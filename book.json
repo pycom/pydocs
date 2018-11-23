@@ -24,7 +24,7 @@
         },
         "insert-logo": {
             "url": "https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/spaces%2F-LIL0iGdl11z7Jos_jpX%2Favatar.png?generation=1532599135148396&alt=media",
-            "style": "background: none;"
+            "style": "background: none; max-width: 100px;"
         },
     "analytics": {
         "google": "UA-72107804-3"
