@@ -1,6 +1,7 @@
 {
-    "plugins": ["favicon-plus","insert-logo","hints","page-ref","-fontsettings","github","youtube","search","algolia","simpletabs","meta-single","analytics","anchors","grid","otherlink","header"],
+    "plugins": ["folding-menu","favicon-plus","insert-logo","hints","page-ref","-fontsettings","github","youtube","search","algolia","simpletabs","meta-single","analytics","anchors","grid","otherlink","header"],
     "pluginsConfig": {
+        "folding-menu": { "animationDuration": 500, "sticky": true } ,
         "fontsettings": {
             "theme": "white",
             "family": "sans",
