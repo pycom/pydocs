@@ -19,6 +19,9 @@ Please start with the following steps:
 
 You can find the different versions of firmwares available here: [https://software.pycom.io/downloads/sequans2.html](https://software.pycom.io/downloads/sequans2.html)
 
+These files are password protected, to download them you should be a forum.pycom.io member and access to: 
+Announcements & News --&gt;  Announcements only for members --&gt; Firmware Files for Sequans LTE modem now are secured, or clicking [Here](https://forum.pycom.io/topic/4020/firmware-files-for-sequans-lte-modem-now-are-secured).
+
 We are using `CATM1-38638.zip` and `NB1-37781.zip` as examples in this tutorial.
 
 After unpacking the zip archive, you will find each firmware packages contains two files, one being the firmware file \(e.g. `CATM1-38638.dup` or `NB1-37781.dup`\) and the `updater.elf` file, which is required when using the "recovery" firmware update method or if a previous upgrade failed and the modem is in recovery mode.
