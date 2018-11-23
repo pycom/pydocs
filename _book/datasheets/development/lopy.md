@@ -10,12 +10,12 @@
 
 The datasheet of the LoPy is available as a PDF File.
 
-[LoPy Datasheet](ref://../../.gitbook/assets/lopy-specsheet.pdf)
+[LoPy Datasheet](../../.gitbook/assets/lopy-specsheet.pdf)
 ## Pinout
 
 The pinout of the LoPy is available as a PDF File
 
-[LoPy Pinout](ref://../../.gitbook/assets/lopy-pinout.pdf)
+[LoPy Pinout](../../.gitbook/assets/lopy-pinout.pdf)
 
 ![](../../.gitbook/assets/lopy-pinout.png)
 

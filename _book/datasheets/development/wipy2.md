@@ -16,7 +16,7 @@ The datasheet of the WiPy2 is available as a PDF File.
 
 The pinout of the WiPy2 is available as a PDF File.
 
-[WiPy 2 Pinout](ref://../../.gitbook/assets/wipy2-pinout.pdf)
+[WiPy 2 Pinout](../../.gitbook/assets/wipy2-pinout.pdf)
 
 ![](../../.gitbook/assets/wipy2-pinout.png)
 
