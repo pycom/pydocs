@@ -1,11 +1,12 @@
 {
-    "plugins": ["insert-logo","hints","page-ref","-fontsettings","github","youtube","search","algolia","simpletabs","meta-single","analytics","anchors","grid","otherlink","header"],
+    "plugins": ["favicon-plus","insert-logo","hints","page-ref","-fontsettings","github","youtube","search","algolia","simpletabs","meta-single","analytics","anchors","grid","otherlink","header"],
     "pluginsConfig": {
         "fontsettings": {
             "theme": "white",
             "family": "sans",
             "size": 2
         },
+        "favicon": "./favicon.ico",
         "github": {
             "url": "https://pycom.github.io/pydocs"
         },
