@@ -16,8 +16,8 @@
         },
         "algolia": {
             "index": "pycom_docs",
-            "applicationID": "PRTCZZ12F8",
-            "publicKey": "7114b80bdadf6ee349fb88497b7c1029",
+            "applicationID": "K37L43EW7N",
+            "publicKey": "427eb1c18422807561448260404bc4ee",
             "freeAccount": "true"
         },
         "meta-single": {
