@@ -2,7 +2,7 @@
     "plugins": [
         "folding-menu","favicon-plus","insert-logo","hints","page-ref","-fontsettings",
         "github","youtube","search","algolia","simpletabs","meta-single","analytics",
-        "anchors","grid","otherlink","header", "bulk-redirect"],
+        "anchors","grid","otherlink","header", "bulk-redirect-with-extension"],
     "pluginsConfig": {
         "bulk-redirect": {
             "basepath": "/",

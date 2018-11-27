@@ -6,7 +6,6 @@ structure:
 
 redirects:
   chapter/products: ./products.md
-
   chapter/gettingstarted: ./gettingstarted/introduction.md
   getting-started: ./gettingstarted/introduction.md
   getting-started/introduction: ./gettingstarted/introduction.md
@@ -92,7 +91,6 @@ redirects:
   chapter/tutorials/pytrack: ./tutorials/pytrack.md
   chapter/tutorials/pysense: ./tutorials/pysense.md
   chapter/tutorials/pyscan: ./tutorials/pyscan.md
-
   chapter/firmwareapi: ./firmwareapi/introduction.md
   chapter/firmwareapi/pycom: ./firmwareapi/pycom/README.md
   chapter/firmwareapi/pycom/machine: ./firmwareapi/pycom/machine/README.md

@@ -1,3 +1,7 @@
+---
+search: false
+---
+
 # Modem Firmware Update
 
 {% hint style="info" %}

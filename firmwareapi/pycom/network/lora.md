@@ -1,3 +1,7 @@
+---
+search: false
+---
+
 # LoRa
 
 This class provides a LoRaWAN 1.0.2 compliant driver for the LoRa network processor in the LoPy and FiPy. Below is an example demonstrating LoRaWAN Activation by Personalisation usage:

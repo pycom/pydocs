@@ -1,3 +1,7 @@
+---
+search: false
+---
+
 # Bluetooth
 
 This class provides a driver for the Bluetooth radio in the module. Currently, only basic BLE functionality is available.

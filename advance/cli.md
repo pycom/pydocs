@@ -1,3 +1,7 @@
+---
+search: false
+---
+
 # CLI Updater
 
 ## Command Line Update Utility
