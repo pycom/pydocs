@@ -187,6 +187,7 @@
         {"from": "chapter/datasheets/boards/deepsleep", "to": "./datasheets/boards/deepsleep/README.html"},
         {"from": "chapter/datasheets/boards/deepsleep/api", "to": "./datasheets/boards/deepsleep/api.html"},
         {"from": "chapter/datasheets/notes", "to": "./datasheets/notes.html"},
+        {"from": "chapter/pybytes", "to": "./pybytes/introduction.html"},
         {"from": "chapter/pybytes/getstarted/intro", "to": "./pybytes/getstarted.html"},
         {"from": "chapter/pybytes/connect/intro", "to": "./pybytes/connect/README.html"},
         {"from": "chapter/pybytes/connect/quick", "to": "./pybytes/connect/quick.html"},
@@ -202,7 +203,6 @@
         {"from": "chapter/advance/downgrade", "to": "./advance/downgrade.html"},
         {"from": "chapter/advance/cli", "to": "./advance/cli.html"},
         {"from": "chapter/advance/encryption", "to": "./advance/encryption.html"},
-        {"from": "chapter/license", "to": "./license.html"},
-        {"from": "chapter/pybytes", "to": "./pybytes/introduction.html"}        
-    ]
+        {"from": "chapter/license", "to": "./license.html"}       
+        ]
 }
