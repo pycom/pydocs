@@ -195,6 +195,7 @@
         {"from": "chapter/pybytes/connect/sigfox/sigfox", "to": "./pybytes/connect/sigfox/README.html"},
         {"from": "chapter/pybytes/connect/sigfox/sigfoxDevKit", "to": "./pybytes/connect/sigfox/devkit.html"},
         {"from": "chapter/pybytes/connect/sigfox/sigfoxCustomContract", "to": "./pybytes/connect/sigfox/custom.html"},
+        {"from": "chapter/pybytes/connect/sigfox/README"},
         {"from": "chapter/pybytes/dashboard/intro", "to": "./pybytes/dashboard"},
         {"from": "chapter/docnotes", "to": "./docnotes/introduction.html"},
         {"from": "chapter/docnotes/syntax", "to": "./docnotes/syntax.html"},
