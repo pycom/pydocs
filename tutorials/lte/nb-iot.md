@@ -12,21 +12,13 @@ Example with Vodafone:
 
 ```python
 from network import LTE
-
 lte = LTE()
-lte.send_at_cmd('AT+CFUN=0')
-lte.send_at_cmd('AT!="clearscanconfig"')
-lte.send_at_cmd('AT!="addscanband band=20"')
-lte.send_at_cmd('AT!="disablelog 1"')
-lte.send_at_cmd('AT+CGDCONT=1,"IP","nb.inetd.gdsp"')
-lte.send_at_cmd('AT+CFUN=1')
-
+lte.attach(band=20, apn="nb.inetd.gdsp")
 while not lte.isattached():
-    pass
-
-lte.connect()
+    time.sleep(0.25)
+lte.connect()       # start a data session and obtain an IP address
 while not lte.isconnected():
-    pass
+    time.sleep(0.25)
 
 # now use socket as usual...
 ```

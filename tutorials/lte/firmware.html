@@ -2703,7 +2703,11 @@ _atrk_opts = { atrk_acct:"WpWNq1SZw320l9", domain:"pycom.io",dynamic: true};
                                 <h1 id="modem-firmware-update"><a name="modem-firmware-update" class="plugin-anchor" href="#modem-firmware-update"><i class="fa fa-link" aria-hidden="true"></i></a>Modem Firmware Update</h1>
 <p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><p>This article is only related to GPy, FiPy, and G01 boards</p>
 </div></div></p>
-<p><div class="alert alert-danger hints-alert"><div class="hints-icon"><i class="fa fa-exclamation-circle"></i></div><div class="hints-container"><p><strong>Important</strong>: When upgrading your modem for the first time, even if you have updated it in the past with the old firmware update method, you <strong>MUST</strong> use the &quot;recovery&quot; upgrade method described below. Otherwise you will risk breaking your module</p>
+<p><div class="alert alert-danger hints-alert"><div class="hints-icon"><i class="fa fa-exclamation-circle"></i></div><div class="hints-container"><p><strong>Important</strong>: When upgrading your modem for the first time, even if you have updated it in the past with the old firmware update method, you <strong>MUST</strong> use the &quot;recovery&quot; upgrade method described below. Otherwise you will risk breaking your module.</p>
+<p>Please also use the file upgdiff_33080-to-39529.dup (1.2M) from the archive.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> sqnsupgrade
+sqnsupgrade.run(<span class="hljs-string">&apos;upgdiff_33080-to-39529.dup&apos;</span>, <span class="hljs-string">&apos;updater.elf&apos;</span>)
+</code></pre>
 </div></div></p>
 <p>Please read the following instructions carefully as there are some significant changes compared to the previous updater version.</p>
 <p>Most importantly, the updater is now integrated in the latest stable firmware release (we will also publish a new development and pybytes firmware in the coming days), so you no longer need to upload any scripts to your module. The built-in updater will take precedence over any scripts uploaded.</p>
@@ -2712,12 +2716,19 @@ _atrk_opts = { atrk_acct:"WpWNq1SZw320l9", domain:"pycom.io",dynamic: true};
 <li>Upgrade the Pycom Firmware Updater tool to latest version</li>
 <li>Select Firmware Type <code>stable</code> in the communication window to upgrade to version <code>v1.18.1.r1</code></li>
 </ol>
-<p>You can find the different versions of firmwares available here: <a href="https://software.pycom.io/downloads/sequans.html&#x200B;" target="_blank">https://software.pycom.io/downloads/sequans.html&#x200B;</a></p>
+<p>You can find the different versions of firmwares available here: <a href="http://software.pycom.io/downloads/sequans2.html&#x200B;" target="_blank"> http://software.pycom.io/downloads/sequans2.html&#x200B;</a></p>
 <p>These files are password protected, to download them you should be a forum.pycom.io member and access to: 
 Announcements &amp; News --&gt;  Announcements only for members --&gt; Firmware Files for Sequans LTE modem now are secured, or clicking <a href="https://forum.pycom.io/topic/4020/firmware-files-for-sequans-lte-modem-now-are-secured" target="_blank">Here</a>.</p>
-<p>We are using <code>CATM1-38638.zip</code> and <code>NB1-37781.zip</code> as examples in this tutorial.</p>
-<p>After unpacking the zip archive, you will find each firmware packages contains two files, one being the firmware file (e.g. <code>CATM1-38638.dup</code> or <code>NB1-37781.dup</code>) and the <code>updater.elf</code> file, which is required when using the &quot;recovery&quot; firmware update method or if a previous upgrade failed and the modem is in recovery mode.</p>
+<p>We are using <code>CATM1-39529.zip</code> and <code>NB1-37781.zip</code> as examples in this tutorial.</p>
+<p>After unpacking the zip archive, you will find each firmware packages contains two files, one being the firmware file (e.g. <code>CATM1-39529.dup</code> or <code>NB1-37781.dup</code>) and the <code>updater.elf</code> file, which is required when using the &quot;recovery&quot; firmware update method or if a previous upgrade failed and the modem is in recovery mode.</p>
 <p>Please note that the <code>updater.elf</code> file is only around 300K so you can also store it inside the flash file system of the module. The firmware dup files will NOT fit into the available <code>/flash</code> file system on the module, so you either need to use an SD card or upload it directly from your computer.</p>
+<p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><p> To upgrade from the previous CAT-M1 firmware 38638 you can simply upload the upgdiff_38638-to-39529.dup file (452K) from the CATM1-39529.zip archive into the /flash directory on your module and run:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> sqnsupgrade
+sqnsupgrade.run(<span class="hljs-string">&apos;upgdiff_38638-to-39529.dup&apos;</span>)
+</code></pre>
+<p>If you are updating the Sequans firmware on your module for the first time, please use instead the file upgdiff_33080-to-39529.dup (1.2M) from the same archive.
+Similar upgrade packages are available for the NB-IoT firmwares. </p>
+</div></div></p>
 <h2 id="via-sd-card"><a name="via-sd-card" class="plugin-anchor" href="#via-sd-card"><i class="fa fa-link" aria-hidden="true"></i></a>Via SD card</h2>
 <p>To transfer the firmware files onto the SD card you have two options:</p>
 <ol>
@@ -2734,7 +2745,7 @@ os.listdir(<span class="hljs-string">&apos;/sd&apos;</span>)      <span class="h
 <p>Once you copied/uploaded the firmware files on to the SD card you can flash the LTE modem using the following command:</p>
 <p>To flash the CAT-M1 firmware onto your device using the recovery method:</p>
 <pre><code class="lang-python"><span class="hljs-keyword">import</span> sqnsupgrade
-sqnsupgrade.run(<span class="hljs-string">&apos;/sd/CATM1-38638.dup&apos;</span>, <span class="hljs-string">&apos;/sd/updater.elf&apos;</span>)
+sqnsupgrade.run(<span class="hljs-string">&apos;/sd/CATM1-39529.dup&apos;</span>, <span class="hljs-string">&apos;/sd/updater.elf&apos;</span>)
 </code></pre>
 <p>To flash the NB-IoT firmware onto your device using the recovery method:</p>
 <pre><code class="lang-python"><span class="hljs-keyword">import</span> sqnsupgrade
@@ -2841,7 +2852,7 @@ Python <span class="hljs-number">3.6</span><span class="hljs-number">.5</span> (
 Type <span class="hljs-string">&quot;help&quot;</span>, <span class="hljs-string">&quot;copyright&quot;</span>, <span class="hljs-string">&quot;credits&quot;</span> <span class="hljs-keyword">or</span> <span class="hljs-string">&quot;license&quot;</span> <span class="hljs-keyword">for</span> more information.
 &gt;&gt;&gt;
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> sqnsupgrade
-<span class="hljs-meta">&gt;&gt;&gt; </span>sqnsupgrade.run(<span class="hljs-string">&apos;Serial_Port&apos;</span>, <span class="hljs-string">&apos;/path/to/CATM1-38638.dup&apos;</span>, <span class="hljs-string">&apos;/path/to/updater.elf&apos;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>sqnsupgrade.run(<span class="hljs-string">&apos;Serial_Port&apos;</span>, <span class="hljs-string">&apos;/path/to/CATM1-39529.dup&apos;</span>, <span class="hljs-string">&apos;/path/to/updater.elf&apos;</span>)
 </code></pre>
 <p>When using the standard method (or if the <code>updater.elf</code> was loaded on the module):</p>
 <pre><code class="lang-python"> $ python3
@@ -2850,12 +2861,18 @@ Type <span class="hljs-string">&quot;help&quot;</span>, <span class="hljs-string
  Type <span class="hljs-string">&quot;help&quot;</span>, <span class="hljs-string">&quot;copyright&quot;</span>, <span class="hljs-string">&quot;credits&quot;</span> <span class="hljs-keyword">or</span> <span class="hljs-string">&quot;license&quot;</span> <span class="hljs-keyword">for</span> more information.
  &gt;&gt;&gt;
  &gt;&gt;&gt; <span class="hljs-keyword">import</span> sqnsupgrade
- &gt;&gt;&gt; sqnsupgrade.run(<span class="hljs-string">&apos;Serial_Port&apos;</span>, <span class="hljs-string">&apos;/path/to/CATM1-38638.dup&apos;</span>)
+ &gt;&gt;&gt; sqnsupgrade.run(<span class="hljs-string">&apos;Serial_Port&apos;</span>, <span class="hljs-string">&apos;/path/to/CATM1-39529.dup&apos;</span>)
 </code></pre>
 <p>Please note that the firmware update may seem to &quot;stall&quot; around 7-10% and again at 99%. This is not an indication of a failure but the fact that the modem has to do some tasks during and the updater will wait for these tasks to be completed. Unless the upgrade process is hanging for more than 5 minutes, <strong>do not interrupt the process</strong> as you will have to start again if you don&apos;t finish it. It may also take several minutes for the updater to load before responding to the AT wakeup command.</p>
 <h2 id="retrying-process"><a name="retrying-process" class="plugin-anchor" href="#retrying-process"><i class="fa fa-link" aria-hidden="true"></i></a>Retrying process</h2>
 <p>In case of any failure or interruption to the process of LTE modem upgrade you can repeat the same steps <strong>after doing a hard reset to the board (i.e disconnecting and reconnecting power), pressing the reset button is not enough.</strong></p>
-<script src="_gitbook_plugin_analytics.js"></script>
+<h2 id="sqnsupgrade-class"><a name="sqnsupgrade-class" class="plugin-anchor" href="#sqnsupgrade-class"><i class="fa fa-link" aria-hidden="true"></i></a>Sqnsupgrade class</h2>
+<p>The latest version of the <code>sqnsupgrade</code> class has a few additional features that help with debugging or modem update.</p>
+<h4 id="sqnsupgradeinfo"><a name="sqnsupgradeinfo" class="plugin-anchor" href="#sqnsupgradeinfo"><i class="fa fa-link" aria-hidden="true"></i></a>sqnsupgrade.info()</h4>
+<pre><code> If the modem is in application mode, the current firmware version is displayed. This behaviour replaces the version() command which now is only available in uart() mode. Optional parameters are sqnsupgrade.info(verbose=False, debug=False)
+</code></pre><h4 id="sqnsupgraderunloadffftrue"><a name="sqnsupgraderunloadffftrue" class="plugin-anchor" href="#sqnsupgraderunloadffftrue"><i class="fa fa-link" aria-hidden="true"></i></a>sqnsupgrade.run(load_fff=True)</h4>
+<pre><code>New optional command line option load_fff for the sqnsupgrade.run() command. This is designed to be an internal flag. And should only applied when advised by pycom support.
+</code></pre><script src="_gitbook_plugin_analytics.js"></script>
                                 
                                 </section>
                             
@@ -2898,7 +2915,7 @@ Type <span class="hljs-string">&quot;help&quot;</span>, <span class="hljs-string
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"search":false,"title":"Modem Firmware Update","level":"5.5.4","depth":2,"next":{"title":"Pytrack Examples","level":"5.6","depth":1,"path":"tutorials/pytrack.md","ref":"tutorials/pytrack.md","articles":[]},"previous":{"title":"Module IMEI","level":"5.5.3","depth":2,"path":"tutorials/lte/imei.md","ref":"tutorials/lte/imei.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["folding-menu","favicon-plus","insert-logo","hints","page-ref","-fontsettings","github","youtube","search","algolia","simpletabs","meta-single","analytics","anchors","grid","otherlink","header","bulk-redirect-with-extension"],"pluginsConfig":{"youtube":{},"github":{"url":"https://pycom.github.io/pydocs"},"grid":{},"analytics":{"google":"UA-72107804-3"},"search":{},"otherlink":{},"layout":{"headerPath":"alexa.html"},"folding-menu":{"animationDuration":500,"sticky":true},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000000,"ignoreSpecialCharacters":false},"header":{},"bulk-redirect-with-extension":{},"simpletabs":{},"meta-single":{"content":"Kbyrn6in1PWDoUk5OR65BLF-Ff4wU9WcT3RcJb6-VYM","name":"google-site-verification"},"algolia":{"freeAccount":"true","index":"pycom_docs","applicationID":"K37L43EW7N","publicKey":"427eb1c18422807561448260404bc4ee"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon-plus":{"appleTouchIconPrecomposed152":"","favicon":"","output":"_book"},"highlight":{},"favicon":"./favicon.ico","page-ref":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none; max-width: 100px;","url":"https://pycom.github.io/pydocs/pycomsquarelogo.png"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"assets/style/cms.css"}},"file":{"path":"tutorials/lte/firmware.md","mtime":"2018-11-27T16:54:06.933Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-27T17:03:16.819Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"search":false,"title":"Modem Firmware Update","level":"5.5.4","depth":2,"next":{"title":"Pytrack Examples","level":"5.6","depth":1,"path":"tutorials/pytrack.md","ref":"tutorials/pytrack.md","articles":[]},"previous":{"title":"Module IMEI","level":"5.5.3","depth":2,"path":"tutorials/lte/imei.md","ref":"tutorials/lte/imei.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["folding-menu","favicon-plus","insert-logo","hints","page-ref","-fontsettings","github","youtube","search","algolia","simpletabs","meta-single","analytics","anchors","grid","otherlink","header","bulk-redirect-with-extension"],"pluginsConfig":{"youtube":{},"github":{"url":"https://pycom.github.io/pydocs"},"grid":{},"analytics":{"google":"UA-72107804-3"},"search":{},"otherlink":{},"layout":{"headerPath":"alexa.html"},"folding-menu":{"animationDuration":500,"sticky":true},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000000,"ignoreSpecialCharacters":false},"header":{},"bulk-redirect-with-extension":{},"simpletabs":{},"meta-single":{"content":"Kbyrn6in1PWDoUk5OR65BLF-Ff4wU9WcT3RcJb6-VYM","name":"google-site-verification"},"algolia":{"freeAccount":"true","index":"pycom_docs","applicationID":"K37L43EW7N","publicKey":"427eb1c18422807561448260404bc4ee"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon-plus":{"appleTouchIconPrecomposed152":"","favicon":"","output":"_book"},"highlight":{},"favicon":"./favicon.ico","page-ref":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none; max-width: 100px;","url":"https://pycom.github.io/pydocs/pycomsquarelogo.png"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"assets/style/cms.css"}},"file":{"path":"tutorials/lte/firmware.md","mtime":"2018-11-30T16:29:54.091Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-30T16:32:00.823Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

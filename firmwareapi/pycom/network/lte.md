@@ -38,13 +38,24 @@ lte = LTE()
 
 This method is used to set up the LTE subsystem. After a `deinit()` this method can take several seconds to return waiting for the LTE modem to start-up. Optionally specify a carrier name. The available options are: `verizon, at&t, standard`. `standard` is generic for any carrier, and it's also the option used when no arguments are given.
 
-#### lte.deinit\(\)
+#### lte.deinit\(\*, deattach=False, reset=True\)
 
 Disables LTE modem completely. This reduces the power consumption to the minimum. Call this before entering deepsleep.
 
-#### lte.attach\(\*, band=None\)
+Has two optional parameters
+
+1. `lte.deinit(dettach=False)`  allows the modem to go into deep sleep (PSM, eDRX) without dettaching from the network
+2. `lte.deinit(reset=True)`  will reset the modem before going into causing it to go into deep sleep.    
+
+#### lte.attach\(\*,apn=None, band=None\)
 
 Enable radio functionality and attach to the LTE Cat M1 network authorised by the inserted SIM card. Optionally specify the band to scan for networks. If no band \(or `None`\) is specified, all 6 bands will be scanned. The possible values for the band are: `3, 4, 12, 13, 20 and 28`.
+
+You can also specify an APN during the call to attach
+
+```python
+    lte.attach(apn="nb.inetd.gdsp")
+```
 
 #### lte.isattached\(\)
 
@@ -89,9 +100,11 @@ Returns `True` if there is an active LTE data session and IP address has been ob
 
 End the data session with the network.
 
-#### lte.send\_at\_cmd\(cmd\)
+#### lte.send\_at\_cmd\(cmd, delay=1000\)
 
 Send an AT command directly to the modem. Returns the raw response from the modem as a string object. **IMPORTANT:** If a data session is active \(i.e. the modem is _connected_\), sending the AT commands requires to pause and then resume the data session. This is all done automatically, but makes the whole request take around 2.5 seconds.
+
+Has an optional delay paramter to specify the number of milliseconds the esp32 chip will wait between sending an AT command to the modem. and reading the response.
 
 Example:
 
@@ -119,7 +132,20 @@ Returns a string object with the IMEI number of the LTE modem.
 
 Returns a string object with the ICCID number of the SIM card.
 
-#### lte.reset\(\)
+#### lte.reset\(\*, reset=True\)
 
 Perform a hardware reset on the cellular modem. This function can take up to 5 seconds to return as it waits for the modem to shutdown and reboot.
+Has an optional `reset` parameter to specify if the modem should be reset before switching of the radio. can help in cases where `lte.deattach()` casuses the modem to freeze.
+
+#### lte.pppsuspend\(\)
+
+Pause the Lte ppp connection to allow sending of AT commands
+
+
+#### lte.pppresume\(\)
+
+Resuime the Lte ppp connection after sending of AT commands
+
+
+
 
