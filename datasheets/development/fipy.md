@@ -44,7 +44,7 @@ The `Vin` pin on the FiPy can be supplied with a voltage ranging from `3.5v` to 
 
 The AT commands for the Sequans Monarch modem on the FiPy are available in a PDF file.
 
-[AT Commands for Sequans](../../.gitbook/assets/monarch\_4g-ez\_lr5110\_atcommands\_referencemanual\_rev3\_noconfidential-2.pdf)
+[AT Commands for Sequans](../../.gitbook/assets/monarch_4g-ez_lr5110_atcommands_referencemanual_rev3_noconfidential-2.pdf)
 
 ## Tutorials
 
