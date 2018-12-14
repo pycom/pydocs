@@ -10,7 +10,7 @@
 
 The datasheet of the SiPy is available as a PDF File.
 
-[SiPy Datasheet](./../.gitbook/assets/sipy-specsheet.pdf)
+[SiPy Datasheet](../../.gitbook/assets/sipy-specsheet.pdf)
 
 ## Pinout
 
