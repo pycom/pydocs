@@ -10,7 +10,7 @@
 
 #### WiPy 2.0
 
-<p><a href="../.gitbook/assets/16-213297_expertise_pycom_wipy-2.0r.pdf" target="_blank">WiPy 2.0 CE RED Certificate&quot;</a></p>
+<p><a href="../.gitbook/assets/16-213297_expertise_pycom_wipy-2.0r.pdf" target="_blank">WiPy 2.0 CE RED Certificate</a></p>
 
 #### WiPy 3.0
 
