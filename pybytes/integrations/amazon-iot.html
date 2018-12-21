@@ -69,7 +69,7 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../../docnotes/introduction.html">
+    <link rel="next" href="webhooks.html">
     
     
     <link rel="prev" href="./">
@@ -2492,6 +2492,32 @@ _atrk_opts = { atrk_acct:"WpWNq1SZw320l9", domain:"pycom.io",dynamic: true};
             
         </li>
     
+        <li class="chapter " data-level="8.5.2" data-path="webhooks.html">
+            
+                <a href="webhooks.html">
+            
+                    
+                    Webhooks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5.3" data-path="azure.html">
+            
+                <a href="azure.html">
+            
+                    
+                    Azure
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -2701,36 +2727,36 @@ _atrk_opts = { atrk_acct:"WpWNq1SZw320l9", domain:"pycom.io",dynamic: true};
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="amazon-iot"><a name="amazon-iot" class="plugin-anchor" href="#amazon-iot"><i class="fa fa-link" aria-hidden="true"></i></a>Amazon IoT</h1>
-<p>Whenever one of your integrated devices sends a message to our broker, we republish the binary payload to the endpoint specified for its integration.</p>
-<h2 id="integrate-your-devices-"><a name="integrate-your-devices-" class="plugin-anchor" href="#integrate-your-devices-"><i class="fa fa-link" aria-hidden="true"></i></a>Integrate your devices <a id="integrate-your-devices"></a></h2>
+<p>Whenever one of your integrated devices sends a signal to our broker, we republish the binary payload to the endpoint specified for its integration.</p>
+<h2 id="integrate-your-devices"><a name="integrate-your-devices" class="plugin-anchor" href="#integrate-your-devices"><i class="fa fa-link" aria-hidden="true"></i></a>Integrate your devices</h2>
 <ol>
 <li>Go in the sidebar, click on <em>New Integration</em> and then on <em>Amazon Web Services</em></li>
 </ol>
-<p><img src="https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LIL0iGdl11z7Jos_jpX%2F-LQ-UAflx-H1r4pkZhzv%2F-LQ-Uat_I9wiYDBCpz_K%2F01_aws_integration.png?alt=media&amp;token=ed8a7737-e0e8-42fc-83a5-8fddffaa3316" alt=""></p>
+<p><img src="../../.gitbook/assets/01_aws_integration.png" alt="New AWS integration"></p>
 <ol>
 <li>Fill in the form choosing an <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html" target="_blank">AWS region</a> and your AWS credentials. You can optionally choose to save them inside the local storage for future use. Once you&apos;re done, click <em>Login</em></li>
 </ol>
-<p><img src="https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LIL0iGdl11z7Jos_jpX%2F-LQ-UAflx-H1r4pkZhzv%2F-LQ-UkDEF_fpCDq7bw2Y%2F02_aws_integration.png?alt=media&amp;token=7f9ab8ae-fc98-47fb-a84a-681a0b83d008" alt=""></p>
+<p><img src="../../.gitbook/assets/02_aws_integration.png" alt="Fill in the form with AWS keys and choosing a region"></p>
 <ol>
 <li>In this step, you have to specify the <a href="https://docs.aws.amazon.com/iot/latest/developerguide/thing-groups.html" target="_blank">AWS group</a> name (just alphanumeric letter, dashes and underscore are allowed), the custom topic and the devices you want to bind to AWS. When you&apos;re ready, click <em>Create</em></li>
 </ol>
-<p><img src="https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LIL0iGdl11z7Jos_jpX%2F-LQ-UAflx-H1r4pkZhzv%2F-LQ-Uo4CkJdFy3JPbh91%2F03_aws_integration.png?alt=media&amp;token=a3589c47-c77c-4f91-9675-a25ba6d89208" alt=""></p>
+<p><img src="../../.gitbook/assets/03_aws_integration.png" alt="AWS group creation"></p>
 <ol>
 <li>If everything&apos;s worked as expected, you should be able to see a summary of your integration like the following:</li>
 </ol>
-<p><img src="https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LIL0iGdl11z7Jos_jpX%2F-LQ-UAflx-H1r4pkZhzv%2F-LQ-UqcDBS4h1BTCqWiZ%2F04_aws_integration.png?alt=media&amp;token=3847a597-83b1-4ddd-a2c9-7d3f6948c4d3" alt=""></p>
+<p><img src="../../.gitbook/assets/04_aws_integration.png" alt="Creation process result"></p>
 <ol>
 <li>The corresponding AWS Thing and AWS Group has been created as well, you just have to <a href="https://console.aws.amazon.com/console/home?nc2=h_ct&amp;src=header-signin" target="_blank">log in to the console</a> and choose the same region of your devices from the topbar. You&apos;ll be able to explore groups and things&apos; details.</li>
 </ol>
-<p><img src="https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LIL0iGdl11z7Jos_jpX%2F-LQY9TjXsTcZzaZ7pMS0%2F-LQY9Yf2cyvfHAJYQcUM%2F05_aws_integration.png?generation=1541409488774926&amp;alt=media" alt=""></p>
+<p><img src="../../.gitbook/assets/05_aws_integration.png" alt="AWS things and groups just created"></p>
 <ol>
 <li>The device&apos;s name is specified as an attribute of the thing.</li>
 </ol>
-<p><img src="https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LIL0iGdl11z7Jos_jpX%2F-LQY9TjXsTcZzaZ7pMS0%2F-LQY9Yf5HQWCqCsWEQwo%2F06_aws_integration.png?generation=1541409488706134&amp;alt=media" alt=""></p>
-<h2 id="final-considerations-"><a name="final-considerations-" class="plugin-anchor" href="#final-considerations-"><i class="fa fa-link" aria-hidden="true"></i></a>Final considerations <a id="final-considerations"></a></h2>
+<p><img src="../../.gitbook/assets/06_aws_integration.png" alt="Device&apos;s attributes"></p>
+<h2 id="final-considerations"><a name="final-considerations" class="plugin-anchor" href="#final-considerations"><i class="fa fa-link" aria-hidden="true"></i></a>Final considerations</h2>
 <p>In order to save the data received by AWS, <a href="https://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html" target="_blank">you must set up a rule</a>. You can also test that everything&apos;s working with the <a href="https://docs.aws.amazon.com/iot/latest/developerguide/view-mqtt-messages.html" target="_blank">AWS IoT MQTT client</a>. Please notice that it&apos;s not possible to download the private key from AWS once it has been generated, by the way we securely store it inside our database. We may consider to allow its download in the future, so that you could also directly send your device to AWS, by passing Pybytes.</p>
 <p><strong>Warning</strong>: do not delete AWS things or groups directly from AWS user interface, otherwise the integration with Pybytes will stop working. Always use Pybytes interface to delete AWS things or groups.</p>
-<script src="../../_gitbook_plugin_analytics.js"></script>
+<script src="_gitbook_plugin_analytics.js"></script>
                                 
                                 </section>
                             
@@ -2762,7 +2788,7 @@ _atrk_opts = { atrk_acct:"WpWNq1SZw320l9", domain:"pycom.io",dynamic: true};
                 </a>
                 
                 
-                <a href="../../docnotes/introduction.html" class="navigation navigation-next " aria-label="Next page: Introduction">
+                <a href="webhooks.html" class="navigation navigation-next " aria-label="Next page: Webhooks">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -2773,7 +2799,7 @@ _atrk_opts = { atrk_acct:"WpWNq1SZw320l9", domain:"pycom.io",dynamic: true};
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Amazon IoT","level":"8.5.1","depth":2,"next":{"title":"Introduction","level":"9.1","depth":1,"path":"docnotes/introduction.md","ref":"docnotes/introduction.md","articles":[]},"previous":{"title":"Integrations","level":"8.5","depth":1,"path":"pybytes/integrations/README.md","ref":"pybytes/integrations/README.md","articles":[{"title":"Amazon IoT","level":"8.5.1","depth":2,"path":"pybytes/integrations/amazon-iot.md","ref":"pybytes/integrations/amazon-iot.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["folding-menu","favicon-plus","insert-logo","hints","page-ref","-fontsettings","github","youtube","search","algolia","simpletabs","meta-single","analytics","anchors","grid","otherlink","header","bulk-redirect-with-extension"],"pluginsConfig":{"youtube":{},"github":{"url":"https://pycom.github.io/pydocs"},"grid":{},"analytics":{"google":"UA-72107804-3"},"search":{},"otherlink":{},"layout":{"headerPath":"alexa.html"},"folding-menu":{"animationDuration":500,"sticky":true},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000000,"ignoreSpecialCharacters":false},"header":{},"bulk-redirect-with-extension":{},"simpletabs":{},"meta-single":{"content":"Kbyrn6in1PWDoUk5OR65BLF-Ff4wU9WcT3RcJb6-VYM","name":"google-site-verification"},"algolia":{"freeAccount":"true","index":"pycom_docs","applicationID":"K37L43EW7N","publicKey":"427eb1c18422807561448260404bc4ee"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon-plus":{"appleTouchIconPrecomposed152":"","favicon":"","output":"_book"},"highlight":{},"favicon":"./favicon.ico","page-ref":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none; max-width: 100px;","url":"https://pycom.github.io/pydocs/pycomsquarelogo.png"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"assets/style/cms.css"}},"file":{"path":"pybytes/integrations/amazon-iot.md","mtime":"2018-12-17T12:47:31.572Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-17T12:53:18.486Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Amazon IoT","level":"8.5.1","depth":2,"next":{"title":"Webhooks","level":"8.5.2","depth":2,"path":"pybytes/integrations/webhooks.md","ref":"pybytes/integrations/webhooks.md","articles":[]},"previous":{"title":"Integrations","level":"8.5","depth":1,"path":"pybytes/integrations/README.md","ref":"pybytes/integrations/README.md","articles":[{"title":"Amazon IoT","level":"8.5.1","depth":2,"path":"pybytes/integrations/amazon-iot.md","ref":"pybytes/integrations/amazon-iot.md","articles":[]},{"title":"Webhooks","level":"8.5.2","depth":2,"path":"pybytes/integrations/webhooks.md","ref":"pybytes/integrations/webhooks.md","articles":[]},{"title":"Azure","level":"8.5.3","depth":2,"path":"pybytes/integrations/azure.md","ref":"pybytes/integrations/azure.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["folding-menu","favicon-plus","insert-logo","hints","page-ref","-fontsettings","github","youtube","search","algolia","simpletabs","meta-single","analytics","anchors","grid","otherlink","header","bulk-redirect-with-extension"],"pluginsConfig":{"youtube":{},"github":{"url":"https://pycom.github.io/pydocs"},"grid":{},"analytics":{"google":"UA-72107804-3"},"search":{},"otherlink":{},"layout":{"headerPath":"alexa.html"},"folding-menu":{"animationDuration":500,"sticky":true},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000000,"ignoreSpecialCharacters":false},"header":{},"bulk-redirect-with-extension":{},"simpletabs":{},"meta-single":{"content":"Kbyrn6in1PWDoUk5OR65BLF-Ff4wU9WcT3RcJb6-VYM","name":"google-site-verification"},"algolia":{"freeAccount":"true","index":"pycom_docs","applicationID":"K37L43EW7N","publicKey":"427eb1c18422807561448260404bc4ee"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon-plus":{"appleTouchIconPrecomposed152":"","favicon":"","output":"_book"},"highlight":{},"favicon":"./favicon.ico","page-ref":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none; max-width: 100px;","url":"https://pycom.github.io/pydocs/pycomsquarelogo.png"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"assets/style/cms.css"}},"file":{"path":"pybytes/integrations/amazon-iot.md","mtime":"2018-12-21T12:20:20.058Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-21T12:50:48.019Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

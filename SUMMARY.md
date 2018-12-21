@@ -190,6 +190,8 @@
 * [Visualise data from your device](pybytes/dashboard.md)
 * [Integrations](pybytes/integrations/README.md)
   * [Amazon IoT](pybytes/integrations/amazon-iot.md)
+  * [Webhooks](pybytes/integrations/webhooks.md)
+  * [Azure](pybytes/integrations/azure.md)
 
 ## Documentation Notes
 
