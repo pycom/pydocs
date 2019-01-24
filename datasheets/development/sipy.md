@@ -1,12 +1,20 @@
 # SiPy
 
-\*\*\*\*![](../../.gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn86n8h-hb1oh1idwb-sipy-2.png) ****
+![](../../.gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn86n8h-hb1oh1idwb-sipy-2.png)
+
+{% hint style="info" %}
+ ** Please Note: We have removed the labels from the pictures in the documentation due to inconsistencies with label orientation.  *The LED must be aligned above the USB socket* when inserting or removing a development board from an expansion board/Pytrack/Pysense/Pyscan. **
+{% endhint %}
+
+
 
 **Store**: [Buy Here](https://pycom.io/product/sipy)
 
 **Getting Started:** [Click Here](../../gettingstarted/connection/sipy.md)
 
 ## Datasheet
+
+
 
 The datasheet of the SiPy is available as a PDF File.
 
