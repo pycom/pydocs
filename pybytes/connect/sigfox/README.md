@@ -12,7 +12,7 @@ Click on GROUP → &lt;your\_company\_name&gt; → API ACCESS → New
 
 ![](../../../.gitbook/assets/apiaccess%20%281%29.png)
 
-In the form chose arbitrary _name_, select Profiles `DEVICE MANAGER [R]` and `DEVICE MANAGER [W]`. Then click on Ok.
+In the form chose arbitrary _name_, select `LIMITED_ADMIN` and Profile and click on Ok.
 
 ![](../../../.gitbook/assets/apiaccessscope.png)
 
