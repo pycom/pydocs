@@ -6,7 +6,7 @@ To get started, read through the Getting Started Guide then feel free to jump st
 
 * [Products](products.md)
 * [Getting Started](gettingstarted/introduction.md)
-* [Pymakr](pymakr/installation/)
+* [Pymakr](pymakr/installation/index.html)
 * [Tutorials](tutorials/introduction.md)
 * [API Documentation](firmwareapi/introduction.md)
 * [Product Info](datasheets/introduction.md)
