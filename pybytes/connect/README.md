@@ -4,9 +4,9 @@ In this section, we will explain to you how to add a device to Pybytes
 
 ## Step 1: Add device wizard
 
-In Pybytes, go to `Devices` Page:
+In Pybytes, go to *Devices* Page:
 
-1. Click on `Add Device`.
+1. Click on *Add Device*.
 
 ![](../../.gitbook/assets/1-1.jpg)
 
@@ -14,13 +14,9 @@ In Pybytes, go to `Devices` Page:
 
 ![](../../.gitbook/assets/2-1.jpg)
 
-3. Select your shield \(e.g., PySense, PyTrack, PyScan or other\);
-
-![](../../.gitbook/assets/3%20%281%29.jpg)
-
 4. Select your network option;
 
-![](../../.gitbook/assets/4%20%281%29.jpg)
+![](../../.gitbook/assets/pybytes/add-device/network-step.png)
 
 5. Enter a unique name and the network credentials \(SSID and password\) for your device;
 
@@ -28,9 +24,9 @@ In Pybytes, go to `Devices` Page:
 
 ## Step 2: Connect your device to Pybytes
 
-At the end of the "Add Device" wizard, Pybytes will give you two options for you to connect your device to Pybytes:
+At the end of the "Add Device" wizard, Pybytes will show that your device profile was successfully created.
 
-![](../../.gitbook/assets/7-1.png)
+![](../../.gitbook/assets/pybytes/add-device/final-step.png)
 
 Select how you would like to connect your device to Pybytes:
 
