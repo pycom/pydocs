@@ -53,7 +53,7 @@ The `Vin` pin on the GPy can be supplied with a voltage ranging from `3.5v` to `
 
 The AT commands for the Sequans Monarch modem on the GPy are available in a PDF file.
 
-[AT Commands for Sequans](../../.gitbook/assets/monarch_4g-ez_lr5110_atcommands_referencemanual_rev3_noconfidential-1.pdf)
+[AT Commands for Sequans](../../.gitbook/assets/Monarch-LR5110-ATCmdRefMan-rev6_noConfidential.pdf)
 
 ## Tutorials
 
