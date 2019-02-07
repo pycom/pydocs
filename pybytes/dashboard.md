@@ -53,7 +53,9 @@ _thread.start_new_thread(send_env_data, ())
 {% hint style="info" %}
 In this code, we're calling the function `pybytes.send_signal(signalNumber, value))` to send data to Pybytes. This function is part of the Pybytes library, and it has two arguments: `signalNumber` and `value`.
 
-* `signalNumber` represents which signal is receiving data, 256 different values (0 ... 255);
+* `signalNumber` represents which signal is receiving data:
+
+    **255** different values: **0 ... 254** (signalNumber 255 is reserved for the Pybytes terminal)
 * `value` is the value being attributed to that particular signal number
 {% endhint %}
 
