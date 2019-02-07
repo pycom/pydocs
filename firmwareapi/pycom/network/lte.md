@@ -38,14 +38,13 @@ lte = LTE()
 
 This method is used to set up the LTE subsystem. After a `deinit()` this method can take several seconds to return waiting for the LTE modem to start-up. Optionally specify a carrier name. The available options are: `verizon, at&t, standard`. `standard` is generic for any carrier, and it's also the option used when no arguments are given.
 
-#### lte.deinit\(\*, deattach=False, reset=True\)
+#### lte.deinit\(\*, deattach=False\)
 
 Disables LTE modem completely. This reduces the power consumption to the minimum. Call this before entering deepsleep.
 
-Has two optional parameters
+Has one optional parameter
 
 1. `lte.deinit(dettach=False)`  allows the modem to go into deep sleep (PSM, eDRX) without dettaching from the network
-2. `lte.deinit(reset=True)`  will reset the modem before going into causing it to go into deep sleep.    
 
 #### lte.attach\(\*,apn=None, band=None\)
 
@@ -61,9 +60,12 @@ You can also specify an APN during the call to attach
 
 Returns `True` if the cellular mode is attached to the network. `False` otherwise.
 
-#### lte.dettach\(\)
+#### lte.dettach\(reset=True\)
 
 Detach the modem from the LTE Cat M1 and disable the radio functionality.
+Has one optional parameter:
+
+1. `lte.deinit(reset=True)`  will reset the modem before going into causing it to go into deep sleep.    
 
 #### lte.connect\(\*, cid=1\)
 
@@ -102,7 +104,7 @@ End the data session with the network.
 
 #### lte.send\_at\_cmd\(cmd, delay=1000\)
 
-Send an AT command directly to the modem. Returns the raw response from the modem as a string object. **IMPORTANT:** If a data session is active \(i.e. the modem is _connected_\), sending the AT commands requires to pause and then resume the data session. This is all done automatically, but makes the whole request take around 2.5 seconds.
+Send an AT command directly to the modem. Returns the raw response from the modem as a string object. **IMPORTANT:** If a data session is active \(i.e. the modem is _connected_\), sending the AT commands requires to pause and then resume the data session. this can be done with the pppsuspend() and pppresume() methods.
 
 Has an optional delay paramter to specify the number of milliseconds the esp32 chip will wait between sending an AT command to the modem. and reading the response.
 
