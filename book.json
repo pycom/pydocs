@@ -36,7 +36,7 @@
         },
         "insert-logo": {
             "url": "https://raw.githubusercontent.com/pycom/pydocs/gh-pages/.gitbook/assets/pycom_logo_lockup_navy_rgb.png",
-            "style": "background: none; max-width: 100px;"
+            "style": "background: none; max-width: 150px;"
         },
     "analytics": {
         "google": "UA-72107804-3"
