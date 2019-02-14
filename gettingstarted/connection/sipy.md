@@ -22,20 +22,17 @@
 * Before connecting your module to a Pysense/Pytrack/Pyscan board, you should update the firmware on the Pysense/Pytrack/Pyscan. Instructions on how to do this can be found [here](../../pytrackpysense/installation/firmware.md).
 * Look for the reset button on the SiPy module \(located at a corner of the board, next to the LED\).
 * Locate the USB connector on the Pysense/Pytrack/Pyscan.
-* Insert the module on the Pysense/Pytrack/Pyscan with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible. ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LIfiUlGe6_zTmmvcuEa%2F-LKMXk1KQvBgjpw04I3u%2F-LIqd_e51Wyuw40k6yJv%2FPysense_SiPy.png?generation=1534772077104600&alt=media)![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LIfiUlGe6_zTmmvcuEa%2F-LKMXk1KQvBgjpw04I3u%2F-LIqdauW7rAnQlc-AL07%2FPytrack_SiPy.png?generation=1534772072530754&alt=media)
+* Insert the module on the Pysense/Pytrack/Pyscan with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible. ![](../../.gitbook/assets/pysense_sipy.png) ![](../../.gitbook/assets/pytrack_sipy.png)
 
 {% content "forth" %}
 * Firstly you will need to connect power to your SiPy. You will need to supply `3.5v`-`5.5v` to the `Vin` pin.
 
-{% hint style="danger" %}
 Do **not** feed `3.3v` directly to the `3.3v` supply pin, this will damage the regulator.
-{% endhint %}
 
 * The connect the `RX` and `TX` of your USB UART to the `TX` and `RX` of the SiPy respectively.
 
-{% hint style="warning" %}
 Please ensure you have the signal level of the UART adapter set to `3.3v` before connecting it.
-{% endhint %}
+
 
 * In order to put the SiPy into bootloader mode to update the device firmware you will need to connect `P2` to `GND`. We recommend you connect a button between the two to make this simpler.
 

@@ -31,15 +31,12 @@
 {% content "forth" %}
 * Firstly you will need to connect power to your LoPy4. You will need to supply `3.5v`-`5.5v` to the `Vin` pin.
 
-{% hint style="danger" %}
 Do **not** feed `3.3v` directly to the `3.3v` supply pin, this will damage the regulator.
-{% endhint %}
+
 
 * The connect the `RX` and `TX` of your USB UART to the `TX` and `RX` of the LoPy4 respectively.
 
-{% hint style="warning" %}
 Please ensure you have the signal level of the UART adapter set to `3.3v` before connecting it.
-{% endhint %}
 
 * In order to put the LoPy4 into bootloader mode to update the device firmware you will need to connect `P2` to `GND`. We recommend you connect a button between the two to make this simpler.
 

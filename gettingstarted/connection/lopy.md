@@ -22,21 +22,17 @@
 * Before connecting your module to a Pysense/Pytrack/Pyscan board, you should update the firmware on the Pysense/Pytrack/Pyscan. Instructions on how to do this can be found [here](../../pytrackpysense/installation/firmware.md).
 * Look for the reset button on the LoPy module \(located at a corner of the board, next to the LED\).
 * Locate the USB connector on the Pysense/Pytrack/Pyscan.
-* Insert the module on the Pysense/Pytrack/Pyscan with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible. ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LIfiUlGe6_zTmmvcuEa%2F-LKMXk1KQvBgjpw04I3u%2F-LIq_ZvQtB3k9-QzXSEi%2FPysense_LoPy.png?generation=1534772084691543&alt=media)![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LIfiUlGe6_zTmmvcuEa%2F-LKMXk1KQvBgjpw04I3u%2F-LIq_aBQabbigN5pR8W2%2FPytrack_LoPy.png?generation=1534772068406423&alt=media)
+* Insert the module on the Pysense/Pytrack/Pyscan with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible. ![](../../.gitbook/assets/pysense_lopy.png)![](../../.gitbook/assets/pytrack_lopy.png)
 
 
 {% content "forth" %}
 * Firstly you will need to connect power to your LoPy. You will need to supply `3.5v`-`5.5v` to the `Vin` pin.
 
-{% hint style="danger" %}
-Do _not_ feed `3.3v` directly to the `3.3v` supply pin, this will damage the regulator.
-{% endhint %}
+Do _not_ feed 3.3v directly to the 3.3v supply pin, this will damage the regulator.
 
 * The connect the `RX` and `TX` of your USB UART to the `TX` and `RX` of the LoPy respectively.
 
-{% hint style="warning" %}
-Please ensure you have the signal level of the UART adapter set to `3.3v` before connecting it.
-{% endhint %}
+Please ensure you have the signal level of the UART adapter set to 3.3v before connecting it.
 
 * In order to put the LoPy into bootloader mode to update the device firmware you will need to connect `P2` to `GND`. We recommend you connect a button between the two to make this simpler.
 
