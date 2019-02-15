@@ -25,7 +25,7 @@
 * Insert the module on the Pysense/Pytrack/Pyscan with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible. ![](../../.gitbook/assets/pysense_lopy.png)![](../../.gitbook/assets/pytrack_lopy.png)
 
 
-{% content "forth" %}
+{% content "fourth" %}
 * Firstly you will need to connect power to your LoPy. You will need to supply `3.5v`-`5.5v` to the `Vin` pin.
 
 Do _not_ feed 3.3v directly to the 3.3v supply pin, this will damage the regulator.
