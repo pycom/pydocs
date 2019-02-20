@@ -35,8 +35,8 @@
             "content": "Kbyrn6in1PWDoUk5OR65BLF-Ff4wU9WcT3RcJb6-VYM"
         },
         "insert-logo": {
-            "url": "https://pycom.github.io/pydocs/pycomsquarelogo.png",
-            "style": "background: none; max-width: 100px;"
+            "url": "https://raw.githubusercontent.com/pycom/pydocs/gh-pages/.gitbook/assets/pycom_logo_lockup_navy_rgb.png",
+            "style": "background: none; max-width: 150px;"
         },
     "analytics": {
         "google": "UA-72107804-3"

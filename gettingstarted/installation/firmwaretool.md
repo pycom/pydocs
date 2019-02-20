@@ -36,9 +36,7 @@ If you are having any issues, make sure the **TX and RX jumpers** are present on
 
 
 {% content "second" %}
-{% hint style="info" %}
-When using a Pysense/Pytrack/Pyscan/Expansion Board 3.0 to update your module you are not required to make a connection between `G23` and `GND`, the Pysense/Pytrack/Pyscan/Expansion Board 3.0 will do this automatically.
-{% endhint %}
+When using a Pysense/Pytrack/Pyscan/Expansion Board 3.0 to update your module you are not required to make a connection between "G23" and "GND", the Pysense/Pytrack/Pyscan/Expansion Board 3.0 will do this automatically.
 
 1. Before connecting your module to a Pysense/Pytrack board, you should update the firmware on the Pysense/Pytrack. Instructions on how to do this can be found [here](../../pytrackpysense/installation/firmware.md).
 2. Disconnect your device from your computer
@@ -49,6 +47,7 @@ When using a Pysense/Pytrack/Pyscan/Expansion Board 3.0 to update your module yo
 ![](../../.gitbook/assets/firmware-update-2.png)
 
 6. Disconnect the USB cable from the board and reconnect it, your device is now ready to use
+
 {% endtabs %}
 
 After you’re done with upgrading, you can use the Pymakr Plugins to upload and run programs in your device.
