@@ -2,13 +2,13 @@
 
 The schematic of the Deep Sleep Shield is available as a PDF File.
 
-[Deep Sleep Schematic](../../../.gitbook/assets/deepsleep-schematic.pdf)
+<a href="../../../.gitbook/assets/deepsleep-schematic.pdf" target="_blank"> Deep Sleep Schematic </a>
 
 ## Pinout
 
 The pinout of the Deep Sleep Shield is available as a PDF File
 
-[Deep Sleep Pinout](../../../.gitbook/assets/deepsleep-pinout.pdf)
+<a href="../../../.gitbook/assets/deepsleep-pinout.pdf" target="_blank"> Deep Sleep Pinout </a>
 
 
 ![](../../../.gitbook/assets/deepsleep-pinout%20%281%29.png)
