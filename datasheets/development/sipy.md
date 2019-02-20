@@ -18,13 +18,13 @@
 
 The datasheet of the SiPy is available as a PDF File.
 
-[SiPy Datasheet](../../.gitbook/assets/sipy-specsheet.pdf)
+<a href="../../.gitbook/assets/specsheets/Pycom_002_Specsheets_SiPy_v2.pdf" target="_blank"> SiPy Datasheet </a>
 
 ## Pinout
 
 The pinout of the SiPy is available as a PDF File
 
-[SiPy Pinout](../../.gitbook/assets/sipy-pinout.pdf)
+<a href="../../.gitbook/assets/sipy-pinout.pdf" target="_blank"> SiPy Pinout </a>
 
 ![](../../.gitbook/assets/sipy-pinout.png)
 

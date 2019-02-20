@@ -6,13 +6,14 @@
 
 The datasheet of the Expansion Board is available as a PDF File.
 
-[Expansion Board 2 Datasheet](../../.gitbook/assets/expansion2-specsheet.pdf)
+<a href="../../.gitbook/assets/expansion2-specsheet.pdf" target="_blank">Expansion Board 2 Datasheet </a>
+
 
 ## Pinout
 
 The pinout of the Expansion Board is available as a PDF File
 
-[Expansion Board 2 Pinout](../../.gitbook/assets/expansion2-pinout.pdf)
+<a href="../../.gitbook/assets/expansion2-pinout.pdf" target="_blank"> Expansion Board 2 Pinout </a>
 
 ![](../../.gitbook/assets/expansion2-pinout-1.png)
 

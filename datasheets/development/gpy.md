@@ -19,17 +19,17 @@ Please Note: We have removed the labels from the pictures in the documentation d
 
 The datasheet of the GPy is available as a PDF File.
 
-[GPy Datasheet](../../.gitbook/assets/gpy-specsheet.pdf)
+<a href="../../.gitbook/assets/specsheets/Pycom_002_Specsheets_GPy_v2.pdf" target="_blank"> GPy Datasheet </a>
 
 The drawing of the LTE-M antenna is available as a PDF File.
 
-[LTE-M Antenna Drawing](../../.gitbook/assets/lte-m-antenna-drawing.pdf)
+<a href="../../.gitbook/assets/lte-m-antenna-drawing.pdf" target="_blank"> LTE-M Antenna Drawing </a>
 
 ## Pinout
 
 The pinout of the GPy is available as a PDF File
 
-[GPy Pinout](../../.gitbook/assets/gpy-pinout.pdf)
+<a href="../../.gitbook/assets/gpy-pinout.pdf" target="_blank"> GPy Pinout </a>
 
 ![](../../.gitbook/assets/gpy-pinout.png)
 

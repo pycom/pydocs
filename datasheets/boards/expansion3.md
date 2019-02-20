@@ -6,13 +6,13 @@
 
 The datasheet of the Expansion Board is available as a PDF File.
 
-[OEM Altium Project and Gerber Files](../../.gitbook/assets/expansion3-specsheet-1.pdf)
+<a href="../../.gitbook/assets/expansion3-specsheet-1.pdf" target="_blank"> OEM Altium Project and Gerber Files </a>
 
 ## Pinout
 
 The pinout of the Expansion Board is available as a PDF File
 
-[Expansion Board 3 Pinout](../../.gitbook/assets/expansion3-pinout.pdf)
+<a href="../../.gitbook/assets/expansion3-pinout.pdf" target="_blank"> Expansion Board 3 Pinout </a>
 
 ![](../../.gitbook/assets/expansion3-pinout-1.png)
 

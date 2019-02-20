@@ -16,13 +16,13 @@
 
 The datasheet of the LoPy4 is available as a PDF File.
 
-[LoPy4 Datasheet](../../.gitbook/assets/lopy4-specsheet-1.pdf)
+<a href="../../.gitbook/assets/specsheets/Pycom_002_Specsheets_LoPy4_v2.pdf" target="_blank"> LoPy4 Datasheet </a>
 
 ## Pinout
 
 The pinout of the LoPy4 is available as a PDF File
 
-[LoPy4 Pinout](../../.gitbook/assets/lopy4-pinout.pdf)
+<a href="../../.gitbook/assets/lopy4-pinout.pdf" target="_blank"> LoPy4 Pinout </a>
 
 ![](../../.gitbook/assets/lopy4-pinout.png)
 

@@ -6,13 +6,13 @@
 
 The datasheet of the Pytrack is available as a PDF File.
 
-[Pytrack Datasheet](../../.gitbook/assets/pytrack-specsheet-1.pdf)
+<a href="../../.gitbook/assets/pytrack-specsheet-1.pdf" target="_blank"> Pytrack Datasheet </a>
 
 ## Pinout
 
 The pinout of the Pytrack is available as a PDF File
 
-[Pytrack Pinout](../../.gitbook/assets/pytrack-pinout.pdf)
+<a href="../../.gitbook/assets/pytrack-pinout.pdf" target="_blank"> Pytrack Pinout </a>
 
 ![](../../.gitbook/assets/pytrack-pinout-1.png)
 

@@ -9,8 +9,8 @@
             "redirectsFile": "redirects.json"
         },
         "folding-menu": { 
-            "animationDuration": 500, 
-            "sticky": true 
+            "animationDuration": 0, 
+            "sticky": false 
         },
         "fontsettings": {
             "theme": "white",

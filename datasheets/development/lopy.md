@@ -16,12 +16,12 @@
 
 The datasheet of the LoPy is available as a PDF File.
 
-[LoPy Datasheet](../../.gitbook/assets/lopy-specsheet.pdf)
+<a href="../../.gitbook/assets/specsheets/Pycom_002_Specsheets_LoPy_v2.pdf" target="_blank"> LoPy Datasheet </a>
 ## Pinout
 
 The pinout of the LoPy is available as a PDF File
 
-[LoPy Pinout](../../.gitbook/assets/lopy-pinout.pdf)
+<a href="../../.gitbook/assets/lopy-pinout.pdf" target="_blank"> LoPy Pinout </a>
 
 ![](../../.gitbook/assets/lopy-pinout.png)
 

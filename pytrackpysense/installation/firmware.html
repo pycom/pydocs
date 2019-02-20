@@ -1,12 +1,12 @@
 
 <!DOCTYPE HTML>
-<html lang="">
+<html lang>
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <title>Updating Firmware &#xB7; GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="">
+        <meta name="description" content>
         <meta name="generator" content="GitBook 3.2.3">
         
         
@@ -83,7 +83,7 @@
 _atrk_opts = { atrk_acct:"WpWNq1SZw320l9", domain:"pycom.io",dynamic: true};
 (function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://certify-js.alexametrics.com/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
 </script>
-<noscript><img src="https://certify.alexametrics.com/atrk.gif?account=WpWNq1SZw320l9" style="display:none" height="1" width="1" alt=""></noscript>
+<noscript><img src="https://certify.alexametrics.com/atrk.gif?account=WpWNq1SZw320l9" style="display:none" height="1" width="1" alt></noscript>
 
     <div class="book-summary">
         
@@ -1119,6 +1119,19 @@ _atrk_opts = { atrk_acct:"WpWNq1SZw320l9", domain:"pycom.io",dynamic: true};
             
         </li>
     
+        <li class="chapter " data-level="5.3.8" data-path="../../tutorials/lora/lora-mesh.html">
+            
+                <a href="../../tutorials/lora/lora-mesh.html">
+            
+                    
+                    Lora Mesh
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1616,6 +1629,25 @@ _atrk_opts = { atrk_acct:"WpWNq1SZw320l9", domain:"pycom.io",dynamic: true};
                 </a>
             
 
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.2.2.4.1" data-path="../../firmwareapi/pycom/network/lora/pymesh.html">
+            
+                <a href="../../firmwareapi/pycom/network/lora/pymesh.html">
+            
+                    
+                    PyMesh
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -2736,7 +2768,7 @@ _atrk_opts = { atrk_acct:"WpWNq1SZw320l9", domain:"pycom.io",dynamic: true};
 <li><a href="https://software.pycom.io/findupgrade?key=expansion31.dfu&amp;type=all&amp;redirect=true" target="_blank">Expansion Board DFU v3.1</a></li>
 </ul>
 <p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><p>  Make sure to choose the correct firmware version for your expansion board. both 3.0 and 3.1 versions have version numbers in the silkscreen on the back of the board. See the image below for examples highlighted in Red
-  <img src="../../.gitbook/assets/expansion_board_version.png" alt=""></p>
+  <img src="../../.gitbook/assets/expansion_board_version.png" alt></p>
 </div></div></p>
 <p>While in the normal, application mode, the Pysense/Pytrack/Pyscan/Expansion Board v3 require a Serial USB CDC driver, in DFU, bootloader mode, the DFU driver is required. Below, the USB Product ID is depicted for each case.</p>
 <table>
@@ -2808,13 +2840,13 @@ _atrk_opts = { atrk_acct:"WpWNq1SZw320l9", domain:"pycom.io",dynamic: true};
 </ul>
 </li>
 </ol>
-<p><img src="../../.gitbook/assets/pytrack_dfu_mode_zadig.png" alt=""></p>
+<p><img src="../../.gitbook/assets/pytrack_dfu_mode_zadig.png" alt></p>
 <p>Open the command prompt and navigate to the directory where the DFU-util and the firmware was downloaded (must be in same directory). Repeat the procedure to get the board in DFU-mode and run the command below but replace <code>X.X.X</code> with the firmware version and replace Pysense with Pytrack if it is the Pytrack that is to be updated (e.g: <code>pytrack_0.0.8.dfu</code>):</p>
 <pre><code class="lang-bash">dfu-util-static.exe -D pysense_X.X.X.dfu
 </code></pre>
 <p>If the update was successful, a message,&quot;Done!&quot; should appear in the bottom of the command prompt.</p>
 <p><strong>Double-check Serial USB (CDC) driver is installed in Application mode:</strong> if, by mistake, the <code>libusbk</code> driver was installed while the USB ID is the Application mode (<code>0xF013</code> for Pytrack or <code>0xF012</code> for Pysense), then the <code>Serial USB (CDC)</code> driver has to be installed for application mode. This will allow Windows to allocate a COM port, which is required for REPL console.</p>
-<p><img src="../../.gitbook/assets/pytrack_app_mode_zadig.png" alt=""></p>
+<p><img src="../../.gitbook/assets/pytrack_app_mode_zadig.png" alt></p>
 <h2 id="using-dfu-util-with-pytrack-pysense-and-expansion-board-v3"><a name="using-dfu-util-with-pytrack-pysense-and-expansion-board-v3" class="plugin-anchor" href="#using-dfu-util-with-pytrack-pysense-and-expansion-board-v3"><i class="fa fa-link" aria-hidden="true"></i></a>Using DFU-util with Pytrack, Pysense and Expansion Board v3</h2>
 <p>To enter update mode follow these steps:</p>
 <ol>
@@ -2912,7 +2944,7 @@ Done!
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Updating Firmware","level":"4.2.1","depth":2,"next":{"title":"Installing Drivers - Windows 7","level":"4.2.2","depth":2,"path":"pytrackpysense/installation/drivers.md","ref":"pytrackpysense/installation/drivers.md","articles":[]},"previous":{"title":"Installing Software","level":"4.2","depth":1,"path":"pytrackpysense/installation/README.md","ref":"pytrackpysense/installation/README.md","articles":[{"title":"Updating Firmware","level":"4.2.1","depth":2,"path":"pytrackpysense/installation/firmware.md","ref":"pytrackpysense/installation/firmware.md","articles":[]},{"title":"Installing Drivers - Windows 7","level":"4.2.2","depth":2,"path":"pytrackpysense/installation/drivers.md","ref":"pytrackpysense/installation/drivers.md","articles":[]},{"title":"Installing Libraries","level":"4.2.3","depth":2,"path":"pytrackpysense/installation/libraries.md","ref":"pytrackpysense/installation/libraries.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["folding-menu","favicon-plus","insert-logo","hints","page-ref","-fontsettings","github","youtube","search","algolia","simpletabs","meta-single","analytics","anchors","grid","otherlink","header","bulk-redirect-with-extension"],"pluginsConfig":{"youtube":{},"github":{"url":"https://pycom.github.io/pydocs"},"grid":{},"analytics":{"google":"UA-72107804-3"},"search":{},"otherlink":{},"layout":{"headerPath":"alexa.html"},"folding-menu":{"animationDuration":500,"sticky":true},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000000,"ignoreSpecialCharacters":false},"header":{},"bulk-redirect-with-extension":{},"simpletabs":{},"meta-single":{"content":"Kbyrn6in1PWDoUk5OR65BLF-Ff4wU9WcT3RcJb6-VYM","name":"google-site-verification"},"algolia":{"freeAccount":"true","index":"pycom_docs","applicationID":"K37L43EW7N","publicKey":"427eb1c18422807561448260404bc4ee"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon-plus":{"appleTouchIconPrecomposed152":"","favicon":"","output":"_book"},"highlight":{},"favicon":"./favicon.ico","page-ref":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none; max-width: 100px;","url":"https://pycom.github.io/pydocs/pycomsquarelogo.png"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"assets/style/cms.css"}},"file":{"path":"pytrackpysense/installation/firmware.md","mtime":"2019-02-04T12:22:25.051Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-04T12:42:42.593Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Updating Firmware","level":"4.2.1","depth":2,"next":{"title":"Installing Drivers - Windows 7","level":"4.2.2","depth":2,"path":"pytrackpysense/installation/drivers.md","ref":"pytrackpysense/installation/drivers.md","articles":[]},"previous":{"title":"Installing Software","level":"4.2","depth":1,"path":"pytrackpysense/installation/README.md","ref":"pytrackpysense/installation/README.md","articles":[{"title":"Updating Firmware","level":"4.2.1","depth":2,"path":"pytrackpysense/installation/firmware.md","ref":"pytrackpysense/installation/firmware.md","articles":[]},{"title":"Installing Drivers - Windows 7","level":"4.2.2","depth":2,"path":"pytrackpysense/installation/drivers.md","ref":"pytrackpysense/installation/drivers.md","articles":[]},{"title":"Installing Libraries","level":"4.2.3","depth":2,"path":"pytrackpysense/installation/libraries.md","ref":"pytrackpysense/installation/libraries.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["folding-menu","favicon-plus","insert-logo","hints","page-ref","-fontsettings","github","youtube","search","algolia","simpletabs","meta-single","analytics","anchors","grid","otherlink","header","bulk-redirect-with-extension"],"pluginsConfig":{"youtube":{},"github":{"url":"https://pycom.github.io/pydocs"},"grid":{},"analytics":{"google":"UA-72107804-3"},"search":{},"otherlink":{},"layout":{"headerPath":"alexa.html"},"folding-menu":{"animationDuration":0,"sticky":false},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000000,"ignoreSpecialCharacters":false},"header":{},"bulk-redirect-with-extension":{},"simpletabs":{},"meta-single":{"content":"Kbyrn6in1PWDoUk5OR65BLF-Ff4wU9WcT3RcJb6-VYM","name":"google-site-verification"},"algolia":{"freeAccount":"true","index":"pycom_docs","applicationID":"K37L43EW7N","publicKey":"427eb1c18422807561448260404bc4ee"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon-plus":{"appleTouchIconPrecomposed152":"","favicon":"","output":"_book"},"highlight":{},"favicon":"./favicon.ico","page-ref":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none; max-width: 100px;","url":"https://pycom.github.io/pydocs/pycomsquarelogo.png"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"assets/style/cms.css"}},"file":{"path":"pytrackpysense/installation/firmware.md","mtime":"2019-02-20T11:52:30.077Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-20T14:30:36.450Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

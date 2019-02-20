@@ -27,7 +27,7 @@ If you require a reference board for the L04 or G01, this design is **not** suit
 
 The layout of the L01 baseboard reference is available as a PDF File
 
-[L01 OEM Layout]()../../.gitbook/assets/l01-oem-layout.pdf)
+<a href="../../.gitbook/assets/l01-oem-layout.pdf" target="_blank"> L01 OEM Layout </a>
 
 ![](../../.gitbook/assets/l01-oem-layout-1.png)
 
@@ -35,11 +35,11 @@ The layout of the L01 baseboard reference is available as a PDF File
 
 The schematic of the L01 baseboard reference is available as a PDF File.
 
-[L01 OEM Schematic](../../.gitbook/assets/l01-oem-schematic.pdf)
+<a href="../../.gitbook/assets/l01-oem-schematic.pdf" target="_blank"> L01 OEM Schematic </a>
 
 ## Altium Project and Gerber Files
 
 The Altium Project and Gerber files are also available as a ZIP File.
 
-[L01 OEM Altium Project and Gerber Files](../../.gitbook/assets/l01-oem-baseboard-ref.zip)
+<a href="../../.gitbook/assets/l01-oem-baseboard-ref.zip" target="_blank"> L01 OEM Altium Project and Gerber Files </a>
 

@@ -6,7 +6,7 @@
 
 The datasheet of the Pyscan is available as a PDF File.
 
-[Pyscan Datasheet](../../.gitbook/assets/pyscan-specsheet.pdf)
+<a href="../../.gitbook/assets/pyscan-specsheet.pdf" target="_blank"> Pyscan Datasheet </a>
 
 ## Pyscan Libraries
 
@@ -35,7 +35,7 @@ For other Operating Systems there's no driver required.
 
 The pinout of the Pyscan is available as a PDF File
 
-[Pyscan Pinout](../../.gitbook/assets/pyscan-pinout.pdf)
+<a href="../../.gitbook/assets/pyscan-pinout.pdf" target="_blank"> Pyscan Pinout </a>
 
 ![](../../.gitbook/assets/pyscan-pinout-1.png)
 

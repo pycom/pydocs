@@ -27,7 +27,7 @@ If you require a reference board for the G01, only this design is suitable. The 
 
 The layout of the OEM baseboard reference is available as a PDF File
 
-[OEM Layout](../../.gitbook/assets/oem-universal-layout.pdf)
+<a href="../../.gitbook/assets/oem-universal-layout.pdf" target="_blank"> OEM Layout </a>
 
 ![](../../.gitbook/assets/oem-universal-layout-1.png)
 
@@ -35,7 +35,7 @@ The layout of the OEM baseboard reference is available as a PDF File
 
 The schematic of the OEM baseboard reference is available as a PDF File.
 
-[OEM Schematic](../../.gitbook/assets/oem-universal-schematic.pdf)
+<a href="../../.gitbook/assets/oem-universal-schematic.pdf" target="_blank"> OEM Schematic </a>
 
 ## Altium Project and Gerber Files
 

@@ -1,12 +1,12 @@
 
 <!DOCTYPE HTML>
-<html lang="">
+<html lang>
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <title>LoPy &#xB7; GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="">
+        <meta name="description" content>
         <meta name="generator" content="GitBook 3.2.3">
         
         
@@ -83,7 +83,7 @@
 _atrk_opts = { atrk_acct:"WpWNq1SZw320l9", domain:"pycom.io",dynamic: true};
 (function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://certify-js.alexametrics.com/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
 </script>
-<noscript><img src="https://certify.alexametrics.com/atrk.gif?account=WpWNq1SZw320l9" style="display:none" height="1" width="1" alt=""></noscript>
+<noscript><img src="https://certify.alexametrics.com/atrk.gif?account=WpWNq1SZw320l9" style="display:none" height="1" width="1" alt></noscript>
 
     <div class="book-summary">
         
@@ -1119,6 +1119,19 @@ _atrk_opts = { atrk_acct:"WpWNq1SZw320l9", domain:"pycom.io",dynamic: true};
             
         </li>
     
+        <li class="chapter " data-level="5.3.8" data-path="../../tutorials/lora/lora-mesh.html">
+            
+                <a href="../../tutorials/lora/lora-mesh.html">
+            
+                    
+                    Lora Mesh
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1616,6 +1629,25 @@ _atrk_opts = { atrk_acct:"WpWNq1SZw320l9", domain:"pycom.io",dynamic: true};
                 </a>
             
 
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.2.2.4.1" data-path="../../firmwareapi/pycom/network/lora/pymesh.html">
+            
+                <a href="../../firmwareapi/pycom/network/lora/pymesh.html">
+            
+                    
+                    PyMesh
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -2728,7 +2760,7 @@ _atrk_opts = { atrk_acct:"WpWNq1SZw320l9", domain:"pycom.io",dynamic: true};
                                 
                                 <h1 id="lopy"><a name="lopy" class="plugin-anchor" href="#lopy"><i class="fa fa-link" aria-hidden="true"></i></a>LoPy</h1>
 <h2 id="basic-connection"><a name="basic-connection" class="plugin-anchor" href="#basic-connection"><i class="fa fa-link" aria-hidden="true"></i></a>Basic connection</h2>
-<p><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#first" aria-controls="first" role="tab" data-toggle="tab">Exp Board 2.0</a></li><li role="presentation" class=""><a href="#second" aria-controls="second" role="tab" data-toggle="tab">Exp Board 3.0</a></li><li role="presentation" class=""><a href="#third" aria-controls="third" role="tab" data-toggle="tab">Pytrack/Pysense/Pyscan</a></li><li role="presentation" class=""><a href="#fourth" aria-controls="fourth" role="tab" data-toggle="tab">USB UART Adapter</a></li><li role="presentation" class=""><a href="#fifth" aria-controls="fifth" role="tab" data-toggle="tab">WiFi</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="first"><ul><li>Look for the reset button on the module (located at a corner of the board, next to the LED).
+<p><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#first" aria-controls="first" role="tab" data-toggle="tab">Exp Board 2.0</a></li><li role="presentation" class><a href="#second" aria-controls="second" role="tab" data-toggle="tab">Exp Board 3.0</a></li><li role="presentation" class><a href="#third" aria-controls="third" role="tab" data-toggle="tab">Pytrack/Pysense/Pyscan</a></li><li role="presentation" class><a href="#fourth" aria-controls="fourth" role="tab" data-toggle="tab">USB UART Adapter</a></li><li role="presentation" class><a href="#fifth" aria-controls="fifth" role="tab" data-toggle="tab">WiFi</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="first"><ul><li>Look for the reset button on the module (located at a corner of the board, next to the LED).
 </li>
 <li>Locate the USB connector on the expansion board.
 </li>
@@ -2776,15 +2808,15 @@ _atrk_opts = { atrk_acct:"WpWNq1SZw320l9", domain:"pycom.io",dynamic: true};
 <ul>
 <li>Firstly you will need to connect the U.FL to SMA pig tail to the LoPy using the U.FL connector on the same side of the LoPy as the LED.</li>
 </ul>
-<p><img src="../../.gitbook/assets/lora_pigtail_lopy.png" alt=""></p>
+<p><img src="../../.gitbook/assets/lora_pigtail_lopy.png" alt></p>
 <ul>
 <li>If you are using a pycase, you will next need to put the SMA connector through the antenna hole, ensuring you align the flat edge correctly, and screw down the connector using the provided nut.</li>
 <li>Finally you will need to screw on the antenna to the SMA connector.</li>
 </ul>
-<p><img src="../../.gitbook/assets/lora_pigtail_ant_lopy.png" alt=""></p>
+<p><img src="../../.gitbook/assets/lora_pigtail_ant_lopy.png" alt></p>
 <h3 id="wifibluetooth-optional"><a name="wifibluetooth-optional" class="plugin-anchor" href="#wifibluetooth-optional"><i class="fa fa-link" aria-hidden="true"></i></a>WiFi/Bluetooth (optional)</h3>
 <p>All Pycom modules, including the LoPy, come with a on-board WiFi antenna as well as a U.FL connector for an external antenna. The external antenna is optional and only required if you need better performance or are mounting the LoPy in such a way that the WiFi signal is blocked. Switching between the antennas is done via software, instructions for this can be found <a href="../../firmwareapi/pycom/network/wlan.html">here.</a></p>
-<p><img src="../../.gitbook/assets/wifi_pigtail_ant_lopy.png" alt=""></p>
+<p><img src="../../.gitbook/assets/wifi_pigtail_ant_lopy.png" alt></p>
 <h2 id="deep-sleep-current-issue"><a name="deep-sleep-current-issue" class="plugin-anchor" href="#deep-sleep-current-issue"><i class="fa fa-link" aria-hidden="true"></i></a>Deep Sleep current issue</h2>
 <p>The LoPy, SiPy, and WiPy 2.0 experience an issue where the modules maintain a high current consumption in deep sleep mode. This issue has been resolved in all newer products. The cause for this issue is the DC to DC switch mode converter remains in a high performance mode even when the device is in deep sleep. The flash memory chip also does not power down. A more detailed explanation can be found <a href="https://forum.pycom.io/topic/1022/root-causes-of-high-deep-sleep-current" target="_blank">here.</a></p>
 <script src="_gitbook_plugin_analytics.js"></script>
@@ -2830,7 +2862,7 @@ _atrk_opts = { atrk_acct:"WpWNq1SZw320l9", domain:"pycom.io",dynamic: true};
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"LoPy","level":"2.2.1","depth":2,"next":{"title":"LoPy 4","level":"2.2.2","depth":2,"path":"gettingstarted/connection/lopy4.md","ref":"gettingstarted/connection/lopy4.md","articles":[]},"previous":{"title":"Hardware Setup","level":"2.2","depth":1,"path":"gettingstarted/connection/README.md","ref":"gettingstarted/connection/README.md","articles":[{"title":"LoPy","level":"2.2.1","depth":2,"path":"gettingstarted/connection/lopy.md","ref":"gettingstarted/connection/lopy.md","articles":[]},{"title":"LoPy 4","level":"2.2.2","depth":2,"path":"gettingstarted/connection/lopy4.md","ref":"gettingstarted/connection/lopy4.md","articles":[]},{"title":"SiPy","level":"2.2.3","depth":2,"path":"gettingstarted/connection/sipy.md","ref":"gettingstarted/connection/sipy.md","articles":[]},{"title":"GPy","level":"2.2.4","depth":2,"path":"gettingstarted/connection/gpy.md","ref":"gettingstarted/connection/gpy.md","articles":[]},{"title":"FiPy","level":"2.2.5","depth":2,"path":"gettingstarted/connection/fipy.md","ref":"gettingstarted/connection/fipy.md","articles":[]},{"title":"WiPy","level":"2.2.6","depth":2,"path":"gettingstarted/connection/wipy.md","ref":"gettingstarted/connection/wipy.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["folding-menu","favicon-plus","insert-logo","hints","page-ref","-fontsettings","github","youtube","search","algolia","simpletabs","meta-single","analytics","anchors","grid","otherlink","header","bulk-redirect-with-extension"],"pluginsConfig":{"youtube":{},"github":{"url":"https://pycom.github.io/pydocs"},"grid":{},"analytics":{"google":"UA-72107804-3"},"search":{},"otherlink":{},"layout":{"headerPath":"alexa.html"},"folding-menu":{"animationDuration":500,"sticky":true},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000000,"ignoreSpecialCharacters":false},"header":{},"bulk-redirect-with-extension":{},"simpletabs":{},"meta-single":{"content":"Kbyrn6in1PWDoUk5OR65BLF-Ff4wU9WcT3RcJb6-VYM","name":"google-site-verification"},"algolia":{"freeAccount":"true","index":"pycom_docs","applicationID":"K37L43EW7N","publicKey":"427eb1c18422807561448260404bc4ee"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon-plus":{"appleTouchIconPrecomposed152":"","favicon":"","output":"_book"},"highlight":{},"favicon":"./favicon.ico","page-ref":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none; max-width: 100px;","url":"https://pycom.github.io/pydocs/pycomsquarelogo.png"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"assets/style/cms.css"}},"file":{"path":"gettingstarted/connection/lopy.md","mtime":"2019-02-04T12:22:24.571Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-04T12:42:42.593Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"LoPy","level":"2.2.1","depth":2,"next":{"title":"LoPy 4","level":"2.2.2","depth":2,"path":"gettingstarted/connection/lopy4.md","ref":"gettingstarted/connection/lopy4.md","articles":[]},"previous":{"title":"Hardware Setup","level":"2.2","depth":1,"path":"gettingstarted/connection/README.md","ref":"gettingstarted/connection/README.md","articles":[{"title":"LoPy","level":"2.2.1","depth":2,"path":"gettingstarted/connection/lopy.md","ref":"gettingstarted/connection/lopy.md","articles":[]},{"title":"LoPy 4","level":"2.2.2","depth":2,"path":"gettingstarted/connection/lopy4.md","ref":"gettingstarted/connection/lopy4.md","articles":[]},{"title":"SiPy","level":"2.2.3","depth":2,"path":"gettingstarted/connection/sipy.md","ref":"gettingstarted/connection/sipy.md","articles":[]},{"title":"GPy","level":"2.2.4","depth":2,"path":"gettingstarted/connection/gpy.md","ref":"gettingstarted/connection/gpy.md","articles":[]},{"title":"FiPy","level":"2.2.5","depth":2,"path":"gettingstarted/connection/fipy.md","ref":"gettingstarted/connection/fipy.md","articles":[]},{"title":"WiPy","level":"2.2.6","depth":2,"path":"gettingstarted/connection/wipy.md","ref":"gettingstarted/connection/wipy.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["folding-menu","favicon-plus","insert-logo","hints","page-ref","-fontsettings","github","youtube","search","algolia","simpletabs","meta-single","analytics","anchors","grid","otherlink","header","bulk-redirect-with-extension"],"pluginsConfig":{"youtube":{},"github":{"url":"https://pycom.github.io/pydocs"},"grid":{},"analytics":{"google":"UA-72107804-3"},"search":{},"otherlink":{},"layout":{"headerPath":"alexa.html"},"folding-menu":{"animationDuration":0,"sticky":false},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000000,"ignoreSpecialCharacters":false},"header":{},"bulk-redirect-with-extension":{},"simpletabs":{},"meta-single":{"content":"Kbyrn6in1PWDoUk5OR65BLF-Ff4wU9WcT3RcJb6-VYM","name":"google-site-verification"},"algolia":{"freeAccount":"true","index":"pycom_docs","applicationID":"K37L43EW7N","publicKey":"427eb1c18422807561448260404bc4ee"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon-plus":{"appleTouchIconPrecomposed152":"","favicon":"","output":"_book"},"highlight":{},"favicon":"./favicon.ico","page-ref":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none; max-width: 100px;","url":"https://pycom.github.io/pydocs/pycomsquarelogo.png"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"assets/style/cms.css"}},"file":{"path":"gettingstarted/connection/lopy.md","mtime":"2019-02-20T11:52:29.922Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-20T14:30:36.450Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

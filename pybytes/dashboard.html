@@ -1,12 +1,12 @@
 
 <!DOCTYPE HTML>
-<html lang="">
+<html lang>
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <title>Visualise data from your device &#xB7; GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="">
+        <meta name="description" content>
         <meta name="generator" content="GitBook 3.2.3">
         
         
@@ -83,7 +83,7 @@
 _atrk_opts = { atrk_acct:"WpWNq1SZw320l9", domain:"pycom.io",dynamic: true};
 (function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://certify-js.alexametrics.com/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
 </script>
-<noscript><img src="https://certify.alexametrics.com/atrk.gif?account=WpWNq1SZw320l9" style="display:none" height="1" width="1" alt=""></noscript>
+<noscript><img src="https://certify.alexametrics.com/atrk.gif?account=WpWNq1SZw320l9" style="display:none" height="1" width="1" alt></noscript>
 
     <div class="book-summary">
         
@@ -1119,6 +1119,19 @@ _atrk_opts = { atrk_acct:"WpWNq1SZw320l9", domain:"pycom.io",dynamic: true};
             
         </li>
     
+        <li class="chapter " data-level="5.3.8" data-path="../tutorials/lora/lora-mesh.html">
+            
+                <a href="../tutorials/lora/lora-mesh.html">
+            
+                    
+                    Lora Mesh
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1616,6 +1629,25 @@ _atrk_opts = { atrk_acct:"WpWNq1SZw320l9", domain:"pycom.io",dynamic: true};
                 </a>
             
 
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.2.2.4.1" data-path="../firmwareapi/pycom/network/lora/pymesh.html">
+            
+                <a href="../firmwareapi/pycom/network/lora/pymesh.html">
+            
+                    
+                    PyMesh
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -2776,37 +2808,37 @@ _thread.start_new_thread(send_env_data, ())
 </div></div></p>
 <p>Your example project in Atom (with Pymakr) should look like this.
 Press <em>Upload</em> button to upload the code into your device.</p>
-<p><img src="../.gitbook/assets/pybytes/dashboard/pymakr-with-example-code.png" alt=""></p>
+<p><img src="../.gitbook/assets/pybytes/dashboard/pymakr-with-example-code.png" alt></p>
 <p>By default, Pymakr will upload all files like <code>*.py</code> from your project folder (<code>my-first-wipy</code> in this case).
 File <code>main.py</code> will be uploaded to <code>/flash</code> folder on your device.</p>
 <p>After the upload is done, the device will reboot and start sending data to Pybytes.
 In the Pymakr terminal, you should see messages send to Pybytes.</p>
-<p><img src="../.gitbook/assets/pybytes/dashboard/device-sending-messsages.png" alt=""></p>
+<p><img src="../.gitbook/assets/pybytes/dashboard/device-sending-messsages.png" alt></p>
 <p>Every line stands for one message sent every 5 seconds. Line <code>1 [-0.7]</code> means signal <code>1</code> sent value <code>-0.7</code>.</p>
 <h2 id="step-2-add-a-signal-from-your-device"><a name="step-2-add-a-signal-from-your-device" class="plugin-anchor" href="#step-2-add-a-signal-from-your-device"><i class="fa fa-link" aria-hidden="true"></i></a>Step 2: Add a signal from your device</h2>
 <p>Go to Pybytes.</p>
 <ol>
 <li>On <em>Devices</em> page select a device;</li>
 </ol>
-<p><img src="../.gitbook/assets/01%20%281%29.gif" alt=""></p>
+<p><img src="../.gitbook/assets/01%20%281%29.gif" alt></p>
 <ol>
 <li>On your device&apos;s page click on the <em>Data</em> tab.</li>
 </ol>
-<p><img src="../.gitbook/assets/02-1.png" alt=""></p>
+<p><img src="../.gitbook/assets/02-1.png" alt></p>
 <ol>
 <li>Click on the row in the <em>Undefined signals</em> table (recommended). Alternatively, you can click on <em>Define new signal</em> button.
 <div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><p>If you don&apos;t see your undefined signal in <em>Undefined signals</em> table, please reload your browser.</p>
 </div></div></li>
 </ol>
-<p><img src="../.gitbook/assets/pybytes/dashboard/undefined-signals-table.png" alt=""></p>
+<p><img src="../.gitbook/assets/pybytes/dashboard/undefined-signals-table.png" alt></p>
 <ol>
 <li>Define new signal by entering a signal name, and optionally a unit (If you clicked on &quot;undefined signal row&quot; your signal number <code>1</code> will be already pre-filled).</li>
 </ol>
-<p><img src="../.gitbook/assets/pybytes/dashboard/define-new-signal.png" alt=""></p>
+<p><img src="../.gitbook/assets/pybytes/dashboard/define-new-signal.png" alt></p>
 <ol>
 <li>Your signal was added!</li>
 </ol>
-<p><img src="../.gitbook/assets/pybytes/dashboard/signal-was-added.png" alt=""></p>
+<p><img src="../.gitbook/assets/pybytes/dashboard/signal-was-added.png" alt></p>
 <p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><p>The name and unit are labels used to identify your signal inside Pybytes (In this example we defined <code>Sinwave</code> as the name of the signal and <code>Rad</code> as the unit).</p>
 <p>The signal number has to match the signal number that you defined on <code>pybytes.send_signal</code> function call, inside your <code>main.py</code> code (In this example we defined <code>signalNumber = 1</code>);</p>
 </div></div></p>
@@ -2814,44 +2846,44 @@ In the Pymakr terminal, you should see messages send to Pybytes.</p>
 <ol>
 <li>Click on the <em>&quot;signal card&quot;</em>.</li>
 </ol>
-<p><img src="../.gitbook/assets/01.png" alt=""></p>
+<p><img src="../.gitbook/assets/01.png" alt></p>
 <ol>
 <li>Click on the <em>Create a new display</em> button.</li>
 </ol>
-<p><img src="../.gitbook/assets/02-1%20%281%29.png" alt=""></p>
+<p><img src="../.gitbook/assets/02-1%20%281%29.png" alt></p>
 <ol>
 <li>Select the type of visualisation (e.g. <em>Bar chart</em> or <em>Line chart</em>).</li>
 </ol>
-<p><img src="../.gitbook/assets/03.gif" alt=""></p>
+<p><img src="../.gitbook/assets/03.gif" alt></p>
 <ol>
 <li>You can adjust the parameters of your widget at <code>Settings</code>. After, click on the button <code>Create</code>.</li>
 </ol>
-<p><img src="../.gitbook/assets/04-1.png" alt=""></p>
+<p><img src="../.gitbook/assets/04-1.png" alt></p>
 <ol>
 <li>Your widget was created. Now, add your widget to your device&apos;s dashboard. Click on the button <code>Edit</code> on your widget.</li>
 </ol>
-<p><img src="../.gitbook/assets/05-1.png" alt=""></p>
+<p><img src="../.gitbook/assets/05-1.png" alt></p>
 <ol>
 <li>Mark the checkbox <code>Display on Dashboard</code> at <code>Settings</code>. Finally, click on the button <code>Save</code>.</li>
 </ol>
-<p><img src="../.gitbook/assets/06.gif" alt=""></p>
+<p><img src="../.gitbook/assets/06.gif" alt></p>
 <ol>
 <li>Click on the tab <code>Dashboard</code>. Your widget was successfully added there!</li>
 </ol>
-<p><img src="../.gitbook/assets/07.png" alt=""></p>
+<p><img src="../.gitbook/assets/07.png" alt></p>
 <h2 id="step-4-organise-your-dashboard"><a name="step-4-organise-your-dashboard" class="plugin-anchor" href="#step-4-organise-your-dashboard"><i class="fa fa-link" aria-hidden="true"></i></a>Step 4: Organise your dashboard</h2>
 <ol>
 <li>Click on the button <code>Organise</code>. Now the dashboard&apos;s grid will enter the edit mode and allow you to resize and reposition its widgets.</li>
 </ol>
-<p><img src="../.gitbook/assets/edit-mode%20%281%29.gif" alt=""></p>
+<p><img src="../.gitbook/assets/edit-mode%20%281%29.gif" alt></p>
 <ol>
 <li>Resize a widget by clicking on the triangle icon at the bottom right corner of the widget and drag the cursor over the grid. After, click on the button <code>Save</code> to save this action.</li>
 </ol>
-<p><img src="../.gitbook/assets/02-1.gif" alt=""></p>
+<p><img src="../.gitbook/assets/02-1.gif" alt></p>
 <ol>
 <li>Change the widget&apos;s position by drag-and-dropping it over the grid. After, click on the button <code>Save</code> to save this action.</li>
 </ol>
-<p><img src="../.gitbook/assets/03-1.gif" alt=""></p>
+<p><img src="../.gitbook/assets/03-1.gif" alt></p>
 <h2 id="done"><a name="done" class="plugin-anchor" href="#done"><i class="fa fa-link" aria-hidden="true"></i></a>Done!</h2>
 <p>Now you&apos;ve learned how to set up your device&apos;s dashboard to display data. Also, you can add more widgets to other signals of your device.</p>
 <script src="_gitbook_plugin_analytics.js"></script>
@@ -2897,7 +2929,7 @@ In the Pymakr terminal, you should see messages send to Pybytes.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Visualise data from your device","level":"8.4","depth":1,"next":{"title":"Integrations","level":"8.5","depth":1,"path":"pybytes/integrations/README.md","ref":"pybytes/integrations/README.md","articles":[{"title":"Amazon IoT","level":"8.5.1","depth":2,"path":"pybytes/integrations/amazon-iot.md","ref":"pybytes/integrations/amazon-iot.md","articles":[]},{"title":"Webhooks","level":"8.5.2","depth":2,"path":"pybytes/integrations/webhooks.md","ref":"pybytes/integrations/webhooks.md","articles":[]},{"title":"Azure","level":"8.5.3","depth":2,"path":"pybytes/integrations/azure.md","ref":"pybytes/integrations/azure.md","articles":[]}]},"previous":{"title":"Custom contract","level":"8.3.3.2","depth":3,"path":"pybytes/connect/sigfox/custom.md","ref":"pybytes/connect/sigfox/custom.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["folding-menu","favicon-plus","insert-logo","hints","page-ref","-fontsettings","github","youtube","search","algolia","simpletabs","meta-single","analytics","anchors","grid","otherlink","header","bulk-redirect-with-extension"],"pluginsConfig":{"youtube":{},"github":{"url":"https://pycom.github.io/pydocs"},"grid":{},"analytics":{"google":"UA-72107804-3"},"search":{},"otherlink":{},"layout":{"headerPath":"alexa.html"},"folding-menu":{"animationDuration":500,"sticky":true},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000000,"ignoreSpecialCharacters":false},"header":{},"bulk-redirect-with-extension":{},"simpletabs":{},"meta-single":{"content":"Kbyrn6in1PWDoUk5OR65BLF-Ff4wU9WcT3RcJb6-VYM","name":"google-site-verification"},"algolia":{"freeAccount":"true","index":"pycom_docs","applicationID":"K37L43EW7N","publicKey":"427eb1c18422807561448260404bc4ee"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon-plus":{"appleTouchIconPrecomposed152":"","favicon":"","output":"_book"},"highlight":{},"favicon":"./favicon.ico","page-ref":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none; max-width: 100px;","url":"https://pycom.github.io/pydocs/pycomsquarelogo.png"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"assets/style/cms.css"}},"file":{"path":"pybytes/dashboard.md","mtime":"2019-02-04T12:22:24.966Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-04T12:42:42.593Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Visualise data from your device","level":"8.4","depth":1,"next":{"title":"Integrations","level":"8.5","depth":1,"path":"pybytes/integrations/README.md","ref":"pybytes/integrations/README.md","articles":[{"title":"Amazon IoT","level":"8.5.1","depth":2,"path":"pybytes/integrations/amazon-iot.md","ref":"pybytes/integrations/amazon-iot.md","articles":[]},{"title":"Webhooks","level":"8.5.2","depth":2,"path":"pybytes/integrations/webhooks.md","ref":"pybytes/integrations/webhooks.md","articles":[]},{"title":"Azure","level":"8.5.3","depth":2,"path":"pybytes/integrations/azure.md","ref":"pybytes/integrations/azure.md","articles":[]}]},"previous":{"title":"Custom contract","level":"8.3.3.2","depth":3,"path":"pybytes/connect/sigfox/custom.md","ref":"pybytes/connect/sigfox/custom.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["folding-menu","favicon-plus","insert-logo","hints","page-ref","-fontsettings","github","youtube","search","algolia","simpletabs","meta-single","analytics","anchors","grid","otherlink","header","bulk-redirect-with-extension"],"pluginsConfig":{"youtube":{},"github":{"url":"https://pycom.github.io/pydocs"},"grid":{},"analytics":{"google":"UA-72107804-3"},"search":{},"otherlink":{},"layout":{"headerPath":"alexa.html"},"folding-menu":{"animationDuration":0,"sticky":false},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000000,"ignoreSpecialCharacters":false},"header":{},"bulk-redirect-with-extension":{},"simpletabs":{},"meta-single":{"content":"Kbyrn6in1PWDoUk5OR65BLF-Ff4wU9WcT3RcJb6-VYM","name":"google-site-verification"},"algolia":{"freeAccount":"true","index":"pycom_docs","applicationID":"K37L43EW7N","publicKey":"427eb1c18422807561448260404bc4ee"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon-plus":{"appleTouchIconPrecomposed152":"","favicon":"","output":"_book"},"highlight":{},"favicon":"./favicon.ico","page-ref":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none; max-width: 100px;","url":"https://pycom.github.io/pydocs/pycomsquarelogo.png"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"assets/style/cms.css"}},"file":{"path":"pybytes/dashboard.md","mtime":"2019-02-20T11:52:30.036Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-20T14:30:36.450Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

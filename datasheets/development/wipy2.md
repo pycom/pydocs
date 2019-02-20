@@ -17,13 +17,13 @@
 
 The datasheet of the WiPy2 is available as a PDF File.
 
-[WiPy 2 Datasheet](../../.gitbook/assets/wipy2-specsheet.pdf)
+<a href="../../.gitbook/assets/specsheets/Pycom_002_Specsheets_WiPy2.0_v2.pdf" target="_blank"> WiPy 2 Datasheet </a>
 
 ## Pinout
 
 The pinout of the WiPy2 is available as a PDF File.
 
-[WiPy 2 Pinout](../../.gitbook/assets/wipy2-pinout.pdf)
+<a href="../../.gitbook/assets/wipy2-pinout.pdf" target="_blank"> WiPy 2 Pinout </a>
 
 ![](../../.gitbook/assets/wipy2-pinout.png)
 

@@ -6,13 +6,13 @@
 
 The datasheet of the Pysense is available as a PDF File.
 
-[Pysense Datasheet](../../.gitbook/assets/pysense-specsheet.pdf)
+<a href="../../.gitbook/assets/pysense-specsheet.pdf" target="_blank"> Pysense Datasheet </a>
 
 ## Pinout
 
 The pinout of the Pysense is available as a PDF File
 
-[Pysense Pinout](../../.gitbook/assets/pysense-pinout.pdf)
+<a href="../../.gitbook/assets/pysense-pinout.pdf" target="_blank"> Pysense Pinout </a>
 
 ![](../../.gitbook/assets/pysense-pinout-1.png)
 

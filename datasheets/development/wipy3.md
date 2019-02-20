@@ -15,13 +15,13 @@
 
 The datasheet of the WiPy3 is available as a PDF File.
 
-[WiPy3 Datasheet](../../.gitbook/assets/wipy3-specsheet.pdf)
+<a href="../../.gitbook/assets/specsheets/Pycom_002_Specsheets_WiPy3.0_v2.pdf" target="_blank"> WiPy3 Datasheet </a>
 
 ## Pinout
 
 The pinout of the WiPy3 is available as a PDF File.
 
-[WiPy3 Pinout](../../.gitbook/assets/wipy3-pinout.pdf)
+<a href="../../.gitbook/assets/wipy3-pinout.pdf" target="_blank"> WiPy3 Pinout </a>
 
 ![](../../.gitbook/assets/wipy3-pinout.png)
 

@@ -118,6 +118,7 @@ redirects:
   chapter/firmwareapi/pycom/network/bluetooth/gattsservice: ./firmwareapi/pycom/network/bluetooth/gattsservice.md
   firmwareapi/pycom/network/bluetooth/gattscharacteristic: chapter/./firmwareapi/pycom/network/bluetooth/gattscharacteristic.md
   chapter/firmwareapi/pycom/network/lora: ./firmwareapi/pycom/network/lora.md
+  chapter/firmwareapi/pycom/network/lora/pymesh: ./firmwareapi/pycom/network/pymesh.md
   chapter/firmwareapi/pycom/network/sigfox: ./firmwareapi/pycom/network/sigfox.md
   chapter/firmwareapi/pycom/network/lte: ./firmwareapi/pycom/network/lte.md
   chapter/firmwareapi/pycom/aes: ./firmwareapi/pycom/aes.md
