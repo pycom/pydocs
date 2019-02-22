@@ -20,5 +20,9 @@ The pinout of the Pysense is available as a PDF File
 
 The board features a single cell Li-Ion/Li-Po charger. When the board is being powered via the micro USB connector, it will charge the battery \(if connected\).
 
+## Mechanical Dimensions
+
+![](../../.gitbook/assets/Pysense_v1.1_MechanicalDimensions_a.png)
+
 
 
