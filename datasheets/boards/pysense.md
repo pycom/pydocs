@@ -22,7 +22,7 @@ The board features a single cell Li-Ion/Li-Po charger. When the board is being p
 
 ## Mechanical Dimensions
 
-![](../../.gitbook/assets/Pysense_v1.1_MechanicalDimensions_a.png)
+![](../../.gitbook/assets/Pysense_v1.1_MechanicalDimensions_b.png)
 
 
 
