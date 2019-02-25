@@ -46,5 +46,5 @@ The board features a single cell Li-Ion/Li-Po charger. When the board is being p
 
 
 
-## Mechanical Dimensions
+## Mechanical Dimensionsde
 ![](../../.gitbook/assets/pyscan_V0.7_20180416_MecahnicalDimensions.png)
