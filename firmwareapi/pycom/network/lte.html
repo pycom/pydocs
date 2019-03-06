@@ -2793,25 +2793,39 @@ lte = LTE()
 <h2 id="methods"><a name="methods" class="plugin-anchor" href="#methods"><i class="fa fa-link" aria-hidden="true"></i></a>Methods</h2>
 <h4 id="lteinit-carriernone"><a name="lteinit-carriernone" class="plugin-anchor" href="#lteinit-carriernone"><i class="fa fa-link" aria-hidden="true"></i></a>lte.init(*, carrier=None)</h4>
 <p>This method is used to set up the LTE subsystem. After a <code>deinit()</code> this method can take several seconds to return waiting for the LTE modem to start-up. Optionally specify a carrier name. The available options are: <code>verizon, at&amp;t, standard</code>. <code>standard</code> is generic for any carrier, and it&apos;s also the option used when no arguments are given.</p>
-<h4 id="ltedeinit-deattachfalse"><a name="ltedeinit-deattachfalse" class="plugin-anchor" href="#ltedeinit-deattachfalse"><i class="fa fa-link" aria-hidden="true"></i></a>lte.deinit(*, deattach=False)</h4>
+<h4 id="ltedeinitdetachtrue-reset--false"><a name="ltedeinitdetachtrue-reset--false" class="plugin-anchor" href="#ltedeinitdetachtrue-reset--false"><i class="fa fa-link" aria-hidden="true"></i></a>lte.deinit(detach=True, reset = False)</h4>
 <p>Disables LTE modem completely. This reduces the power consumption to the minimum. Call this before entering deepsleep.</p>
-<p>Has one optional parameter</p>
-<ol>
-<li><code>lte.deinit(dettach=False)</code>  allows the modem to go into deep sleep (PSM, eDRX) without dettaching from the network</li>
-</ol>
-<h4 id="lteattachapnnone-bandnone"><a name="lteattachapnnone-bandnone" class="plugin-anchor" href="#lteattachapnnone-bandnone"><i class="fa fa-link" aria-hidden="true"></i></a>lte.attach(*,apn=None, band=None)</h4>
-<p>Enable radio functionality and attach to the LTE Cat M1 network authorised by the inserted SIM card. Optionally specify the band to scan for networks. If no band (or <code>None</code>) is specified, all 6 bands will be scanned. The possible values for the band are: <code>3, 4, 12, 13, 20 and 28</code>.</p>
-<p>You can also specify an APN during the call to attach</p>
-<pre><code class="lang-python">    lte.attach(apn=<span class="hljs-string">&quot;nb.inetd.gdsp&quot;</span>)
-</code></pre>
+<ul>
+<li><p><code>detach</code> : detach from network.</p>
+</li>
+<li><p><code>reset</code> : reset LTE modem.</p>
+</li>
+</ul>
+<h4 id="lteattach-bandnone-apnnone-cidnone-typelteip-legacyattachtrue"><a name="lteattach-bandnone-apnnone-cidnone-typelteip-legacyattachtrue" class="plugin-anchor" href="#lteattach-bandnone-apnnone-cidnone-typelteip-legacyattachtrue"><i class="fa fa-link" aria-hidden="true"></i></a>lte.attach(*, band=None, apn=None, cid=None, type=LTE.IP, legacyattach=True)</h4>
+<p>Enable radio functionality and attach to the LTE network authorised by the inserted SIM card. Optionally specify:</p>
+<ul>
+<li><p><code>band</code> : to scan for networks. If no band (or <code>None</code>) is specified, all 8 bands will be scanned. The possible values for the band are: <code>3, 4, 5, 8, 12, 13, 20 and 28</code>.</p>
+</li>
+<li><p><code>apn</code> : Specify the APN (Access point Name).</p>
+</li>
+<li><p><code>cid</code> : connection ID, see <code>LTE.connect()</code>. when the ID is set here it will be remembered when doint connect so no need to specify again</p>
+</li>
+<li><p><code>type</code> : PDP context type either <code>LTE.IP</code> or <code>LTE.IPV4V6</code>. These are options to specify PDP type &#x2018;Packet Data protocol&#x2019; either IP [Internet Protocol] or IPV4V6 ver4,6 , that depends actually on what does the Network support.</p>
+</li>
+<li><p><code>legacyattach</code> : When kept = True the API <code>LTE.isattached()</code> will return True when attached to the Network AND Network registration status is home or roaming, when flag is False, API <code>LTE.isattached()</code> will return True when attached to the Network only.</p>
+</li>
+</ul>
+<hr>
+<p><em>NOTE</em> :
+When carrier is specified in <code>LTE()</code> or <code>LTE.init()</code> (eg. <code>lte = LTE(carrier=verizon)</code>) No need to specify band, apn or type these parameters are already programmed in to the LTE modem for each carrier.</p>
+<hr>
 <h4 id="lteisattached"><a name="lteisattached" class="plugin-anchor" href="#lteisattached"><i class="fa fa-link" aria-hidden="true"></i></a>lte.isattached()</h4>
 <p>Returns <code>True</code> if the cellular mode is attached to the network. <code>False</code> otherwise.</p>
-<h4 id="ltedettachresettrue"><a name="ltedettachresettrue" class="plugin-anchor" href="#ltedettachresettrue"><i class="fa fa-link" aria-hidden="true"></i></a>lte.dettach(reset=True)</h4>
-<p>Detach the modem from the LTE Cat M1 and disable the radio functionality.
-Has one optional parameter:</p>
-<ol>
-<li><code>lte.deinit(reset=True)</code>  will reset the modem before going into causing it to go into deep sleep.    </li>
-</ol>
+<h4 id="ltedetachresetfalse"><a name="ltedetachresetfalse" class="plugin-anchor" href="#ltedetachresetfalse"><i class="fa fa-link" aria-hidden="true"></i></a>lte.detach(reset=False)</h4>
+<p>Detach the modem from the LTE Cat M1 and disable the radio functionality.</p>
+<ul>
+<li><code>reset</code> : set to True to reset the LTE modem.</li>
+</ul>
 <h4 id="lteconnect-cid1"><a name="lteconnect-cid1" class="plugin-anchor" href="#lteconnect-cid1"><i class="fa fa-link" aria-hidden="true"></i></a>lte.connect(*, cid=1)</h4>
 <p>Start a data session and obtain and IP address. Optionally specify a CID (Connection ID) for the data session. The arguments are:</p>
 <ul>
@@ -2839,9 +2853,8 @@ lte.connect(cid=<span class="hljs-number">3</span>)
 <p>Returns <code>True</code> if there is an active LTE data session and IP address has been obtained. <code>False</code> otherwise.</p>
 <h4 id="ltedisconnect"><a name="ltedisconnect" class="plugin-anchor" href="#ltedisconnect"><i class="fa fa-link" aria-hidden="true"></i></a>lte.disconnect()</h4>
 <p>End the data session with the network.</p>
-<h4 id="ltesendatcmdcmd-delay1000"><a name="ltesendatcmdcmd-delay1000" class="plugin-anchor" href="#ltesendatcmdcmd-delay1000"><i class="fa fa-link" aria-hidden="true"></i></a>lte.send_at_cmd(cmd, delay=1000)</h4>
-<p>Send an AT command directly to the modem. Returns the raw response from the modem as a string object. <strong>IMPORTANT:</strong> If a data session is active (i.e. the modem is <em>connected</em>), sending the AT commands requires to pause and then resume the data session. this can be done with the pppsuspend() and pppresume() methods.</p>
-<p>Has an optional delay paramter to specify the number of milliseconds the esp32 chip will wait between sending an AT command to the modem. and reading the response.</p>
+<h4 id="ltesendatcmdcmd-delay10000"><a name="ltesendatcmdcmd-delay10000" class="plugin-anchor" href="#ltesendatcmdcmd-delay10000"><i class="fa fa-link" aria-hidden="true"></i></a>lte.send_at_cmd(cmd, delay=10000)</h4>
+<p>Send an AT command directly to the modem. Returns the raw response from the modem as a string object. <strong>IMPORTANT:</strong> If a data session is active (i.e. the modem is <em>connected</em>), sending the AT commands requires to pause and then resume the data session. This is all done automatically, but makes the whole request take around 2.5 seconds.</p>
 <p>Example:</p>
 <pre><code class="lang-python">lte.send_at_cmd(<span class="hljs-string">&apos;AT+CEREG?&apos;</span>)    <span class="hljs-comment"># check for network registration manually (sames as lte.isattached())</span>
 </code></pre>
@@ -2854,17 +2867,39 @@ lte.connect(cid=<span class="hljs-number">3</span>)
 send_at_cmd_pretty(<span class="hljs-string">&apos;AT!=&quot;showphy&quot;&apos;</span>)     <span class="hljs-comment"># get the PHY status</span>
 send_at_cmd_pretty(<span class="hljs-string">&apos;AT!=&quot;fsm&quot;&apos;</span>)         <span class="hljs-comment"># get the System FSM</span>
 </code></pre>
+<ul>
+<li><code>delay</code> : specify the number of milliseconds the esp32 chip will wait between sending an AT command to the modem. and reading the response.</li>
+</ul>
 <h4 id="lteimei"><a name="lteimei" class="plugin-anchor" href="#lteimei"><i class="fa fa-link" aria-hidden="true"></i></a>lte.imei()</h4>
 <p>Returns a string object with the IMEI number of the LTE modem.</p>
 <h4 id="lteiccid"><a name="lteiccid" class="plugin-anchor" href="#lteiccid"><i class="fa fa-link" aria-hidden="true"></i></a>lte.iccid()</h4>
 <p>Returns a string object with the ICCID number of the SIM card.</p>
-<h4 id="ltereset-resettrue"><a name="ltereset-resettrue" class="plugin-anchor" href="#ltereset-resettrue"><i class="fa fa-link" aria-hidden="true"></i></a>lte.reset(*, reset=True)</h4>
-<p>Perform a hardware reset on the cellular modem. This function can take up to 5 seconds to return as it waits for the modem to shutdown and reboot.
-Has an optional <code>reset</code> parameter to specify if the modem should be reset before switching of the radio. can help in cases where <code>lte.deattach()</code> casuses the modem to freeze.</p>
+<h4 id="ltereset"><a name="ltereset" class="plugin-anchor" href="#ltereset"><i class="fa fa-link" aria-hidden="true"></i></a>lte.reset()</h4>
+<p>Perform a hardware reset on the cellular modem. This function can take up to 5 seconds to return as it waits for the modem to shutdown and reboot.</p>
 <h4 id="ltepppsuspend"><a name="ltepppsuspend" class="plugin-anchor" href="#ltepppsuspend"><i class="fa fa-link" aria-hidden="true"></i></a>lte.pppsuspend()</h4>
-<p>Pause the Lte ppp connection to allow sending of AT commands</p>
+<p>Suspend PPP session with LTE modem. this function can be used when needing to send AT commands which is not supported in PPP mode.</p>
 <h4 id="ltepppresume"><a name="ltepppresume" class="plugin-anchor" href="#ltepppresume"><i class="fa fa-link" aria-hidden="true"></i></a>lte.pppresume()</h4>
-<p>Resuime the Lte ppp connection after sending of AT commands</p>
+<p>Resumes PPP session with LTE modem.</p>
+<h4 id="ltefactoryreset"><a name="ltefactoryreset" class="plugin-anchor" href="#ltefactoryreset"><i class="fa fa-link" aria-hidden="true"></i></a>lte.factory_reset()</h4>
+<p>Reset modem configuration to Factory settings.</p>
+<h4 id="ltemodemupgrademode"><a name="ltemodemupgrademode" class="plugin-anchor" href="#ltemodemupgrademode"><i class="fa fa-link" aria-hidden="true"></i></a>lte.modem_upgrade_mode()</h4>
+<p> Puts the modem in to modem upgrade mode and bridging LTE modem UART port to FiPy/GPy UART0 to enable upgrading Firmware over USB port.</p>
+<hr>
+<p> <em>NOTE</em> :</p>
+<h2 id="in-this-mode-all-all-tasks-on-the-board-are-halted-and-a-reset-is-required-to-regain-functionality"><a name="in-this-mode-all-all-tasks-on-the-board-are-halted-and-a-reset-is-required-to-regain-functionality" class="plugin-anchor" href="#in-this-mode-all-all-tasks-on-the-board-are-halted-and-a-reset-is-required-to-regain-functionality"><i class="fa fa-link" aria-hidden="true"></i></a> In this mode all All tasks on the board are halted and a reset is required to regain functionality.</h2>
+<h4 id="ltereconnectuart"><a name="ltereconnectuart" class="plugin-anchor" href="#ltereconnectuart"><i class="fa fa-link" aria-hidden="true"></i></a>lte.reconnect_uart()</h4>
+<p>Reconnect esp32 UART 2 to LTE modem UART port.</p>
+<h4 id="lteuecoverage"><a name="lteuecoverage" class="plugin-anchor" href="#lteuecoverage"><i class="fa fa-link" aria-hidden="true"></i></a>lte.ue_coverage()</h4>
+<p>Check Network Coverage for UE device (i.e LTE modem).</p>
+<p><code>True</code>: There is Network Coverage.</p>
+<p><code>False</code>: No Netwok Coverage.</p>
+<h2 id="constants"><a name="constants" class="plugin-anchor" href="#constants"><i class="fa fa-link" aria-hidden="true"></i></a>Constants</h2>
+<ul>
+<li><p><code>LTE.IP</code> : Internet Protocol IP</p>
+</li>
+<li><p><code>LTE.IPV4V6</code> : Internet protocol ver. 4/6</p>
+</li>
+</ul>
 <script src="../../../_gitbook_plugin_analytics.js"></script>
                                 
                                 </section>
@@ -2908,7 +2943,7 @@ Has an optional <code>reset</code> parameter to specify if the modem should be r
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"LTE","level":"6.2.2.6","depth":3,"next":{"title":"AES","level":"6.2.3","depth":2,"path":"firmwareapi/pycom/aes.md","ref":"firmwareapi/pycom/aes.md","articles":[]},"previous":{"title":"Sigfox","level":"6.2.2.5","depth":3,"path":"firmwareapi/pycom/network/sigfox.md","ref":"firmwareapi/pycom/network/sigfox.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["folding-menu","favicon-plus","insert-logo","hints","page-ref","-fontsettings","github","youtube","search","algolia","simpletabs","meta-single","analytics","anchors","grid","otherlink","header","bulk-redirect-with-extension"],"pluginsConfig":{"youtube":{},"github":{"url":"https://pycom.github.io/pydocs"},"grid":{},"analytics":{"google":"UA-72107804-3"},"search":{},"otherlink":{},"layout":{"headerPath":"alexa.html"},"folding-menu":{"animationDuration":0,"sticky":false},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000000,"ignoreSpecialCharacters":false},"header":{},"bulk-redirect-with-extension":{},"simpletabs":{},"meta-single":{"content":"Kbyrn6in1PWDoUk5OR65BLF-Ff4wU9WcT3RcJb6-VYM","name":"google-site-verification"},"algolia":{"freeAccount":"true","index":"pycom_docs","applicationID":"K37L43EW7N","publicKey":"427eb1c18422807561448260404bc4ee"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon-plus":{"appleTouchIconPrecomposed152":"","favicon":"","output":"_book"},"highlight":{},"favicon":"./favicon.ico","page-ref":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none; max-width: 150px;","url":"https://raw.githubusercontent.com/pycom/pydocs/gh-pages/.gitbook/assets/pycom_logo_lockup_navy_rgb.png"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"assets/style/cms.css"}},"file":{"path":"firmwareapi/pycom/network/lte.md","mtime":"2019-03-06T11:35:19.226Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-06T11:37:32.296Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"LTE","level":"6.2.2.6","depth":3,"next":{"title":"AES","level":"6.2.3","depth":2,"path":"firmwareapi/pycom/aes.md","ref":"firmwareapi/pycom/aes.md","articles":[]},"previous":{"title":"Sigfox","level":"6.2.2.5","depth":3,"path":"firmwareapi/pycom/network/sigfox.md","ref":"firmwareapi/pycom/network/sigfox.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["folding-menu","favicon-plus","insert-logo","hints","page-ref","-fontsettings","github","youtube","search","algolia","simpletabs","meta-single","analytics","anchors","grid","otherlink","header","bulk-redirect-with-extension"],"pluginsConfig":{"youtube":{},"github":{"url":"https://pycom.github.io/pydocs"},"grid":{},"analytics":{"google":"UA-72107804-3"},"search":{},"otherlink":{},"layout":{"headerPath":"alexa.html"},"folding-menu":{"animationDuration":0,"sticky":false},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000000,"ignoreSpecialCharacters":false},"header":{},"bulk-redirect-with-extension":{},"simpletabs":{},"meta-single":{"content":"Kbyrn6in1PWDoUk5OR65BLF-Ff4wU9WcT3RcJb6-VYM","name":"google-site-verification"},"algolia":{"freeAccount":"true","index":"pycom_docs","applicationID":"K37L43EW7N","publicKey":"427eb1c18422807561448260404bc4ee"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon-plus":{"appleTouchIconPrecomposed152":"","favicon":"","output":"_book"},"highlight":{},"favicon":"./favicon.ico","page-ref":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none; max-width: 150px;","url":"https://raw.githubusercontent.com/pycom/pydocs/gh-pages/.gitbook/assets/pycom_logo_lockup_navy_rgb.png"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"assets/style/cms.css"}},"file":{"path":"firmwareapi/pycom/network/lte.md","mtime":"2019-03-06T15:15:35.471Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-06T15:18:22.378Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
