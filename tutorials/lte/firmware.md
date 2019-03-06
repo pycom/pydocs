@@ -30,7 +30,7 @@ Please start with the following steps:
 2. Select Firmware Type `stable` in the communication window to upgrade to version `v1.18.1.r1`
 
 
-These files are password protected, to download them you should be a forum.pycom.io member and access to: 
+The modem firmware files are password protected, to download them you should be a forum.pycom.io member and access to: 
 Announcements & News --&gt;  Announcements only for members --&gt; Firmware Files for Sequans LTE modem now are secured, or clicking [Here](https://forum.pycom.io/topic/4020/firmware-files-for-sequans-lte-modem-now-are-secured).
 
 You can find the different versions of firmwares available [here](https://software.pycom.io/downloads/sequans2.html).
