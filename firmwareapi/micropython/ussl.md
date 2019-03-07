@@ -4,7 +4,7 @@ This module provides access to Transport Layer Security \(often known as "Secure
 
 ## Methods
 
-#### ssl.wrap\_socket\(sock, keyfile=None, certfile=None, server\_side=False, cert\_reqs=CERT\_NONE, ca\_certs=None\)
+#### ssl.wrap\_socket\(sock, keyfile=None, certfile=None, server\_side=False, cert\_reqs=CERT\_NONE, ca\_certs=None\, timeout=10sec)
 
 Takes an instance `sock` of `socket.socket`, and returns an instance of ssl.SSLSocket, a subtype of `socket.socket`, which wraps the underlying socket in an SSL context. Example:
 
@@ -29,6 +29,8 @@ ss.connect(socket.getaddrinfo('cloud.blynk.cc', 8441)[0][-1])
 ```
 
 SSL sockets inherit all methods and from the standard sockets, see the `usocket` module.
+
+`timeout` : specify a Timeout in Seconds for the SSL handshake operation between client and server, default is 10 seconds
 
 ## Exceptions
 

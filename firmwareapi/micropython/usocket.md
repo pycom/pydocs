@@ -146,6 +146,11 @@ Write the buffer of bytes to the socket.
 
 Return value: number of bytes written.
 
+#### socket.do_handshake\(\)
+
+Perform the SSL handshake on the previously "wrapped" socket with ssl.wrap_socket().
+could be used when the socket is non-blocking and the SSL handshake is not performed during connect().
+
 #### socket.dnsserver(*, dnsIndex, ip_addr)
  
 When no arguments are passed this function returns the configured DNS servers Primary (Index=0) and backup (Index = 1)
