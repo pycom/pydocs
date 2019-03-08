@@ -1136,7 +1136,20 @@ _atrk_opts = { atrk_acct:"WpWNq1SZw320l9", domain:"pycom.io",dynamic: true};
                 <a href="../../../../tutorials/lora/lora-mesh.html">
             
                     
-                    Lora Mesh
+                    Pymesh
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.9" data-path="../../../../tutorials/lora/pymesh-br.html">
+            
+                <a href="../../../../tutorials/lora/pymesh-br.html">
+            
+                    
+                    Pymesh Border Router
             
                 </a>
             
@@ -2826,7 +2839,7 @@ To use again Pymesh the <code>LoRa.Mesh()</code> constructor has to be called.</
 </code></pre>
 <p>More info: <a href="https://openthread.io/guides/thread-primer/node-roles-and-types" target="_blank">https://openthread.io/guides/thread-primer/node-roles-and-types</a></p>
 <h4 id="meshsingle"><a name="meshsingle" class="plugin-anchor" href="#meshsingle"><i class="fa fa-link" aria-hidden="true"></i></a>mesh.single()</h4>
-<p>Returns <code>True</code> if this node is the only Leader or Router in the current Mesh network. </p>
+<p>Returns <code>True</code> if this node is the only Leader or Router in the current Mesh network.</p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>pymesh.single()
 <span class="hljs-keyword">True</span>
 </code></pre>
@@ -2903,7 +2916,7 @@ To use again Pymesh the <code>LoRa.Mesh()</code> constructor has to be called.</
 <span class="hljs-number">25600</span>
 </code></pre>
 <h4 id="meshleader"><a name="meshleader" class="plugin-anchor" href="#meshleader"><i class="fa fa-link" aria-hidden="true"></i></a>mesh.leader()</h4>
-<p>Returns information about Leader of the current Pymesh. can be called from any connected node. </p>
+<p>Returns information about Leader of the current Pymesh. can be called from any connected node.</p>
 <p>The following details are returned:</p>
 <ul>
 <li>part_id - partition id, the Pymesh internal network address.</li>
@@ -2913,32 +2926,60 @@ To use again Pymesh the <code>LoRa.Mesh()</code> constructor has to be called.</
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>pymesh.leader()
 (part_id=<span class="hljs-number">828258</span>, mac=<span class="hljs-number">72340172838076676</span>, rloc16=<span class="hljs-number">52224</span>)
 </code></pre>
-<h4 id="meshrxcbhandler"><a name="meshrxcbhandler" class="plugin-anchor" href="#meshrxcbhandler"><i class="fa fa-link" aria-hidden="true"></i></a>mesh.rx_cb(handler)</h4>
-<p>Specify the callback handler executed when a new packet was received.</p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">receive_all_data</span><span class="hljs-params">(self)</span>:</span>
-    <span class="hljs-string">&quot;&quot;&quot; receives all packages on socket &quot;&quot;&quot;</span>
-
+<h4 id="meshrxcbhandler-argument"><a name="meshrxcbhandler-argument" class="plugin-anchor" href="#meshrxcbhandler-argument"><i class="fa fa-link" aria-hidden="true"></i></a>mesh.rx_cb(handler, argument)</h4>
+<p>Specify the callback handler executed ( with parameter <code>argument</code>) when a new packet was received, on <strong>any opened socket</strong> (in case multiple sockets are opened). At this moment, in the callback handler, the right socket
+has to be checked for incoming data.</p>
+<p>Please check the following callback example.</p>
+<pre><code class="lang-python"><span class="hljs-comment"># handler responsible for receiving packets on UDP Pymesh socket</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">receive_pack</span><span class="hljs-params">(sockets)</span>:</span>
+    <span class="hljs-comment"># listen for incoming packets on all sockets</span>
     <span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
-        rcv_data, rcv_addr = sock.recvfrom(<span class="hljs-number">512</span>)
-        <span class="hljs-keyword">if</span> len(rcv_data) == <span class="hljs-number">0</span>:
-            <span class="hljs-keyword">break</span>  <span class="hljs-comment"># out of while, no packet</span>
+        is_new_data = <span class="hljs-keyword">False</span>
+        <span class="hljs-keyword">for</span> sock <span class="hljs-keyword">in</span> sockets:
+            <span class="hljs-comment"># check if data received on all sockets</span>
+            rcv_data, rcv_addr = sock.recvfrom(<span class="hljs-number">128</span>)
+            <span class="hljs-keyword">if</span> len(rcv_data) &gt; <span class="hljs-number">0</span>:
+                is_new_data = <span class="hljs-keyword">True</span>
+                <span class="hljs-keyword">break</span> <span class="hljs-comment"># out of for sock</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> is_new_data:
+            <span class="hljs-keyword">break</span> <span class="hljs-comment"># out of while True</span>
         rcv_ip = rcv_addr[<span class="hljs-number">0</span>]
         rcv_port = rcv_addr[<span class="hljs-number">1</span>]
-        print(<span class="hljs-string">&apos;Incomming %d bytes from %s (port %d):&apos;</span> %
-              (len(rcv_data), rcv_ip, rcv_port))
+        print(<span class="hljs-string">&apos;Incomming %d bytes from %s (port %d)&apos;</span>%(len(rcv_data), rcv_ip, rcv_port))
+
+        <span class="hljs-comment">#check if data is for the external of the Pymesh (for The Cloud)</span>
+        <span class="hljs-keyword">if</span> rcv_data[<span class="hljs-number">0</span>] == BORDER_ROUTER_MAGIC_BYTE <span class="hljs-keyword">and</span> len(rcv_data) &gt;= struct.calcsize(BORDER_ROUTER_HEADER_FORMAT):
+            br_header = struct.unpack(BORDER_ROUTER_HEADER_FORMAT, rcv_data)
+            print(<span class="hljs-string">&quot;IP dest: %x:%x:%x:%x:%x:%x:%x:%x (port %d)&quot;</span>%(
+                br_header[<span class="hljs-number">1</span>],br_header[<span class="hljs-number">2</span>],br_header[<span class="hljs-number">3</span>],br_header[<span class="hljs-number">4</span>],
+                br_header[<span class="hljs-number">5</span>],br_header[<span class="hljs-number">6</span>],br_header[<span class="hljs-number">7</span>],br_header[<span class="hljs-number">8</span>], br_header[<span class="hljs-number">9</span>]))
+            rcv_data = rcv_data[struct.calcsize(BORDER_ROUTER_HEADER_FORMAT):]
+
         print(rcv_data)
 
+        <span class="hljs-comment"># send some ACK</span>
+        <span class="hljs-keyword">if</span>  <span class="hljs-keyword">not</span> rcv_data.startswith(<span class="hljs-string">&quot;ACK&quot;</span>):
+            print(<span class="hljs-string">&quot;Sent ACK back&quot;</span>)
+            sock.sendto(<span class="hljs-string">&apos;ACK&apos;</span>, (rcv_ip, rcv_port))
+
+<span class="hljs-comment"># create the list of sockets</span>
+sockets = []
+sockets.append(eid_socket)
+sockets.append(br_socket)
+
 <span class="hljs-comment"># set RX callback</span>
-pymesh.rx_cb(receive_all_data)
+mesh.mesh.rx_cb(receive_pack, sockets)
 </code></pre>
-<h4 id="meshborderrouteripv6netaddress-preferencelevel"><a name="meshborderrouteripv6netaddress-preferencelevel" class="plugin-anchor" href="#meshborderrouteripv6netaddress-preferencelevel"><i class="fa fa-link" aria-hidden="true"></i></a>mesh.border_router(ipv6_net_address, preference_level)</h4>
-<p>Sets as Border Router the current node, by specifying the external IPv6 network address(prefix), which should be used for any IPv6 packet to be sent outside of Pymesh. The parameters details are:</p>
+<h4 id="meshborderrouteripv6netaddress-preferencelevel"><a name="meshborderrouteripv6netaddress-preferencelevel" class="plugin-anchor" href="#meshborderrouteripv6netaddress-preferencelevel"><i class="fa fa-link" aria-hidden="true"></i></a>mesh.border_router([ipv6_net_address, preference_level])</h4>
+<p>Gets or sets as Border Router the current node, by specifying the external IPv6 network address (prefix), which should be used for any IPv6 packet to be sent outside of Pymesh. The parameters details are:</p>
 <ul>
 <li>ipv6_net_address<ul>
 <li>has to be a valid IPv6 network address containing IP and mask, for ex <code>&quot;2001:cafe:cafe:cafe::/64&quot;</code>.</li>
 <li>all the nodes from the Pymesh will receive a random additional IPv6 unicast address, from this network address.</li>
 <li>a IPv6 packet which has as destination this prefix, will be routed to this node.</li>
+<li>the UDP datagram has a custom header: MAGIC byte (<code>0xBB</code>), then 16 bytes of IPv6 destination and 2 bytes port number.</li>
 <li>to actually catch this IPv6 packet, a socket has to be created on a port.</li>
+<li>please check the Pymesh example, to see how a UDP packet for external network is being handled.</li>
 </ul>
 </li>
 <li>preference_level - should be a value (-1: low, 0: normal, 1: high)<ul>
@@ -2952,10 +2993,31 @@ pymesh.rx_cb(receive_all_data)
 <span class="hljs-comment"># setting Border Router</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>pymesh.border_router(<span class="hljs-string">&quot;2001:cafe:cafe:cafe::/64&quot;</span>, <span class="hljs-number">0</span>)
 <span class="hljs-number">0</span>
-<span class="hljs-comment">#checking a new IPv6 address is assigned</span>
+<span class="hljs-comment"># checking a new IPv6 address is assigned</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>pymesh.ipaddr()
 [<span class="hljs-string">&apos;2001:cafe:cafe:cafe:a5d2:6934:9acd:66b3&apos;</span>, <span class="hljs-string">&apos;fdde:ad00:beef:0:0:ff:fe00:fc00&apos;</span>, <span class="hljs-string">&apos;fdde:ad00:beef:0:0:ff:fe00:cc00&apos;</span>, <span class="hljs-string">&apos;fdde:ad00:beef:0:86c3:6130:98cc:6633&apos;</span>, <span class="hljs-string">&apos;fe80:0:0:0:301:101:101:104&apos;</span>]
+<span class="hljs-comment"># list the BR entries</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>mesh.mesh.border_router()
+[(net=<span class="hljs-string">&apos;2001:dead:beef:cafe::/64&apos;</span>, preference=<span class="hljs-number">0</span>)]
 &gt;&gt;&gt;
+</code></pre>
+<h4 id="meshborderrouterdelipv6netaddress"><a name="meshborderrouterdelipv6netaddress" class="plugin-anchor" href="#meshborderrouterdelipv6netaddress"><i class="fa fa-link" aria-hidden="true"></i></a>mesh.border_router_del(ipv6_net_address)</h4>
+<p>Removes a Border Router entry, by specifying the external IPv6 network address (prefix), which should be used for any IPv6 packet to be sent outside of Pymesh. The parameter is the same as for <code>mesh.border_router(ipv6_net_address, preference_level)</code>.</p>
+<p>This will remove all IPv6 unicast from all Mesh nodes, which previously set an IPv6 with BR prefix.</p>
+<pre><code class="lang-python"><span class="hljs-comment"># BR entry</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>mesh.mesh.border_router()
+[(net=<span class="hljs-string">&apos;2001:dead:beef:caff::/64&apos;</span>, preference=<span class="hljs-number">1</span>)]
+<span class="hljs-comment"># checking the BR IPv6 unicast address with BR prefix</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>pymesh.ipaddr()
+[<span class="hljs-string">&apos;2001:dead:beef:caff:2291:48a4:5229:94ca&apos;</span>, <span class="hljs-string">&apos;fdde:ad00:beef:0:0:ff:fe00:6800&apos;</span>, <span class="hljs-string">&apos;fdde:ad00:beef:0:4623:91c8:64b2:d9ec&apos;</span>, <span class="hljs-string">&apos;fe80:0:0:0:200:0:0:8&apos;</span>]
+<span class="hljs-comment"># remove the BR entry</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>mesh.mesh.border_router_del(<span class="hljs-string">&apos;2001:dead:beef:caff::/64&apos;</span>)
+<span class="hljs-comment"># verify, no more BR entry</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>mesh.mesh.border_router()
+[]
+<span class="hljs-comment"># verify, no more IPv6 with BR prefix</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>mesh.ipaddr()
+[<span class="hljs-string">&apos;fdde:ad00:beef:0:0:ff:fe00:6800&apos;</span>, <span class="hljs-string">&apos;fdde:ad00:beef:0:4623:91c8:64b2:d9ec&apos;</span>, <span class="hljs-string">&apos;fe80:0:0:0:200:0:0:8&apos;</span>]
 </code></pre>
 <h4 id="meshcli"><a name="meshcli" class="plugin-anchor" href="#meshcli"><i class="fa fa-link" aria-hidden="true"></i></a>mesh.cli()</h4>
 <p>Sends a CLI command to the internal openthread engine; the list of CLI commands is <a href="https://github.com/openthread/openthread/blob/c482301ec73b80985445102e4d0a936346172ddb/src/cli/README.md" target="_blank">here</a></p>
@@ -2975,7 +3037,8 @@ Leader Router ID: <span class="hljs-number">51</span>
 <pre><code class="lang-python"><span class="hljs-keyword">import</span> socket
 s = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
 </code></pre>
-<p>Pymesh socket is created, if the Mesh was enabled before (<code>lora.Mesh()</code> was called).</p>
+<p>Multiple sockets (maximum 3) can be created, being bind on a certain IPv6 unicast and port number.</p>
+<p>Pymesh sockets is created, if the Mesh was enabled before (<code>lora.Mesh()</code> was called).</p>
 <p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><p>The Pymesh sockets supports only the following socket methods: <code>close()</code> , <code>bind()</code>, <code>sendto()</code>, and <code>recvfrom()</code>.</p>
 </div></div></p>
 <p>LoRa sockets support the following standard methods from the socket module:</p>
@@ -2985,9 +3048,16 @@ s = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
 <pre><code class="lang-python">s.close()
 </code></pre>
 <h4 id="socketbindportnumber"><a name="socketbindportnumber" class="plugin-anchor" href="#socketbindportnumber"><i class="fa fa-link" aria-hidden="true"></i></a>socket.bind(port_number)</h4>
-<p>Binds (links) an UDP port number (values 1024 to 63535), with the Pymesh network interface (implicitly <code>&quot;::&quot;</code> - all IPv6 unicast addresses).</p>
+<h4 id="socketbindipv6string-portnumber"><a name="socketbindipv6string-portnumber" class="plugin-anchor" href="#socketbindipv6string-portnumber"><i class="fa fa-link" aria-hidden="true"></i></a>socket.bind((ipv6_string, port_number))</h4>
+<p>Binds (links) an socket with an UDP port number (values 1024 to 63535), with or without an IPv6 interface.
+By default, if just <code>port_number</code> is used, then it binds the socket with all IPv6 unicast addresses; it&apos;s equivalent with <code>&quot;::&quot;</code>as for the <code>ipv6_string</code>.</p>
 <p>Usage:</p>
-<pre><code class="lang-python">s.bind(<span class="hljs-number">1234</span>)
+<pre><code class="lang-python"><span class="hljs-comment"># binding socket with all IPv6 interfaces, like &quot;::&quot;</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>s.bind(<span class="hljs-number">1234</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>mesh.ipaddr()
+[<span class="hljs-string">&apos;fdde:ad00:beef:0:0:ff:fe00:6800&apos;</span>, <span class="hljs-string">&apos;fdde:ad00:beef:0:4623:91c8:64b2:d9ec&apos;</span>, <span class="hljs-string">&apos;fe80:0:0:0:200:0:0:8&apos;</span>]
+<span class="hljs-comment"># binding the socket on a specific pair IPv6 and port number</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>s.bind((<span class="hljs-string">&apos;fdde:ad00:beef:0:4623:91c8:64b2:d9ec&apos;</span>, <span class="hljs-number">1235</span>))
 </code></pre>
 <h4 id="socketsendtobytesip-port"><a name="socketsendtobytesip-port" class="plugin-anchor" href="#socketsendtobytesip-port"><i class="fa fa-link" aria-hidden="true"></i></a>socket.sendto(bytes,(ip, port))</h4>
 <p>Sends <code>bytes</code> buffer to <code>ip</code>, on the designated UDP <code>port</code>. Returns the number of bytes sent.</p>
@@ -3044,7 +3114,7 @@ s = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"PyMesh","level":"6.2.2.4.1","depth":4,"next":{"title":"Sigfox","level":"6.2.2.5","depth":3,"path":"firmwareapi/pycom/network/sigfox.md","ref":"firmwareapi/pycom/network/sigfox.md","articles":[]},"previous":{"title":"LoRa","level":"6.2.2.4","depth":3,"path":"firmwareapi/pycom/network/lora.md","ref":"firmwareapi/pycom/network/lora.md","articles":[{"title":"PyMesh","level":"6.2.2.4.1","depth":4,"path":"firmwareapi/pycom/network/lora/pymesh.md","ref":"firmwareapi/pycom/network/lora/pymesh.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["folding-menu","favicon-plus","insert-logo","hints","page-ref","-fontsettings","github","youtube","search","algolia","simpletabs","meta-single","analytics","anchors","grid","otherlink","header","bulk-redirect-with-extension"],"pluginsConfig":{"youtube":{},"github":{"url":"https://pycom.github.io/pydocs"},"grid":{},"analytics":{"google":"UA-72107804-3"},"search":{},"otherlink":{},"layout":{"headerPath":"alexa.html"},"folding-menu":{"animationDuration":0,"sticky":false},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000000,"ignoreSpecialCharacters":false},"header":{},"bulk-redirect-with-extension":{},"simpletabs":{},"meta-single":{"content":"Kbyrn6in1PWDoUk5OR65BLF-Ff4wU9WcT3RcJb6-VYM","name":"google-site-verification"},"algolia":{"freeAccount":"true","index":"pycom_docs","applicationID":"K37L43EW7N","publicKey":"427eb1c18422807561448260404bc4ee"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon-plus":{"appleTouchIconPrecomposed152":"","favicon":"","output":"_book"},"highlight":{},"favicon":"./favicon.ico","page-ref":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none; max-width: 150px;","url":"https://raw.githubusercontent.com/pycom/pydocs/gh-pages/.gitbook/assets/pycom_logo_lockup_navy_rgb.png"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"assets/style/cms.css"}},"file":{"path":"firmwareapi/pycom/network/lora/pymesh.md","mtime":"2019-03-08T10:26:17.157Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-08T10:30:37.848Z"},"basePath":"../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"PyMesh","level":"6.2.2.4.1","depth":4,"next":{"title":"Sigfox","level":"6.2.2.5","depth":3,"path":"firmwareapi/pycom/network/sigfox.md","ref":"firmwareapi/pycom/network/sigfox.md","articles":[]},"previous":{"title":"LoRa","level":"6.2.2.4","depth":3,"path":"firmwareapi/pycom/network/lora.md","ref":"firmwareapi/pycom/network/lora.md","articles":[{"title":"PyMesh","level":"6.2.2.4.1","depth":4,"path":"firmwareapi/pycom/network/lora/pymesh.md","ref":"firmwareapi/pycom/network/lora/pymesh.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["folding-menu","favicon-plus","insert-logo","hints","page-ref","-fontsettings","github","youtube","search","algolia","simpletabs","meta-single","analytics","anchors","grid","otherlink","header","bulk-redirect-with-extension"],"pluginsConfig":{"youtube":{},"github":{"url":"https://pycom.github.io/pydocs"},"grid":{},"analytics":{"google":"UA-72107804-3"},"search":{},"otherlink":{},"layout":{"headerPath":"alexa.html"},"folding-menu":{"animationDuration":0,"sticky":false},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000000,"ignoreSpecialCharacters":false},"header":{},"bulk-redirect-with-extension":{},"simpletabs":{},"meta-single":{"content":"Kbyrn6in1PWDoUk5OR65BLF-Ff4wU9WcT3RcJb6-VYM","name":"google-site-verification"},"algolia":{"freeAccount":"true","index":"pycom_docs","applicationID":"K37L43EW7N","publicKey":"427eb1c18422807561448260404bc4ee"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon-plus":{"appleTouchIconPrecomposed152":"","favicon":"","output":"_book"},"highlight":{},"favicon":"./favicon.ico","page-ref":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none; max-width: 150px;","url":"https://raw.githubusercontent.com/pycom/pydocs/gh-pages/.gitbook/assets/pycom_logo_lockup_navy_rgb.png"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"assets/style/cms.css"}},"file":{"path":"firmwareapi/pycom/network/lora/pymesh.md","mtime":"2019-03-08T10:51:38.701Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-08T10:54:46.015Z"},"basePath":"../../../..","book":{"language":""}});
         });
     </script>
 </div>
