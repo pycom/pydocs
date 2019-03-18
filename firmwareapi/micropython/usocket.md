@@ -183,13 +183,18 @@ poller = select.poll()
 poller.register(s, select.POLLOUT | select.POLLIN)
 while True:
     res = poller.poll(1000)
-    time.sleep(0.5)
-    if res[0][1] & select.POLLOUT:
-        s.do_handshake()
-        s.send(b"GET / HTTP/1.0\r\n\r\n")
-    if res[0][1] & select.POLLIN:
-        print(s.recv(4092))
-        break
+    if res:
+        if res[0][1] & select.POLLOUT:
+            print("Doing Handshake")
+            s.do_handshake()
+            print("Handshake Done")
+            s.send(b"GET / HTTP/1.0\r\n\r\n")
+            poller.modify(s,select.POLLIN)
+            continue
+        if res[0][1] & select.POLLIN:
+            print(s.recv(4092))
+            break
+    break
 ```
 
 #### socket.dnsserver(*, dnsIndex, ip_addr)
