@@ -151,6 +151,47 @@ Return value: number of bytes written.
 Perform the SSL handshake on the previously "wrapped" socket with ssl.wrap_socket().
 could be used when the socket is non-blocking and the SSL handshake is not performed during connect().
 
+Example:
+
+```
+from network import WLAN
+import time
+import socket
+import ssl
+import uselect as select
+
+wlan = WLAN(mode=WLAN.STA)
+wlan.connect(ssid='<AP_SSID>', auth=(WLAN.WPA2, '<PASS>'))
+while not wlan.isconnected():
+    time.sleep(1)
+    print("Wifi .. Connecting")
+
+print ("Wifi Connected")
+
+a = socket.getaddrinfo('www.postman-echo.com', 443)[0][-1]
+s= socket.socket()
+s.setblocking(False)
+s = ssl.wrap_socket(s)
+try:
+    s.connect(a)
+except OSError as e:
+    if str(e) == '119': # For non-Blocking sockets 119 is EINPROGRESS
+        print("In Progress")
+    else:
+        raise e
+poller = select.poll()
+poller.register(s, select.POLLOUT | select.POLLIN)
+while True:
+    res = poller.poll(1000)
+    time.sleep(0.5)
+    if res[0][1] & select.POLLOUT:
+        s.do_handshake()
+        s.send(b"GET / HTTP/1.0\r\n\r\n")
+    if res[0][1] & select.POLLIN:
+        print(s.recv(4092))
+        break
+```
+
 #### socket.dnsserver(*, dnsIndex, ip_addr)
  
 When no arguments are passed this function returns the configured DNS servers Primary (Index=0) and backup (Index = 1)
