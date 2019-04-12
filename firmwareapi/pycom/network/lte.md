@@ -15,6 +15,20 @@ The GPy and FiPy support both new LTE-M protocols:
 The Sequans modem used on Pycom's cellular enabled modules can only work in one of these modes at a time. In order to switch between the two protocols you need to flash a different firmware to the Sequans modem. Instructions for this can be found [here](../../../tutorials/lte/firmware.md).
 {% endhint %}
 
+{% hint style="info" %}
+
+**FiPy/Gpy Band Support**
+
+- Fipy/GPy v1.0 ==> supports 6 bands only (3, 4, 12, 13, 20, 28)
+
+- Fipy/GPy v1.2  with Sequans modem Firmware (41xxx) ==> Supports Full range of 17 bands (1, 2, 3, 4, 5, 8, 12, 13, 14, 17, 18, 19, 20, 25, 26, 28, 66)
+
+- Fipy/GPy v1.2  with Sequans older modem Firmwares  (39xxx)==> Supports 8 Bands (3, 4, 5, 8, 12, 13, 20, 28)
+
+- Fipy/GPy v1.2  with Sequans old modem Firmwares  < (39xxx)==> Supports 6 Bands (3, 4, 12, 13, 20, 28)
+
+{% endhint %}
+
 ## AT Commands
 
 The AT commands for the Sequans Monarch modem on the GPy/FiPy are available in a PDF file.
