@@ -1,4 +1,4 @@
-# OTA update - Lorawan
+# Lorawan OTA update
 
 {% hint style="info" %}
 Coming soon.

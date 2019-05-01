@@ -74,7 +74,7 @@
   * [PIR Sensor](tutorials/all/pir.md)
   * [Modbus](tutorials/all/modbus.md)
   * [OTA update](tutorials/all/ota.md)
-  * [OTA update \(Lorawan\)](tutorials/all/ota-lorawan.md)
+  * [Lorawan OTA update](tutorials/all/ota-lorawan.md)
   * [RMT](tutorials/all/rmt.md)
 * [LoRa Examples](tutorials/lora/README.md)
   * [LoRa-MAC \(Raw LoRa\)](tutorials/lora/lora-mac.md)
