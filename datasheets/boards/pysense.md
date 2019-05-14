@@ -25,4 +25,7 @@ The board features a single cell Li-Ion/Li-Po charger. When the board is being p
 ![](../../.gitbook/assets/Pysense_v1.1_MechanicalDimensions_b.png)
 
 
+## 3D model for case design
+
+* Please see the [3D model](../../.gitbook/assets/PySense_v1.1.step) (step format)
 

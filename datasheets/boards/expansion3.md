@@ -6,7 +6,7 @@
 
 The datasheet of the Expansion Board is available as a PDF File.
 
-<a href="../../.gitbook/assets/expansion3-specsheet-1.pdf" target="_blank"> OEM Altium Project and Gerber Files </a>
+<a href="../../.gitbook/assets/expansion3-specsheet-1.pdf" target="_blank"> Expansion Board Datasheet </a>
 
 ## Pinout
 
@@ -45,4 +45,8 @@ To use the battery, pull `P8/G15` high \(connect to `3v3`\). If you want to use 
 ## Troubleshooting
 
 * If PIC stays in bootloader mode, the [`dfu-util` update](../../pytrackpysense/installation/firmware.md) should be performed
+
+## 3D model for case design
+
+* Please see the [3D model](../../.gitbook/assets/Expansion_Board_3D.step) (step format)
 
