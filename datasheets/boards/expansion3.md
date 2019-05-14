@@ -48,5 +48,5 @@ To use the battery, pull `P8/G15` high \(connect to `3v3`\). If you want to use 
 
 ## 3D model for case design
 
-* Please see the [3D model](../../.gitbook/assets/Expansion_Board_3D.step) (step format)
+* Please see the <a href="../../.gitbook/assets/Expansion_Board_3D.step" target="_blank"> 3D model </a> (step format)
 

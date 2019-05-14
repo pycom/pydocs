@@ -51,5 +51,5 @@ The board features a single cell Li-Ion/Li-Po charger. When the board is being p
 
 ## 3D model for case design
 
-* Please see the [3D model](../../.gitbook/assets/PyScan_v0.7.step) (step format)
+* Please see the <a href="../../.gitbook/assets/PyScan_v0.7.step" target="_blank"> 3D model </a> (step format)
 
