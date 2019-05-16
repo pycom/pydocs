@@ -76,6 +76,7 @@
   * [OTA update](tutorials/all/ota.md)
   * [Lorawan OTA update](tutorials/all/ota-lorawan.md)
   * [RMT](tutorials/all/rmt.md)
+  * [TOUCH](tutorials/all/touch.md)
 * [LoRa Examples](tutorials/lora/README.md)
   * [LoRa-MAC \(Raw LoRa\)](tutorials/lora/lora-mac.md)
   * [LoRaWAN with OTAA](tutorials/lora/lorawan-otaa.md)
