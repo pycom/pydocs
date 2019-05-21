@@ -200,6 +200,12 @@
         {"from": "chapter/advance/downgrade", "to": "./advance/downgrade.html"},
         {"from": "chapter/advance/cli", "to": "./advance/cli.html"},
         {"from": "chapter/advance/encryption", "to": "./advance/encryption.html"},
+        {"from": "gettingstarted/wipy.html", "to": "./gettingstarted/connection/wipy.html"},
+        {"from": "gettingstarted/lopy.html", "to": "./gettingstarted/connection/lopy.html"},
+        {"from": "gettingstarted/sipy.html", "to": "./gettingstarted/connection/sipy.html"},
+        {"from": "gettingstarted/gpy.html", "to": "./gettingstarted/connection/gpy.html"},
+        {"from": "gettingstarted/fipy.html", "to": "./gettingstarted/connection/fipy.html"},
+        {"from": "gettingstarted/lopy4.html", "to": "./gettingstarted/connection/lopy4.html"},
         {"from": "chapter/license", "to": "./license.html"}
      ]
 }
