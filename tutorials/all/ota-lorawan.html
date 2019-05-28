@@ -2810,7 +2810,54 @@ _atrk_opts = { atrk_acct:"WpWNq1SZw320l9", domain:"pycom.io",dynamic: true};
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="lorawan-ota-update"><a name="lorawan-ota-update" class="plugin-anchor" href="#lorawan-ota-update"><i class="fa fa-link" aria-hidden="true"></i></a>Lorawan OTA update</h1>
-<p>Lorawan is a low-power wide-area (LPWA) network protocol that connects millions of devices around the globe. This technology offers long range, low power, secure communications, however, at much lower data rates than traditional networks such as Wi-Fi. In this tutorial we show how to perform a fast, reliable, over-the-air (OTA) update of the <strong>text files (.py, .js, .txt, etc) residing in flash only.</strong></p>
+<p>Lorawan is a low-power wide-area (LPWA) network protocol that connects millions of devices around the globe. This technology offers long range, low power, secure communications, however, at much lower data rates than traditional networks such as Wi-Fi. In this tutorial we show how to perform a fast, reliable, over-the-air (OTA) update of the <strong>text files (.py, .js, .txt, etc) residing in flash.</strong></p>
+<h2 id="getting-started"><a name="getting-started" class="plugin-anchor" href="#getting-started"><i class="fa fa-link" aria-hidden="true"></i></a>Getting Started</h2>
+<p>This project is based on a client-server architecture. On the server side the <a href="https://www.loraserver.io" target="_blank">loraserver</a> and the mosquitto MQTT server are used to send data between the updater application and the connected devices. The updater interfaces with the loraserver MQTT using the [paho-mqtt] (<a href="https://pypi.org/project/paho-mqtt/" target="_blank">https://pypi.org/project/paho-mqtt/</a>) client. The Python libraries and sample code for the OTA updater are available at the following <a href="https://github.com/pycom/pycom-libraries/tree/master/examples/OTA-lorawan" target="_blank">Github Repository</a>.</p>
+<h3 id="server-setup"><a name="server-setup" class="plugin-anchor" href="#server-setup"><i class="fa fa-link" aria-hidden="true"></i></a>Server setup</h3>
+<ul>
+<li>Install the <a href="https://www.loraserver.io/overview/" target="_blank">loraserver</a>. In this tutorial we will install the <a href="https://www.loraserver.io/guides/docker-compose/" target="_blank">docker</a> version on Linux.</li>
+<li>Navigate to the loraserver-docker/configuration/loraserver folder and open the loraserver.toml file. Update the following LoraWAN regional parameters as indicated:</li>
+</ul>
+<pre><code>name=&quot;Your region&quot; E.g &quot;EU_863_870&quot; for Europe 
+rx_window=2
+rx2_dr=&quot;Choose one with a payload of 200 bytes or more&quot; E.g 5 for Europe
+</code></pre><p>An example configuration file with parameter description can be found <a href="https://www.loraserver.io/loraserver/install/config/" target="_blank">here</a>. The lora-app-server, lora-gateway-bridge and lora-geo-server configuration files can be left to their default values.</p>
+<ul>
+<li>Run the following command to create all docker containers and start the loraserver:</li>
+</ul>
+<pre><code>$ sudo docker-compose up
+</code></pre><ul>
+<li>Open a web-browser and use <a href="http://localhost:8080" target="_blank">http://localhost:8080</a> (https if certificates configured) to access the Loraserver web-interface. </li>
+<li>Login to loraserver using admin for both user and password.</li>
+</ul>
+<p><img src="../../.gitbook/assets/Loraserver_login.png" alt="Loraserver login"></p>
+<ul>
+<li>Now you should be able to see the Loraserver web-interface shown below.</li>
+</ul>
+<p><img src="../../.gitbook/assets/Loraserver_main.png" alt="Loraserver homepage"></p>
+<ul>
+<li>Click on Network-servers and press Add. Enter a network-server name and loraserver:8000 as network-server server.</li>
+</ul>
+<p><img src="../../.gitbook/assets/Loraserver_ns.png" alt="Loraserver homepage"></p>
+<ul>
+<li>Click on service-profile and then press create. Choose a service-profile name, select the network-server we created before and click the Add gateway meta-data checkbox.</li>
+</ul>
+<p><img src="../../.gitbook/assets/Loraserver_sp.png" alt="Loraserver homepage"></p>
+<ul>
+<li>Click on Device-profile and then press the create button. In the general tab, input a device-profile name, select 1.0.2 from the Lorawan Mac version menu and select B from the Lorawan Regional parameters revision field.</li>
+</ul>
+<p><img src="../../.gitbook/assets/Loraserver_dp_general.png" alt="Loraserver homepage"></p>
+<p>In the Join tab, select the Device supports OTAA check box otherwise ABP will be chosen automatically. If you prefer ABP, you need to fill the RX1 delay, RX2 data-rate and RX2 channel frequency parameters.</p>
+<p><img src="../../.gitbook/assets/Loraserver_dp_auth.png" alt="Loraserver homepage"></p>
+<p>In the class C tab, please select Device supports Class-C checkbox. </p>
+<ul>
+<li>Click on Applications and then press create. Input an application name and an application description. From the dropdown menu choose the service-profile we created previoulsy.</li>
+</ul>
+<p><img src="../../.gitbook/assets/Loraserver_app.png" alt="Loraserver homepage"></p>
+<p>Click on the application just created and in the devices tab, select create. Select a device name, device description and a device EUI. From the device-profile dropdown menu select the device-profile create in the previous steps.</p>
+<p><img src="../../.gitbook/assets/Loraserver_app_device.png" alt="Loraserver homepage"></p>
+<p>In the keys tab, create an application key. </p>
+<p><img src="../../.gitbook/assets/Loraserver_device_key.png" alt="Loraserver homepage"></p>
 <script src="../../_gitbook_plugin_analytics.js"></script>
                                 
                                 </section>
@@ -2854,7 +2901,7 @@ _atrk_opts = { atrk_acct:"WpWNq1SZw320l9", domain:"pycom.io",dynamic: true};
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Lorawan OTA update","level":"5.2.16","depth":2,"next":{"title":"RMT","level":"5.2.17","depth":2,"path":"tutorials/all/rmt.md","ref":"tutorials/all/rmt.md","articles":[]},"previous":{"title":"OTA update","level":"5.2.15","depth":2,"path":"tutorials/all/ota.md","ref":"tutorials/all/ota.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["folding-menu","favicon-plus","insert-logo","hints","page-ref","-fontsettings","github","youtube","search","algolia","simpletabs","meta-single","analytics","anchors","grid","otherlink","header","bulk-redirect-with-extension"],"pluginsConfig":{"youtube":{},"github":{"url":"https://pycom.github.io/pydocs"},"grid":{},"analytics":{"google":"UA-72107804-3"},"search":{},"otherlink":{},"layout":{"headerPath":"alexa.html"},"folding-menu":{"animationDuration":0,"sticky":false},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000000,"ignoreSpecialCharacters":false},"header":{},"bulk-redirect-with-extension":{},"simpletabs":{},"meta-single":{"content":"Kbyrn6in1PWDoUk5OR65BLF-Ff4wU9WcT3RcJb6-VYM","name":"google-site-verification"},"algolia":{"freeAccount":"true","index":"pycom_docs","applicationID":"K37L43EW7N","publicKey":"427eb1c18422807561448260404bc4ee"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon-plus":{"appleTouchIconPrecomposed152":"","favicon":"","output":"_book"},"highlight":{},"favicon":"./favicon.ico","page-ref":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none; max-width: 150px;","url":"https://raw.githubusercontent.com/pycom/pydocs/gh-pages/.gitbook/assets/pycom_logo_lockup_navy_rgb.png"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"assets/style/cms.css"}},"file":{"path":"tutorials/all/ota-lorawan.md","mtime":"2019-05-23T12:39:41.428Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-23T12:40:46.703Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Lorawan OTA update","level":"5.2.16","depth":2,"next":{"title":"RMT","level":"5.2.17","depth":2,"path":"tutorials/all/rmt.md","ref":"tutorials/all/rmt.md","articles":[]},"previous":{"title":"OTA update","level":"5.2.15","depth":2,"path":"tutorials/all/ota.md","ref":"tutorials/all/ota.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["folding-menu","favicon-plus","insert-logo","hints","page-ref","-fontsettings","github","youtube","search","algolia","simpletabs","meta-single","analytics","anchors","grid","otherlink","header","bulk-redirect-with-extension"],"pluginsConfig":{"youtube":{},"github":{"url":"https://pycom.github.io/pydocs"},"grid":{},"analytics":{"google":"UA-72107804-3"},"search":{},"otherlink":{},"layout":{"headerPath":"alexa.html"},"folding-menu":{"animationDuration":0,"sticky":false},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000000,"ignoreSpecialCharacters":false},"header":{},"bulk-redirect-with-extension":{},"simpletabs":{},"meta-single":{"content":"Kbyrn6in1PWDoUk5OR65BLF-Ff4wU9WcT3RcJb6-VYM","name":"google-site-verification"},"algolia":{"freeAccount":"true","index":"pycom_docs","applicationID":"K37L43EW7N","publicKey":"427eb1c18422807561448260404bc4ee"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon-plus":{"appleTouchIconPrecomposed152":"","favicon":"","output":"_book"},"highlight":{},"favicon":"./favicon.ico","page-ref":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none; max-width: 150px;","url":"https://raw.githubusercontent.com/pycom/pydocs/gh-pages/.gitbook/assets/pycom_logo_lockup_navy_rgb.png"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"assets/style/cms.css"}},"file":{"path":"tutorials/all/ota-lorawan.md","mtime":"2019-05-28T14:51:48.309Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-28T14:56:28.165Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
