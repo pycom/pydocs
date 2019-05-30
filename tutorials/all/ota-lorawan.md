@@ -39,6 +39,14 @@ $ sudo docker-compose up
 
 ![Loraserver homepage](../../.gitbook/assets/Loraserver_ns.png)
 
+* Click on the Gateway-profiles and press create. Give this profile a name, select the channels enabled for this channel, and choose the network-server just created.
+
+![Loraserver homepage](../../.gitbook/assets/Loraserver_gw_profile.png)
+
+* Click on the Gateways and press create. Choose a gateway name a fill the description field. Read the gateway ID from your lora gateway and choose the network-server and gateway-profile just created. Check the gateway discovery enabled checkbox.
+
+![Loraserver homepage](../../.gitbook/assets/Loraserver_gw.png)
+
 * Click on service-profile and then press create. Choose a service-profile name, select the network-server we created before and click the Add gateway meta-data checkbox.
 
 ![Loraserver homepage](../../.gitbook/assets/Loraserver_sp.png)
@@ -61,9 +69,31 @@ Click on the application just created and in the devices tab, select create. Sel
 
 ![Loraserver homepage](../../.gitbook/assets/Loraserver_app_device.png)
 
-In the keys tab, create an application key. 
+In the keys tab, generate the application keys. 
 
 ![Loraserver homepage](../../.gitbook/assets/Loraserver_device_key.png)
+
+* Clone or download the OTA updater from the following [Github Repository](https://github.com/pycom/pycom-libraries/tree/master/examples/OTA-lorawan).
+
+* The server side code requires Python 3. To determine whether you have Python 3 installed, type the following:
+
+```
+$ python3 -V
+```
+
+* Install the paho mqtt client using:
+
+```
+$ pip3 install paho-mqtt
+``` 
+
+* ** Update the python config file parameters with the values from the previous steps. ** 
+
+* Start the OTA updater service using the following:
+
+```
+$ python3 updaterService.py
+```
 
 
 

@@ -2840,6 +2840,14 @@ rx2_dr=&quot;Choose one with a payload of 200 bytes or more&quot; E.g 5 for Euro
 </ul>
 <p><img src="../../.gitbook/assets/Loraserver_ns.png" alt="Loraserver homepage"></p>
 <ul>
+<li>Click on the Gateway-profiles and press create. Give this profile a name, select the channels enabled for this channel, and choose the network-server just created.</li>
+</ul>
+<p><img src="../../.gitbook/assets/Loraserver_gw_profile.png" alt="Loraserver homepage"></p>
+<ul>
+<li>Click on the Gateways and press create. Choose a gateway name a fill the description field. Read the gateway ID from your lora gateway and choose the network-server and gateway-profile just created. Check the gateway discovery enabled checkbox.</li>
+</ul>
+<p><img src="../../.gitbook/assets/Loraserver_gw.png" alt="Loraserver homepage"></p>
+<ul>
 <li>Click on service-profile and then press create. Choose a service-profile name, select the network-server we created before and click the Add gateway meta-data checkbox.</li>
 </ul>
 <p><img src="../../.gitbook/assets/Loraserver_sp.png" alt="Loraserver homepage"></p>
@@ -2856,9 +2864,27 @@ rx2_dr=&quot;Choose one with a payload of 200 bytes or more&quot; E.g 5 for Euro
 <p><img src="../../.gitbook/assets/Loraserver_app.png" alt="Loraserver homepage"></p>
 <p>Click on the application just created and in the devices tab, select create. Select a device name, device description and a device EUI. From the device-profile dropdown menu select the device-profile create in the previous steps.</p>
 <p><img src="../../.gitbook/assets/Loraserver_app_device.png" alt="Loraserver homepage"></p>
-<p>In the keys tab, create an application key. </p>
+<p>In the keys tab, generate the application keys. </p>
 <p><img src="../../.gitbook/assets/Loraserver_device_key.png" alt="Loraserver homepage"></p>
-<script src="../../_gitbook_plugin_analytics.js"></script>
+<ul>
+<li><p>Clone or download the OTA updater from the following <a href="https://github.com/pycom/pycom-libraries/tree/master/examples/OTA-lorawan" target="_blank">Github Repository</a>.</p>
+</li>
+<li><p>The server side code requires Python 3. To determine whether you have Python 3 installed, type the following:</p>
+</li>
+</ul>
+<pre><code>$ python3 -V
+</code></pre><ul>
+<li>Install the paho mqtt client using:</li>
+</ul>
+<pre><code>$ pip3 install paho-mqtt
+</code></pre><ul>
+<li><p><strong> Update the python config file parameters with the values from the previous steps. </strong> </p>
+</li>
+<li><p>Start the OTA updater service using the following:</p>
+</li>
+</ul>
+<pre><code>$ python3 updaterService.py
+</code></pre><script src="../../_gitbook_plugin_analytics.js"></script>
                                 
                                 </section>
                             
@@ -2901,7 +2927,7 @@ rx2_dr=&quot;Choose one with a payload of 200 bytes or more&quot; E.g 5 for Euro
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Lorawan OTA update","level":"5.2.16","depth":2,"next":{"title":"RMT","level":"5.2.17","depth":2,"path":"tutorials/all/rmt.md","ref":"tutorials/all/rmt.md","articles":[]},"previous":{"title":"OTA update","level":"5.2.15","depth":2,"path":"tutorials/all/ota.md","ref":"tutorials/all/ota.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["folding-menu","favicon-plus","insert-logo","hints","page-ref","-fontsettings","github","youtube","search","algolia","simpletabs","meta-single","analytics","anchors","grid","otherlink","header","bulk-redirect-with-extension"],"pluginsConfig":{"youtube":{},"github":{"url":"https://pycom.github.io/pydocs"},"grid":{},"analytics":{"google":"UA-72107804-3"},"search":{},"otherlink":{},"layout":{"headerPath":"alexa.html"},"folding-menu":{"animationDuration":0,"sticky":false},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000000,"ignoreSpecialCharacters":false},"header":{},"bulk-redirect-with-extension":{},"simpletabs":{},"meta-single":{"content":"Kbyrn6in1PWDoUk5OR65BLF-Ff4wU9WcT3RcJb6-VYM","name":"google-site-verification"},"algolia":{"freeAccount":"true","index":"pycom_docs","applicationID":"K37L43EW7N","publicKey":"427eb1c18422807561448260404bc4ee"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon-plus":{"appleTouchIconPrecomposed152":"","favicon":"","output":"_book"},"highlight":{},"favicon":"./favicon.ico","page-ref":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none; max-width: 150px;","url":"https://raw.githubusercontent.com/pycom/pydocs/gh-pages/.gitbook/assets/pycom_logo_lockup_navy_rgb.png"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"assets/style/cms.css"}},"file":{"path":"tutorials/all/ota-lorawan.md","mtime":"2019-05-28T14:51:48.309Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-28T14:56:28.165Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Lorawan OTA update","level":"5.2.16","depth":2,"next":{"title":"RMT","level":"5.2.17","depth":2,"path":"tutorials/all/rmt.md","ref":"tutorials/all/rmt.md","articles":[]},"previous":{"title":"OTA update","level":"5.2.15","depth":2,"path":"tutorials/all/ota.md","ref":"tutorials/all/ota.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["folding-menu","favicon-plus","insert-logo","hints","page-ref","-fontsettings","github","youtube","search","algolia","simpletabs","meta-single","analytics","anchors","grid","otherlink","header","bulk-redirect-with-extension"],"pluginsConfig":{"youtube":{},"github":{"url":"https://pycom.github.io/pydocs"},"grid":{},"analytics":{"google":"UA-72107804-3"},"search":{},"otherlink":{},"layout":{"headerPath":"alexa.html"},"folding-menu":{"animationDuration":0,"sticky":false},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000000,"ignoreSpecialCharacters":false},"header":{},"bulk-redirect-with-extension":{},"simpletabs":{},"meta-single":{"content":"Kbyrn6in1PWDoUk5OR65BLF-Ff4wU9WcT3RcJb6-VYM","name":"google-site-verification"},"algolia":{"freeAccount":"true","index":"pycom_docs","applicationID":"K37L43EW7N","publicKey":"427eb1c18422807561448260404bc4ee"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon-plus":{"appleTouchIconPrecomposed152":"","favicon":"","output":"_book"},"highlight":{},"favicon":"./favicon.ico","page-ref":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none; max-width: 150px;","url":"https://raw.githubusercontent.com/pycom/pydocs/gh-pages/.gitbook/assets/pycom_logo_lockup_navy_rgb.png"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"assets/style/cms.css"}},"file":{"path":"tutorials/all/ota-lorawan.md","mtime":"2019-05-30T14:53:56.688Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-30T14:59:42.206Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
