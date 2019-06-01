@@ -115,6 +115,46 @@ The server scripts should be run in a directory that contains every version of t
 $ python3 updaterService.py
 ```
 
+### Client setup
+
+A MicroPyton library for interfacing with the server described above is available [here](https://github.com/pycom/pycom-libraries/tree/master/examples/OTA-lorawan/firmware/1.17.0/flash).
+
+* Open the main.py and set the Lorawan regional parameters to be exactly the same as those on the gateway and Loraserver. The LORA_DEVICE_CLASS parameter must be Class C. 
+
+A sample main.py script is show below:
+
+```Python
+from loranet import LoraNet
+from ota import LoraOTA
+from network import LoRa
+import machine
+import utime
+
+def main():
+    LORA_FREQUENCY = 868100000
+    LORA_NODE_DR = 5
+    LORA_REGION = LoRa.EU868
+    LORA_DEVICE_CLASS = LoRa.CLASS_C
+    LORA_ACTIVATION = LoRa.OTAA
+    LORA_CRED = ('my dev_eui', 'my app_eui', 'my app_key')
+
+    lora = LoraNet(LORA_FREQUENCY, LORA_NODE_DR, LORA_REGION, LORA_DEVICE_CLASS, LORA_ACTIVATION, LORA_CRED)
+    lora.connect()
+
+    ota = LoraOTA(lora)
+
+    while True:
+        rx = lora.receive(256)
+        if rx:
+            print('Received user message: {}'.format(rx))
+
+        utime.sleep(2)
+
+main()
+```
+
+* Using the (pymkr plugin)[https://atom.io/packages/pymakr] upload 
+
 
 
 
