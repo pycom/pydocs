@@ -73,8 +73,6 @@ In the keys tab, generate the application keys.
 
 ![Loraserver homepage](../../.gitbook/assets/Loraserver_device_key.png)
 
-* Clone or download the OTA updater from the following [Github Repository](https://github.com/pycom/pycom-libraries/tree/master/examples/OTA-lorawan).
-
 * The server side code requires Python 3. To determine whether you have Python 3 installed, type the following:
 
 ```
@@ -86,6 +84,28 @@ $ python3 -V
 ```
 $ pip3 install paho-mqtt
 ``` 
+
+* Clone or download the OTA updater from the following [Github Repository](https://github.com/pycom/pycom-libraries/tree/master/examples/OTA-lorawan).
+
+The server scripts should be run in a directory that contains every version of the end devices code, in the following structure:
+
+```text
+  - server directory
+    |- server OTA python scripts
+    |- 1.0.0 (client code)
+    |  |- flash
+    |  |   |- lib
+    |  |   |- other text / scripts
+    |  |   |- main.py
+    |  |   |- boot.py
+    |- 1.0.1 (client code)
+    |  |- flash
+    |  |   |- lib
+    |  |   |- main.py
+    |  |   |- boot.py
+    |  |   |- other text / scripts
+    |  |   |- new scripts.py 
+```
 
 * ** Update the python config file parameters with the values from the previous steps. ** 
 
