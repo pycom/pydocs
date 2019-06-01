@@ -153,7 +153,7 @@ def main():
 main()
 ```
 
-* Using the (pymkr plugin)[https://atom.io/packages/pymakr] upload 
+* Using the (pymkr plugin)[https://atom.io/packages/pymakr] upload the client code to a Lora capable Pycom device. 
 
 
 
