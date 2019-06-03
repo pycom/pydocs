@@ -29,5 +29,5 @@ for cycles in range(10): # stop after 10 cycles
 
 Here is the expected result:
 
-![](../../.gitbook/assets/traffic.gif)
+![](../../gitbook/assets/traffic.gif)
 

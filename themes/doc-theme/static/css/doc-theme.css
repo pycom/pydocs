@@ -1,0 +1,163 @@
+html {
+    font-size: 105%;
+}
+pre {
+    background-color: transparent!important;
+}
+pre > code {
+  width: 100%;
+  padding: 12px;
+  margin: 18px;
+
+}
+
+.v-content  {
+  padding-bottom: 120px!important;
+}
+
+.menu-contextual {
+  width: 320px;
+  right: 12px;
+  top: 12px;
+  z-index: 3;
+  position: fixed;
+}
+
+li  {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+aside {
+  padding-bottom: 72px;
+}
+
+nav#TableOfContents {
+  margin-left: -48px;
+}
+
+
+
+h1, h2, h3, h4 {
+  color: #0D47A1;
+}
+
+h1, h2, h3, h4 {
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+
+.application {
+    line-height: 1.7;
+}
+
+.theme--dark.v-navigation-drawer:not(.v-navigation-drawer--floating) .v-navigation-drawer__border {
+    background-color: transparent;
+}
+/** this gives correct offset when link to anchors */
+*[id]:before {
+  display: block;
+  content: " ";
+  margin-top: -75px;
+  height: 75px;
+  visibility: hidden;
+}
+
+
+footer {
+  positison: fixed;
+  display: block;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding-left: 300px;
+
+}
+
+a, li > a {
+
+  text-decoration: none;
+}
+
+li > a {
+  color: #0D47A1;
+
+    line-height: 1.60;
+}
+
+li > a.hot {
+  color: #42A5F5;
+}
+
+
+
+li.lefttree {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+li.hot {
+  width: calc(100% + 22px);
+  margin-right: 0px;
+  padding-right: 0px;
+  transform: translate(-22px);
+  padding-left: 22px;
+}
+
+
+
+ul.lefttree {
+  padding-right: 0px;
+  margin-right: 0px;
+}
+
+.v-toolbar__content, .v-toolbar__extension {
+    padding:0!important;
+}
+
+.article {
+  margin-top: -32px;
+}
+
+.hot {
+
+}
+
+.danger-alert {
+  background-color: #FFCDD2 !important;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.warning-alert {
+  background-color: #FFCDD2 !important;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+
+.info-alert {
+  background-color: #BBDEFB !important;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.theme--light.v-toolbar {
+    color: #171730!important;
+}
+
+nav#TableOfContents {
+    overflow-y: scroll;
+    max-height: 640px;
+}
+
+img {
+  max-width: 100%;
+  padding: 18px;
+}
+
+.mono {
+  font-family: monospace;
+}

@@ -4,7 +4,7 @@ Before you start, update your device to the latest firmware. Select _stable_ fir
 
 Copy _Sigfox ID_ and _Sigfox PAC_ from the last screen of firmware updater.
 
-![](../../.gitbook/assets/fwupdater.png)
+![](../../gitbook/assets/fwupdater.png)
 
 _Sigfox ID_ and _Sigfox Pac_ is assigned to your device just once during the first update process. _Sigfox ID_ and _Sigfox Pac_ will not change after successive firmware updates.
 
@@ -28,13 +28,13 @@ print(binascii.hexlify(sigfox.pac()))
 
 You need to register to the Sigfox Backend. Navigate to [https://backend.sigfox.com/activate](https://backend.sigfox.com/activate)
 
-![](../../.gitbook/assets/sigfoxactivate%20%281%29.png)
+![](../../gitbook/assets/sigfoxactivate%20%281%29.png)
 
 Find the specific country country where the device will be activated. Enter the device's _Sigfox ID_ and _Sigfox PAC_.
 
 You should see green microchip if you entered correct _Sigfox ID_ and _Sigfox PAC_
 
-![](../../.gitbook/assets/sigfoxidpac.png)
+![](../../gitbook/assets/sigfoxidpac.png)
 
 Then provide the required information including email address and complete registration.
 
@@ -42,13 +42,13 @@ Then provide the required information including email address and complete regis
 When registering your other devices \(not your first device\), you already have created Sigfox Account before. Be sure you are login with your Sigfox account. In that way all of your devices will be added to same Sigfox Account.
 {% endhint %}
 
-![](../../.gitbook/assets/sigfoxregistrationform.png)
+![](../../gitbook/assets/sigfoxregistrationform.png)
 
 After registration, you will receive confirmation email with _password_ to Sigfox backend [https://backend.sigfox.com/auth/login](https://backend.sigfox.com/auth/login)
 
 Use your email and password to login to Sigfox backend.
 
-![](../../.gitbook/assets/sigfoxbackend.png)
+![](../../gitbook/assets/sigfoxbackend.png)
 
 If you enter correct credentials then you should be able to login to Sigfox backend.
 
@@ -60,11 +60,11 @@ Once you register your device on Sigfox backend, then your Sigfox PAC was used, 
 
 To get new Sigfox PAC navigate to your device on Sigfox backend. On _device_ click on Sigfox Id of device you want to transfer.
 
-![](../../.gitbook/assets/sigfoxtableid%20%281%29.png)
+![](../../gitbook/assets/sigfoxtableid%20%281%29.png)
 
 Now you can see your new Sigfox PAC.
 
-![](../../.gitbook/assets/newsigfoxpac%20%281%29.png)
+![](../../gitbook/assets/newsigfoxpac%20%281%29.png)
 
 Once you know your new Sigfox PAC go to [https://backend.sigfox.com/activate](https://backend.sigfox.com/activate) and register device with different account.
 

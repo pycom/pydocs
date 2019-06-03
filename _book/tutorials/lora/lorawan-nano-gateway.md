@@ -345,7 +345,7 @@ class NanoGateway:
 
 To set up the gateway with The Things Network \(TTN\), navigate to their website and create/register an account. Enter a username and an email address to verify with their platform.
 
-![](../../.gitbook/assets/ttn-1.png)
+![](../../gitbook/assets/ttn-1.png)
 
 Once an account has been registered, the nano-gateway can then be registered. To do this, navigate to the TTN Console web page.
 
@@ -353,11 +353,11 @@ Once an account has been registered, the nano-gateway can then be registered. To
 
 Inside the TTN Console, there are two options, `applications` and `gateways`. Select `gateways` and then click on `register gateway`. This will allow for the set up and registration of a new nano-gateway.
 
-![](../../.gitbook/assets/ttn-2%20%281%29.png)
+![](../../gitbook/assets/ttn-2%20%281%29.png)
 
 On the Register Gateway page, you will need to set the following settings:
 
-![](../../.gitbook/assets/ttn-gatewayreg-11-2017-2.jpg) These are unique to each gateway, location and country specific frequency. Please verify that correct settings are selected otherwise the gateway will not connect to TTN.
+![](../../gitbook/assets/ttn-gatewayreg-11-2017-2.jpg) These are unique to each gateway, location and country specific frequency. Please verify that correct settings are selected otherwise the gateway will not connect to TTN.
 
 **You need to tick the "I'm using the legacy packet forwarder" to enable the right settings.** This is because the Nano-Gateway uses the 'de facto' standard Semtech UDP protocol.
 
@@ -374,7 +374,7 @@ The Gateway EUI should match your Gateway ID from the `config.py` file. We sugge
 
 Once these settings have been applied, click `Register Gateway`. A Gateway Overview page will appear, with the configuration settings showing. Next click on the `Gateway Settings` and configure the Router address to match that of the gateway \(default: `router.eu.thethings.network`\).
 
-![](../../.gitbook/assets/ttn-4%20%281%29.png)
+![](../../gitbook/assets/ttn-4%20%281%29.png)
 
 The `Gateway` should now be configured. Next, one or more nodes can now be configured to use the nano-gateway and TTN applications may be built.
 
@@ -511,7 +511,7 @@ Now that the gateway & nodes have been setup, a TTN Application can be built; i.
 
 Selecting the `Applications` tab at the top of the TTN console, will bring up a screen for registering applications. Click register and a new page, similar to the one below, will open.
 
-![](../../.gitbook/assets/ttn-5.png)
+![](../../gitbook/assets/ttn-5.png)
 
 Enter a unique `Application ID` as well as a Description & Handler Registration.
 
@@ -521,7 +521,7 @@ Now the LoPy nodes must be registered to send data up to the new Application.
 
 To connect nodes to the nano-gateway, devices need to be added to the application. To do this, navigate to the `Devices` tab on the `Application` home page and click the `Register Device` button.
 
-![](../../.gitbook/assets/ttn-6.png)
+![](../../gitbook/assets/ttn-6.png)
 
 In the `Register Device` panel, complete the forms for the `Device ID` and the `Device EUI`. The `Device ID` is user specified and is unique to the device in this application. The `Device EUI` is also user specified but must consist of exactly 8 bytes, given in hexadecimal.
 
@@ -531,23 +531,23 @@ Once the device has been added, change the `Activation Method` between `OTAA` an
 
 Now that the data is arriving on the TTN Backend, TTN can be managed as to where data should be delivered to. To do this, use the `Integrations` tab within the new Application’s settings.
 
-![](../../.gitbook/assets/ttn-7%20%281%29.png)
+![](../../gitbook/assets/ttn-7%20%281%29.png)
 
 Upon clicking `add integration`, a screen with 4 different options will appear. These have various functionality and more information about them can be found on the TTN website/documentation.
 
 For this example, use the `HTTP Integration` to forward the LoRaWAN Packets to a remote server/address.
 
-![](../../.gitbook/assets/ttn-8%20%281%29.png)
+![](../../gitbook/assets/ttn-8%20%281%29.png)
 
 Click `HTTP Integration` to connect up an endpoint that can receive the data.
 
 For testing, a website called [RequestBin](https://requestb.in/) may be used to receive the data that TTN forwards \(via POST Request\). To set this up, navigate to [RequestBin](https://requestb.in/) and click the `Create a RequestBin`.
 
-![](../../.gitbook/assets/ttn-9%20%281%29.png)
+![](../../gitbook/assets/ttn-9%20%281%29.png)
 
 Copy the URL that is generated and past this into the `URL` form under the `Application Settings`.
 
-![](../../.gitbook/assets/ttn-10%20%281%29.png)
+![](../../gitbook/assets/ttn-10%20%281%29.png)
 
 This is the address that TTN will forward data onto. As soon as a LoPy starts sending messages, TTN will forward these onto `RequestBin` and they will appear at the unique `RequestBin URL`.
 

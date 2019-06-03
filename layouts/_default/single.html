@@ -1,0 +1,6 @@
+{{ define "main" }}
+  {{ partial "breadcrumb_recursive.html" (dict "menu" .Site.Menus.main "page" . ) }}
+    <h1>{{- .Title -}}</h1>
+    {{- .Content -}}
+
+{{ end }}

@@ -2759,7 +2759,7 @@ data = (<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<s
 duration = <span class="hljs-number">10000</span>
 rmt.pulses_send(duration, data)
 </code></pre>
-<p><img src="../../.gitbook/assets/rmt_ex_1%20%281%29.png" alt="Waveform of example 1"></p>
+<p><img src="../../gitbook/assets/rmt_ex_1%20%281%29.png" alt="Waveform of example 1"></p>
 <p>In this example we define the signal by a tuple of durations and what state the signal starts in.</p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> machine <span class="hljs-keyword">import</span> RMT
 <span class="hljs-comment"># Map RMT channel 4 to P21, when the RMT is idle, it will output LOW</span>
@@ -2774,7 +2774,7 @@ duration = (<span class="hljs-number">8000</span>,<span class="hljs-number">1100
 <span class="hljs-comment"># toggle state between each duration</span>
 rmt.pulses_send(duration, start_level=RMT.HIGH)
 </code></pre>
-<p><img src="../../.gitbook/assets/rmt_ex_2.png" alt="Waveform of example 2"></p>
+<p><img src="../../gitbook/assets/rmt_ex_2.png" alt="Waveform of example 2"></p>
 <p>This third example, is a combination of the above two styles of defining a signal. Each pulse has a defined duration as well as a state. This is useful if you don&apos;t always want the signal to toggle state.</p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> machine <span class="hljs-keyword">import</span> RMT
 <span class="hljs-comment"># Map RMT channel 4 to P21, when the RMT is idle, it will output LOW</span>
@@ -2786,7 +2786,7 @@ data = (<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<s
 duration = (<span class="hljs-number">400</span>,<span class="hljs-number">200</span>,<span class="hljs-number">100</span>,<span class="hljs-number">300</span>,<span class="hljs-number">200</span>,<span class="hljs-number">400</span>)
 rmt.pulses_send(duration, data)
 </code></pre>
-<p><img src="../../.gitbook/assets/rmt_ex_3%20%281%29.png" alt="Waveform of example 3"></p>
+<p><img src="../../gitbook/assets/rmt_ex_3%20%281%29.png" alt="Waveform of example 3"></p>
 <p>The following example creates an RMT object on channel 4 and configures it for transmission with carrier modulation.</p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> machine <span class="hljs-keyword">import</span> RMT
 rmt = RMT(channel=<span class="hljs-number">4</span>,
@@ -2798,7 +2798,7 @@ data = (<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<s
 duration = <span class="hljs-number">10000</span>
 rmt.pulses_send(duration, data)
 </code></pre>
-<p><img src="../../.gitbook/assets/rmt_ex_4.png" alt="Waveform of example 4"></p>
+<p><img src="../../gitbook/assets/rmt_ex_4.png" alt="Waveform of example 4"></p>
 <p>The following example creates an RMT object on channel 2, configures it for receiving, then waits for the first, undefined number of pulses without timeout</p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> machine <span class="hljs-keyword">import</span> RMT
 rmt = machine.RMT(channel=<span class="hljs-number">2</span>)

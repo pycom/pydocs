@@ -1,6 +1,6 @@
 # L01 OEM Baseboard Reference
 
-![](../../.gitbook/assets/l01-reference%20%281%29.png)
+![](../../gitbook/assets/l01-reference%20%281%29.png)
 
 The L01 OEM reference board is a reference design suitable L01 as well as W01 making it possible to have a single PCB design that can accommodate both OEM modules.
 
@@ -27,19 +27,19 @@ If you require a reference board for the L04 or G01, this design is **not** suit
 
 The layout of the L01 baseboard reference is available as a PDF File
 
-[L01 OEM Layout]()../../.gitbook/assets/l01-oem-layout.pdf)
+[L01 OEM Layout]()../../gitbook/assets/l01-oem-layout.pdf)
 
-![](../../.gitbook/assets/l01-oem-layout-1.png)
+![](../../gitbook/assets/l01-oem-layout-1.png)
 
 ## Schematic
 
 The schematic of the L01 baseboard reference is available as a PDF File.
 
-[L01 OEM Schematic](../../.gitbook/assets/l01-oem-schematic.pdf)
+[L01 OEM Schematic](../../gitbook/assets/l01-oem-schematic.pdf)
 
 ## Altium Project and Gerber Files
 
 The Altium Project and Gerber files are also available as a ZIP File.
 
-[L01 OEM Altium Project and Gerber Files](../../.gitbook/assets/l01-oem-baseboard-ref.zip)
+[L01 OEM Altium Project and Gerber Files](../../gitbook/assets/l01-oem-baseboard-ref.zip)
 

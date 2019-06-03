@@ -14,7 +14,7 @@ Go to: Settings \(in sidebar\) → Sigfox API → Settings
 
 and select Sigfox device type which is associated with Sigfox custom contract.
 
-![](../../../.gitbook/assets/selectdevicetypecustomcontract.png)
+![](../../../gitbook/assets/selectdevicetypecustomcontract.png)
 
 ### Add your Sigfox device to Pybytes
 
@@ -29,7 +29,7 @@ Detailed steps which are same for all devices are [**described here**](../quick.
 
 After your device was flashed with Pybytes firmware in automatically start adding itself to Sigfox backend.
 
-![](../../../.gitbook/assets/sigfoxcustomcontractstatus%20%281%29.png)
+![](../../../gitbook/assets/sigfoxcustomcontractstatus%20%281%29.png)
 
 ## Troubleshooting
 

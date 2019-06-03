@@ -1,6 +1,6 @@
 # Installation
 
-![](../../.gitbook/assets/pymakr-logo-1.png)
+![](../../gitbook/assets/pymakr-logo-1.png)
 
 ## Pymakr Plugins <a id="pymakr-plugins"></a>
 

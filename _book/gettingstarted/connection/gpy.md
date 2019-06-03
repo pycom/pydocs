@@ -8,7 +8,7 @@
 * Locate the USB connector on the expansion board.
 * Insert the GPy module on the the expansion board with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.
 
-![](../../.gitbook/assets/expansion_board_2_gpy.png)
+![](../../gitbook/assets/expansion_board_2_gpy.png)
 
 
 {% content "second" %}
@@ -17,7 +17,7 @@
 * Locate the USB connector on the expansion board.
 * Insert the GPy module on the Expansion Board with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.
 
-![](../../.gitbook/assets/expansion_board_3_gpy.png)
+![](../../gitbook/assets/expansion_board_3_gpy.png)
 
 {% content "third" %}
 * Before connecting your module to a Pysense/Pytrack/Pyscan board, you should update the firmware on the Pysense/Pytrack/Pyscan. Instructions on how to do this can be found [here](../../pytrackpysense/installation/firmware.md).
@@ -46,7 +46,7 @@ Please ensure you have the signal level of the UART adapter set to `3.3v` before
 
 * In order to access the GPy via WiFi you only need to provide `3.5v` - `5.5v` on the `Vin` pin of the GPy:
 
-![](../../.gitbook/assets/bare_gpy.png)
+![](../../gitbook/assets/bare_gpy.png)
 
 * By default, when the GPy boots, it will create a WiFi access point with the following credentials:
   * SSID:`gpy-wlan`
@@ -66,17 +66,17 @@ If you intend on using the LTE CAT-M1 or NB-IoT connectivity of the GPy you **mu
 
 * You will need to connect the antenna to the GPy using the U.FL connector on the same side of the GPy as the LED.
 
-![](../../.gitbook/assets/lte_ant_gpy.png)
+![](../../gitbook/assets/lte_ant_gpy.png)
 
 ### WiFi/Bluetooth \(optional\)
 
 All Pycom modules, including the GPy, come with a on-board WiFi antenna as well as a U.FL connector for an external antenna. The external antenna is optional and only required if you need better performance or are mounting the GPy in such a way that the WiFi signal is blocked. Switching between the antennas is done via software, instructions for this can be found [here.](../../firmwareapi/pycom/network/wlan.md)
 
-![](../../.gitbook/assets/wifi_pigtail_ant_gpy.png)
+![](../../gitbook/assets/wifi_pigtail_ant_gpy.png)
 
 ### SIM card <a id="sim-card"></a>
 
 If you intend on using the LTE CAT-M1 or NB-IoT connectivity of the GPy you will need to insert a SIM card into your GPy. It should be noted that the GPy does not support regular LTE connectivity and you may require a special SIM. It is best to contact your local cellular providers for more information on acquiring a LTE CAT-M1/NB-IoT enabled nano SIM.
 
-![](../../.gitbook/assets/sim_gpy.png)
+![](../../gitbook/assets/sim_gpy.png)
 

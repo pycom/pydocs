@@ -1,6 +1,6 @@
 # LoPy
 
-\*\*\*\*![](../../.gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn80ythqnrgah01r2m-lopy-1.png) ****
+\*\*\*\*![](../../gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn80ythqnrgah01r2m-lopy-1.png) ****
 
 **Store**: [Buy Here](https://pycom.io/product/lopy)
 
@@ -10,14 +10,14 @@
 
 The datasheet of the LoPy is available as a PDF File.
 
-[LoPy Datasheet](../../.gitbook/assets/lopy-specsheet.pdf)
+[LoPy Datasheet](../../gitbook/assets/lopy-specsheet.pdf)
 ## Pinout
 
 The pinout of the LoPy is available as a PDF File
 
-[LoPy Pinout](../../.gitbook/assets/lopy-pinout.pdf)
+[LoPy Pinout](../../gitbook/assets/lopy-pinout.pdf)
 
-![](../../.gitbook/assets/lopy-pinout.png)
+![](../../gitbook/assets/lopy-pinout.png)
 
 {% hint style="info" %}
 Please note that the PIN assignments for UART1 \(TX1/RX1\), SPI \(CLK, MOSI, MISO\) and I2C \(SDA, SCL\) are defaults and can be changed in Software.

@@ -26,7 +26,7 @@ After you’re done with upgrading, you can use the Pymakr Plugins to upload and
 4. Reconnect the board via USB to your computer, this puts the device in ‘firmware update mode’.
 5. Run the Firmware Upgrade tool
 
-![](../../.gitbook/assets/firmware-update.png)
+![](../../gitbook/assets/firmware-update.png)
 
 6. Remove the `G23` to `GND` jumper cable/wire
 
@@ -46,7 +46,7 @@ When using a Pysense/Pytrack/Pyscan/Expansion Board 3.0 to update your module yo
 4. Reconnect the board via USB to your computer
 5. Run the Firmware Upgrade tool
 
-![](../../.gitbook/assets/firmware-update-2.png)
+![](../../gitbook/assets/firmware-update-2.png)
 
 6. Disconnect the USB cable from the board and reconnect it, your device is now ready to use
 {% endtabs %}

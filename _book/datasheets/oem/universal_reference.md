@@ -1,6 +1,6 @@
 # Universal OEM Baseboard Reference
 
-![](../../.gitbook/assets/universal_reference%20%281%29.png)
+![](../../gitbook/assets/universal_reference%20%281%29.png)
 
 The universal OEM reference board is a reference design suitable W01, L01, L04 and G01 OEM modules, making it possible to have a single PCB design that can accommodate all our OEM modules.
 
@@ -27,19 +27,19 @@ If you require a reference board for the G01, only this design is suitable. The 
 
 The layout of the OEM baseboard reference is available as a PDF File
 
-[OEM Layout](../../.gitbook/assets/oem-universal-layout.pdf)
+[OEM Layout](../../gitbook/assets/oem-universal-layout.pdf)
 
-![](../../.gitbook/assets/oem-universal-layout-1.png)
+![](../../gitbook/assets/oem-universal-layout-1.png)
 
 ## Schematic
 
 The schematic of the OEM baseboard reference is available as a PDF File.
 
-[OEM Schematic](../../.gitbook/assets/oem-universal-schematic.pdf)
+[OEM Schematic](../../gitbook/assets/oem-universal-schematic.pdf)
 
 ## Altium Project and Gerber Files
 
 The Altium Project and Gerber files are also available as a ZIP File.
 
-[OEM Altium Project and Gerber Files](../../.gitbook/assets/oem-universal-baseboard-ref.zip)
+[OEM Altium Project and Gerber Files](../../gitbook/assets/oem-universal-baseboard-ref.zip)
 

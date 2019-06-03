@@ -33,9 +33,9 @@ If using FileZilla, it's important to configure the settings correctly.
 
 Do not use the quick connect button. Instead, open the site manager and create a new configuration. Within the `General` tab, ensure that encryption is set to: `Only use plain FTP (insecure)`.
 
-![](../../.gitbook/assets/filezilla-settings-1.png)
+![](../../gitbook/assets/filezilla-settings-1.png)
 
 In the `Transfer Settings` tab, limit the max number of connections to one. Other FTP clients may behave in a similar ways; visit their documentation for more specific information.
 
-![](../../.gitbook/assets/filezilla-settings-2.png)
+![](../../gitbook/assets/filezilla-settings-2.png)
 

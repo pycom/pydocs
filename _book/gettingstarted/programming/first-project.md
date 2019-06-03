@@ -17,7 +17,7 @@ This guide will take you through how to setup your first project with Pymakr and
 {% hint style="info" %}
 If you are using Atom, it is important to check at this point that Atom has successfully identified the project. The name of the directory you created in step 1 \(`RGB-Blink` in this case\) should be shown in the Pymakr pane like so:
 
-![](../../.gitbook/assets/atom_project.png)
+![](../../gitbook/assets/atom_project.png)
 
 If this is not the case you can press `alt-ctrl-r` on Windows/Linux or `ctrl-alt-cmd-l` on macOS, in order to reload Atom and fix the issue.
 {% endhint %}

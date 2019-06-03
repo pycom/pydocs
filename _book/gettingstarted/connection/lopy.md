@@ -8,7 +8,7 @@
 * Locate the USB connector on the expansion board.
 * Insert the LoPy module on the the expansion board with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.
 
-![](../../.gitbook/assets/expansion_board_2_lopy.png)
+![](../../gitbook/assets/expansion_board_2_lopy.png)
 
 {% content "second" %}
 * Before connecting your module to an Expansion Board 3.0, you should update the firmware on the Expansion Board 3.0. Instructions on how to do this can be found [here](../../pytrackpysense/installation/firmware.md).
@@ -16,7 +16,7 @@
 * Locate the USB connector on the expansion board.
 * Insert the LoPy module on the Expansion Board with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.
 
-![](../../.gitbook/assets/expansion_board_3_lopy.png)
+![](../../gitbook/assets/expansion_board_3_lopy.png)
 
 {% content "third" %}
 * Before connecting your module to a Pysense/Pytrack/Pyscan board, you should update the firmware on the Pysense/Pytrack/Pyscan. Instructions on how to do this can be found [here](../../pytrackpysense/installation/firmware.md).
@@ -40,14 +40,14 @@ Please ensure you have the signal level of the UART adapter set to `3.3v` before
 
 * In order to put the LoPy into bootloader mode to update the device firmware you will need to connect `P2` to `GND`. We recommend you connect a button between the two to make this simpler.
 
-![](../../.gitbook/assets/uart_lopy.png)
+![](../../gitbook/assets/uart_lopy.png)
 
 {% content "fifth" %}
 **Note:** This method of connection is not recommended for first time users. It is possible to lock yourself out of the device, requiring a USB connection.
 
 * In order to access the LoPy via WiFi you only need to provide `3.5v` - `5.5v` on the `Vin` pin of the LoPy:
 
-![](../../.gitbook/assets/bare_lopy.png)
+![](../../gitbook/assets/bare_lopy.png)
 
 * By default, when the LoPy boots, it will create a WiFi access point with the following credentials:
   * SSID: `lopy-wlan`
@@ -71,18 +71,18 @@ The LoPy only supports LoRa on the 868MHz or 915MHz bands. It does not support 4
 
 * Firstly you will need to connect the U.FL to SMA pig tail to the LoPy using the U.FL connector on the same side of the LoPy as the LED.
 
-![](../../.gitbook/assets/lora_pigtail_lopy.png)
+![](../../gitbook/assets/lora_pigtail_lopy.png)
 
 * If you are using a pycase, you will next need to put the SMA connector through the antenna hole, ensuring you align the flat edge correctly, and screw down the connector using the provided nut.
 * Finally you will need to screw on the antenna to the SMA connector.
 
-![](../../.gitbook/assets/lora_pigtail_ant_lopy.png)
+![](../../gitbook/assets/lora_pigtail_ant_lopy.png)
 
 ### WiFi/Bluetooth \(optional\)
 
 All Pycom modules, including the LoPy, come with a on-board WiFi antenna as well as a U.FL connector for an external antenna. The external antenna is optional and only required if you need better performance or are mounting the LoPy in such a way that the WiFi signal is blocked. Switching between the antennas is done via software, instructions for this can be found [here.](../../firmwareapi/pycom/network/wlan.md)
 
-![](../../.gitbook/assets/wifi_pigtail_ant_lopy.png)
+![](../../gitbook/assets/wifi_pigtail_ant_lopy.png)
 
 ## Deep Sleep current issue
 

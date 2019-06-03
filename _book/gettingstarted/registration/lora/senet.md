@@ -1,6 +1,6 @@
 # Senet
 
-![](../../../.gitbook/assets/senet-logo.png)
+![](../../../gitbook/assets/senet-logo.png)
 
 ## The Senet Developer Portal
 
@@ -33,7 +33,7 @@ print("DevEUI: %s" % (ubinascii.hexlify(lora.mac()).decode('ascii')))
 
 Use this value during the first step of device registration.
 
-![](../../../.gitbook/assets/senet-register.png)
+![](../../../gitbook/assets/senet-register.png)
 
 ### Application EUI and Application Key
 
@@ -41,7 +41,7 @@ The Application EUI uniquely identifies the security broker \(called a Join Serv
 
 At the completion of your device registration process on the Senet Developer Portal, you will be presented with the Application EUI and the Application Key which you will need to provision in your device. This information is always available after the fact in the device details screen.
 
-![](../../../.gitbook/assets/senet-register-complete.png)
+![](../../../gitbook/assets/senet-register-complete.png)
 
 ## Provisioning the LoPy or FiPy
 

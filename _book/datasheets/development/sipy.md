@@ -1,6 +1,6 @@
 # SiPy
 
-\*\*\*\*![](../../.gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn86n8h-hb1oh1idwb-sipy-2.png) ****
+\*\*\*\*![](../../gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn86n8h-hb1oh1idwb-sipy-2.png) ****
 
 **Store**: [Buy Here](https://pycom.io/product/sipy)
 
@@ -10,15 +10,15 @@
 
 The datasheet of the SiPy is available as a PDF File.
 
-[SiPy Datasheet](./../.gitbook/assets/sipy-specsheet.pdf)
+[SiPy Datasheet](./../gitbook/assets/sipy-specsheet.pdf)
 
 ## Pinout
 
 The pinout of the SiPy is available as a PDF File
 
-[SiPy Pinout](../../.gitbook/assets/sipy-pinout.pdf)
+[SiPy Pinout](../../gitbook/assets/sipy-pinout.pdf)
 
-![](../../.gitbook/assets/sipy-pinout.png)
+![](../../gitbook/assets/sipy-pinout.png)
 
 {% hint style="info" %}
 Please note that the PIN assignments for UART1 \(TX1/RX1\), SPI \(CLK, MOSI, MISO\) and I2C \(SDA, SCL\) are defaults and can be changed in Software.

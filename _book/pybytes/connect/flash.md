@@ -12,11 +12,11 @@ From firmware 1.16.x onwards all Pycom devices come with Pybytes library build-i
 
 At the last step of the "Add Device" process:
 
-![](../../.gitbook/assets/pybyteslib-box-1.gif)
+![](../../gitbook/assets/pybyteslib-box-1.gif)
 
 1. Click on download "Pybytes library"
 
-![](../../.gitbook/assets/pybytes-library-wizard%20%281%29.png)
+![](../../gitbook/assets/pybytes-library-wizard%20%281%29.png)
 
 You can also download _Pybytes library_ at the device's settings page:
 
@@ -26,7 +26,7 @@ You can also download _Pybytes library_ at the device's settings page:
 
 4. Click on the button _Download_ at Pybytes library;
 
-![](../../.gitbook/assets/pybytes-library-download%20%281%29.gif)
+![](../../gitbook/assets/pybytes-library-download%20%281%29.gif)
 
 ### Step 2. Flash your device with Pymakr
 

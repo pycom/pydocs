@@ -73,7 +73,7 @@ To install the drivers, the Pytrack/Pysense board must be in DFU-mode:
    * _Here the USB ID has to be the DFU-bootloader one \(_`0xF014`_for Pytrack or_ `0xF011` _for Pysense\)._
    * _This is a successful DFU driver installation for Pytrack:_
 
-![](../../.gitbook/assets/pytrack_dfu_mode_zadig.png)
+![](../../gitbook/assets/pytrack_dfu_mode_zadig.png)
 
 Open the command prompt and navigate to the directory where the DFU-util and the firmware was downloaded \(must be in same directory\). Repeat the procedure to get the board in DFU-mode and run the command below but replace `X.X.X` with the firmware version and replace Pysense with Pytrack if it is the Pytrack that is to be updated \(e.g: `pytrack_0.0.8.dfu`\):
 
@@ -85,7 +85,7 @@ If the update was successful, a message,"Done!" should appear in the bottom of t
 
 **Double-check Serial USB \(CDC\) driver is installed in Application mode:** if, by mistake, the `libusbk` driver was installed while the USB ID is the Application mode \(`0xF013` for Pytrack or `0xF012` for Pysense\), then the `Serial USB (CDC)` driver has to be installed for application mode. This will allow Windows to allocate a COM port, which is required for REPL console.
 
-![](../../.gitbook/assets/pytrack_app_mode_zadig.png)
+![](../../gitbook/assets/pytrack_app_mode_zadig.png)
 
 ## Using DFU-util with Pytrack, Pysense and Expansion Board v3
 

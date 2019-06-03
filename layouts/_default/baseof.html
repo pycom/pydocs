@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+  <title>{{ if .Title }}{{ .Title }} {{ else }}{{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.SiteDescription }}{{ end }}">
+
+
+  <link href="/css/doc-theme.css?" rel="stylesheet">
+</head>
+<body>
+<v-app id="app" class="grey lighten-5">
+
+<v-container class="ma-0 pa-0">
+   <v-content  width="100%">
+          {{ partial "menu.html" . }}
+
+
+          {{- partial "toolbar.html" . -}}
+
+          <v-container class="article">
+            <div id="sr">
+              <gcse:searchresults></gcse:search>
+            </div>
+            <div id="article">
+              {{- partial "menu-contextual.html" . -}}
+              {{- block "main" . }}{{- end }}
+            </div>
+          </v-container>
+
+          </v-content>
+
+</v-container>
+
+  {{- partial "footer.html" . -}}
+
+ </v-app>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/1.5.13/vuetify.min.js"></script>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        gsearch_api_key: 'AIzaSyD4-MGytNzTCZpTH6UYk1mfOxZkt74T5MI',
+        drawer: true,
+        drawer2: true,
+        toc: 0,
+        branches: [
+          { value: 'http://docs.pycom.io:1313', text: 'version stable',  } ,
+          { value: 'http://development.pycom.io', text: 'version development'}
+        ],
+        branch: ""
+      },
+      mounted: function () {
+        this.branch= this.branches[0]
+        for (b in this.branches) {
+          // console.log(this.branches[b].value, document.location.href)
+          // console.log(document.location.href.indexOf(this.branches[b].value))
+          if ( document.location.href.indexOf(this.branches[b].value) > -1) {
+            console.log(this.branches[b].value)
+            this.branch= this.branches[b]
+          }
+        }
+        var elem = this.$refs.tocBtn.$el
+        setTimeout(function () {
+            elem.click()
+        }, 1500);
+      },
+      methods: {
+        fetchResults (kw) {
+          var cx = "004592132197158309932:anluf60c9w8";
+          var url = "https://www.googleapis.com/customsearch/v1";
+          url = url + "?cx=" + cx + "&q=" + encodeURI(kw);
+
+          // this.drawer2= false;
+        }
+      },
+      computed: {
+        searchResults: function () {
+          console.log(window.searchResults)
+          return window.searchResults;
+        }
+      },
+      watch: {
+        // whenever question changes, this function will run
+        branch: function (newb, old) {
+          console.log(newb, old);
+        }
+      },
+    });
+
+  var observeDOM = (function(){
+    var MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
+
+    return function( obj, callback ){
+      if( !obj || !obj.nodeType === 1 ) return; // validation
+
+      if( MutationObserver ){
+        // define a new observer
+        var obs = new MutationObserver(function(mutations, observer){
+            callback(mutations);
+        })
+        // have the observer observe foo for changes in children
+        obs.observe( obj, { childList:true, subtree:true });
+      }
+
+      else if( window.addEventListener ){
+        obj.addEventListener('DOMNodeInserted', callback, false);
+        obj.addEventListener('DOMNodeRemoved', callback, false);
+      }
+    }
+  })();
+
+var cb = function (e) {
+   var elem = document.getElementById('sr');
+   var s = elem.innerHTML.length;
+   if (s > 4000) {
+     window.searchResults = true;
+     document.getElementById('article').innerHTML= '';
+     window.scrollTo(0, 0);
+   } else {
+     window.searchResults = false;
+   }
+}
+
+ var elem = document.getElementById('sr');
+ observeDOM(elem, cb);
+app.searchResults = window.searchResults;
+
+
+    (function() {
+
+
+      var cx = '004592132197158309932:anluf60c9w8';
+      var gcse = document.createElement('script');
+      gcse.type = 'text/javascript';
+      gcse.async = true;
+      gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(gcse, s);
+    })();
+  </script>
+
+
+</body>
+</html>

@@ -2693,11 +2693,11 @@
                                 
                                 <h1 id="introduction-to-micropython"><a name="introduction-to-micropython" class="plugin-anchor" href="#introduction-to-micropython"><i class="fa fa-link" aria-hidden="true"></i></a>Introduction to MicroPython</h1>
 <p>Our boards work with <a href="https://micropython.org/" target="_blank">MicroPython</a>; a Python 3.5 implementation that is optimised to run on micro controllers. This allows for much faster and more simple development process than using C.</p>
-<p><img src="../../.gitbook/assets/micropython%20%281%29.jpg" alt=""></p>
+<p><img src="../../gitbook/assets/micropython%20%281%29.jpg" alt=""></p>
 <h2 id="booting-into-micropython"><a name="booting-into-micropython" class="plugin-anchor" href="#booting-into-micropython"><i class="fa fa-link" aria-hidden="true"></i></a>Booting into MicroPython</h2>
 <p>When booting, two files are executed automatically: first <code>boot.py</code> and then <code>main.py</code>. These are placed in the <code>/flash</code> folder on the board. Any other files or libraries can be placed here as well, and can be included or used from <code>boot.py</code> or <code>main.py</code>.</p>
 <p>The folder structure in <code>/flash</code> looks like the picture below. The files can be managed either using FTP or using the Pymakr Plugin.</p>
-<p><img src="../../.gitbook/assets/mp-filestructure%20%281%29.png" alt=""></p>
+<p><img src="../../gitbook/assets/mp-filestructure%20%281%29.png" alt=""></p>
 <h2 id="tips--tricks"><a name="tips--tricks" class="plugin-anchor" href="#tips--tricks"><i class="fa fa-link" aria-hidden="true"></i></a>Tips &amp; Tricks</h2>
 <p>Micropython shares majority of the same syntax as Python 3.5. The intention of this design is to provide compatibility upwards from Micropython to Python 3.5, meaning that code written for Micropython should work in a similar manner in Python 3.5. There are some minor variations and these should taken viewed as implementation differences.</p>
 <p>Micropython also has a number of Micropython specific libraries for accessing hardware level features. Specifics relating to those libraries can be found in the Firmware API Reference section of this documentation.</p>

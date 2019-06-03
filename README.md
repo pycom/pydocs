@@ -1,14 +1,24 @@
-# Introduction   
+notes:
 
-Welcome to the Pycom documentation site. We recommend reading through all the sections to familiarise yourself with the various tools and features available to you to help you develop on your Pycom module.
+Some commands that have been used for building
 
-To get started, read through the Getting Started Guide then feel free to jump straight into the tutorials and examples in Tutorials & Examples to begin building your projects.
+- ```
+python3 migration.py
+rpl -R '\)' ')' *
+rpl -R '\(' '(' *
+find "./content/" -name "*.html" -exec rm {} \;
+rpl -R ".gitbook/assets/" "gitbook/assets/" *
+rpl -R "../gitbook/assets" "/gitbook/assets" content
+```
 
-* [Products](products.md)
-* [Getting Started](gettingstarted/introduction.md)
-* [Pymakr](pymakr/installation/)
-* [Tutorials](tutorials/introduction.md)
-* [API Documentation](firmwareapi/introduction.md)
-* [Product Info](datasheets/introduction.md)
-* [Pybytes](pybytes/introduction.md)
+- ```
 
+rpl -R '\(' '(' *
+
+```
+
+TODO:
+- redirects
+- [Libraries GitHub repository](https://github.com/pycom/pycom-libraries)
+- next page
+- google as ajax

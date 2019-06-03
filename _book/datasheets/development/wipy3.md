@@ -1,6 +1,6 @@
 # WiPy 3.0
 
-\*\*\*\*![](../../.gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn86pdzbdvrponxeg6-wipy3.png) ****
+\*\*\*\*![](../../gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn86pdzbdvrponxeg6-wipy3.png) ****
 
 **Store**: [Buy Here](https://pycom.io/product/wipy-3-0/)
 
@@ -10,15 +10,15 @@
 
 The datasheet of the WiPy3 is available as a PDF File.
 
-[WiPy3 Datasheet](../../.gitbook/assets/wipy3-specsheet.pdf)
+[WiPy3 Datasheet](../../gitbook/assets/wipy3-specsheet.pdf)
 
 ## Pinout
 
 The pinout of the WiPy3 is available as a PDF File.
 
-[WiPy3 Pinout](../../.gitbook/assets/wipy3-pinout.pdf)
+[WiPy3 Pinout](../../gitbook/assets/wipy3-pinout.pdf)
 
-![](../../.gitbook/assets/wipy3-pinout.png)
+![](../../gitbook/assets/wipy3-pinout.png)
 
 {% hint style="info" %}
 Please note that the PIN assignments for UART1 \(TX1/RX1\), SPI \(CLK, MOSI, MISO\) and I2C \(SDA, SCL\) are defaults and can be changed in Software.

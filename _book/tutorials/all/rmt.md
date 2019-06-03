@@ -35,7 +35,7 @@ duration = 10000
 rmt.pulses_send(duration, data)
 ```
 
-![Waveform of example 1](../../.gitbook/assets/rmt_ex_1%20%281%29.png)
+![Waveform of example 1](../../gitbook/assets/rmt_ex_1%20%281%29.png)
 
 In this example we define the signal by a tuple of durations and what state the signal starts in.
 
@@ -54,7 +54,7 @@ duration = (8000,11000,8000,11000,6000,13000,6000,3000,8000)
 rmt.pulses_send(duration, start_level=RMT.HIGH)
 ```
 
-![Waveform of example 2](../../.gitbook/assets/rmt_ex_2.png)
+![Waveform of example 2](../../gitbook/assets/rmt_ex_2.png)
 
 This third example, is a combination of the above two styles of defining a signal. Each pulse has a defined duration as well as a state. This is useful if you don't always want the signal to toggle state.
 
@@ -70,7 +70,7 @@ duration = (400,200,100,300,200,400)
 rmt.pulses_send(duration, data)
 ```
 
-![Waveform of example 3](../../.gitbook/assets/rmt_ex_3%20%281%29.png)
+![Waveform of example 3](../../gitbook/assets/rmt_ex_3%20%281%29.png)
 
 The following example creates an RMT object on channel 4 and configures it for transmission with carrier modulation.
 
@@ -86,7 +86,7 @@ duration = 10000
 rmt.pulses_send(duration, data)
 ```
 
-![Waveform of example 4](../../.gitbook/assets/rmt_ex_4.png)
+![Waveform of example 4](../../gitbook/assets/rmt_ex_4.png)
 
 The following example creates an RMT object on channel 2, configures it for receiving, then waits for the first, undefined number of pulses without timeout
 

@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+    <h1>{{- .Title -}}</h1>
+    {{- .Content -}}
+<ul>
+
+  {{ if not (gt .WordCount 100) }}
+
+  {{ range .Paginator.Pages }}
+
+
+    <li><a href="{{ .URL }}">
+      {{ if .Title }}{{ .Title }}{{ else }}{{ .URL }}{{ end }}
+      <a/></li>
+
+  {{ end }}
+    {{ end }}
+  </ul>
+{{ end }}

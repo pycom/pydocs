@@ -1,6 +1,6 @@
 # GPy
 
-\*\*\*\*![](../../.gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn87yf-xz772800vwc-gpy-1.png) ****
+\*\*\*\*![](../../gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn87yf-xz772800vwc-gpy-1.png) ****
 
 **Store**: [Buy Here](https://pycom.io/product/gpy)
 
@@ -10,19 +10,19 @@
 
 The datasheet of the GPy is available as a PDF File.
 
-[GPy Datasheet](../../.gitbook/assets/gpy-specsheet.pdf)
+[GPy Datasheet](../../gitbook/assets/gpy-specsheet.pdf)
 
 The drawing of the LTE-M antenna is available as a PDF File.
 
-[LTE-M Antenna Drawing](../../.gitbook/assets/lte-m-antenna-drawing.pdf)
+[LTE-M Antenna Drawing](../../gitbook/assets/lte-m-antenna-drawing.pdf)
 
 ## Pinout
 
 The pinout of the GPy is available as a PDF File
 
-[GPy Pinout](../../.gitbook/assets/gpy-pinout.pdf)
+[GPy Pinout](../../gitbook/assets/gpy-pinout.pdf)
 
-![](../../.gitbook/assets/gpy-pinout.png)
+![](../../gitbook/assets/gpy-pinout.png)
 
 {% hint style="info" %}
 Please note that the PIN assignments for UART1 \(TX1/RX1\), SPI \(CLK, MOSI, MISO\) and I2C \(SDA, SCL\) are defaults and can be changed in Software.
@@ -44,7 +44,7 @@ The `Vin` pin on the GPy can be supplied with a voltage ranging from `3.5v` to `
 
 The AT commands for the Sequans Monarch modem on the GPy are available in a PDF file.
 
-[AT Commands for Sequans](../../.gitbook/assets/monarch\_4g-ez\_lr5110\_atcommands\_referencemanual\_rev3\_noconfidential-1.pdf)
+[AT Commands for Sequans](../../gitbook/assets/monarch\_4g-ez\_lr5110\_atcommands\_referencemanual\_rev3\_noconfidential-1.pdf)
 
 ## Tutorials
 

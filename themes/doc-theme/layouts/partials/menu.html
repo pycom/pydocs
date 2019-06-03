@@ -1,0 +1,49 @@
+
+  <v-navigation-drawer
+    v-model="drawer"
+    fixed
+    app
+    dark
+    class="grey lighten-4 pt-0"
+    style="    overflow-y: hidden; overflow-x: hidden;
+        max-height: 100%;"
+  >
+  <v-container class="ml-4 pt-3 pl-4 pb-0 ma-0 pb-0">
+      <v-img height=48 width=190  src="/logo2.svg">
+  </v-container>
+  <div style="    overflow-y: scroll; overflow-x: hidden;
+      max-height: 100%;">
+<v-container class="pa-2 mt-2 mb-1 ml-1 mr-1 pr-1">
+
+  <gcse:searchbox searchbox-only></gcse:searchbox>
+</v-container>
+
+
+<v-divider class="grey lighten-1  mr-2 ml-2 mb-4"></v-divider>
+
+<!--
+  <v-toolbar floating light class="grey lighten-4"  style="width: 272px;">
+  <v-text-field
+  style="width: 228px;"
+    flat
+
+    hide-details
+    prepend-inner-icon="search"
+    label="Search"
+    class="hidden-sm-and-down"
+  ></v-text-field>
+</v-toolbar>
+  -->
+
+
+<p class="ml-3">
+   <a href="/"><v-icon class="blue--text darken-4">home</v-icon> Table of content</a>
+<p>
+
+  {{ partial "menu_recursive.html" (dict "menu" .Site.Menus.main "page" . ) }}
+<v-divider class="grey lighten-1 ma-2 mt-4 mb-4"></v-divider>
+<ul>Have a question ?
+  <li>  <a href="https://forums.pycom.io">Ask on the forum</a>
+</ul>
+</div>
+  </v-navigation-drawer>

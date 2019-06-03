@@ -50,5 +50,5 @@ To use PuTTY the serial port \(COM port\) in which the Pycom device is connected
 
 3. Finally, click the `Open` button
 
-![](../../../.gitbook/assets/putty.png)
+![](../../../gitbook/assets/putty.png)
 

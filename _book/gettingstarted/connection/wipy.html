@@ -2699,7 +2699,7 @@
 </li>
 <li>Insert the WiPy module on the the expansion board with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.
 </li></ul>
-<p><img src="../../.gitbook/assets/expansion_board_2_wipy.png"></p></div><div role="tabpanel" class="tab-pane " id="second"><ul><li>Before connecting your module to an Expansion Board 3.0, you should update the firmware on the Expansion Board 3.0. Instructions on how to do this can be found <a href="../../pytrackpysense/installation/firmware.html">here</a>.
+<p><img src="../../gitbook/assets/expansion_board_2_wipy.png"></p></div><div role="tabpanel" class="tab-pane " id="second"><ul><li>Before connecting your module to an Expansion Board 3.0, you should update the firmware on the Expansion Board 3.0. Instructions on how to do this can be found <a href="../../pytrackpysense/installation/firmware.html">here</a>.
 </li>
 <li>Look for the reset button on the module (located at a corner of the board, next to the LED).
 </li>
@@ -2707,7 +2707,7 @@
 </li>
 <li>Insert the WiPy module on the Expansion Board with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.
 </li></ul>
-<p><img src="../../.gitbook/assets/expansion_board_3_wipy.png"></p></div><div role="tabpanel" class="tab-pane " id="third"><ul><li>Before connecting your module to a Pysense/Pytrack/Pyscan board, you should update the firmware on the Pysense/Pytrack/Pyscan. Instructions on how to do this can be found <a href="../../pytrackpysense/installation/firmware.html">here</a>.
+<p><img src="../../gitbook/assets/expansion_board_3_wipy.png"></p></div><div role="tabpanel" class="tab-pane " id="third"><ul><li>Before connecting your module to a Pysense/Pytrack/Pyscan board, you should update the firmware on the Pysense/Pytrack/Pyscan. Instructions on how to do this can be found <a href="../../pytrackpysense/installation/firmware.html">here</a>.
 </li>
 <li>Look for the reset button on the WiPy module (located at a corner of the board, next to the LED).
 </li>
@@ -2719,7 +2719,7 @@
 </li></ul>
 </div><div role="tabpanel" class="tab-pane " id="fifth"><p><strong>Note:</strong> This method of connection is not recommended for first time users. It is possible to lock yourself out of the device, requiring a USB connection.</p><ul><li>In order to access the WiPy via WiFi you only need to provide <code>3.5v</code> - <code>5.5v</code> on the <code>Vin</code> pin of the WiPy:
 </li></ul>
-<p><img src="../../.gitbook/assets/bare_wipy.png"></p><ul><li>By default, when the WiPy boots, it will create a WiFi access point with the following credentials:
+<p><img src="../../gitbook/assets/bare_wipy.png"></p><ul><li>By default, when the WiPy boots, it will create a WiFi access point with the following credentials:
 <ul><li>SSID: <code>wipy-wlan</code>
 </li>
 <li>password: <code>www.pycom.io</code>
@@ -2735,7 +2735,7 @@
 <h2 id="antennas"><a name="antennas" class="plugin-anchor" href="#antennas"><i class="fa fa-link" aria-hidden="true"></i></a>Antennas</h2>
 <h3 id="wifibluetooth-optional"><a name="wifibluetooth-optional" class="plugin-anchor" href="#wifibluetooth-optional"><i class="fa fa-link" aria-hidden="true"></i></a>WiFi/Bluetooth (optional)</h3>
 <p>All Pycom modules, including the WiPy, come with a on-board WiFi antenna as well as a U.FL connector for an external antenna. The external antenna is optional and only required if you need better performance or are mounting the WiPy in such a way that the WiFi signal is blocked. Switching between the antennas is done via software, instructions for this can be found <a href="../../firmwareapi/pycom/network/wlan.html">here.</a></p>
-<p><img src="../../.gitbook/assets/wifi_pigtail_ant_wipy.png" alt=""></p>
+<p><img src="../../gitbook/assets/wifi_pigtail_ant_wipy.png" alt=""></p>
 <h2 id="deep-sleep-current-issue"><a name="deep-sleep-current-issue" class="plugin-anchor" href="#deep-sleep-current-issue"><i class="fa fa-link" aria-hidden="true"></i></a>Deep Sleep current issue</h2>
 <p>The LoPy, SiPy, and WiPy 2.0 experience an issue where the modules maintain a high current consumption in deep sleep mode. This issue has been resolved in all newer products. The cause for this issue is the DC to DC switch mode converter remains in a high performance mode even when the device is in deep sleep. The flash memory chip also does not power down. A more detailed explanation can be found <a href="https://forum.pycom.io/topic/1022/root-causes-of-high-deep-sleep-current" target="_blank">here.</a></p>
 <h2 id="wipy-20-vs-wipy-30"><a name="wipy-20-vs-wipy-30" class="plugin-anchor" href="#wipy-20-vs-wipy-30"><i class="fa fa-link" aria-hidden="true"></i></a>WiPy 2.0 vs WiPy 3.0</h2>

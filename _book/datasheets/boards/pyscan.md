@@ -1,12 +1,12 @@
 # Pyscan
 
-![](../../.gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn83hfia61dsuyojco-pyscan-new.png) 
+![](../../gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn83hfia61dsuyojco-pyscan-new.png) 
 
 ## Datasheet
 
 The datasheet of the Pyscan is available as a PDF File.
 
-[Pyscan Datasheet](../../.gitbook/assets/pyscan-specsheet.pdf)
+[Pyscan Datasheet](../../gitbook/assets/pyscan-specsheet.pdf)
 
 ## Pyscan Libraries
 
@@ -35,9 +35,9 @@ For other Operating Systems there's no driver required.
 
 The pinout of the Pyscan is available as a PDF File
 
-[Pyscan Pinout](../../.gitbook/assets/pyscan-pinout.pdf)
+[Pyscan Pinout](../../gitbook/assets/pyscan-pinout.pdf)
 
-![](../../.gitbook/assets/pyscan-pinout-1.png)
+![](../../gitbook/assets/pyscan-pinout-1.png)
 
 ## Battery Charger
 

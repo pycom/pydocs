@@ -1,6 +1,6 @@
 # WiPy 2.0
 
-\*\*\*\*![](../../.gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn83ftusu7mke5ppmd-wipy2-1.png) ****
+\*\*\*\*![](../../gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn83ftusu7mke5ppmd-wipy2-1.png) ****
 
 **Store**: Discontinued, See [WiPy3](wipy3.md)
 
@@ -10,15 +10,15 @@
 
 The datasheet of the WiPy2 is available as a PDF File.
 
-[WiPy 2 Datasheet](../../.gitbook/assets/wipy2-specsheet.pdf)
+[WiPy 2 Datasheet](../../gitbook/assets/wipy2-specsheet.pdf)
 
 ## Pinout
 
 The pinout of the WiPy2 is available as a PDF File.
 
-[WiPy 2 Pinout](../../.gitbook/assets/wipy2-pinout.pdf)
+[WiPy 2 Pinout](../../gitbook/assets/wipy2-pinout.pdf)
 
-![](../../.gitbook/assets/wipy2-pinout.png)
+![](../../gitbook/assets/wipy2-pinout.png)
 
 {% hint style="info" %}
 Please note that the PIN assignments for UART1 \(TX1/RX1\), SPI \(CLK, MOSI, MISO\) and I2C \(SDA, SCL\) are defaults and can be changed in Software.

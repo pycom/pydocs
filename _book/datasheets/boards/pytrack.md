@@ -1,20 +1,20 @@
 # Pytrack
 
-![](../../.gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn83ejihh1jeasccad-pytrack.png) 
+![](../../gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn83ejihh1jeasccad-pytrack.png) 
 
 ## Datasheet
 
 The datasheet of the Pytrack is available as a PDF File.
 
-[Pytrack Datasheet](../../.gitbook/assets/pytrack-specsheet-1.pdf)
+[Pytrack Datasheet](../../gitbook/assets/pytrack-specsheet-1.pdf)
 
 ## Pinout
 
 The pinout of the Pytrack is available as a PDF File
 
-[Pytrack Pinout](../../.gitbook/assets/pytrack-pinout.pdf)
+[Pytrack Pinout](../../gitbook/assets/pytrack-pinout.pdf)
 
-![](../../.gitbook/assets/pytrack-pinout-1.png)
+![](../../gitbook/assets/pytrack-pinout-1.png)
 
 ## Battery Charger
 

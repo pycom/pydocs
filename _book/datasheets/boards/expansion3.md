@@ -1,20 +1,20 @@
 # Expansion Board 3.0
 
-## ![](../../.gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn82uldmpus0lnq1kx-expansion3.png) 
+## ![](../../gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn82uldmpus0lnq1kx-expansion3.png) 
 
 ## Datasheet
 
 The datasheet of the Expansion Board is available as a PDF File.
 
-[OEM Altium Project and Gerber Files](../../.gitbook/assets/expansion3-specsheet-1.pdf)
+[OEM Altium Project and Gerber Files](../../gitbook/assets/expansion3-specsheet-1.pdf)
 
 ## Pinout
 
 The pinout of the Expansion Board is available as a PDF File
 
-[Expansion Board 3 Pinout](../../.gitbook/assets/expansion3-pinout.pdf)
+[Expansion Board 3 Pinout](../../gitbook/assets/expansion3-pinout.pdf)
 
-![](../../.gitbook/assets/expansion3-pinout-1.png)
+![](../../gitbook/assets/expansion3-pinout-1.png)
 
 {% hint style="danger" %}
 Be gentle when plugging/unplugging from the USB connector. Whilst the USB connector is soldered and is relatively strong, if it breaks off it can be very difficult to fix.
