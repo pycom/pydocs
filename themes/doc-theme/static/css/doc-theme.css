@@ -23,7 +23,7 @@ pre > code {
   position: fixed;
 }
 
-li  {
+li.lefttree, li.righttree   {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -163,23 +163,23 @@ img {
   font-family: monospace;
 }
 
-.fancyScroll::-webkit-scrollbar
+nav#TableOfContents::-webkit-scrollbar, .fancyScroll::-webkit-scrollbar
 {
 	width: 10px!important;
 	background-color: #F5F5F5!important;
 }
 
-.fancyScroll::-webkit-scrollbar-thumb
+nav#TableOfContents::-webkit-scrollbar-thumb, .fancyScroll::-webkit-scrollbar-thumb
 {
 	border-radius: 10px!important;
 	background-image: -webkit-gradient(linear,
 									   left bottom,
 									   left top,
                      color-stop(0.86, rgb(255,255,255)),
-                     color-stop(0.72, rgb(179,212,252)))
-
-									   ;
+                     color-stop(0.72, rgb(179,212,252)));
 }
+
+
 
 
 [v-cloak] > * { display:none }

@@ -22,7 +22,7 @@
 
           {{- partial "toolbar.html" . -}}
 
-          <v-container class="article">
+          <v-container class="article" mt-3>
             <div id="sr">
               <gcse:searchresults></gcse:search>
             </div>
@@ -42,10 +42,15 @@
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/1.5.13/vuetify.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js"></script>
   <script>
+  Vue.use(VueResource)
     var app = new Vue({
       el: '#app',
       data: {
+        q: null,
+        error: null,
+        results: null,
         drawer: true,
         drawer2: true,
         toc: 0,
@@ -56,37 +61,56 @@
         branch: ""
       },
       mounted: function () {
+        // on boot set default branch as specified as first in array
         this.branch= this.branches[0]
         for (b in this.branches) {
-          // console.log(this.branches[b].value, document.location.href)
-          // console.log(document.location.href.indexOf(this.branches[b].value))
           if ( document.location.href.indexOf(this.branches[b].value) > -1) {
-            console.log(this.branches[b].value)
             this.branch= this.branches[b]
           }
         }
         // there is not always a toc button
+        // temp. show page-toc to the user as hint of existence
         if (this.$refs.tocBtn) {
           var elem = this.$refs.tocBtn.$el
           setTimeout(function () {
               elem.click()
           }, 1500);
         }
+        // we use a /search/ page essentially to generate/store a browser
+        // history, if in search page, query results
+        if (document.location.pathname === "/search/") {
+          this.q = decodeURI(window.location.search.split("=")[1])
+          this.fetchResults (this.q)
+        }
 
       },
       methods: {
         fetchResults (kw) {
+          var key = "AIzaSyD4-MGytNzTCZpTH6UYk1mfOxZkt74T5MI";
           var cx = "004592132197158309932:anluf60c9w8";
           var url = "https://www.googleapis.com/customsearch/v1";
-          url = url + "?cx=" + cx + "&q=" + encodeURI(kw);
+          url = url + "?cx=" + cx + "&key=" + key + "&q=" + encodeURI(kw);
+          console.log(url)
+          this.$http.get(url).then((res) => {
+            console.log(res.data)
+            if (res.data &&  res.data.items) {
+              this.results = res.data.items
+            } else {
+              console.log('no items?')
 
-          // this.drawer2= false;
-        }
-      },
-      computed: {
-        searchResults: function () {
-          console.log(window.searchResults)
-          return window.searchResults;
+            }
+            console.log(this.results)
+
+
+            // window.scrollTo(0, document.body.scrollHeight)
+          }, response => {
+            this.results = null;
+            this.error = { status: response.error, message: response.text }
+            // ====
+          })
+        },
+        search(p) {
+          window.location = '/search/?q=' + encodeURI(this.q)
         }
       },
       watch: {

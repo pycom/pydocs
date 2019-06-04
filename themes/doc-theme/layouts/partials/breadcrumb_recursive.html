@@ -11,7 +11,8 @@
   {{ if .HasChildren }}
       {{ if or $iz $haz }}
 
-      <a href="{{ .URL | relURL }}" class="{{ if or $iz $haz }}hot{{end}}"> {{ .Pre }} {{ .Name }}</a>   >
+      <a href="{{ .URL | relURL }}" class="{{ if or $iz $haz }}hot{{end}}"> {{ .Pre }} {{ .Name }}</a>
+        {{ if not $iz }}>{{ end }}
       {{ end }}
           {{ partial "breadcrumb_recursive.html" (dict "menu" .Children "page" $page) }}
     {{ if or $iz $haz }}

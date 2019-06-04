@@ -15,8 +15,8 @@
 
 
       </v-card-title>
-      <v-card-text>
-    {{ .TableOfContents }}
+      <v-card-text class="fancyScroll righttree">
+    {{ .TableOfContents | replaceRE "<li>" "<li class=\"righttree\">" | safeHTML }}
       </v-card-text>
     </v-card>
 </v-slide-y-transition>
