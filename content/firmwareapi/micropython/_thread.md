@@ -6,7 +6,7 @@ aliases:
     - chapter/firmwareapi/micropython/_thread
 ---
 
-This module provides low-level primitives for working with multiple threads (also called light-weight processes or tasks) — multiple threads of control sharing their global data space. For synchronisation, simple locks (also called mutexes or binary semaphores) are provided.
+This module provides low-level primitives for working with multiple threads (also called light-weight processes or tasks)  multiple threads of control sharing their global data space. For synchronisation, simple locks (also called mutexes or binary semaphores) are provided.
 
 When a thread specific error occurs a `RuntimeError` exception is raised.
 
@@ -89,4 +89,3 @@ a_lock = _thread.allocate_lock()
 with a_lock:
     print("a_lock is locked while this executes")
 ```
-
