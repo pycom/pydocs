@@ -12,24 +12,24 @@ This project is based on a client-server architecture. On the server side the [l
 * Install the [loraserver](https://www.loraserver.io/overview/). In this tutorial we will install the [docker](https://www.loraserver.io/guides/docker-compose/) version on Linux.
 * Navigate to the loraserver-docker/configuration/loraserver folder and open the loraserver.toml file. Update the following LoraWAN regional parameters as indicated:
 
-```
-name="Your region" E.g "EU_863_870" for Europe 
-rx_window=2
-rx2_dr="Choose one with a payload of 200 bytes or more" E.g 5 for Europe
-```
+  ```
+  name="Your region" E.g "EU_863_870" for Europe 
+  rx_window=2
+  rx2_dr="Choose one with a payload of 200 bytes or more" E.g 5 for Europe
+  ```
 
-An example configuration file with parameter description can be found [here](https://www.loraserver.io/loraserver/install/config/). The lora-app-server, lora-gateway-bridge and lora-geo-server configuration files can be left to their default values.
+  An example configuration file with parameter description can be found [here](https://www.loraserver.io/loraserver/install/config/). The lora-app-server, lora-gateway-bridge and lora-geo-server configuration files can be left to their default values.
 
 * Run the following command to create all docker containers and start the loraserver:
 
-```
-$ sudo docker-compose up
-```
+  ```
+  $ sudo docker-compose up
+  ```
 
 * Open a web-browser and use http://localhost:8080 (https if certificates configured) to access the Loraserver web-interface. 
 * Login to loraserver using admin for both user and password.
 
-![Loraserver login](../../.gitbook/assets/Loraserver_login.png)
+  ![Loraserver login](../../.gitbook/assets/Loraserver_login.png)
 
 * Now you should be able to see the Loraserver web-interface shown below.
 
