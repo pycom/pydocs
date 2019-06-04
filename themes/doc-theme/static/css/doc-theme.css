@@ -83,12 +83,13 @@ a, li > a {
 
 li > a {
   color: #0D47A1;
-
+  font-weight: 500;
     line-height: 1.60;
 }
 
 li > a.hot {
-  color: #42A5F5;
+  color: #1976D2;
+  text-decoration: underline;
 }
 
 
@@ -178,4 +179,16 @@ img {
                      color-stop(0.72, rgb(179,212,252)))
 
 									   ;
+}
+
+
+[v-cloak] > * { display:none }
+[v-cloak]::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 100%;
+height: 100%;
+background-image: url('/logo2.svg');
+background-size: cover;
 }
