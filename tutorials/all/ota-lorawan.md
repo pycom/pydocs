@@ -33,63 +33,63 @@ This project is based on a client-server architecture. On the server side the [l
 
 * Now you should be able to see the Loraserver web-interface shown below.
 
-![Loraserver homepage](../../.gitbook/assets/Loraserver_main.png)
+  ![Loraserver homepage](../../.gitbook/assets/Loraserver_main.png)
 
 * Click on Network-servers and press Add. Enter a network-server name and loraserver:8000 as network-server server.
 
-![Loraserver homepage](../../.gitbook/assets/Loraserver_ns.png)
+  ![Loraserver homepage](../../.gitbook/assets/Loraserver_ns.png)
 
 * Click on the Gateway-profiles and press create. Give this profile a name, select the channels enabled for this channel, and choose the network-server just created.
 
-![Loraserver homepage](../../.gitbook/assets/Loraserver_gw_profile.png)
+  ![Loraserver homepage](../../.gitbook/assets/Loraserver_gw_profile.png)
 
 * Click on the Gateways and press create. Choose a gateway name a fill the description field. Read the gateway ID from your lora gateway and choose the network-server and gateway-profile just created. Check the gateway discovery enabled checkbox.
 
-![Loraserver homepage](../../.gitbook/assets/Loraserver_gw.png)
+  ![Loraserver homepage](../../.gitbook/assets/Loraserver_gw.png)
 
 * Click on service-profile and then press create. Choose a service-profile name, select the network-server we created before and click the Add gateway meta-data checkbox.
 
-![Loraserver homepage](../../.gitbook/assets/Loraserver_sp.png)
+  ![Loraserver homepage](../../.gitbook/assets/Loraserver_sp.png)
 
 * Click on Device-profile and then press the create button. In the general tab, input a device-profile name, select 1.0.2 from the Lorawan Mac version menu and select B from the Lorawan Regional parameters revision field.
 
-![Loraserver homepage](../../.gitbook/assets/Loraserver_dp_general.png)
+  ![Loraserver homepage](../../.gitbook/assets/Loraserver_dp_general.png)
 
-In the Join tab, select the Device supports OTAA check box otherwise ABP will be chosen automatically. If you prefer ABP, you need to fill the RX1 delay, RX2 data-rate and RX2 channel frequency parameters.
+  In the Join tab, select the Device supports OTAA check box otherwise ABP will be chosen automatically. If you prefer ABP, you need to fill the RX1 delay, RX2 data-rate and RX2 channel frequency parameters.
 
-![Loraserver homepage](../../.gitbook/assets/Loraserver_dp_auth.png)
+  ![Loraserver homepage](../../.gitbook/assets/Loraserver_dp_auth.png)
 
-In the class C tab, please select Device supports Class-C checkbox. 
+  In the class C tab, please select Device supports Class-C checkbox. 
 
 * Click on Applications and then press create. Input an application name and an application description. From the dropdown menu choose the service-profile we created previoulsy.
 
-![Loraserver homepage](../../.gitbook/assets/Loraserver_app.png)
+  ![Loraserver homepage](../../.gitbook/assets/Loraserver_app.png)
 
-Click on the application just created and in the devices tab, select create. Select a device name, device description and a device EUI. From the device-profile dropdown menu select the device-profile create in the previous steps.
+  Click on the application just created and in the devices tab, select create. Select a device name, device description and a device EUI. From the device-profile dropdown menu select the device-profile create in the previous steps.
 
-![Loraserver homepage](../../.gitbook/assets/Loraserver_app_device.png)
+  ![Loraserver homepage](../../.gitbook/assets/Loraserver_app_device.png)
 
-In the keys tab, generate the application keys. 
+  In the keys tab, generate the application keys. 
 
-![Loraserver homepage](../../.gitbook/assets/Loraserver_device_key.png)
+  ![Loraserver homepage](../../.gitbook/assets/Loraserver_device_key.png)
 
 * The server side code requires Python 3. To determine whether you have Python 3 installed, type the following:
-
-```
-$ python3 -V
-```
+ 
+  ```
+  $ python3 -V
+  ```
 
 * Install the paho mqtt client using:
 
-```
-$ pip3 install paho-mqtt
-``` 
+  ```
+  $ pip3 install paho-mqtt
+  ``` 
 
 * Clone or download the OTA updater from the following [Github Repository](https://github.com/pycom/pycom-libraries/tree/master/examples/OTA-lorawan).
 
-The server scripts should be run in a directory that contains every version of the end devices code, in the following structure:
+  The server scripts should be run in a directory that contains every version of the end devices code, in the following structure:
 
-```text
+  ```text
   - server directory
     |- server OTA python scripts
     |- 1.0.0 (client code)
@@ -105,15 +105,15 @@ The server scripts should be run in a directory that contains every version of t
     |  |   |- boot.py
     |  |   |- other text / scripts
     |  |   |- new scripts.py 
-```
+  ```
 
 * ** Update the python config file parameters with the values from the previous steps. ** 
 
 * Start the OTA updater service using the following:
 
-```
-$ python3 updaterService.py
-```
+  ```
+  $ python3 updaterService.py
+  ```
 
 ### Client setup
 
@@ -121,37 +121,37 @@ A MicroPyton library for interfacing with the server described above is availabl
 
 * Open the main.py and set the Lorawan regional parameters to be exactly the same as those on the gateway and Loraserver. The LORA_DEVICE_CLASS parameter must be Class C. 
 
-A sample main.py script is show below:
+  A sample main.py script is show below:
 
-```Python
-from loranet import LoraNet
-from ota import LoraOTA
-from network import LoRa
-import machine
-import utime
+  ```Python
+  from loranet import LoraNet
+  from ota import LoraOTA
+  from network import LoRa
+  import machine
+  import utime
 
-def main():
-    LORA_FREQUENCY = 868100000
-    LORA_NODE_DR = 5
-    LORA_REGION = LoRa.EU868
-    LORA_DEVICE_CLASS = LoRa.CLASS_C
-    LORA_ACTIVATION = LoRa.OTAA
-    LORA_CRED = ('my dev_eui', 'my app_eui', 'my app_key')
+  def main():
+      LORA_FREQUENCY = 868100000
+      LORA_NODE_DR = 5
+      LORA_REGION = LoRa.EU868
+      LORA_DEVICE_CLASS = LoRa.CLASS_C
+      LORA_ACTIVATION = LoRa.OTAA
+      LORA_CRED = ('my dev_eui', 'my app_eui', 'my app_key')
 
-    lora = LoraNet(LORA_FREQUENCY, LORA_NODE_DR, LORA_REGION, LORA_DEVICE_CLASS, LORA_ACTIVATION, LORA_CRED)
-    lora.connect()
+      lora = LoraNet(LORA_FREQUENCY, LORA_NODE_DR, LORA_REGION, LORA_DEVICE_CLASS, LORA_ACTIVATION, LORA_CRED)
+      lora.connect()
 
-    ota = LoraOTA(lora)
+      ota = LoraOTA(lora)
 
-    while True:
+      while True:
         rx = lora.receive(256)
         if rx:
             print('Received user message: {}'.format(rx))
 
-        utime.sleep(2)
+      utime.sleep(2)
 
-main()
-```
+  main()
+  ```
 
 * Using the [pymkr plugin](https://atom.io/packages/pymakr) upload the client code to a Lora capable Pycom device. 
 
