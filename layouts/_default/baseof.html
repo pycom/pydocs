@@ -50,8 +50,8 @@
         drawer2: true,
         toc: 0,
         branches: [
-          { value: 'http://docs.pycom.io:1313', text: 'version stable',  } ,
-          { value: 'http://development.pycom.io', text: 'version development'}
+          { value: 'https://docs.pycom.io', text: 'version stable',  } ,
+          { value: 'https://development.pycom.io', text: 'version development'}
         ],
         branch: ""
       },
@@ -65,10 +65,14 @@
             this.branch= this.branches[b]
           }
         }
-        var elem = this.$refs.tocBtn.$el
-        setTimeout(function () {
-            elem.click()
-        }, 1500);
+        // there is not always a toc button
+        if (this.$refs.tocBtn) {
+          var elem = this.$refs.tocBtn.$el
+          setTimeout(function () {
+              elem.click()
+          }, 1500);
+        }
+
       },
       methods: {
         fetchResults (kw) {
@@ -88,7 +92,12 @@
       watch: {
         // whenever question changes, this function will run
         branch: function (newb, old) {
-          console.log(newb, old);
+          if (newb.value != this.branches[0].value) {
+            window.location = newb + window.location.pathname
+          }
+
+          // window.location = newb.toString() + window.location.pathname;
+
         }
       },
     });
