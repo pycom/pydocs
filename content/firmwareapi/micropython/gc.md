@@ -1,5 +1,9 @@
 ---
 title: "gc"
+aliases:
+    - firmwareapi/micropython/gc.html
+    - firmwareapi/micropython/gc.md
+    - chapter/firmwareapi/micropython/gc
 ---
 
 ## Methods

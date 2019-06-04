@@ -22,7 +22,7 @@
 
 #### GPy
 
-[GPy CE RED Certificate](../gitbook/assets/c03-b0-red-final \(1\).pdf)
+[GPy CE RED Certificate](../gitbook/assets/c03-b0-red-final \(1).pdf)
 
 #### FiPy
 

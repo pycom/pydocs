@@ -10,7 +10,7 @@ The latest firmware DFU file can be downloaded from the links below:
 
 While in the normal, application mode, the Pysense/Pytrack/Pyscan/Expansion Board v3 require a Serial USB CDC driver, in DFU, bootloader mode, the DFU driver is required. Below, the USB Product ID is depicted for each case.
 
-| Board | DFU bootloader \(update mode\) | Application firmware \(normal mode\) |
+| Board | DFU bootloader \(update mode) | Application firmware \(normal mode) |
 | :--- | :--- | :--- |
 | Pytrack | `0xF014` | `0xF013` |
 | Pysense | `0xF011` | `0xF012` |
@@ -70,12 +70,12 @@ To install the drivers, the Pytrack/Pysense board must be in DFU-mode:
 4. Keep the button pressed for at least one second
 5. Release the button. When the board is connected in DFU-mode, it will be in this state for 7 seconds.
 6. Click the`“Install Driver` button immediately. If the driver was unsuccessful, repeat from step 1.
-   * _Here the USB ID has to be the DFU-bootloader one \(_`0xF014`_for Pytrack or_ `0xF011` _for Pysense\)._
+   * _Here the USB ID has to be the DFU-bootloader one \(_`0xF014`_for Pytrack or_ `0xF011` _for Pysense)._
    * _This is a successful DFU driver installation for Pytrack:_
 
 ![](../../gitbook/assets/pytrack_dfu_mode_zadig.png)
 
-Open the command prompt and navigate to the directory where the DFU-util and the firmware was downloaded \(must be in same directory\). Repeat the procedure to get the board in DFU-mode and run the command below but replace `X.X.X` with the firmware version and replace Pysense with Pytrack if it is the Pytrack that is to be updated \(e.g: `pytrack_0.0.8.dfu`\):
+Open the command prompt and navigate to the directory where the DFU-util and the firmware was downloaded \(must be in same directory). Repeat the procedure to get the board in DFU-mode and run the command below but replace `X.X.X` with the firmware version and replace Pysense with Pytrack if it is the Pytrack that is to be updated \(e.g: `pytrack_0.0.8.dfu`):
 
 ```bash
 dfu-util-static.exe -D pysense_X.X.X.dfu
@@ -83,7 +83,7 @@ dfu-util-static.exe -D pysense_X.X.X.dfu
 
 If the update was successful, a message,"Done!" should appear in the bottom of the command prompt.
 
-**Double-check Serial USB \(CDC\) driver is installed in Application mode:** if, by mistake, the `libusbk` driver was installed while the USB ID is the Application mode \(`0xF013` for Pytrack or `0xF012` for Pysense\), then the `Serial USB (CDC)` driver has to be installed for application mode. This will allow Windows to allocate a COM port, which is required for REPL console.
+**Double-check Serial USB \(CDC) driver is installed in Application mode:** if, by mistake, the `libusbk` driver was installed while the USB ID is the Application mode \(`0xF013` for Pytrack or `0xF012` for Pysense), then the `Serial USB (CDC)` driver has to be installed for application mode. This will allow Windows to allocate a COM port, which is required for REPL console.
 
 ![](../../gitbook/assets/pytrack_app_mode_zadig.png)
 
@@ -92,7 +92,7 @@ If the update was successful, a message,"Done!" should appear in the bottom of t
 To enter update mode follow these steps:
 
 1. Unplug the device
-2. Press the button and keep it held \(on the Expansion Board the `S1` button\)
+2. Press the button and keep it held \(on the Expansion Board the `S1` button)
 3. Plug in the USB cable to the host computer and wait 1 second before releasing the button
 4. After this you will have approximately 7 seconds to run the DFU-util tool
 
@@ -144,7 +144,7 @@ Using `lsusb` command, the Pytrack/Pysense device should be visible in both norm
 For exemple, a Pytrack board is visible as either:
 
 * `Bus 020 Device 004: ID 04d8:f014 Microchip Technology Inc. Application Specific Device`
-  * this is bootloader mode \(`f014` is USB PID\), active just for 7-8 seconds, if the reset button was just  pressed before plugging USB connector.
+  * this is bootloader mode \(`f014` is USB PID), active just for 7-8 seconds, if the reset button was just  pressed before plugging USB connector.
 * `Bus 020 Device 005: ID 04d8:f013 Microchip Technology Inc. Pytrack Serial: Pyabcde0`
-  * this is normal, application mode \(`f013` is USB PID\), this means the bootloader verified application partition and it boot-up correctly.
+  * this is normal, application mode \(`f013` is USB PID), this means the bootloader verified application partition and it boot-up correctly.
 

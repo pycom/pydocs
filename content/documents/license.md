@@ -1,5 +1,8 @@
 ---
 title: "License"
+aliases:
+    - documents/license.html
+    - documents/license.md
 ---
 
 The MIT License (MIT)

@@ -1,5 +1,10 @@
 ---
 title: "WiPy"
+aliases:
+    - gettingstarted/connection/wipy.html
+    - gettingstarted/connection/wipy.md
+    - chapter/gettingstarted/connection/wipy
+    - gettingstarted/wipy.html
 ---
 
 ## Basic connection
@@ -25,21 +30,18 @@ title: "WiPy"
 * Before connecting your module to a Pysense/Pytrack/Pyscan board, you should update the firmware on the Pysense/Pytrack/Pyscan. Instructions on how to do this can be found [here](../../pytrackpysense/installation/firmware).
 * Look for the reset button on the WiPy module (located at a corner of the board, next to the LED).
 * Locate the USB connector on the Pysense/Pytrack/Pyscan.
-* Insert the module on the Pysense/Pytrack/Pyscan with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible. ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LIfiUlGe6_zTmmvcuEa%2F-LKMXk1KQvBgjpw04I3u%2F-LIqfutE_BZ6gjVdmiv0%2FPysense_WiPy.png?generation=1534772071067482&alt=media)![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LIfiUlGe6_zTmmvcuEa%2F-LKMXk1KQvBgjpw04I3u%2F-LIqfvoSjvxTIwgw2MSg%2FPytrack_WiPy.png?generation=1534772075484372&alt=media)
+* Insert the module on the Pysense/Pytrack/Pyscan with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible. ![](../../.gitbook/asssets/pysense_wipy.png) ![](/gitbook/assets/pytrack_wipy.png)
 
-
-{% content "fifth" %}
+{% content "fourth" %}
 * Firstly you will need to connect power to your WiPy. You will need to supply `3.5v`-`5.5v` to the `Vin` pin.
 
-{{< hint style="danger" >}}
 Do **not** feed `3.3v` directly to the `3.3v` supply pin, this will damage the regulator.
-{{< /hint >}}
+
 
 * The connect the `RX` and `TX` of your USB UART to the `TX` and `RX` of the WiPy respectively.
 
-{{< hint style="warning" >}}
 Please ensure you have the signal level of the UART adapter set to `3.3v` before connecting it.
-{{< /hint >}}
+
 
 * In order to put the WiPy into bootloader mode to update the device firmware you will need to connect `P2` to `GND`. We recommend you connect a button between the two to make this simpler.
 

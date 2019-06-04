@@ -12,7 +12,7 @@ Whenever one of your integrated devices sends a message to our broker, we republ
 
 ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LIL0iGdl11z7Jos_jpX%2F-LQ-UAflx-H1r4pkZhzv%2F-LQ-UkDEF_fpCDq7bw2Y%2F02_aws_integration.png?alt=media&token=7f9ab8ae-fc98-47fb-a84a-681a0b83d008)
 
-1. In this step, you have to specify the [AWS group](https://docs.aws.amazon.com/iot/latest/developerguide/thing-groups.html) name \(just alphanumeric letter, dashes and underscore are allowed\), the custom topic and the devices you want to bind to AWS. When you're ready, click _Create_
+1. In this step, you have to specify the [AWS group](https://docs.aws.amazon.com/iot/latest/developerguide/thing-groups.html) name \(just alphanumeric letter, dashes and underscore are allowed), the custom topic and the devices you want to bind to AWS. When you're ready, click _Create_
 
 ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LIL0iGdl11z7Jos_jpX%2F-LQ-UAflx-H1r4pkZhzv%2F-LQ-Uo4CkJdFy3JPbh91%2F03_aws_integration.png?alt=media&token=a3589c47-c77c-4f91-9675-a25ba6d89208)
 

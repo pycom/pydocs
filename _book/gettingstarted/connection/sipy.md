@@ -4,7 +4,7 @@
 
 {% tabs first="Exp Board 2.0", second="Exp Board 3.0", third="Pytrack/Pysense/Pyscan", forth="USB UART Adapter", fifth="WiFi" %}
 {% content "first" %}
-* Look for the reset button on the module \(located at a corner of the board, next to the LED\).
+* Look for the reset button on the module \(located at a corner of the board, next to the LED).
 * Locate the USB connector on the expansion board.
 * Insert the SiPy module on the the expansion board with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.
 
@@ -12,7 +12,7 @@
 
 {% content "second" %}
 * Before connecting your module to an Expansion Board 3.0, you should update the firmware on the Expansion Board 3.0. Instructions on how to do this can be found [here](../../pytrackpysense/installation/firmware.md).
-* Look for the reset button on the module \(located at a corner of the board, next to the LED\).
+* Look for the reset button on the module \(located at a corner of the board, next to the LED).
 * Locate the USB connector on the expansion board.
 * Insert the SiPy module on the Expansion Board with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.
 
@@ -20,7 +20,7 @@
 
 {% content "third" %}
 * Before connecting your module to a Pysense/Pytrack/Pyscan board, you should update the firmware on the Pysense/Pytrack/Pyscan. Instructions on how to do this can be found [here](../../pytrackpysense/installation/firmware.md).
-* Look for the reset button on the SiPy module \(located at a corner of the board, next to the LED\).
+* Look for the reset button on the SiPy module \(located at a corner of the board, next to the LED).
 * Locate the USB connector on the Pysense/Pytrack/Pyscan.
 * Insert the module on the Pysense/Pytrack/Pyscan with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible. ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LIfiUlGe6_zTmmvcuEa%2F-LKMXk1KQvBgjpw04I3u%2F-LIqd_e51Wyuw40k6yJv%2FPysense_SiPy.png?generation=1534772077104600&alt=media)![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LIfiUlGe6_zTmmvcuEa%2F-LKMXk1KQvBgjpw04I3u%2F-LIqdauW7rAnQlc-AL07%2FPytrack_SiPy.png?generation=1534772072530754&alt=media)
 
@@ -73,7 +73,7 @@ If you intend on using the Sigfox connectivity of the SiPy you **must** connect 
 
 ![](../../gitbook/assets/sigfox_pigtail_ant_sipy.png)
 
-### WiFi/Bluetooth \(optional\)
+### WiFi/Bluetooth \(optional)
 
 All Pycom modules, including the FiPy, come with a on-board WiFi antenna as well as a U.FL connector for an external antenna. The external antenna is optional and only required if you need better performance or are mounting the FiPy in such a way that the WiFi signal is blocked. Switching between the antennas is done via software, instructions for this can be found [here.](../../firmwareapi/pycom/network/wlan.md)
 

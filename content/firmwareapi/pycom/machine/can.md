@@ -1,5 +1,9 @@
 ---
 title: "CAN"
+aliases:
+    - firmwareapi/pycom/machine/can.html
+    - firmwareapi/pycom/machine/can.md
+    - chapter/firmwareapi/pycom/machine/can
 ---
 
 The CAN class supports the full CAN 2.0 specification with standard and extended frames, as well as acceptance filtering.

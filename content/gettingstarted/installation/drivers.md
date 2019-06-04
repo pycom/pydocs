@@ -1,5 +1,9 @@
 ---
 title: "Drivers"
+aliases:
+    - gettingstarted/installation/drivers.html
+    - gettingstarted/installation/drivers.md
+    - chapter/gettingstarted/installation/drivers
 ---
 
 ## Linux

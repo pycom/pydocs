@@ -1,5 +1,9 @@
 ---
 title: "cmath"
+aliases:
+    - firmwareapi/micropython/cmath.html
+    - firmwareapi/micropython/cmath.md
+    - chapter/firmwareapi/micropython/cmath
 ---
 
 The `cmath` module provides some basic mathematical functions for working with complex numbers. Floating point support required for this module.

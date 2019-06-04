@@ -1,5 +1,9 @@
 ---
 title: "Visual Studio Code"
+aliases:
+    - pymakr/installation/vscode.html
+    - pymakr/installation/vscode.md
+    - chapter/pymakr/installation/vscode
 ---
 
 Pycom also supports Microsoft's Visual Studio Code IDE platform with the Pymakr Plugin. To download Visual Studio Code, navigate to [VS Code](https://code.visualstudio.com/).
@@ -64,7 +68,7 @@ After installing the Pymakr Plugin, you need to take a few seconds to configure 
 
 These settings can also be applied on a per project basis by clicking `All commands` then `Pymakr > Project Settings`. This will open a JSON file which you can edit to enter your desired settings for the currently open project.
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 This process is easiest with either a Pycom Expansion Board or a Pytrack/Pysense as the addresses are automatically selected. For external products such as FTDI USB Serial Cables, the serial address may need to be copied manually. Additionally, the reset button on the device may also need to be pressed before a connection message appears.
 {{< /hint >}}
 
@@ -90,3 +94,4 @@ After installing the Pymakr Plugin, a device may be connected via the telnet int
 5. Finally close the JSON file, click `All commands`, then `Pymakr > Connect`,
 
    Pymakr will now connect via telnet.
+

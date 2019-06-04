@@ -1,10 +1,14 @@
 ---
 title: "AWS"
+aliases:
+    - tutorials/all/aws.html
+    - tutorials/all/aws.md
+    - chapter/tutorials/all/aws
 ---
 
 The AWS IoT platform enables devices to connect to the Amazon cloud and lets applications in the cloud interact with Internet-connected things. Common IoT applications either collect and process telemetry from devices or enable users to control a device remotely. Things report their state by publishing messages, in JSON format, on MQTT topics.
 
-For more information see this [PDF File](http://docs.aws.amazon.com/iot/latest/developerguide/iot-dg.pdf).
+For more information see this <a href="http://docs.aws.amazon.com/iot/latest/developerguide/iot-dg.pdf" target="_blank"> PDF File </a>.
 
 ## Getting Started with AWS IoT
 

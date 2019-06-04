@@ -1,5 +1,9 @@
 ---
 title: "Bluetooth"
+aliases:
+    - tutorials/all/ble.html
+    - tutorials/all/ble.md
+    - chapter/tutorials/all/ble
 ---
 
 At present, basic BLE functionality is available. More features will be implemented in the near future, such as pairing. This page will be updated in line with these features.

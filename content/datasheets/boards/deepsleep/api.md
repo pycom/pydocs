@@ -1,5 +1,10 @@
 ---
 title: "Deep Sleep API"
+aliases:
+    - datasheets/boards/deepsleep/api.html
+    - datasheets/boards/deepsleep/api.md
+    - product-info/boards/deepsleep/api
+    - chapter/datasheets/boards/deepsleep/api
 ---
 
 This chapter describes the library which controls the Deep Sleep Shield. This includes the controls for external interrupts and timer setup of the deep sleep functionality.
@@ -91,7 +96,7 @@ This method sends the board into deep sleep for a period of `seconds` or until a
 
 This method resets the PIC controller and resets it to the state previous to the pins/min-voltage being set.
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 Please note that more functionality is being added weekly to these libraries. If a required feature is not available, feel free to contribute with a pull request at the [Pycom Libraries](https://github.com/pycom/pycom-libraries) GitHub repository.
 {{< /hint >}}
 

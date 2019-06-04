@@ -1,5 +1,9 @@
 ---
 title: "HTTPS"
+aliases:
+    - tutorials/all/https.html
+    - tutorials/all/https.md
+    - chapter/tutorials/all/https
 ---
 
 Basic connection using `ssl.wrap_socket()`.

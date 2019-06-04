@@ -1,5 +1,9 @@
 ---
 title: "Pyscan Examples"
+aliases:
+    - tutorials/pyscan.html
+    - tutorials/pyscan.md
+    - chapter/tutorials/pyscan
 ---
 
 This basic example shows how to read an NFC card and authenticate it using a pre-defined access list.

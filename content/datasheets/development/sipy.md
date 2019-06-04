@@ -1,8 +1,19 @@
 ---
 title: "SiPy"
+aliases:
+    - datasheets/development/sipy.html
+    - datasheets/development/sipy.md
+    - product-info/development/sipy
+    - chapter/datasheets/development/sipy
 ---
 
-\*\*\*\*![](/gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn86n8h-hb1oh1idwb-sipy-2.png) ****
+![](/gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn86n8h-hb1oh1idwb-sipy-2.png)
+
+{{% hint style="info" %}}
+ ** Please Note: We have removed the labels from the pictures in the documentation due to inconsistencies with label orientation.  *The LED must be aligned above the USB socket* when inserting or removing a development board from an expansion board/Pytrack/Pysense/Pyscan. **
+{{< /hint >}}
+
+
 
 **Store**: [Buy Here](https://pycom.io/product/sipy)
 
@@ -10,19 +21,21 @@ title: "SiPy"
 
 ## Datasheet
 
+
+
 The datasheet of the SiPy is available as a PDF File.
 
-[SiPy Datasheet](.//gitbook/assets/sipy-specsheet.pdf)
+<a href="/gitbook/assets/specsheets/Pycom_002_Specsheets_SiPy_v2.pdf" target="_blank"> SiPy Datasheet </a>
 
 ## Pinout
 
 The pinout of the SiPy is available as a PDF File
 
-[SiPy Pinout](/gitbook/assets/sipy-pinout.pdf)
+<a href="/gitbook/assets/sipy-pinout.pdf" target="_blank"> SiPy Pinout </a>
 
 ![](/gitbook/assets/sipy-pinout.png)
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 Please note that the PIN assignments for UART1 (TX1/RX1), SPI (CLK, MOSI, MISO) and I2C (SDA, SCL) are defaults and can be changed in Software.
 {{< /hint >}}
 

@@ -1,5 +1,6 @@
 ---
 title: "REPL"
+aliases:
 ---
 
 REPL stands for Read Evaluate Print Loop, and is the name given to the interactive MicroPython prompt that is accessible on the Pycom devices. Using the REPL is by far the easiest way to test out Python code and run commands. You can use the REPL in addition to writing scripts in `main.py`.
@@ -13,7 +14,7 @@ The REPL includes the following features:
 * Halt any executing code: with `Ctrl-C`
 * Copy/paste code or output: `Ctrl-C` and `Ctrl-V`
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 There are a number of useful shortcuts for interacting with the MicroPython REPL. See below for the key combinations;
 
 * `Ctrl-A` on a blank line will enter raw REPL mode. This is similar to permanent paste mode, except that characters are not echoed back.

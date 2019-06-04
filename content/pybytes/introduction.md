@@ -1,5 +1,9 @@
 ---
 title: "Introduction"
+aliases:
+    - pybytes/introduction.html
+    - pybytes/introduction.md
+    - chapter/pybytes
 ---
 
 ![](/gitbook/assets/pybyteslogo%20%281%29.png)
@@ -28,6 +32,7 @@ In a nutshell, Pybytes is an environment designed to optimise your IoT applicati
 ## Let's get started!
 
 * [Getting started with Pybytes](getstarted)
-* [Connect your Pycom module to Pybytes](connect/)
+* [Connect your Pycom module to Pybytes](connect/index.html)
 * [Visualise data from your device](dashboard)
-* ​[Integrations with external services](integrations/)​
+* ​[Integrations with external services](integrations/index.html)​
+

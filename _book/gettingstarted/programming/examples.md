@@ -1,6 +1,6 @@
 # MicroPython Examples
 
-To get you started with Python \(MicroPython\) syntax, we've provided you with a number of code examples.
+To get you started with Python \(MicroPython) syntax, we've provided you with a number of code examples.
 
 ## Variable Assignment
 
@@ -26,7 +26,7 @@ else:
     print("Just right!")
 ```
 
-## Loops \(For & While loop\)
+## Loops \(For & While loop)
 
 Loops are another important feature of any programming language. This allows you to cycle your code and repeat functions/assignments/etc.
 
@@ -50,7 +50,7 @@ print(x)
 
 ## Functions
 
-Functions are blocks of code that are referred to by name. Data can be passed into it to be operated on \(i.e. the parameters\) and can optionally return data \(the return value\). All data that is passed to a function is explicitly passed.
+Functions are blocks of code that are referred to by name. Data can be passed into it to be operated on \(i.e. the parameters) and can optionally return data \(the return value). All data that is passed to a function is explicitly passed.
 
 The function below takes two numbers and adds them together, outputting the result.
 
@@ -73,11 +73,11 @@ welcome("Alex") # expect "Hello, Alex!"
 
 ## Data Structures
 
-Python has a number of different data structures for storing and manipulating variables. The main difference \(regarding data structures\) between C and Python is that Python manages memory for you. This means there’s no need to declare the sizes of lists, dictionaries, strings, etc.
+Python has a number of different data structures for storing and manipulating variables. The main difference \(regarding data structures) between C and Python is that Python manages memory for you. This means there’s no need to declare the sizes of lists, dictionaries, strings, etc.
 
 ### Lists
 
-A data structure that holds an ordered collection \(sequence\) of items.
+A data structure that holds an ordered collection \(sequence) of items.
 
 ```python
 networks = ['lora', 'sigfox', 'wifi', 'bluetooth', 'lte-m']
@@ -86,7 +86,7 @@ print(networks[2]) # expect 'wifi'
 
 ### Dictionaries
 
-A dictionary is like an address-book where you can find the address or contact details of a person by knowing only his/her name, i.e. keys \(names\) are associate with values \(details\).
+A dictionary is like an address-book where you can find the address or contact details of a person by knowing only his/her name, i.e. keys \(names) are associate with values \(details).
 
 ```python
 address_book = {'Alex':'2604 Crosswind Drive','Joe':'1301 Hillview Drive','Chris':'3236 Goldleaf Lane'}

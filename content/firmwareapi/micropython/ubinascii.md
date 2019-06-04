@@ -1,5 +1,9 @@
 ---
 title: "ubinascii"
+aliases:
+    - firmwareapi/micropython/ubinascii.html
+    - firmwareapi/micropython/ubinascii.md
+    - chapter/firmwareapi/micropython/ubinascii
 ---
 
 This module implements conversions between binary data and various encodings of it in ASCII form (in both directions).
@@ -10,7 +14,7 @@ This module implements conversions between binary data and various encodings of 
 
 Convert binary data to hexadecimal representation. Returns bytes string.
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 **Difference to CPython**
 
 If additional argument, `sep` is supplied, it is used as a separator between hexadecimal values.

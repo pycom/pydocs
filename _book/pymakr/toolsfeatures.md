@@ -1,8 +1,8 @@
 # Tools/Features
 
-## Console \(REPL\)
+## Console \(REPL)
 
-MicroPython has an interactive code tool known as the REPL \(Read Evaluate Print Line\). The REPL allows you to run code on your device, line by line. To begin coding, go to the Pymakr Plugin Console and start typing your code. Start by making the LED change colour.
+MicroPython has an interactive code tool known as the REPL \(Read Evaluate Print Line). The REPL allows you to run code on your device, line by line. To begin coding, go to the Pymakr Plugin Console and start typing your code. Start by making the LED change colour.
 
 ```python
 import pycom           # we need this module to control the LED
@@ -22,7 +22,7 @@ The console can be used to run any python code, also functions or loops.
 Use `print()` to output contents of variables to the console for you to read. Returned values from functions will also be displayed if they are not caught in a variable. This will not happen for code running from the main or boot files. Here you need to use `print()` to output to the console.
 
 {% hint style="info" %}
-Note that after writing or pasting any indented code like a function or a while loop, the user will have to press enter up to three times to tell MicroPython the code is to be closed \(this is standard MicroPython & Python behaviour\).
+Note that after writing or pasting any indented code like a function or a while loop, the user will have to press enter up to three times to tell MicroPython the code is to be closed \(this is standard MicroPython & Python behaviour).
 
 Also be aware that code written into the REPL is not saved after the device is powered off/on again.
 {% endhint %}
@@ -60,7 +60,7 @@ To start using the `Upload` feature, ensure that a project folder has been creat
 
 ![](../gitbook/assets/mp-filestructure%20%281%29.png)
 
-Library files should be placed into the `lib` folder, certificates into the `cert` folder and so on. The `Upload` button will take the highest level folder \(currently open\) and upload this to the connected Pycom device. The files will be pushed to the device in exactly the same structure as within the code editor's file directory.
+Library files should be placed into the `lib` folder, certificates into the `cert` folder and so on. The `Upload` button will take the highest level folder \(currently open) and upload this to the connected Pycom device. The files will be pushed to the device in exactly the same structure as within the code editor's file directory.
 
 ## More
 

@@ -9,7 +9,7 @@ In order to retrieve the current WLAN instance, run:
 >>> wlan = WLAN() # we call the constructor without params
 ```
 
-The current mode \(`WLAN.AP` after power up\) may be checked by running:
+The current mode \(`WLAN.AP` after power up) may be checked by running:
 
 ```python
 >>> wlan.mode()
@@ -125,7 +125,7 @@ if machine.reset_cause() != machine.SOFT_RESET:
 
 ### Connecting with EAP-TLS:
 
-Before connecting, obtain and copy the public and private keys to the device, e.g. under location `/flash/cert`. If it is required to validate the server’s public key, an appropriate CA certificate \(chain\) must also be provided.
+Before connecting, obtain and copy the public and private keys to the device, e.g. under location `/flash/cert`. If it is required to validate the server’s public key, an appropriate CA certificate \(chain) must also be provided.
 
 ```python
 from network import WLAN
@@ -136,7 +136,7 @@ wlan.connect(ssid='mywifi', auth=(WLAN.WPA2_ENT,), identity='myidentity', ca_cer
 
 ### Connecting with EAP-PEAP or EAP-TTLS:
 
-In case of EAP-PEAP \(or EAP-TTLS\), the client key and certificate are not necessary, only a username and password pair. If it is required to validate the server’s public key, an appropriate CA certificate \(chain\) must also be provided.
+In case of EAP-PEAP \(or EAP-TTLS), the client key and certificate are not necessary, only a username and password pair. If it is required to validate the server’s public key, an appropriate CA certificate \(chain) must also be provided.
 
 ```python
 from network import WLAN

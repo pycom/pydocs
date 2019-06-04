@@ -1,5 +1,8 @@
 ---
 title: "Troubleshooting Guide"
+aliases:
+    - gettingstarted/troubleshooting-guide.html
+    - gettingstarted/troubleshooting-guide.md
 ---
 
 ## How to ask for help

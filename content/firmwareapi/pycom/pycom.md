@@ -1,5 +1,9 @@
 ---
 title: "pycom"
+aliases:
+    - firmwareapi/pycom/pycom.html
+    - firmwareapi/pycom/pycom.md
+    - chapter/firmwareapi/pycom/pycom
 ---
 
 The `pycom` module contains functions to control specific features of the Pycom devices, such as the heartbeat RGB LED.

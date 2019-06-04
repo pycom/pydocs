@@ -1,5 +1,9 @@
 ---
 title: "Atom"
+aliases:
+    - pymakr/installation/atom.html
+    - pymakr/installation/atom.md
+    - chapter/pymakr/installation/atom
 ---
 
 For beginners, users getting started with MicroPython & Pycom as well as Atom text editor users, we recommend the **Pymakr Plugin for Atom**. This section will help you get started using the Atom Text Editor & Pymakr Plugin.
@@ -60,7 +64,7 @@ After installing the Pymakr Plugin, you need to take a few seconds to configure 
 
 These settings can also be applied on a per project basis by clicking `Settings` then `Project Settings`. This will open a JSON file which you can edit to enter your desired settings.
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 This process is easiest with either a Pycom Expansion Board or a Pytrack/Pysense as the addresses are automatically selected. For external products such as FTDI USB Serial Cables, the serial address may need to be copied manually. Additionally, the reset button on the device may also need to be pressed before a connection message appears.
 {{< /hint >}}
 
@@ -78,3 +82,4 @@ After installing the Pymakr Plugin, a device may be connected via the telnet int
 5. Click `Connect` in the Pymakr pane, Pymakr will now connect via telnet.
 
 ![](/gitbook/assets/pymakr-plugin-settings-1.png)
+

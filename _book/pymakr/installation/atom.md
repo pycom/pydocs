@@ -67,7 +67,7 @@ This process is easiest with either a Pycom Expansion Board or a Pytrack/Pysense
 After installing the Pymakr Plugin, a device may be connected via the telnet interface. Please see the following steps:
 
 1. Ensure that Pycom device is turned on
-2. Connect the host computer to the WiFi Access Point named after your board \(the SSID will be as follows e.g. `lopy-wlan-xxxx`, `wipy-wlan-xxxx`, etc.\). The password is `www.pycom.io`.
+2. Connect the host computer to the WiFi Access Point named after your board \(the SSID will be as follows e.g. `lopy-wlan-xxxx`, `wipy-wlan-xxxx`, etc.). The password is `www.pycom.io`.
 3. Follow the steps as above in the "Connecting via Serial USB" section but
 
    enter `192.168.4.1` as the address.

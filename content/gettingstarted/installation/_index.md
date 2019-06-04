@@ -1,5 +1,6 @@
 ---
 title: "Software"
+aliases:
 ---
 
 To get you up and running, Pycom provides a suite of tools to assist with developing and programming your Pycom Devices:

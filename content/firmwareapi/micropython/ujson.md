@@ -1,5 +1,9 @@
 ---
 title: "ujson"
+aliases:
+    - firmwareapi/micropython/ujson.html
+    - firmwareapi/micropython/ujson.md
+    - chapter/firmwareapi/micropython/ujson
 ---
 
 This modules allows to convert between Python objects and the JSON data format.

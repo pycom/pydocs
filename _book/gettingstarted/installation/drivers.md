@@ -16,7 +16,7 @@ All our products will work out of the box for Windows 8/10/+. If using Windows 7
 
 Please download the driver software from the link below.
 
-[Pysense/Pytrack/Pyscan/Expansion Board 3.0 Serial Driver \(save the file to your computer\)](https://raw.githubusercontent.com/pycom/pycom-documentation/master/pytrackpysense/installation/pycom.inf)
+[Pysense/Pytrack/Pyscan/Expansion Board 3.0 Serial Driver \(save the file to your computer)](https://raw.githubusercontent.com/pycom/pycom-documentation/master/pytrackpysense/installation/pycom.inf)
 
 
 ### Installation
@@ -33,7 +33,7 @@ Select the option to **Browse my computer for driver software**.
 
 ![](../../gitbook/assets/win7-3.png)
 
-Next you will need to navigate to where you downloaded the driver to \(e.g. **Downloads** Folder\).
+Next you will need to navigate to where you downloaded the driver to \(e.g. **Downloads** Folder).
 
 ![](../../gitbook/assets/win7-4%20%281%29.png)
 

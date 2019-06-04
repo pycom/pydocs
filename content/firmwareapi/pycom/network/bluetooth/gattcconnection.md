@@ -1,5 +1,8 @@
 ---
 title: "GATTCConnection"
+aliases:
+    - firmwareapi/pycom/network/bluetooth/gattcconnection.html
+    - firmwareapi/pycom/network/bluetooth/gattcconnection.md
 ---
 
 The GATT Client is the device that requests data from the server, otherwise known as the master device (commonly this might be a phone/tablet/PC). All transactions are initiated by the master, which receives a response from the slave.

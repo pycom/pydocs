@@ -126,12 +126,12 @@ def _parse_line(f, line):
         # {% page-ref page="development/wipy2.md" %}
         #    -->
         #     {{< refname "development/wipy2.md" >}}
-        line = line.replace("{% page-ref page=", "{{< refname ")
-        line = line.replace("%}", ">}}")
+        line = line.replace("{% page-ref page=", "{{% refname ")
+        line = line.replace("%}", "%}}")
 
     if "{% hint" in line:
-        line = line.replace("{%", "{{<")
-        line = line.replace("%}", ">}}")
+        line = line.replace("{%", "{{%")
+        line = line.replace("%}", "%}}")
 
     if "endhint" in line:
         # {% endhint %} --> {{% /hint %}}
@@ -156,7 +156,8 @@ def _find_title(filename):
            if str(filename)[8:].replace('.md','') in line:
                 # result is beetween []
                 result = re.search('\[(.*)\]', line)
-                return result.group(1).replace("\\","")
+                if result is not None:
+                    return result.group(1).replace("\\","")
            line = fp.readline()
     print("title not found for", filename)
 
@@ -192,6 +193,7 @@ def _remove_front_matters(file_path):
     # recopy content
     output_path = '%s.output' % file_path
     with open(output_path, 'wb') as out_file:
+        out_file.write(line.encode())
         while line:
             line = file.readline()
             out_file.write(line.encode())
@@ -202,17 +204,19 @@ def _make_front_matters(title, urls):
     fm =""
     fm+= "---\n"
     fm += "title: \"%s\"\n" % title.replace("\\","") # remove escapes if any
-    # for now no  aliases 302 redirects are better for SEO
-    # fm += "aliases:\n"
-    # for url in urls:
-    #     fm += "    - %s" % url
+    #
+    fm += "aliases:\n"
+    for url in urls:
+        fm += "    - %s\n" % url
     fm += "---\n"
+    print(fm)
     return fm
 
-
+import json
 def _write_front_matters(file_path, title, urls):
     # remove possible existing front matters tags
     _remove_front_matters(file_path)
+    # load the gitbook redirects.json
     # open a tmp file
     output_path = '%s.output' % file_path
     with open(output_path, 'wb') as out_file:
@@ -223,15 +227,6 @@ def _write_front_matters(file_path, title, urls):
             out_file.write(in_file.read().encode())
     # delete tmp file and place new one
     os.rename(output_path, file_path)
-
-
-
-
-
-
-
-
-
 
 
 # callable public methods
@@ -252,20 +247,34 @@ def parse_files():
         text = _parse_file(f)
         _override_file(f, text)
 
-def _make_urls(file_path):
-    return []
+def _make_urls(file_path, redirects):
+    urls = []
+    if not (str(file_path).endswith("_index.md") or str(file_path).endswith("README.md")):
+        urls.append(str(file_path)[8:].replace(".md", ".html"))
+        urls.append(str(file_path)[8:])
+    for r in redirects['redirects']:
+        if 'to' in r:
+            r['to'] = r['to'].replace(".html", "") #[2:]
+            r['to'] = r['to'].replace(".html", "")
+            file_path = str(file_path).replace(".md", "") #[8:]
+
+            if r['to'][2:] == file_path[8:]:
+                print("compare %s %s" % (r['to'], file_path))
+                urls.append(r["from"])
+    return urls
 
 def write_all_front_matters():
+    with open("redirects.json", "r") as read_file:
+        redirects = json.load(read_file)
     for f in _list_content():
-        urls = _make_urls(f)
+        urls = _make_urls(f, redirects)
         title = _find_title(f)
         _write_front_matters(f, title, urls)
 
 
 
-# load_sumary()
-# parse_files()
-
+load_sumary()
+parse_files()
 write_all_front_matters()
 
 # ({{% ref page="../dashboard.md" %}})

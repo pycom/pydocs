@@ -1,5 +1,9 @@
 ---
 title: "Server"
+aliases:
+    - firmwareapi/pycom/network/server.html
+    - firmwareapi/pycom/network/server.md
+    - chapter/firmwareapi/pycom/network/server
 ---
 
 The `Server` class controls the behaviour and the configuration of the FTP and telnet services running on the Pycom device. Any changes performed using this class’ methods will affect both.

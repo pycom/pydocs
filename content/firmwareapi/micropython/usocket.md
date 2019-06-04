@@ -1,5 +1,9 @@
 ---
 title: "usocket"
+aliases:
+    - firmwareapi/micropython/usocket.html
+    - firmwareapi/micropython/usocket.md
+    - chapter/firmwareapi/micropython/usocket
 ---
 
 This module provides access to the BSD socket interface.
@@ -33,7 +37,7 @@ s.connect(socket.getaddrinfo('www.micropython.org', 80)[0][-1])
 
 ## Constants
 
-* Family types: `socket.AF_INET`, `socket.AF_LORA`
+* Family types: `socket.AF_INET`, `socket.AF_LORA`, `socket.AF_SIGFOX`
 * Socket types: `socket.SOCK_STREAM`, `socket.SOCK_DGRAM`, `socket.SOCK_RAW`
 * Socket protocols: `socket.IPPROTO_UDP`, `socket.IPPROTO_TCP`
 * Socket options layers: `socket.SOL_SOCKET`, `socket.SOL_LORA`, `socket.SOL_SIGFOX`
@@ -55,7 +59,7 @@ Sockets are automatically closed when they are garbage-collected, but it is reco
 
 Bind the `socket` to `address`. The socket must not already be bound. The `address` parameter must be a tuple containing the IP address and the port.
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 In the case of LoRa sockets, the address parameter is simply an integer with the port number, for instance: `s.bind(1)`
 {{< /hint >}}
 
@@ -116,7 +120,7 @@ Return a file object associated with the socket. The exact returned type depends
 
 The socket must be in blocking mode; it can have a timeout, but the file object’s internal buffer may end up in a inconsistent state if a timeout occurs.
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 **Difference to CPython**
 
 Closing the file object returned by `makefile()` **WILL** close the original socket as well.
@@ -148,3 +152,72 @@ Write the buffer of bytes to the socket.
 
 Return value: number of bytes written.
 
+#### socket.do_handshake()
+
+Perform the SSL handshake on the previously "wrapped" socket with ssl.wrap_socket().
+could be used when the socket is non-blocking and the SSL handshake is not performed during connect().
+
+Example:
+
+```
+from network import WLAN
+import time
+import socket
+import ssl
+import uselect as select
+
+wlan = WLAN(mode=WLAN.STA)
+wlan.connect(ssid='<AP_SSID>', auth=(WLAN.WPA2, '<PASS>'))
+while not wlan.isconnected():
+    time.sleep(1)
+    print("Wifi .. Connecting")
+
+print ("Wifi Connected")
+
+a = socket.getaddrinfo('www.postman-echo.com', 443)[0][-1]
+s= socket.socket()
+s.setblocking(False)
+s = ssl.wrap_socket(s)
+try:
+    s.connect(a)
+except OSError as e:
+    if str(e) == '119': # For non-Blocking sockets 119 is EINPROGRESS
+        print("In Progress")
+    else:
+        raise e
+poller = select.poll()
+poller.register(s, select.POLLOUT | select.POLLIN)
+while True:
+    res = poller.poll(1000)
+    if res:
+        if res[0][1] & select.POLLOUT:
+            print("Doing Handshake")
+            s.do_handshake()
+            print("Handshake Done")
+            s.send(b"GET / HTTP/1.0\r\n\r\n")
+            poller.modify(s,select.POLLIN)
+            continue
+        if res[0][1] & select.POLLIN:
+            print(s.recv(4092))
+            break
+    break
+```
+
+#### socket.dnsserver(*, dnsIndex, ip_addr)
+ 
+When no arguments are passed this function returns the configured DNS servers Primary (Index=0) and backup (Index = 1)
+to set primary and Backup DNS servers specify the Index and Ip Address.
+
+Example:
+
+```
+>>> socket.dnsserver()
+('10.0.0.1', '8.8.8.8')
+```
+Setting DNS servers:
+
+```
+>>> socket.dnsserver(1, '0.0.0.0')
+>>> socket.dnsserver()
+('10.0.0.1', '0.0.0.0')
+```

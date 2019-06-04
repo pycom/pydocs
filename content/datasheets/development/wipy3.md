@@ -1,8 +1,18 @@
 ---
 title: "WiPy 3.0"
+aliases:
+    - datasheets/development/wipy3.html
+    - datasheets/development/wipy3.md
+    - product-info/development/wipy3
+    - chapter/datasheets/development/wipy3
 ---
 
-\*\*\*\*![](/gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn86pdzbdvrponxeg6-wipy3.png) ****
+![](/gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn86pdzbdvrponxeg6-wipy3.png) 
+
+{{% hint style="info" %}}
+ ** Please Note: We have removed the labels from the pictures in the documentation due to inconsistencies with label orientation.  *The LED must be aligned above the USB socket* when inserting or removing a development board from an expansion board/Pytrack/Pysense/Pyscan. **
+{{< /hint >}}
+
 
 **Store**: [Buy Here](https://pycom.io/product/wipy-3-0/)
 
@@ -12,17 +22,17 @@ title: "WiPy 3.0"
 
 The datasheet of the WiPy3 is available as a PDF File.
 
-[WiPy3 Datasheet](/gitbook/assets/wipy3-specsheet.pdf)
+<a href="/gitbook/assets/specsheets/Pycom_002_Specsheets_WiPy3.0_v2.pdf" target="_blank"> WiPy3 Datasheet </a>
 
 ## Pinout
 
 The pinout of the WiPy3 is available as a PDF File.
 
-[WiPy3 Pinout](/gitbook/assets/wipy3-pinout.pdf)
+<a href="/gitbook/assets/wipy3-pinout.pdf" target="_blank"> WiPy3 Pinout </a>
 
 ![](/gitbook/assets/wipy3-pinout.png)
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 Please note that the PIN assignments for UART1 (TX1/RX1), SPI (CLK, MOSI, MISO) and I2C (SDA, SCL) are defaults and can be changed in Software.
 {{< /hint >}}
 

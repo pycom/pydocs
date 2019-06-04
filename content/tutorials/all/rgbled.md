@@ -1,5 +1,9 @@
 ---
 title: "RGB LED"
+aliases:
+    - tutorials/all/rgbled.html
+    - tutorials/all/rgbled.md
+    - chapter/tutorials/all/rgbled
 ---
 
 By default the heartbeat LED flashes in blue colour once every 4s to signal that the system is alive. This can be overridden through the `pycom` module.

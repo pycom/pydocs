@@ -4,9 +4,9 @@ The Pycom documentation follows standard Python Library format using the popular
 
 ## Keyword Arguments
 
-`Keyword Arguments` refer to the arguments that are passed into a constructor \(upon referencing a class object\). When passing values into a MicroPython constructor it is not always required to specify the name of the argument and instead rely on the order of the arguments passed as to describe what they refer to. In the example below, it can be seen that the argument `mode` is passed into the `i2c.init()` method without specifying a name.
+`Keyword Arguments` refer to the arguments that are passed into a constructor \(upon referencing a class object). When passing values into a MicroPython constructor it is not always required to specify the name of the argument and instead rely on the order of the arguments passed as to describe what they refer to. In the example below, it can be seen that the argument `mode` is passed into the `i2c.init()` method without specifying a name.
 
-The values of the arguments \(as seen in the examples/docs\) refer to the default values that are passed into the constructor if nothing is provided.
+The values of the arguments \(as seen in the examples/docs) refer to the default values that are passed into the constructor if nothing is provided.
 
 ```python
 i2c.init(mode, * , baudrate=100000, pins=(SDA, SCL))
@@ -26,7 +26,7 @@ It is important to note that there are certain class methods that can only accep
 
 ## Keyword
 
-An astrik `*` in a method description \(in the docs\), denotes that the following arguments require a keyword, i.e. `pin='P16'` in the example below.
+An astrik `*` in a method description \(in the docs), denotes that the following arguments require a keyword, i.e. `pin='P16'` in the example below.
 
 ```python
 adc.channel(* , pin, attn=ADC.ATTN_0DB)
@@ -67,7 +67,7 @@ pycom.rgbled(color=0xFF0000) # Incorrect
 pycom.rgbled(0xFF0000) # Correct
 ```
 
-Another example of a method that only accepts value input. In this case, the `RTC.init()` method require a value \(`tuple`\) input for the `datetime`. It will not accept a keyword.
+Another example of a method that only accepts value input. In this case, the `RTC.init()` method require a value \(`tuple`) input for the `datetime`. It will not accept a keyword.
 
 ```python
 rtc.init(datetime)

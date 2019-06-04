@@ -34,7 +34,7 @@ print(wlan.ifconfig())
 
 ## Constructors
 
-#### class network.WLAN\(id=0, ...\)
+#### class network.WLAN\(id=0, ...)
 
 Create a WLAN object, and optionally configure it. See [`init`](wlan.md#wlan-init-mode-ssid-none-auth-none-channel-1-antenna-none-power_save-false-hidden-false) for params of configuration.
 
@@ -44,7 +44,7 @@ The WLAN constructor is special in the sense that if no arguments besides the `i
 
 ## Methods
 
-#### wlan.init\(mode, \* , ssid=None, auth=None, channel=1, antenna=None, power\_save=False, hidden=False\)
+#### wlan.init\(mode, \* , ssid=None, auth=None, channel=1, antenna=None, power\_save=False, hidden=False)
 
 Set or get the WiFi network processor configuration.
 
@@ -52,10 +52,10 @@ Arguments are:
 
 * `mode` can be either `WLAN.STA`, `WLAN.AP`, or `WLAN.STA_AP`.
 * `ssid` is a string with the SSID name. Only needed when mode is `WLAN.AP`.
-* `auth` is a tuple with \(sec, key\). Security can be `None`, `WLAN.WEP`, `WLAN.WPA`, or `WLAN.WPA2`. The key is a string with the network password.
-  * If `sec` is `WLAN.WEP` the key must be a string representing hexadecimal values \(e.g. `ABC1DE45BF`\). Only needed when mode is `WLAN.AP`.
+* `auth` is a tuple with \(sec, key). Security can be `None`, `WLAN.WEP`, `WLAN.WPA`, or `WLAN.WPA2`. The key is a string with the network password.
+  * If `sec` is `WLAN.WEP` the key must be a string representing hexadecimal values \(e.g. `ABC1DE45BF`). Only needed when mode is `WLAN.AP`.
 * `channel` a number in the range 1-11. Only needed when mode is `WLAN.AP`.
-* `antenna` selects between the internal and the external antenna. Can be either `WLAN.INT_ANT`, `WLAN.EXT_ANT`. With our development boards it defaults to using the internal antenna, but in the case of an OEM module, the antenna pin \(`P12`\) is not used, so it’s free to be
+* `antenna` selects between the internal and the external antenna. Can be either `WLAN.INT_ANT`, `WLAN.EXT_ANT`. With our development boards it defaults to using the internal antenna, but in the case of an OEM module, the antenna pin \(`P12`) is not used, so it’s free to be
 
   used for other things.
 
@@ -84,16 +84,16 @@ Pin('P12', mode=Pin.OUT)(True)
 ```
 {% endhint %}
 
-#### wlan.deinit\(\)
+#### wlan.deinit\()
 
 Disables the WiFi radio.
 
-#### wlan.connect\(ssid, \* , auth=None, bssid=None, timeout=None, ca\_certs=None, keyfile=None, certfile=None, identity=None\)
+#### wlan.connect\(ssid, \* , auth=None, bssid=None, timeout=None, ca\_certs=None, keyfile=None, certfile=None, identity=None)
 
 Connect to a wifi access point using the given SSID, and other security parameters.
 
 * `auth` is a tuple with `(sec, key)`. Security can be `None`, `WLAN.WEP`, `WLAN.WPA`, `WLAN.WPA2` or `WLAN.WPA2_ENT`. The key is a string with the network password.
-  * If `sec` is `WLAN.WEP` the key must be a string representing hexadecimal values \(e.g. `ABC1DE45BF`\).
+  * If `sec` is `WLAN.WEP` the key must be a string representing hexadecimal values \(e.g. `ABC1DE45BF`).
   * If `sec` is `WLAN.WPA2_ENT` then the `auth` tuple can have either 3 elements: `(sec, username, password)`, or just 1: `(sec,)`. When passing the 3 element tuple, the`keyfile` and `certifle` arguments must not be given.
 * `bssid` is the MAC address of the AP to connect to. Useful when there are several APs with the same SSID.
 * `timeout` is the maximum time in milliseconds to wait for the connection to succeed.
@@ -103,22 +103,22 @@ Connect to a wifi access point using the given SSID, and other security paramete
 * `identity` is only used in case of `WLAN.WPA2_ENT` security. Needed by the server.
 
 {% hint style="info" %}
-The ESP32 only handles certificates with `pkcs8` format \(but not the "Traditional SSLeay RSAPrivateKey" format\). The private key should be RSA coded with 2048 bits at maximum.
+The ESP32 only handles certificates with `pkcs8` format \(but not the "Traditional SSLeay RSAPrivateKey" format). The private key should be RSA coded with 2048 bits at maximum.
 {% endhint %}
 
-#### wlan.scan\(\)
+#### wlan.scan\()
 
 Performs a network scan and returns a list of named tuples with `(ssid, bssid, sec, channel, rssi)`. Note that channel is always `None` since this info is not provided by the WiPy.
 
-#### wlan.disconnect\(\)
+#### wlan.disconnect\()
 
 Disconnect from the WiFi access point.
 
-#### wlan.isconnected\(\)
+#### wlan.isconnected\()
 
 In case of STA mode, returns `True` if connected to a WiFi access point and has a valid IP address. In AP mode returns `True` when a station is connected, `False` otherwise.
 
-#### wlan.ifconfig\(id=0, config=\['dhcp' or configtuple\]\)
+#### wlan.ifconfig\(id=0, config=\['dhcp' or configtuple\])
 
 When `id` is 0, the configuration will be get/set on the Station interface. When `id` is 1 the configuration will be done for the AP interface.
 
@@ -132,25 +132,25 @@ If the 4-tuple config is given then a static IP is configured. For instance:
 wlan.ifconfig(config=('192.168.0.4', '255.255.255.0', '192.168.0.1', '8.8.8.8'))
 ```
 
-#### wlan.mode\(\[mode\]\)
+#### wlan.mode\(\[mode\])
 
 Get or set the WLAN mode.
 
-#### wlan.ssid\(\[ssid\]\)
+#### wlan.ssid\(\[ssid\])
 
 Get or set the SSID when in AP mode.
 
-#### wlan.auth\(\[auth\]\)
+#### wlan.auth\(\[auth\])
 
 Get or set the authentication type when in AP mode.
 
-#### wlan.channel\(\[channel\]\)
+#### wlan.channel\(\[channel\])
 
-Get or set the channel \(only applicable in AP mode\).
+Get or set the channel \(only applicable in AP mode).
 
-#### wlan.antenna\(\[antenna\]\)
+#### wlan.antenna\(\[antenna\])
 
-Get or set the antenna type \(external or internal\).
+Get or set the antenna type \(external or internal).
 
 {% hint style="info" %}
 To use an external antenna, set `P12 as output pin.`
@@ -160,7 +160,7 @@ Pin('P12', mode=Pin.OUT)(True)
 ```
 {% endhint %}
 
-#### wlan.mac\(\)
+#### wlan.mac\()
 
 Get a 6-byte long `bytes` object with the WiFI MAC address.
 

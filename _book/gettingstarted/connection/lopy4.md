@@ -4,7 +4,7 @@
 
 {% tabs first="Exp Board 2.0", second="Exp Board 3.0", third="Pytrack/Pysense/Pyscan", fourth="USB UART Adapter", fifth="Wifi" %}
 {% content "first" %}
-* Look for the reset button on the module \(located at a corner of the board, next to the LED\).
+* Look for the reset button on the module \(located at a corner of the board, next to the LED).
 * Locate the USB connector on the expansion board.
 * Insert the LoPy4 module on the the expansion board with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.
 
@@ -12,7 +12,7 @@
 
 {% content "second" %}
 * Before connecting your module to an Expansion Board 3.0, you should update the firmware on the Expansion Board 3.0. Instructions on how to do this can be found [here](../../pytrackpysense/installation/firmware.md).
-* Look for the reset button on the module \(located at a corner of the board, next to the LED\).
+* Look for the reset button on the module \(located at a corner of the board, next to the LED).
 * Locate the USB connector on the expansion board.
 * Insert the LoPy4 module on the Expansion Board with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.
 
@@ -21,7 +21,7 @@
 
 {% content "third" %}
 * Before connecting your module to a Pysense/Pytrack/Pyscan board, you should update the firmware on the Pysense/Pytrack/Pyscan. Instructions on how to do this can be found [here](../../pytrackpysense/installation/firmware.md).
-* Look for the reset button on the LoPy4 module \(located at a corner of the board, next to the LED\).
+* Look for the reset button on the LoPy4 module \(located at a corner of the board, next to the LED).
 * Locate the USB connector on the Pysense/Pytrack/Pyscan.
 * Insert the module on the Pysense/Pytrack/Pyscan with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible. 
 
@@ -69,7 +69,7 @@ Please ensure you have the signal level of the UART adapter set to `3.3v` before
 If you intend on using the LoRa/Sigfox connectivity of the LoPy4 you **must** connect a LoRa/Sigfox antenna to your LoPy4 before trying to use LoRa/Sigfox otherwise you risk damaging the device.
 {% endhint %}
 
-* Firstly you will need to connect the U.FL to SMA pig tail to the LoPy4 using one of the two the U.FL connectors on the same side of the LoPy4 as the LED. The one on the left hand side is for 433MHz \(LoRa only\), the one of the right hand side is for 868MHz/915MHz \(LoRa & Sigfox\). **Note:** This is different from the LoPy.
+* Firstly you will need to connect the U.FL to SMA pig tail to the LoPy4 using one of the two the U.FL connectors on the same side of the LoPy4 as the LED. The one on the left hand side is for 433MHz \(LoRa only), the one of the right hand side is for 868MHz/915MHz \(LoRa & Sigfox). **Note:** This is different from the LoPy.
 
 ![](../../gitbook/assets/lora_sigfox_pigtail_lopy4.png)
 
@@ -82,7 +82,7 @@ If you intend on using the LoRa/Sigfox connectivity of the LoPy4 you **must** co
 Since the LoRa chip only runs on one frequency band at a time you only need to connect an antenna to the appropriate U.FL connecor. You should be supplied with a the antenna that suits the band you intend using.
 {% endhint %}
 
-### WiFi/Bluetooth \(optional\)
+### WiFi/Bluetooth \(optional)
 
 All Pycom modules, including the LoPy4, come with a on-board WiFi antenna as well as a U.FL connector for an external antenna. The external antenna is optional and only required if you need better performance or are mounting the LoPy4 in such a way that the WiFi signal is blocked. Switching between the antennas is done via software, instructions for this can be found [here.](../../firmwareapi/pycom/network/wlan.md)
 

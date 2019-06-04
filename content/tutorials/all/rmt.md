@@ -1,5 +1,9 @@
 ---
 title: "RMT"
+aliases:
+    - tutorials/all/rmt.html
+    - tutorials/all/rmt.md
+    - chapter/tutorials/all/rmt
 ---
 
 Detailed information about this class can be found in [`RMT`](../../firmwareapi/pycom/machine/rmt).
@@ -102,7 +106,7 @@ data = rmt.pulses_get()
 
 
 
-{{< hint style="danger" >}}
+{{% hint style="danger" %}}
     If tx_idle_level is not set to the opposite of the third value in the tx_carrier tuple, the carrier wave will continue to be generated when the RMT channel is idle.
 {{< /hint >}}
 

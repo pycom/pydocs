@@ -1,5 +1,9 @@
 ---
 title: "Onewire Driver"
+aliases:
+    - tutorials/all/owd.html
+    - tutorials/all/owd.md
+    - chapter/tutorials/all/owd
 ---
 
 This tutorial explains how to connect and read data from a DS18x20 temperature sensor. The onewire library is also available at the [pycom-libraries](https://github.com/pycom/pycom-libraries/tree/master/lib/onewire) GitHub Repository.

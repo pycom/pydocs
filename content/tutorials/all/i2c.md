@@ -1,5 +1,9 @@
 ---
 title: "I2C"
+aliases:
+    - tutorials/all/i2c.html
+    - tutorials/all/i2c.md
+    - chapter/tutorials/all/i2c
 ---
 
 The following example receives data from a light sensor using I2C. Sensor used is the BH1750FVI Digital Light Sensor.

@@ -1,5 +1,9 @@
 ---
 title: "DAC"
+aliases:
+    - firmwareapi/pycom/machine/dac.html
+    - firmwareapi/pycom/machine/dac.md
+    - chapter/firmwareapi/pycom/machine/dac
 ---
 
 The DAC is used to output analog values (a specific voltage) on pin `P22` or pin `P21`. The voltage will be between `0` and `3.3V`.

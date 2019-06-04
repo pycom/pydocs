@@ -1,5 +1,9 @@
 ---
 title: "array"
+aliases:
+    - firmwareapi/micropython/array.html
+    - firmwareapi/micropython/array.md
+    - chapter/firmwareapi/micropython/array
 ---
 
 See [Python array](https://docs.python.org/3/library/array.html) for more information.

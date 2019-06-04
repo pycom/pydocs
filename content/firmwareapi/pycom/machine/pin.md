@@ -1,5 +1,9 @@
 ---
 title: "Pin"
+aliases:
+    - firmwareapi/pycom/machine/pin.html
+    - firmwareapi/pycom/machine/pin.md
+    - chapter/firmwareapi/pycom/machine/pin
 ---
 
 A pin is the basic object to control I/O pins (also known as GPIO - general-purpose input/output). It has methods to set the mode of the pin (input, output, etc) and methods to get and set the digital logic level. For analog control of a pin, see the ADC class.
@@ -122,7 +126,7 @@ p_in = Pin('P10', mode=Pin.IN, pull=Pin.PULL_UP)
 p_in.callback(Pin.IRQ_FALLING | Pin.IRQ_RISING, pin_handler)
 ```
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 For more information on how Pycom’s products handle interrupts, see [here](../../notes.md#interrupt-handling).
 {{< /hint >}}
 

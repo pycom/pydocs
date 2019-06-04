@@ -1,5 +1,9 @@
 ---
 title: "SPI"
+aliases:
+    - firmwareapi/pycom/machine/spi.html
+    - firmwareapi/pycom/machine/spi.md
+    - chapter/firmwareapi/pycom/machine/spi
 ---
 
 SPI is a serial protocol that is driven by a master. At the physical level there are 3 lines: SCK, MOSI, MISO.

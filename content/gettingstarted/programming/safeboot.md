@@ -1,5 +1,9 @@
 ---
 title: "Safe boot"
+aliases:
+    - gettingstarted/programming/safeboot.html
+    - gettingstarted/programming/safeboot.md
+    - chapter/gettingstarted/programming/safeboot
 ---
 
 If powering up normally or upon pressing the reset button, a Pycom module will boot into standard mode; the `boot.py` file will be executed first, followed by `main.py`. It is possible to alter the boot procedure of the module by tying certain pins `high` or `low` when the module boots.
@@ -33,7 +37,7 @@ If problems occur within the filesystem or you wish to factory reset your module
 >>> os.mkfs('/flash')
 ```
 
-{{< hint style="danger" >}}
+{{% hint style="danger" %}}
 Be aware, resetting the flash filesystem will delete all files inside the internal device storage (not the SD card) and they cannot be recovered.
 {{< /hint >}}
 

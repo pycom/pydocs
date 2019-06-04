@@ -1,5 +1,9 @@
 ---
 title: "Settings"
+aliases:
+    - pymakr/settings.html
+    - pymakr/settings.md
+    - chapter/pymakr/settings
 ---
 
 Below you will find a description of the various settings available for Pymakr.

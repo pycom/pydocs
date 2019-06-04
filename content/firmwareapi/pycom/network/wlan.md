@@ -1,5 +1,9 @@
 ---
 title: "WLAN"
+aliases:
+    - firmwareapi/pycom/network/wlan.html
+    - firmwareapi/pycom/network/wlan.md
+    - chapter/firmwareapi/pycom/network/wlan
 ---
 
 This class provides a driver for the WiFi network processor in the module. Example usage:
@@ -40,7 +44,7 @@ print(wlan.ifconfig())
 
 Create a WLAN object, and optionally configure it. See [`init`](wlan.md#wlan-init-mode-ssid-none-auth-none-channel-1-antenna-none-power_save-false-hidden-false) for params of configuration.
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 The WLAN constructor is special in the sense that if no arguments besides the `id` are given, it will return the already existing WLAN instance without re-configuring it. This is because WLAN is a system feature of the WiPy. If the already existing instance is not initialised it will do the same as the other constructors an will initialise it with default values.
 {{< /hint >}}
 
@@ -78,7 +82,7 @@ or
 wlan.init(mode=WLAN.STA)
 ```
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 To use an external antenna, set `P12 as output pin.`
 
 ```python
@@ -104,7 +108,7 @@ Connect to a wifi access point using the given SSID, and other security paramete
 * `certfile` is the path to the client certificate. Only used if `username` and `password` are not part of the `auth` tuple.
 * `identity` is only used in case of `WLAN.WPA2_ENT` security. Needed by the server.
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 The ESP32 only handles certificates with `pkcs8` format (but not the "Traditional SSLeay RSAPrivateKey" format). The private key should be RSA coded with 2048 bits at maximum.
 {{< /hint >}}
 
@@ -154,7 +158,7 @@ Get or set the channel (only applicable in AP mode).
 
 Get or set the antenna type (external or internal).
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 To use an external antenna, set `P12 as output pin.`
 
 ```python

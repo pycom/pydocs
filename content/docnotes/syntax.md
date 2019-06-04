@@ -1,5 +1,9 @@
 ---
 title: "Syntax"
+aliases:
+    - docnotes/syntax.html
+    - docnotes/syntax.md
+    - chapter/docnotes/syntax
 ---
 
 The Pycom documentation follows standard Python Library format using the popular Sphinx Docs tool. There are some notable points regarding the syntax of classes, methods and constants. Please see the notes below and familiarise yourself with the specific details before reviewing the documentation.
@@ -91,7 +95,7 @@ The `constants` section of a library within the docs refers to specific values f
 I2C.MASTER()
 ```
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 Be aware that you can only reference these constants upon importing and constructing a object from a library.
 {{< /hint >}}
 

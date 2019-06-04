@@ -1,5 +1,9 @@
 ---
 title: "Serial USB (UART)"
+aliases:
+    - gettingstarted/programming/repl/serial.html
+    - gettingstarted/programming/repl/serial.md
+    - chapter/gettingstarted/programming/repl/serial
 ---
 
 To use the REPL, a Pycom device must be connected to the host computer with a USB connection either to an Expansion Board or to serial converter (a diagram of how to do this can be found the the [getting started](../../introduction) page for your module).
@@ -27,7 +31,7 @@ Upon exiting `screen`, press `CTRL-A CTRL-\`. If the keyboard does not support t
 
 This will allow screen to exited by pressing `CTRL-A Q`.
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 On Linux, `picocom` or `minicom` may be used instead of `screen`. The usb serial address might also be listed as `/dev/ttyUSB01` or a higher increment for `ttyUSB`. Additionally, the elevated permissions to access the device (e.g. group uucp/dialout or use `sudo`) may be required.
 {{< /hint >}}
 
@@ -52,5 +56,5 @@ To use PuTTY the serial port (COM port) in which the Pycom device is connected, 
 
 3. Finally, click the `Open` button
 
-![](../..//gitbook/assets/putty.png)
+![](..//gitbook/assets/putty.png)
 

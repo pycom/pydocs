@@ -1,8 +1,18 @@
 ---
 title: "WiPy 2.0"
+aliases:
+    - datasheets/development/wipy2.html
+    - datasheets/development/wipy2.md
+    - product-info/development/wipy2
+    - chapter/datasheets/development/wipy2
 ---
 
-\*\*\*\*![](/gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn83ftusu7mke5ppmd-wipy2-1.png) ****
+![](/gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn83ftusu7mke5ppmd-wipy2-1.png) 
+
+{{% hint style="info" %}}
+ ** Please Note: We have removed the labels from the pictures in the documentation due to inconsistencies with label orientation.  *The LED must be aligned above the USB socket* when inserting or removing a development board from an expansion board/Pytrack/Pysense/Pyscan. **
+{{< /hint >}}
+
 
 **Store**: Discontinued, See [WiPy3](wipy3)
 
@@ -10,19 +20,21 @@ title: "WiPy 2.0"
 
 ## Datasheet
 
+
+
 The datasheet of the WiPy2 is available as a PDF File.
 
-[WiPy 2 Datasheet](/gitbook/assets/wipy2-specsheet.pdf)
+<a href="/gitbook/assets/specsheets/Pycom_002_Specsheets_WiPy2.0_v2.pdf" target="_blank"> WiPy 2 Datasheet </a>
 
 ## Pinout
 
 The pinout of the WiPy2 is available as a PDF File.
 
-[WiPy 2 Pinout](/gitbook/assets/wipy2-pinout.pdf)
+<a href="/gitbook/assets/wipy2-pinout.pdf" target="_blank"> WiPy 2 Pinout </a>
 
 ![](/gitbook/assets/wipy2-pinout.png)
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 Please note that the PIN assignments for UART1 (TX1/RX1), SPI (CLK, MOSI, MISO) and I2C (SDA, SCL) are defaults and can be changed in Software.
 {{< /hint >}}
 

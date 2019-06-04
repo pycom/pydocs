@@ -1,5 +1,6 @@
 ---
 title: "LoRa Examples"
+aliases:
 ---
 
 The following tutorials demonstrate the use of the LoRa functionality on the LoPy. LoRa can work in 2 different modes; **LoRa-MAC** (which we also call Raw-LoRa) and **LoRaWAN** mode.

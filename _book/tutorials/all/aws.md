@@ -6,7 +6,7 @@ For more information see this [PDF File](http://docs.aws.amazon.com/iot/latest/d
 
 ## Getting Started with AWS IoT
 
-### Creating the message broker \(Amazon website\):
+### Creating the message broker \(Amazon website):
 
 * Sign in to the [AWS Management Console](https://aws.amazon.com/console/)
 * Navigate to the IoT Console by clicking on the [AWS IoT link](https://github.com/pycom/pycom-docs/tree/37661883902849b1a931ee273a23ae8e0f3d773e/img/aws-1.png)
@@ -20,14 +20,14 @@ For more information see this [PDF File](http://docs.aws.amazon.com/iot/latest/d
 * On the [Create Policy](https://github.com/pycom/pycom-docs/tree/37661883902849b1a931ee273a23ae8e0f3d773e/img/aws-6.png) page, choose a policy name and the actions to authorise.
 * Go to the certificates page, click on the three dots of your certificate and attach the policy to the certificate as shown in the [diagram](https://github.com/pycom/pycom-docs/tree/37661883902849b1a931ee273a23ae8e0f3d773e/img/aws-7.png)
 
-### Setting up the device \(Pycom device\):
+### Setting up the device \(Pycom device):
 
 * Download the latest sample code from the Pycom [GitHub Repository](https://github.com/pycom/aws-pycom).
-* Connect to the device via FTP and put the root CA certificate, the client certificate \(`*.pem.crt`\) and the private key \(`*.private.pem.key`\) in the `/flash/cert` folder.
+* Connect to the device via FTP and put the root CA certificate, the client certificate \(`*.pem.crt`) and the private key \(`*.private.pem.key`) in the `/flash/cert` folder.
 * Update the config file with your WiFi settings, the [AWS Host](https://github.com/pycom/pycom-docs/tree/37661883902849b1a931ee273a23ae8e0f3d773e/img/aws-8.png) and the certificate paths.
 * Put the `config.py` and the `main.py` in the device flash
 
-### Configuration \(`config.py`\):
+### Configuration \(`config.py`):
 
 This file contains the WiFi, certificate paths and application specific settings that need to be updated by the user.
 
@@ -72,7 +72,7 @@ LAST_WILL_MSG = 'To All: Last will message'
 #MQTT_OPER_TIMEOUT = 5
 ```
 
-### Subscibe / Publish \(`main.py`\)
+### Subscibe / Publish \(`main.py`)
 
 To subscribe to a topic:
 
@@ -117,7 +117,7 @@ while loopCount < 8:
     time.sleep(5.0)
 ```
 
-### Shadow updater \(`main.py`\)
+### Shadow updater \(`main.py`)
 
 ```python
 # user specified callback functions
@@ -165,7 +165,7 @@ while True:
     time.sleep(5)
 ```
 
-### Delta Listener \(`main.py`\)
+### Delta Listener \(`main.py`)
 
 ```python
 # Custom Shadow callback

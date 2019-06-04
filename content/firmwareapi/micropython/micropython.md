@@ -1,5 +1,9 @@
 ---
 title: "micropython"
+aliases:
+    - firmwareapi/micropython/micropython.html
+    - firmwareapi/micropython/micropython.md
+    - chapter/firmwareapi/micropython/micropython
 ---
 
 ## Methods

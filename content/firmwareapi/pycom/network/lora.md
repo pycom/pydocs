@@ -1,6 +1,14 @@
 ---
 title: "LoRa"
+aliases:
+    - firmwareapi/pycom/network/lora.html
+    - firmwareapi/pycom/network/lora.md
+    - chapter/firmwareapi/pycom/network/lora
 ---
+search: false
+---
+
+# LoRa
 
 This class provides a LoRaWAN 1.0.2 compliant driver for the LoRa network processor in the LoPy and FiPy. Below is an example demonstrating LoRaWAN Activation by Personalisation usage:
 
@@ -43,7 +51,7 @@ data = s.recv(64)
 print(data)
 ```
 
-{{< hint style="danger" >}}
+{{% hint style="danger" %}}
 Please ensure that there is an antenna connected to your device before sending/receiving LoRa messages as improper use (e.g. without an antenna), may damage the device.
 {{< /hint >}}
 
@@ -85,7 +93,7 @@ The arguments are:
 * `tx_retries` sets the number of TX retries in `LoRa.LORAWAN` mode.
 * `device_class` sets the LoRaWAN device class. Can be either `LoRa.CLASS_A` or `LoRa.CLASS_C`.
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 In `LoRa.LORAWAN` mode, only `adr`, `public`, `tx_retries` and `device_class` are used. All the other params will be ignored as they are handled by the LoRaWAN stack directly. On the other hand, in `LoRa.LORA` mode from those 4 arguments, only the public one is important in order to program the sync word. In `LoRa.LORA` mode `adr`, `tx_retries` and `device_class` are ignored since they are only relevant to the LoRaWAN stack.
 {{< /hint >}}
 
@@ -413,7 +421,7 @@ Usage:
 s.bind(1)
 ```
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 The `bind()` method is only applicable when the radio is configured in `LoRa.LORAWAN` mode.
 {{< /hint >}}
 
@@ -464,7 +472,7 @@ s.setsockopt(socket.SOL_LORA, socket.SO_CONFIRMED, False)
 s.setsockopt(socket.SOL_LORA, socket.SO_CONFIRMED, True)
 ```
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 Socket options are only applicable when the LoRa radio is used in LoRa.LORAWAN mode. When using the radio in LoRa.LORA mode, use the class methods to change the spreading factor, bandwidth and coding rate to the desired values.
 {{< /hint >}}
 

@@ -2,7 +2,7 @@
 
 ## Accelerometer
 
-This basic example shows how to read pitch and roll from the on-board accelerometer and output it in comma separated value \(CSV\) format over serial.
+This basic example shows how to read pitch and roll from the on-board accelerometer and output it in comma separated value \(CSV) format over serial.
 
 ```python
 from LIS2HH12 import LIS2HH12

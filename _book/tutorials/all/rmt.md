@@ -2,9 +2,9 @@
 
 Detailed information about this class can be found in [`RMT`](../../firmwareapi/pycom/machine/rmt.md).
 
-The RMT \(Remote Control\) peripheral of the ESP32 is primarily designed to send and receive infrared remote control signals that use on-off-keying of a carrier frequency, but due to its design it can be used to generate various types of signals, this class will allow you to do this.
+The RMT \(Remote Control) peripheral of the ESP32 is primarily designed to send and receive infrared remote control signals that use on-off-keying of a carrier frequency, but due to its design it can be used to generate various types of signals, this class will allow you to do this.
 
-The RMT has 7 channels, of which 5 are available and can be mapped to any GPIO pin \(_Note:_ Pins `P13` -`P18` can only be used as inputs\).
+The RMT has 7 channels, of which 5 are available and can be mapped to any GPIO pin \(_Note:_ Pins `P13` -`P18` can only be used as inputs).
 
 | Channel | Resolution | Maximum Pulse Width |
 | :--- | :--- | :--- |

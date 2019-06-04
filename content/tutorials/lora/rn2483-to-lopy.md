@@ -1,5 +1,9 @@
 ---
 title: "RN2483 to LoPy"
+aliases:
+    - tutorials/lora/rn2483-to-lopy.html
+    - tutorials/lora/rn2483-to-lopy.md
+    - chapter/tutorials/lora/rn2483-to-lopy
 ---
 
 This example shows how to send data between a Microchip RN2483 and a LoPy via raw LoRa.

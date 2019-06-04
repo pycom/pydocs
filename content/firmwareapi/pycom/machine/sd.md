@@ -1,5 +1,9 @@
 ---
 title: "SD"
+aliases:
+    - firmwareapi/pycom/machine/sd.html
+    - firmwareapi/pycom/machine/sd.md
+    - chapter/firmwareapi/pycom/machine/sd
 ---
 
 The SD card class allows to configure and enable the memory card module of your Pycom module and automatically mount it as `/sd` as part of the file system. There is a single pin combination that can be used for the SD card, and the current implementation only works in 1-bit mode. The pin connections are as follows:
@@ -8,7 +12,7 @@ The SD card class allows to configure and enable the memory card module of your 
 
 If you have one of the Pycom expansion boards, then simply insert the card into the micro SD socket and run your script.
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 Make sure your SD card is formatted either as FAT16 or FAT32.
 {{< /hint >}}
 
@@ -49,7 +53,7 @@ Enable the SD card.
 
 Disable the SD card.
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 Please note that the SD card library currently supports FAT16/32 formatted SD cards up to 32 GB. Future firmware updates will increase compatibility with additional formats and sizes.
 {{< /hint >}}
 

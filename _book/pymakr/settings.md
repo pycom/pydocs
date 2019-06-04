@@ -4,7 +4,7 @@ Below you will find a description of the various settings available for Pymakr.
 
 ## address
 
-This is the address of the Pycom module you want Pymakr can connect to. This can be either a serial port \(e.g `COM1` on windows or `/dev/cu.usbserial-DQ0054ES` on Linux/macOS\) or an IP address \(Telnet\) \(e.g. `192.168.4.1` if connected to the AP created by the Pycom module\).
+This is the address of the Pycom module you want Pymakr can connect to. This can be either a serial port \(e.g `COM1` on windows or `/dev/cu.usbserial-DQ0054ES` on Linux/macOS) or an IP address \(Telnet) \(e.g. `192.168.4.1` if connected to the AP created by the Pycom module).
 
 ## username
 

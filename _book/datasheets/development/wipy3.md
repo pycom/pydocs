@@ -21,7 +21,7 @@ The pinout of the WiPy3 is available as a PDF File.
 ![](../../gitbook/assets/wipy3-pinout.png)
 
 {% hint style="info" %}
-Please note that the PIN assignments for UART1 \(TX1/RX1\), SPI \(CLK, MOSI, MISO\) and I2C \(SDA, SCL\) are defaults and can be changed in Software.
+Please note that the PIN assignments for UART1 \(TX1/RX1), SPI \(CLK, MOSI, MISO) and I2C \(SDA, SCL) are defaults and can be changed in Software.
 {% endhint %}
 
 ## Differences from WiPy 2.0
@@ -29,7 +29,7 @@ Please note that the PIN assignments for UART1 \(TX1/RX1\), SPI \(CLK, MOSI, MIS
 * Deep sleep current draw fixed, now only 19.7µA
 * Upgraded RAM from 512KB to 4MB
 * Upgraded External FLASH from 4MB to 8MB
-* Antenna select pin moved from GPIO16 to GPIO21 \(P12\)
+* Antenna select pin moved from GPIO16 to GPIO21 \(P12)
 
 ## Notes
 

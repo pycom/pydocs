@@ -1,5 +1,9 @@
 ---
 title: "Module IMEI"
+aliases:
+    - tutorials/lte/imei.html
+    - tutorials/lte/imei.md
+    - chapter/tutorials/lte/imei
 ---
 
 In order to retrieve the IMEI of your cellular enabled Pycom module you will firstly need to make sure you are on firmware version `1.17.0.b1` or higher. You can check your firmware version by running the following code on you device via the interactive REPL.

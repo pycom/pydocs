@@ -1,5 +1,9 @@
 ---
 title: "Pyscan"
+aliases:
+    - pytrackpysense/apireference/pyscan.html
+    - pytrackpysense/apireference/pyscan.md
+    - chapter/pytrackpysense/apireference/pyscan
 ---
 
 This chapter describes the various libraries which are designed for the Pyscan board. This includes details about the various methods and classes available for each of the Pyscan’s sensors.
@@ -141,7 +145,7 @@ Prints the bytes in `data` array in hexadecimal format, separated by spaces usin
 * `data` The array to be printed
 * `len` The number of bytes to print
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 Please note that more functionality is being added weekly to these libraries. If a required feature is not available, feel free to contribute with a pull request at the [Libraries GitHub repository](https://github.com/pycom/pycom-libraries)
 {{< /hint >}}
 

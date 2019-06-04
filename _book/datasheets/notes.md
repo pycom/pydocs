@@ -21,6 +21,6 @@ The `GPIO` pins of the modules are **NOT** `5V` tolerant, connecting them to vol
 {% endhint %}
 
 {% hint style="danger" %}
-Static electricity can damage components on the device and may destroy them. If there is a lot of static electricity in the area \(e.g. dry and cold climates\), take extra care not to shock the device. If the device came in a ESD bag \(Silver packaging\), the best way to store and carry the device is inside this bag as it will be protected against static discharges.
+Static electricity can damage components on the device and may destroy them. If there is a lot of static electricity in the area \(e.g. dry and cold climates), take extra care not to shock the device. If the device came in a ESD bag \(Silver packaging), the best way to store and carry the device is inside this bag as it will be protected against static discharges.
 {% endhint %}
 

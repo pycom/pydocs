@@ -5,8 +5,8 @@
 Always provide these details when asking for help. This helps us understand your setup and save time.
 
 * Run `os.uname()` on your module to get the version numbers
-* Your module’s type & version \(e.g. FiPy 1.0\)
-* Any shields, or devices connected \(e.g. Pytrack, Extension Board 3.0 with “x" sensor\)
+* Your module’s type & version \(e.g. FiPy 1.0)
+* Any shields, or devices connected \(e.g. Pytrack, Extension Board 3.0 with “x" sensor)
 * Your Operating System’s version
 * Pymakr version
 * Atom / VSCode version
@@ -47,7 +47,7 @@ Synchronising takes a bit of memory, so this error can occur when code running o
 
 **Failed to load package: Cannot find module ‘serialport’**
 
-In some cases, this is caused by the Atom Package Manager \(apm\) using Python 3.x, while `node-gyp` \(used for compiling the `serialport` lib\) needs Python 2.x. To confirm this, `apm —version` can be run to check which Python version apm is using.
+In some cases, this is caused by the Atom Package Manager \(apm) using Python 3.x, while `node-gyp` \(used for compiling the `serialport` lib) needs Python 2.x. To confirm this, `apm —version` can be run to check which Python version apm is using.
 
 **Solution:** Tell the package manager to use python 2 instead. Running the following command switches apm to 2.7:
 
@@ -61,11 +61,11 @@ Now reinstall Pymakr or run apm install from the Pymakr package located in `~/.a
 
 If the installation of the `serialport` library failed, it reverts back to the precompiled version that is included in the plugin. This is compiled for the latest versions of Atom and loses compatibility with older versions.
 
-**Solution:** upgrade to the latest Atom \(1.19.0 or higher\) or install the previous version of the plugin \(`apm install pymakr@1.0.3`\)
+**Solution:** upgrade to the latest Atom \(1.19.0 or higher) or install the previous version of the plugin \(`apm install pymakr@1.0.3`)
 
 **Any error where the traceback contains \.atom\packages\Pymakr\ with a capital “P”**
 
-This happened after `Pymakr` renamed to `pymakr` \(lowercase\) starting at version 1.2.5, but Atom remembers the old folder name inside the packages folder.
+This happened after `Pymakr` renamed to `pymakr` \(lowercase) starting at version 1.2.5, but Atom remembers the old folder name inside the packages folder.
 
 **Solution:**
 
@@ -94,5 +94,5 @@ If you’re a Linux user and can’t connect to your board, there might be a per
 
 If the Pymakr terminal is not opening or giving an error, this might be because NodeJS is not installed on your system. This is because the terminal process is running separate from VSCode and depends on your systems NodeJS install.
 
-**Solution:** install NodeJS. For Windows 64 machines, install a 32 bit version of NodeJS \(for example `nvm install 7.8.0 32` when using `nvm`\).
+**Solution:** install NodeJS. For Windows 64 machines, install a 32 bit version of NodeJS \(for example `nvm install 7.8.0 32` when using `nvm`).
 

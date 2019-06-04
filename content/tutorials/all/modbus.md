@@ -1,5 +1,9 @@
 ---
 title: "Modbus"
+aliases:
+    - tutorials/all/modbus.html
+    - tutorials/all/modbus.md
+    - chapter/tutorials/all/modbus
 ---
 
 Modbus is a messaging protocol that defines the packet structure for transferring data between devices in a master/slave architecture. The protocol is independent of the transmission medium and is usually transmitted over TCP (MODBUS TCP) or serial communication (MODBUS RTU). Modbus is intended as a request/reply protocol and delivers services specified by function codes. The function code in the request tells the addressed slave what kind of action to perform. The function codes most commonly supported by devices are listed below.
@@ -15,7 +19,7 @@ Modbus is a messaging protocol that defines the packet structure for transferrin
 | Write Multiple Coils | 0x0F |
 | Write Multiple Registers | 0x10 |
 
-For more information on the MODBUS RTU see the following [PDF File](http://www.modbus.org/docs/Modbus_over_serial_line_V1_02.pdf). Information on the MODBUS TCP can be found [here](http://www.modbus.org/docs/Modbus_Messaging_Implementation_Guide_V1_0b.pdf).
+For more information on the MODBUS RTU see the following <a href="http://www.modbus.org/docs/Modbus_over_serial_line_V1_02.pdf" target="_blank"> PDF File </a>. Information on the MODBUS TCP can be found <a href="http://www.modbus.org/docs/Modbus_Messaging_Implementation_Guide_V1_0b.pdf" target="_blank"> Here </a>.
 
 ## Pycom Modbus Library
 

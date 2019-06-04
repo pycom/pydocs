@@ -1,5 +1,9 @@
 ---
 title: "MicroPython Examples"
+aliases:
+    - gettingstarted/programming/examples.html
+    - gettingstarted/programming/examples.md
+    - chapter/gettingstarted/programming/examples
 ---
 
 To get you started with Python (MicroPython) syntax, we've provided you with a number of code examples.
@@ -104,7 +108,7 @@ pycom_devices = ('wipy', 'lopy', 'sipy', 'gpy', 'fipy')
 print(pycom_devices[0]) # expect 'wipy'
 ```
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 For more Python examples, check out these [tutorials](https://www.tutorialspoint.com/python3/). Be aware of the implementation differences between MicroPython and Python 3.5.
 {{< /hint >}}
 

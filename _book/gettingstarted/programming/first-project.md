@@ -15,7 +15,7 @@ This guide will take you through how to setup your first project with Pymakr and
 3. Once the text editor has loaded you will need to click `File` &gt; `Open`, and open the directory you created in step 1
 
 {% hint style="info" %}
-If you are using Atom, it is important to check at this point that Atom has successfully identified the project. The name of the directory you created in step 1 \(`RGB-Blink` in this case\) should be shown in the Pymakr pane like so:
+If you are using Atom, it is important to check at this point that Atom has successfully identified the project. The name of the directory you created in step 1 \(`RGB-Blink` in this case) should be shown in the Pymakr pane like so:
 
 ![](../../gitbook/assets/atom_project.png)
 
@@ -79,7 +79,7 @@ You may have noticed that when you power up your Pycom module, the on-board LED 
 pycom.heartbeat(False)
 ```
 
-Now it's time to test your code. On the Pymakr pane/bottom of the window you will see a `run` button. \(If you haven't connected to your device yet, you will need to do that first\). When you click the run button, the code in the currently open file will be executed on the device, but it won't copy it to the device. After running this code, you should see that that on-board LED stops blinking blue.
+Now it's time to test your code. On the Pymakr pane/bottom of the window you will see a `run` button. \(If you haven't connected to your device yet, you will need to do that first). When you click the run button, the code in the currently open file will be executed on the device, but it won't copy it to the device. After running this code, you should see that that on-board LED stops blinking blue.
 
 Now that we can confirm the device is connected and Pymakr is able to run code on it, we can complete our script to blink the LED like so:
 
@@ -98,11 +98,11 @@ while True:
     time.sleep(1)
 ```
 
-Once you run the above script, it will run forever. You will notice this prevents you from accessing the interactive REPL on the device \(You cannot see the `>>>` prompt\). In order to stop the script, click onto the Pymakr terminal, and press `ctrl-c` on your keyboard. This should stop the script running and return you to the interactive REPL.
+Once you run the above script, it will run forever. You will notice this prevents you from accessing the interactive REPL on the device \(You cannot see the `>>>` prompt). In order to stop the script, click onto the Pymakr terminal, and press `ctrl-c` on your keyboard. This should stop the script running and return you to the interactive REPL.
 
 ## Uploading to your module
 
-In the previous section we got code running on on your Pycom module using the `run` feature of Pymakr. This is useful for quick testing but has a couple of drawbacks. Firstly the code does not remain on the device permanently. If you reboot the device, it will no longer be running your code. Secondly, it will only work if you are using libraries built into the firmware. If you need any extra libraries, these need to be copied to the device first. This is where the `upload` feature comes in. If instead of `run` you click `upload`, Pymakr will upload all the files in the project \(so long as their type is in the `sync_file_types` setting for your project\). These then persist on your device even between reboots, and allows you to use libraries from the `lib` folder in your project.
+In the previous section we got code running on on your Pycom module using the `run` feature of Pymakr. This is useful for quick testing but has a couple of drawbacks. Firstly the code does not remain on the device permanently. If you reboot the device, it will no longer be running your code. Secondly, it will only work if you are using libraries built into the firmware. If you need any extra libraries, these need to be copied to the device first. This is where the `upload` feature comes in. If instead of `run` you click `upload`, Pymakr will upload all the files in the project \(so long as their type is in the `sync_file_types` setting for your project). These then persist on your device even between reboots, and allows you to use libraries from the `lib` folder in your project.
 
 If you need to remove files from your device you have two options, either connect via FTP and manage your files that way or format the device's internal flash like so:
 

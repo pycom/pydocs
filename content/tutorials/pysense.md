@@ -1,5 +1,9 @@
 ---
 title: "Pysense Examples"
+aliases:
+    - tutorials/pysense.html
+    - tutorials/pysense.md
+    - chapter/tutorials/pysense
 ---
 
 ## Accelerometer

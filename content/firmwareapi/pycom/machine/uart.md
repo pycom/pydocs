@@ -1,5 +1,9 @@
 ---
 title: "UART"
+aliases:
+    - firmwareapi/pycom/machine/uart.html
+    - firmwareapi/pycom/machine/uart.md
+    - chapter/firmwareapi/pycom/machine/uart
 ---
 
 UART implements the standard UART/USART duplex serial communications protocol. At the physical level it consists of 2 lines: RXD and TXD. The unit of communication is a character (not to be confused with a string character) which can be 5, 6, 7 or 8 bits wide.
@@ -67,7 +71,7 @@ uart.read(5) # read up to 5 bytes
 
 Construct a UART object on the given `bus`. `bus` can be `0, 1 or 2`. If the `bus` is not given, the default one will be selected (`0`) or the selection will be made based on the given pins.
 
-{{< hint style="danger" >}}
+{{% hint style="danger" %}}
 On the GPy/FiPy UART2 is unavailable because it is used to communicate with the cellular radio.
 {{< /hint >}}
 

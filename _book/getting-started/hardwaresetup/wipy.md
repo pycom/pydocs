@@ -4,7 +4,7 @@
 
 {% tabs %}
 {% tab title="Exp Board 2.0" %}
-* Look for the reset button on the module \(located at a corner of the board, next to the LED\).
+* Look for the reset button on the module \(located at a corner of the board, next to the LED).
 * Locate the USB connector on the expansion board.
 * Insert the WiPy module on the the expansion board with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.
 
@@ -13,7 +13,7 @@
 
 {% tab title="Exp Board 3.0" %}
 * Before connecting your module to an Expansion Board 3.0, you should update the firmware on the Expansion Board 3.0. Instructions on how to do this can be found [here](https://docs.pycom.io/chapter/pytrackpysense/installation/firmware.html).
-* Look for the reset button on the module \(located at a corner of the board, next to the LED\).
+* Look for the reset button on the module \(located at a corner of the board, next to the LED).
 * Locate the USB connector on the expansion board.
 * Insert the WiPy module on the Expansion Board with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.
 
@@ -22,7 +22,7 @@
 
 {% tab title="Pytrack/Pysense/Pyscan" %}
 * Before connecting your module to a Pysense/Pytrack/Pyscan board, you should update the firmware on the Pysense/Pytrack/Pyscan. Instructions on how to do this can be found [here](https://docs.pycom.io/chapter/pytrackpysense/installation/firmware.html).
-* Look for the reset button on the WiPy module \(located at a corner of the board, next to the LED\).
+* Look for the reset button on the WiPy module \(located at a corner of the board, next to the LED).
 * Locate the USB connector on the Pysense/Pytrack/Pyscan.
 * Insert the module on the Pysense/Pytrack/Pyscan with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.
 
@@ -67,7 +67,7 @@ Please ensure you have the signal level of the UART adapter set to `3.3v` before
 
 ## Antennas
 
-### WiFi/Bluetooth \(optional\)
+### WiFi/Bluetooth \(optional)
 
 All Pycom modules, including the WiPy, come with a on-board WiFi antenna as well as a U.FL connector for an external antenna. The external antenna is optional and only required if you need better performance or are mounting the WiPy in such a way that the WiFi signal is blocked. Switching between the antennas is done via software, instructions for this can be found [here.](https://docs.pycom.io/chapter/firmwareapi/pycom/network/wlan.html)
 
@@ -84,5 +84,5 @@ The WiPy 3.0 is an upgraded version of the WiPy 2.0 with the following changes:
 * The FLASH has been upgraded from 4MB to 8MB.
 * The RAM has been upgraded from 512KB to 4MB.
 * The deepsleep current consumption issue has been fixed
-* The antenna select pin has moved to GPIO21 \(P12\)
+* The antenna select pin has moved to GPIO21 \(P12)
 

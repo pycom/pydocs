@@ -14,7 +14,7 @@ Some times the code you have written will prevent you gaining access to the REPL
 * Your code gets stuck before reaching the REPL
 * You set a socket as blocking but never receive any data
 
-In order to fix this you can safe boot your module. This will prevent `boot.py` and `main.py` from being executed and will drop you straight into the interactive REPL. After reset, if `P12` pin is held `high` \(i.e. connect it to the `3V3` output pin\), the heartbeat LED will begin flashing orange slowly. If after 3 seconds the pin is still held high, the LED will start blinking faster. In this mode the module will do the same as previously explained but it will also select the previous OTA image to boot if you have updated the module via the OTA update procedure \(updates performed via the firmware update tool do not count\). This is useful if you flashed a OTA update that breaks the device.
+In order to fix this you can safe boot your module. This will prevent `boot.py` and `main.py` from being executed and will drop you straight into the interactive REPL. After reset, if `P12` pin is held `high` \(i.e. connect it to the `3V3` output pin), the heartbeat LED will begin flashing orange slowly. If after 3 seconds the pin is still held high, the LED will start blinking faster. In this mode the module will do the same as previously explained but it will also select the previous OTA image to boot if you have updated the module via the OTA update procedure \(updates performed via the firmware update tool do not count). This is useful if you flashed a OTA update that breaks the device.
 
 Pin `P12` released during:
 
@@ -32,7 +32,7 @@ If problems occur within the filesystem or you wish to factory reset your module
 ```
 
 {% hint style="danger" %}
-Be aware, resetting the flash filesystem will delete all files inside the internal device storage \(not the SD card\) and they cannot be recovered.
+Be aware, resetting the flash filesystem will delete all files inside the internal device storage \(not the SD card) and they cannot be recovered.
 {% endhint %}
 
 ## Reset

@@ -1,12 +1,16 @@
 ---
 title: "Connect to Pybytes: Quick Add"
+aliases:
+    - pybytes/connect/quick.html
+    - pybytes/connect/quick.md
+    - chapter/pybytes/connect/quick
 ---
 
 ## Connecting a device to Pybytes quickly by using the Firmware Updater
 
 In this section, we explain to you how to connect your device to Pybytes quickly using the Firmware Updater.
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 In case you want to extend Pybytes library you can flash Pybytes library manually. [Click here for more information.](flash)
 {{< /hint >}}
 
@@ -14,19 +18,23 @@ In case you want to extend Pybytes library you can flash Pybytes library manuall
 
 At the last step of the "Add Device" process:
 
-![](/gitbook/assets/7-1.png)
+![](/gitbook/assets/pybytes/add-device/final-step.png)
 
-1. Download the [firmware updater](https://pycom.io/downloads/) for your operating system;
+1. Select Firmware updater for your operating.
+
+    (Firmware updater is also available in [Downloads](https://pycom.io/downloads/) section on pycom.io)
 
 ![](/gitbook/assets/8-1.png)
 
-2. Copy the device token.
+2. Copy the activation token.
+
+    The activation token is valid for one hour. If your activation token is expired, you can create a new one.
 
 ### Step 2: Firmware updater
 
 Install the Firmware updater on your computer.
 
-1. Start the `Firmware updater`;
+1. Start the *Firmware updater*;
 
 ![](/gitbook/assets/1-1.png)
 
@@ -38,7 +46,7 @@ Install the Firmware updater on your computer.
 
 ![](/gitbook/assets/3.png)
 
-4. Paste your device token from Pybytes;
+4. Paste your activation token from Pybytes;
 
 ![](/gitbook/assets/5-1.gif)
 
@@ -50,7 +58,7 @@ Install the Firmware updater on your computer.
 
 ## Next step: Set up your device's dashboard!
 
-Now it's time to display data from your device into Pybytes dashboard.
+[Now it's time to display data from your device into Pybytes dashboard](../dashboard)
 
-{{< refname "../dashboard.md" >}}
+{{% refname "../dashboard.md" %}}
 

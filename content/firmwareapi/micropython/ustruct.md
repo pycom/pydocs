@@ -1,5 +1,9 @@
 ---
 title: "ustruct"
+aliases:
+    - firmwareapi/micropython/ustruct.html
+    - firmwareapi/micropython/ustruct.md
+    - chapter/firmwareapi/micropython/ustruct
 ---
 
 See Python [struct](https://docs.python.org/3/library/struct.html) for more information.

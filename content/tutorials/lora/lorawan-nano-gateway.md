@@ -1,5 +1,9 @@
 ---
 title: "LoRaWAN Nano-Gateway"
+aliases:
+    - tutorials/lora/lorawan-nano-gateway.html
+    - tutorials/lora/lorawan-nano-gateway.md
+    - chapter/tutorials/lora/lorawan-nano-gateway
 ---
 search: false
 ---
@@ -384,7 +388,7 @@ The `Gateway` should now be configured. Next, one or more nodes can now be confi
 
 There are two methods of connecting LoPy devices to the nano-gateway, Over the Air Activation (OTAA) and Activation By Personalisation (ABP). The code and instructions for registering these methods are shown below, followed by instruction for how to connect them to an application on TTN.
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 It’s important that the following code examples (also on GitHub) are used to connect to the nano-gateway as it only supports single channel connections.
 {{< /hint >}}
 
@@ -543,7 +547,7 @@ For this example, use the `HTTP Integration` to forward the LoRaWAN Packets to a
 
 Click `HTTP Integration` to connect up an endpoint that can receive the data.
 
-For testing, a website called [RequestBin](https://requestb.in/) may be used to receive the data that TTN forwards (via POST Request). To set this up, navigate to [RequestBin](https://requestb.in/) and click the `Create a RequestBin`.
+For testing, a website called [RequestBin](https://requestbin.com/), may be used to receive the data that TTN forwards (via POST Request). To set this up, navigate to [RequestBin](https://requestbin.com/) and click the `Create a RequestBin`.
 
 ![](/gitbook/assets/ttn-9%20%281%29.png)
 

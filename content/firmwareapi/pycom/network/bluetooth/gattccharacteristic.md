@@ -1,5 +1,8 @@
 ---
 title: "GATTCCharacteristic"
+aliases:
+    - firmwareapi/pycom/network/bluetooth/gattccharacteristic.html
+    - firmwareapi/pycom/network/bluetooth/gattccharacteristic.md
 ---
 
 The smallest concept in GATT is the Characteristic, which encapsulates a single data point (though it may contain an array of related data, such as X/Y/Z values from a 3-axis accelerometer, longitude and latitude from a GPS, etc.).

@@ -1,6 +1,6 @@
 # The Things Network
 
-In order to use The Things Network \(TTN\) you should navigate to their website and create/register an account. Enter a username and an email address to verify with their platform.
+In order to use The Things Network \(TTN) you should navigate to their website and create/register an account. Enter a username and an email address to verify with their platform.
 
 ![](../../../gitbook/assets/ttn-1.png)
 
@@ -55,13 +55,13 @@ These are unique to each gateway, location and country specific frequency. Pleas
 | Option | Value |
 | :--- | :--- |
 | Protocol | Packet Forwarder |
-| Gateway EUI | User Defined \(must match `config.py`\) |
+| Gateway EUI | User Defined \(must match `config.py`) |
 | Description | User Defined |
-| Frequency Plan | Select Country \(e.g. EU - 868 MHz\) |
+| Frequency Plan | Select Country \(e.g. EU - 868 MHz) |
 | Location | User Defined |
 | Antenna Placement | Indoor or Outdoor |
 
-Most LoRaWAN network servers expect a Gateway ID in the form of a unique 64-bit hexadecimal number \(called a EUI-64\). The recommended practice is to produce this ID from your board by expanding the WiFi MAC address \(a 48-bit number, called MAC-48\). You can obtain that by running this code prior to configuration:
+Most LoRaWAN network servers expect a Gateway ID in the form of a unique 64-bit hexadecimal number \(called a EUI-64). The recommended practice is to produce this ID from your board by expanding the WiFi MAC address \(a 48-bit number, called MAC-48). You can obtain that by running this code prior to configuration:
 
 ```python
  from network import WLAN
@@ -70,7 +70,7 @@ Most LoRaWAN network servers expect a Gateway ID in the form of a unique 64-bit 
  binascii.hexlify(wl.mac())[:6] + 'FFFE' + binascii.hexlify(wl.mac())[6:]
 ```
 
-Once these settings have been applied, click `Register Gateway`. A Gateway Overview page will appear, with the configuration settings showing. Next click on the `Gateway Settings` and configure the Router address to match that of the gateway \(default: `router.eu.thethings.network`\).
+Once these settings have been applied, click `Register Gateway`. A Gateway Overview page will appear, with the configuration settings showing. Next click on the `Gateway Settings` and configure the Router address to match that of the gateway \(default: `router.eu.thethings.network`).
 
 ![](../../../gitbook/assets/ttn-4%20%281%29.png)
 

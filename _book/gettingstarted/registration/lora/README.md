@@ -20,11 +20,11 @@ lora = LoRa(mode=LoRa.LORAWAN)
 print(ubinascii.hexlify(lora.mac()).upper().decode('utf-8'))
 ```
 
-The output will be a hex string like: `70B3D5499585FCA1`. Once you have this you will need to provide it to your LoRaWAN network which will then provide you with the details need to connect via Over-the-Air Activation \(OTAA\) or Activation by Personalisation \(ABP\)
+The output will be a hex string like: `70B3D5499585FCA1`. Once you have this you will need to provide it to your LoRaWAN network which will then provide you with the details need to connect via Over-the-Air Activation \(OTAA) or Activation by Personalisation \(ABP)
 
 #### OTAA
 
-If you wish to connect via OTAA \(which is the recommended method\) the network will provide you with an `Application EUI` and `Application Key`. The former identifies what application your device is connecting to, the latter is a shared secret key unique to your device to generate the session keys that prove its identity to the network. Once you have these you can use the [LoRaWAN OTAA example](../../../tutorials/lora/lorawan-otaa.md) code to connect to the network.
+If you wish to connect via OTAA \(which is the recommended method) the network will provide you with an `Application EUI` and `Application Key`. The former identifies what application your device is connecting to, the latter is a shared secret key unique to your device to generate the session keys that prove its identity to the network. Once you have these you can use the [LoRaWAN OTAA example](../../../tutorials/lora/lorawan-otaa.md) code to connect to the network.
 
 #### ABP
 

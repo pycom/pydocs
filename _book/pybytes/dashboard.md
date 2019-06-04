@@ -6,7 +6,7 @@ In this section, we will explain to you how to create widgets for data visualisa
 We assume that you already have your device connected to Pybytes. In case you haven't, check how to [add your device here](connect/). After your done with that, you can proceed to the next example.
 {% endhint %}
 
-## Step 1: Set up your application \(`main.py`\)
+## Step 1: Set up your application \(`main.py`)
 
 The first step is to have an application running on your device. The application in this example sends data from a vector every 10 seconds to Pybytes.
 
@@ -74,11 +74,11 @@ Go to Pybytes.
 ![](../gitbook/assets/05%20%281%29.png)
 
 {% hint style="info" %}
-The name and unit are labels used to identify your signal inside Pybytes \(In this example we defined `Sinwave` as the name of the signal and `Rad` as the unit\).
+The name and unit are labels used to identify your signal inside Pybytes \(In this example we defined `Sinwave` as the name of the signal and `Rad` as the unit).
 
-The signal number has to match the pin number that you defined on `pybytes.send_virtual_pin_value` function call, inside your `main.py` code \(In this example we defined `pin = 1`\);
+The signal number has to match the pin number that you defined on `pybytes.send_virtual_pin_value` function call, inside your `main.py` code \(In this example we defined `pin = 1`);
 
-The datatype also has to match the variable used as argument on `pybytes.send_virtual_pin_value` function call, inside your `main.py` code \(In this example our variable is a floating number; therefore we defined as a `Float32`\).
+The datatype also has to match the variable used as argument on `pybytes.send_virtual_pin_value` function call, inside your `main.py` code \(In this example our variable is a floating number; therefore we defined as a `Float32`).
 {% endhint %}
 
 ## Step 3: Add a widget for the signal
@@ -91,7 +91,7 @@ The datatype also has to match the variable used as argument on `pybytes.send_vi
 
 ![](../gitbook/assets/02-1%20%281%29.png)
 
-3. Select the type of visualisation \(e.g. Bar chart or Line chart\).
+3. Select the type of visualisation \(e.g. Bar chart or Line chart).
 
 ![](../gitbook/assets/03.gif)
 

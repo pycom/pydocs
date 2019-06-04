@@ -15,7 +15,7 @@ In order to get access to the CLI tool on macOS, you will need to right click on
 
 #### Linux
 
-In the [Ubuntu 14.04 LTS](https://software.pycom.io/findupgrade?product=pycom-firmware-updater&type=all&platform=unix&redirect=true) \(and newer\) version of the updater tool, `pycom-fwtool-cli` is installed in `/usr/local/bin`. In the [Generic Linux](https://software.pycom.io/findupgrade?product=pycom-firmware-updater&type=all&platform=unix&redirect=true) package, the tool is extracted into folder `./pyupgrade`
+In the [Ubuntu 14.04 LTS](https://software.pycom.io/findupgrade?product=pycom-firmware-updater&type=all&platform=unix&redirect=true) \(and newer) version of the updater tool, `pycom-fwtool-cli` is installed in `/usr/local/bin`. In the [Generic Linux](https://software.pycom.io/findupgrade?product=pycom-firmware-updater&type=all&platform=unix&redirect=true) package, the tool is extracted into folder `./pyupgrade`
 
 ### Usage
 
@@ -260,12 +260,12 @@ optional arguments:
 ```
 
 {% hint style="info" %}
-Note: The local `pybytes_config.json` file is overwritten when making any modifications using this command \(requires Pybytes firmware `1.17.5.b6` or higher and Firmware updater `1.14.3`\).
+Note: The local `pybytes_config.json` file is overwritten when making any modifications using this command \(requires Pybytes firmware `1.17.5.b6` or higher and Firmware updater `1.14.3`).
 {% endhint %}
 
 #### cb
 
-Read/Write config block \(LPMAC, Sigfox PAC & ID, etc.\). You can find the structure of this block [here.](https://github.com/pycom/pycom-micropython-sigfox/blob/master/esp32/pycom_config.h#L24)
+Read/Write config block \(LPMAC, Sigfox PAC & ID, etc.). You can find the structure of this block [here.](https://github.com/pycom/pycom-micropython-sigfox/blob/master/esp32/pycom_config.h#L24)
 
 ```text
 usage: pycom-fwtool-cli  -p PORT cb [-h] [-f FILE] [-b] [-r]

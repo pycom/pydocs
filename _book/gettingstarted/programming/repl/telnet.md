@@ -1,6 +1,6 @@
 # Telnet REPL
 
-Pycom devices also support a connection via `telnet`, using the device's on board WiFi/WLAN. Connect to the device's WiFi Access Point \(AP\) and using the following credentials to connect to the AP. The WiFi `SSID` will appear upon powering on a Pycom Device for the first time \(e.g. `lopy-`\). To re-enable this feature at a later date, please see [network.WLAN](../../../firmwareapi/pycom/network/wlan.md).
+Pycom devices also support a connection via `telnet`, using the device's on board WiFi/WLAN. Connect to the device's WiFi Access Point \(AP) and using the following credentials to connect to the AP. The WiFi `SSID` will appear upon powering on a Pycom Device for the first time \(e.g. `lopy-`). To re-enable this feature at a later date, please see [network.WLAN](../../../firmwareapi/pycom/network/wlan.md).
 
 * password: `www.pycom.io`
 
@@ -31,8 +31,8 @@ Upon connection, the telnet program will prompt for the `username` and `password
 
 A terminal emulator is needed to open a telnet connection from Windows; the easiest option is to download the free program, [PuTTY](http://www.putty.org/).
 
-1. With PuTTY open, select telnet as connection type and leave the default port \(`23`\)
-2. Next enter the IP address of the Pycom device \(e.g. `192.168.4.1`\)
+1. With PuTTY open, select telnet as connection type and leave the default port \(`23`)
+2. Next enter the IP address of the Pycom device \(e.g. `192.168.4.1`)
 3. Finally click `Open`
 
 {% hint style="info" %}

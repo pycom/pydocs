@@ -1,5 +1,10 @@
 ---
 title: "LoPy 4"
+aliases:
+    - gettingstarted/connection/lopy4.html
+    - gettingstarted/connection/lopy4.md
+    - chapter/gettingstarted/connection/lopy4
+    - gettingstarted/lopy4.html
 ---
 
 ## Basic connection
@@ -33,15 +38,12 @@ title: "LoPy 4"
 {% content "forth" %}
 * Firstly you will need to connect power to your LoPy4. You will need to supply `3.5v`-`5.5v` to the `Vin` pin.
 
-{{< hint style="danger" >}}
 Do **not** feed `3.3v` directly to the `3.3v` supply pin, this will damage the regulator.
-{{< /hint >}}
+
 
 * The connect the `RX` and `TX` of your USB UART to the `TX` and `RX` of the LoPy4 respectively.
 
-{{< hint style="warning" >}}
 Please ensure you have the signal level of the UART adapter set to `3.3v` before connecting it.
-{{< /hint >}}
 
 * In order to put the LoPy4 into bootloader mode to update the device firmware you will need to connect `P2` to `GND`. We recommend you connect a button between the two to make this simpler.
 
@@ -67,7 +69,7 @@ Please ensure you have the signal level of the UART adapter set to `3.3v` before
 
 ### Lora/Sigfox
 
-{{< hint style="danger" >}}
+{{% hint style="danger" %}}
 If you intend on using the LoRa/Sigfox connectivity of the LoPy4 you **must** connect a LoRa/Sigfox antenna to your LoPy4 before trying to use LoRa/Sigfox otherwise you risk damaging the device.
 {{< /hint >}}
 
@@ -80,7 +82,7 @@ If you intend on using the LoRa/Sigfox connectivity of the LoPy4 you **must** co
 
 ![](/gitbook/assets/lora_sigfox_pigtail_ant_lopy4.png)
 
-{{< hint style="danger" >}}
+{{% hint style="danger" %}}
 Since the LoRa chip only runs on one frequency band at a time you only need to connect an antenna to the appropriate U.FL connecor. You should be supplied with a the antenna that suits the band you intend using.
 {{< /hint >}}
 

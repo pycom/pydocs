@@ -1,5 +1,9 @@
 ---
 title: "PWM"
+aliases:
+    - firmwareapi/pycom/machine/pwm.html
+    - firmwareapi/pycom/machine/pwm.md
+    - chapter/firmwareapi/pycom/machine/pwm
 ---
 
 ## class PWM – Pulse Width Modulation

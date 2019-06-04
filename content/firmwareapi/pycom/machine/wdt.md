@@ -1,5 +1,9 @@
 ---
 title: "WDT"
+aliases:
+    - firmwareapi/pycom/machine/wdt.html
+    - firmwareapi/pycom/machine/wdt.md
+    - chapter/firmwareapi/pycom/machine/wdt
 ---
 
 The WDT is used to restart the system when the application crashes and ends up into a non recoverable state. After enabling, the application must "feed" the watchdog periodically to prevent it from expiring and resetting the system.

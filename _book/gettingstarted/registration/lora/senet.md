@@ -8,15 +8,15 @@ Connecting your device begins by creating an account on the Senet Developer Port
 
 Complete Senet Developer Portal documentation is available on line at [Docs](https://docs.senetco.io/docs).
 
-Once your account has been activated, you may want to onboard a gateway, if Senet public network access in unavailable. Onboarding your device consists of registering the device through your portal account and then provisioning your device with the information provided at the completion of the registration process. Senet supports both Over-The-Air-Activation \(OTAA\) and Activation-By-Personalization \(ABP\). As ABP is useful only in a very narrow set of use-cases, this tutorial will walk you through OTAA registration and provisioning.
+Once your account has been activated, you may want to onboard a gateway, if Senet public network access in unavailable. Onboarding your device consists of registering the device through your portal account and then provisioning your device with the information provided at the completion of the registration process. Senet supports both Over-The-Air-Activation \(OTAA) and Activation-By-Personalization \(ABP). As ABP is useful only in a very narrow set of use-cases, this tutorial will walk you through OTAA registration and provisioning.
 
 ## Device Identity and Security Elements
 
-All LoRaWAN 1.0.x end-devices require three provisioning elements to join a network. Devices typically come from the factory with a unique, 64-bit EUI \(called a DevEUI\) which is the device's globally unique identifier. In the case of the Senet Developer Portal, the two additional elements \(The Application EUI or AppEUI and Application Key or AppKey\) will be generated and provided to you after registration \(in typical production environments, these additional elements are also provided during manufacturing and provisioned into the network backend\).
+All LoRaWAN 1.0.x end-devices require three provisioning elements to join a network. Devices typically come from the factory with a unique, 64-bit EUI \(called a DevEUI) which is the device's globally unique identifier. In the case of the Senet Developer Portal, the two additional elements \(The Application EUI or AppEUI and Application Key or AppKey) will be generated and provided to you after registration \(in typical production environments, these additional elements are also provided during manufacturing and provisioned into the network backend).
 
-* Device EUI \(DevEUI\)
-* Application EUI \(AppEUI\)
-* Application Key \(AppKey\)
+* Device EUI \(DevEUI)
+* Application EUI \(AppEUI)
+* Application Key \(AppKey)
 
 ### Device EUI
 
@@ -37,7 +37,7 @@ Use this value during the first step of device registration.
 
 ### Application EUI and Application Key
 
-The Application EUI uniquely identifies the security broker \(called a Join Server in LoRaWAN terminology\) which is interogated by the network when the device attempts to join the network. The Application Key is the shared secret \(between the end-device and the Join-Server\) which forms the basis for LoRaWAN security and is used to generate the application and network session keys used for privacy and message integrity.
+The Application EUI uniquely identifies the security broker \(called a Join Server in LoRaWAN terminology) which is interogated by the network when the device attempts to join the network. The Application Key is the shared secret \(between the end-device and the Join-Server) which forms the basis for LoRaWAN security and is used to generate the application and network session keys used for privacy and message integrity.
 
 At the completion of your device registration process on the Senet Developer Portal, you will be presented with the Application EUI and the Application Key which you will need to provision in your device. This information is always available after the fact in the device details screen.
 

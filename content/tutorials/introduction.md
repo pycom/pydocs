@@ -1,5 +1,9 @@
 ---
 title: "Introduction"
+aliases:
+    - tutorials/introduction.html
+    - tutorials/introduction.md
+    - chapter/tutorials
 ---
 
 ![](/gitbook/assets/tutorialsicon%20%281%29.png)

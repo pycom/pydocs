@@ -10,7 +10,7 @@ If you require a reference board for the G01, only this design is suitable. The 
 
 ## Features
 
-* Suits all OEM modules \(L01, L04, W01, G01\)
+* Suits all OEM modules \(L01, L04, W01, G01)
 * On-board 2.4GHz antenna for WiFi and Bluetooth, with the ability to switch
 
   to a external antenna via a U.FL connector.

@@ -1,5 +1,9 @@
 ---
 title: "Pycom Products"
+aliases:
+    - products.html
+    - products.md
+    - chapter/products
 ---
 
 ## Pycom Products

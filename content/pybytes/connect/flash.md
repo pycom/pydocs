@@ -1,12 +1,16 @@
 ---
 title: "Connect to Pybytes: Flash Pybytes library manually"
+aliases:
+    - pybytes/connect/flash.html
+    - pybytes/connect/flash.md
+    - chapter/pybytes/connect/flash
 ---
 
 ## Connecting a device to Pybytes by flashing Pybytes library manually
 
 In this section, we will explain to you how to connect your device to Pybytes by flashing Pybytes library manually.
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 From firmware 1.16.x onwards all Pycom devices come with Pybytes library build-in `/frozen` folder. That means that you can add your device quickly without the need of flashing Pybytes library manually. [Click here for more information.](quick)
 {{< /hint >}}
 
@@ -32,7 +36,7 @@ You can also download _Pybytes library_ at the device's settings page:
 
 ### Step 2. Flash your device with Pymakr
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 In case you haven't installed Pymakr plugin, follow [these instructions](../../pymakr/installation/atom).
 {{< /hint >}}
 
@@ -59,7 +63,7 @@ In case you haven't installed Pymakr plugin, follow [these instructions](../../p
 
    After all Pybytes library files are uploaded to device, device will restart and will connect to Pybytes.
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 Pybytes library is written to `/flash` folder and will take precedence over build in firmware libraries in `/frozen` folder.
 {{< /hint >}}
 
@@ -67,5 +71,5 @@ Pybytes library is written to `/flash` folder and will take precedence over buil
 
 Now it's time to display data from your device into Pybytes dashboard.
 
-{{< refname "../dashboard.md" >}}
+{{% refname "../dashboard.md" %}}
 

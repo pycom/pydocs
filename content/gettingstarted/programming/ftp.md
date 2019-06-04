@@ -1,5 +1,9 @@
 ---
 title: "FTP"
+aliases:
+    - gettingstarted/programming/ftp.html
+    - gettingstarted/programming/ftp.md
+    - chapter/gettingstarted/programming/ftp
 ---
 
 There is a small internal file system accessible with each Pycom device, called `/flash`. This is stored within the external serial flash memory. If a microSD card is also connected and mounted, it will be available as well. When the device starts up, it will always boot from the `boot.py` located in the `/flash` file system.

@@ -2,7 +2,7 @@
 
 The SD card class allows to configure and enable the memory card module of your Pycom module and automatically mount it as `/sd` as part of the file system. There is a single pin combination that can be used for the SD card, and the current implementation only works in 1-bit mode. The pin connections are as follows:
 
-`P8: DAT0`, `P23: SCLK` and `P4: CMD` \(no external pull-up resistors are needed\)
+`P8: DAT0`, `P23: SCLK` and `P4: CMD` \(no external pull-up resistors are needed)
 
 If you have one of the Pycom expansion boards, then simply insert the card into the micro SD socket and run your script.
 
@@ -33,17 +33,17 @@ f.close()
 
 ## Constructors
 
-#### class machine.SD\(id, ...\)
+#### class machine.SD\(id, ...)
 
 Create a SD card object. See [`sd.init()`](sd.md#sd-init-id-0) for parameters if initialisation.
 
 ## Methods
 
-#### sd.init\(id=0\)
+#### sd.init\(id=0)
 
 Enable the SD card.
 
-#### sd.deinit\(\)
+#### sd.deinit\()
 
 Disable the SD card.
 

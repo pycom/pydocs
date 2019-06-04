@@ -1,10 +1,14 @@
 ---
 title: "NB-IoT"
+aliases:
+    - tutorials/lte/nb-iot.html
+    - tutorials/lte/nb-iot.md
+    - chapter/tutorials/lte/nb-iot
 ---
 
 ## LTE class for Narrow Band IoT
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 As shipped, Pycom modules only support CAT-M1, in order to use NB-IoT you need to flash a different firmware to the Sequans modem. Instructions for this can be found [here](firmware).
 {{< /hint >}}
 
@@ -14,21 +18,13 @@ Example with Vodafone:
 
 ```python
 from network import LTE
-
 lte = LTE()
-lte.send_at_cmd('AT+CFUN=0')
-lte.send_at_cmd('AT!="clearscanconfig"')
-lte.send_at_cmd('AT!="addscanband band=20"')
-lte.send_at_cmd('AT!="disablelog 1"')
-lte.send_at_cmd('AT+CGDCONT=1,"IP","nb.inetd.gdsp"')
-lte.send_at_cmd('AT+CFUN=1')
-
+lte.attach(band=20, apn="nb.inetd.gdsp")
 while not lte.isattached():
-    pass
-
-lte.connect()
+    time.sleep(0.25)
+lte.connect()       # start a data session and obtain an IP address
 while not lte.isconnected():
-    pass
+    time.sleep(0.25)
 
 # now use socket as usual...
 ```

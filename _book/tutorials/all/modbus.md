@@ -1,6 +1,6 @@
 # Modbus
 
-Modbus is a messaging protocol that defines the packet structure for transferring data between devices in a master/slave architecture. The protocol is independent of the transmission medium and is usually transmitted over TCP \(MODBUS TCP\) or serial communication \(MODBUS RTU\). Modbus is intended as a request/reply protocol and delivers services specified by function codes. The function code in the request tells the addressed slave what kind of action to perform. The function codes most commonly supported by devices are listed below.
+Modbus is a messaging protocol that defines the packet structure for transferring data between devices in a master/slave architecture. The protocol is independent of the transmission medium and is usually transmitted over TCP \(MODBUS TCP) or serial communication \(MODBUS RTU). Modbus is intended as a request/reply protocol and delivers services specified by function codes. The function code in the request tells the addressed slave what kind of action to perform. The function codes most commonly supported by devices are listed below.
 
 | Function Name | Function Code |
 | :--- | :--- |
@@ -21,7 +21,7 @@ Python libraries and sample code that support Modbus TCP and Modbus RTU are avai
 
 ### Read Coils
 
-This function code requests the status \(ON/OFF\) of discrete coils on a remote device. The slave device address, the address of the first coil and the number of coils must be specified in the request. The address of the first coil is 0 and a maximum of 2000 contiguous coils can be read. Python sample code is shown below.
+This function code requests the status \(ON/OFF) of discrete coils on a remote device. The slave device address, the address of the first coil and the number of coils must be specified in the request. The address of the first coil is 0 and a maximum of 2000 contiguous coils can be read. Python sample code is shown below.
 
 ```python
 slave_addr=0x0A
@@ -34,7 +34,7 @@ print('Coil status: ' + ' '.join('{:d}'.format(x) for x in coil_status))
 
 ### Read Discrete Inputs
 
-This command is used to read the status \(ON/OFF\) of discrete inputs on a remote device. The slave address, the address of the first input, and the quantity of inputs to be read must be specified. The address of the first input is 0 and a maximum of 2000 continuous inputs can be read. The Python sample code is shown below.
+This command is used to read the status \(ON/OFF) of discrete inputs on a remote device. The slave address, the address of the first input, and the quantity of inputs to be read must be specified. The address of the first input is 0 and a maximum of 2000 continuous inputs can be read. The Python sample code is shown below.
 
 ```python
 slave_addr=0x0A

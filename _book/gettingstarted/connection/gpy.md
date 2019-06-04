@@ -4,7 +4,7 @@
 
 {% tabs first="Exp Board 2.0", second="Exp Board 3.0", third="Pytrack/Pysense/Pyscan", forth="USB UART Adapter", fifth="WiFi" %}
 {% content "first" %}
-* Look for the reset button on the module \(located at a corner of the board, next to the LED\).
+* Look for the reset button on the module \(located at a corner of the board, next to the LED).
 * Locate the USB connector on the expansion board.
 * Insert the GPy module on the the expansion board with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.
 
@@ -13,7 +13,7 @@
 
 {% content "second" %}
 * Before connecting your module to an Expansion Board 3.0, you should update the firmware on the Expansion Board 3.0. Instructions on how to do this can be found [here](../../pytrackpysense/installation/firmware.md).
-* Look for the reset button on the module \(located at a corner of the board, next to the LED\).
+* Look for the reset button on the module \(located at a corner of the board, next to the LED).
 * Locate the USB connector on the expansion board.
 * Insert the GPy module on the Expansion Board with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.
 
@@ -21,7 +21,7 @@
 
 {% content "third" %}
 * Before connecting your module to a Pysense/Pytrack/Pyscan board, you should update the firmware on the Pysense/Pytrack/Pyscan. Instructions on how to do this can be found [here](../../pytrackpysense/installation/firmware.md).
-* Look for the reset button on the GPy module \(located at a corner of the board, next to the LED\).
+* Look for the reset button on the GPy module \(located at a corner of the board, next to the LED).
 * Locate the USB connector on the Pysense/Pytrack/Pyscan.
 * Insert the module on the Pysense/Pytrack/Pyscan with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible. ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LIfiUlGe6_zTmmvcuEa%2F-LKMXk1KQvBgjpw04I3u%2F-LIqejpmTIS1tbGw0Vrl%2FPysense_GPy.png?generation=1534772072781141&alt=media)![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LIfiUlGe6_zTmmvcuEa%2F-LKMXk1KQvBgjpw04I3u%2F-LIqekpWIfccll6qkt85%2FPytrack_GPy.png?generation=1534772080535030&alt=media)
 
@@ -68,7 +68,7 @@ If you intend on using the LTE CAT-M1 or NB-IoT connectivity of the GPy you **mu
 
 ![](../../gitbook/assets/lte_ant_gpy.png)
 
-### WiFi/Bluetooth \(optional\)
+### WiFi/Bluetooth \(optional)
 
 All Pycom modules, including the GPy, come with a on-board WiFi antenna as well as a U.FL connector for an external antenna. The external antenna is optional and only required if you need better performance or are mounting the GPy in such a way that the WiFi signal is blocked. Switching between the antennas is done via software, instructions for this can be found [here.](../../firmwareapi/pycom/network/wlan.md)
 

@@ -1,5 +1,9 @@
 ---
 title: "MQTT"
+aliases:
+    - tutorials/all/mqtt.html
+    - tutorials/all/mqtt.md
+    - chapter/tutorials/all/mqtt
 ---
 
 MQTT is a lightweight messaging protocol that is ideal for sending small packets of data to and from IoT devices via WiFi.

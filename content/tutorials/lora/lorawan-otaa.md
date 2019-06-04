@@ -1,5 +1,9 @@
 ---
 title: "LoRaWAN with OTAA"
+aliases:
+    - tutorials/lora/lorawan-otaa.html
+    - tutorials/lora/lorawan-otaa.md
+    - chapter/tutorials/lora/lorawan-otaa
 ---
 
 OTAA stands for Over The Air Authentication. With this method the LoPy sends a Join request to the LoRaWAN Gateway using the `APPEUI` and `APPKEY` provided. If the keys are correct the Gateway will reply to the LoPy with a join accept message and from that point on the LoPy is able to send and receive packets to/from the Gateway. If the keys are incorrect no response will be received and the `has_joined()` method will always return `False`.

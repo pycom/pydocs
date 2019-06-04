@@ -1,5 +1,9 @@
 ---
 title: "LoPy to LoPy"
+aliases:
+    - tutorials/lora/module-module.html
+    - tutorials/lora/module-module.md
+    - chapter/tutorials/lora/module-module
 ---
 
 This example shows how to connect two Pycode LoRa capable modules (nodes) via raw LoRa.

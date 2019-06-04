@@ -24,7 +24,7 @@ Select the option to **Browse my computer for driver software**.
 
 ![](../../gitbook/assets/win7-3.png)
 
-Next you will need to navigate to where you downloaded the driver to \(e.g. **Downloads** Folder\).
+Next you will need to navigate to where you downloaded the driver to \(e.g. **Downloads** Folder).
 
 ![](../../gitbook/assets/win7-4%20%281%29.png)
 

@@ -1,5 +1,10 @@
 ---
 title: "FiPy"
+aliases:
+    - gettingstarted/connection/fipy.html
+    - gettingstarted/connection/fipy.md
+    - chapter/gettingstarted/connection/fipy
+    - gettingstarted/fipy.html
 ---
 
 ## Basic connection
@@ -26,20 +31,16 @@ title: "FiPy"
 * Before connecting your module to a Pysense/Pytrack/Pyscan board, you should update the firmware on the Pysense/Pytrack/Pyscan. Instructions on how to do this can be found [here](../../pytrackpysense/installation/firmware).
 * Look for the reset button on the FiPy module (located at a corner of the board, next to the LED).
 * Locate the USB connector on the Pysense/Pytrack/Pyscan.
-* Insert the module on the Pysense/Pytrack/Pyscan with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible. ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LIfiUlGe6_zTmmvcuEa%2F-LKMXk1KQvBgjpw04I3u%2F-LIqVauBuoNMgcByrNql%2FPysense_FiPy.png?generation=1534772069160637&alt=media)![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LIfiUlGe6_zTmmvcuEa%2F-LKMXk1KQvBgjpw04I3u%2F-LIqVdDdxkK38AlRxtkc%2FPytrack_FiPy.png?generation=1534772071490748&alt=media)
+* Insert the module on the Pysense/Pytrack/Pyscan with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible. ![](/gitbook/assets/pysense_fipy.png)![](/gitbook/assets/pytrack_fipy.png)
 
 {% content "forth" %}
 * Firstly you will need to connect power to your FiPy. You will need to supply `3.5v`-`5.5v` to the `Vin` pin.
 
-{{< hint style="danger" >}}
 Do **not** feed `3.3v` directly to the `3.3v` supply pin, this will damage the regulator.
-{{< /hint >}}
 
 * The connect the `RX` and `TX` of your USB UART to the `TX` and `RX` of the FiPy respectively.
 
-{{< hint style="warning" >}}
 Please ensure you have the signal level of the UART adapter set to `3.3v` before connecting it.
-{{< /hint >}}
 
 * In order to put the FiPy into bootloader mode to update the device firmware you will need to connect `P2` to `GND`. We recommend you connect a button between the two to make this simpler.
 
@@ -64,11 +65,11 @@ Please ensure you have the signal level of the UART adapter set to `3.3v` before
 
 ### Lora/Sigfox
 
-{{< hint style="danger" >}}
+{{% hint style="danger" %}}
 If you intend on using the LoRa/Sigfox connectivity of the FiPy you **must** connect a LoRa/Sigfox antenna to your FiPy before trying to use LoRa/Sigfox otherwise you risk damaging the device.
 {{< /hint >}}
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 The FiPy only supports LoRa on the 868MHz or 915MHz bands. It does not support 433MHz. For this you will require a LoPy4.
 {{< /hint >}}
 
@@ -83,7 +84,7 @@ The FiPy only supports LoRa on the 868MHz or 915MHz bands. It does not support 4
 
 ### LTE Cat-M1/NB-IoT
 
-{{< hint style="danger" >}}
+{{% hint style="danger" %}}
 If you intend on using the LTE CAT-M1 or NB-IoT connectivity of the FiPy you **must** connect a LTE CAT-M1/NB-IoT antenna to your FiPy before trying to use LTE Cat-M1 or NB-IoT otherwise you risk damaging the device.
 {{< /hint >}}
 

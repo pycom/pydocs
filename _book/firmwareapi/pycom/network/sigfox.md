@@ -3,7 +3,7 @@
 Sigfox is a Low Power Wide Area Network protocol that enables remote devices to connect using ultra-narrow band, UNB technology. The protocol is bi-directional, messages can both be sent up to and down from the Sigfox servers.
 
 {% hint style="info" %}
-When operating in RCZ2 and RCZ4 the module can only send messages on the default macro-channel \(this is due to Sigfox network limitations\). Therefore, the device needs to reset automatically to the default macro-channel after every 2 transmissions. However, due to FCC duty cycle limitations, there must a minimum of a 20s delay after resetting to the default macro-channel. Our API takes care of this, \(and in real life applications you should not be in the need to send Sigfox messages that often\), so it will wait for the necessary amount of time to make sure that the duty cycle restrictions are fulfilled.
+When operating in RCZ2 and RCZ4 the module can only send messages on the default macro-channel \(this is due to Sigfox network limitations). Therefore, the device needs to reset automatically to the default macro-channel after every 2 transmissions. However, due to FCC duty cycle limitations, there must a minimum of a 20s delay after resetting to the default macro-channel. Our API takes care of this, \(and in real life applications you should not be in the need to send Sigfox messages that often), so it will wait for the necessary amount of time to make sure that the duty cycle restrictions are fulfilled.
 
 This means that if you run a piece of test code like:
 
@@ -41,12 +41,12 @@ s.send(bytes([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]))
 ```
 
 {% hint style="danger" %}
-Please ensure that there is an antenna connected to your device before sending/receiving Sigfox messages as in proper use \(e.g. without an antenna\), may damage the device.
+Please ensure that there is an antenna connected to your device before sending/receiving Sigfox messages as in proper use \(e.g. without an antenna), may damage the device.
 {% endhint %}
 
 ## Constructors
 
-#### class network.Sigfox\(id=0, ...\)
+#### class network.Sigfox\(id=0, ...)
 
 Create and configure a Sigfox object. See init for params of configuration. Examples:
 
@@ -64,7 +64,7 @@ Sigfox.FSK mode is not supported on LoPy 4 and FiPy.
 
 ## Methods
 
-#### sigfox.init\(mode=Sigfox.SIGFOX, rcz=Sigfox.RCZ1, \* , frequency=None\)
+#### sigfox.init\(mode=Sigfox.SIGFOX, rcz=Sigfox.RCZ1, \* , frequency=None)
 
 Set the Sigfox radio configuration.
 
@@ -78,19 +78,19 @@ The arguments are:
 The SiPy comes in 2 different hardware flavours: a +14dBm Tx power version which can only work with `RCZ1` and `RCZ3` and a +22dBm version which works exclusively on `RCZ2` and `RCZ4`.
 {% endhint %}
 
-#### sigfox.mac\(\)
+#### sigfox.mac\()
 
 Returns a byte object with the 8-Byte MAC address of the Sigfox radio.
 
-#### sigfox.id\(\)
+#### sigfox.id\()
 
 Returns a byte object with the 4-Byte bytes object with the Sigfox ID.
 
-#### sigfox.rssi\(\)
+#### sigfox.rssi\()
 
 Returns a signed integer with indicating the signal strength value of the last received packet.
 
-#### sigfox.pac\(\)
+#### sigfox.pac\()
 
 Returns a byte object with the 8-Byte bytes object with the Sigfox PAC.
 
@@ -102,11 +102,11 @@ print(ubinascii.hexlify(sigfox.mac()))
 ```
 {% endhint %}
 
-#### sigfox.frequencies\(\)
+#### sigfox.frequencies\()
 
 Returns a tuple of the form: `(uplink_frequency_hz, downlink_frequency_hz)`
 
-#### sigfox.public\_key\(\[public\]\)
+#### sigfox.public\_key\(\[public\])
 
 Sets or gets the public key flag. When called passing a `True` value the Sigfox public key will be used to encrypt the packets. Calling it without arguments returns the state of the flag.
 
@@ -142,11 +142,11 @@ And they must be created after initialising the Sigfox network card.
 
 Sigfox sockets support the following standard methods from the `socket` module:
 
-#### socket.close\(\)
+#### socket.close\()
 
 Use it to close an existing socket.
 
-#### socket.send\(bytes\)
+#### socket.send\(bytes)
 
 In Sigfox mode the maximum data size is 12 bytes. In FSK the maximum is 64.
 
@@ -158,7 +158,7 @@ s.send(bytes([1, 2, 3]))
 s.send('Hello')
 ```
 
-#### socket.recv\(bufsize\)
+#### socket.recv\(bufsize)
 
 This method can be used to receive a Sigfox downlink or FSK message.
 
@@ -167,9 +167,9 @@ This method can be used to receive a Sigfox downlink or FSK message.
 s.recv(64)
 ```
 
-#### socket.setsockopt\(level, optname, value\)
+#### socket.setsockopt\(level, optname, value)
 
-Set the value of the given socket option. The needed symbolic constants are defined in the socket module \(`SO_*` etc.\). In the case of Sigfox the values are always an integer. Examples:
+Set the value of the given socket option. The needed symbolic constants are defined in the socket module \(`SO_*` etc.). In the case of Sigfox the values are always an integer. Examples:
 
 ```python
 # wait for a downlink after sending the uplink packet
@@ -209,7 +209,7 @@ If the socket is set to blocking, your code will be wait until the socket comple
 
 ## Sigfox Downlink
 
-A Sigfox capable Pycom devices \(SiPy\) can both send and receive data from the Sigfox network. To receive data, a message must first be sent up to Sigfox, requesting a downlink message. This can be done by passing a `True` argument into the `setsockopt()` method.
+A Sigfox capable Pycom devices \(SiPy) can both send and receive data from the Sigfox network. To receive data, a message must first be sent up to Sigfox, requesting a downlink message. This can be done by passing a `True` argument into the `setsockopt()` method.
 
 ```python
 s.setsockopt(socket.SOL_SIGFOX, socket.SO_RX, True)
@@ -237,7 +237,7 @@ s.send(bytes([1, 2, 3]))
 s.recv(32)
 ```
 
-## Sigfox FSK \(Device to Device\)
+## Sigfox FSK \(Device to Device)
 
 To communicate between two Sigfox capable devices, it may be used in FSK mode. Two devices are required to be set to the same frequency, both using FSK.
 
@@ -274,6 +274,6 @@ while True:
 ```
 
 {% hint style="danger" %}
-Remember to use the correct frequency for your region \(868 MHz for Europe, 912 MHz for USA, etc.\)
+Remember to use the correct frequency for your region \(868 MHz for Europe, 912 MHz for USA, etc.)
 {% endhint %}
 

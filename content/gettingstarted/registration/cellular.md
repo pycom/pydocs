@@ -1,5 +1,9 @@
 ---
 title: "Cellular"
+aliases:
+    - gettingstarted/registration/cellular.html
+    - gettingstarted/registration/cellular.md
+    - chapter/gettingstarted/registration/cellular
 ---
 
 In order to use your GPy/FiPy on a cellular network you are required to get a SIM card from a local provider.

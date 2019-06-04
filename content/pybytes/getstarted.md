@@ -1,5 +1,9 @@
 ---
 title: "Getting Started with Pybytes"
+aliases:
+    - pybytes/getstarted.html
+    - pybytes/getstarted.md
+    - chapter/pybytes/getstarted/intro
 ---
 
 Follow these steps to create a Pybytes account:
@@ -15,5 +19,5 @@ Follow these steps to create a Pybytes account:
 
 Now it's time to explore Pybytes. You can start by connecting your Pycom board to Pybytes.
 
-{{< refname "connect/" >}}
+{{% refname "connect/" %}}
 

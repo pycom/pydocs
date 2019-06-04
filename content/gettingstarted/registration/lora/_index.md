@@ -1,5 +1,6 @@
 ---
 title: "LoRaWAN"
+aliases:
 ---
 
 ## Raw LoRa
@@ -34,11 +35,11 @@ With ABP the encryption keys enabling communication with the network are preconf
 
 ### Networks
 
-[![](../..//gitbook/assets/ttn-logo.png)](ttn)
+[![](..//gitbook/assets/ttn-logo.png)](ttn)
 
-[![](../..//gitbook/assets/senet-logo-2.png)](senet)
+[![](..//gitbook/assets/senet-logo-2.png)](senet)
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 If you cannot find your favourite LoRaWAN network in the list above, please consider writing a tutorial for how to connect a Pycom module with it and contribute it to this documentation via a [GitHub pull request](https://github.com/pycom/pycom-documentation).
 {{< /hint >}}
 

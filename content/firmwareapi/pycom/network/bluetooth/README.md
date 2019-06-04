@@ -1,6 +1,12 @@
 ---
 title: "Bluetooth"
+aliases:
+    - chapter/firmwareapi/pycom/network/bluetooth
 ---
+search: false
+---
+
+# Bluetooth
 
 This class provides a driver for the Bluetooth radio in the module. Currently, only basic BLE functionality is available.
 
@@ -68,7 +74,7 @@ bluetooth = Bluetooth()
 
 Initialises and enables the Bluetooth radio in BLE mode.
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 To use an external antenna, set `P12 as output pin.`
 
 ```python

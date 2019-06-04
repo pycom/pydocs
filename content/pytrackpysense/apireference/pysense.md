@@ -1,5 +1,9 @@
 ---
 title: "Pysense"
+aliases:
+    - pytrackpysense/apireference/pysense.html
+    - pytrackpysense/apireference/pysense.md
+    - chapter/pytrackpysense/apireference/pysense
 ---
 
 This chapter describes the various libraries which are designed for the Pysense board. This includes details about the various methods and classes available for each of the Pysense’s sensors.
@@ -102,7 +106,7 @@ The following arguments may be passed into the constructor.
 
 * mode: `PRESSURE`, `ALTITUDE`
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 Please note that more functionality is being added weekly to these libraries. If a required feature is not available, feel free to contribute with a pull request at the [Libraries GitHub repository](https://github.com/pycom/pycom-libraries)
 {{< /hint >}}
 

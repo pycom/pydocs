@@ -35,15 +35,15 @@ while True:
       time.sleep(0.050)
 ```
 
-## Bluetooth Low Energy \(BLE\)
+## Bluetooth Low Energy \(BLE)
 
-Bluetooth low energy \(BLE\) is a subset of classic Bluetooth, designed for easy connecting and communicating between devices \(in particular mobile platforms\). BLE uses a methodology known as Generic Access Profile \(GAP\) to control connections and advertising.
+Bluetooth low energy \(BLE) is a subset of classic Bluetooth, designed for easy connecting and communicating between devices \(in particular mobile platforms). BLE uses a methodology known as Generic Access Profile \(GAP) to control connections and advertising.
 
-GAP allows for devices to take various roles but generic flow works with devices that are either a Server \(low power, resource constrained, sending small payloads of data\) or a Client device \(commonly a mobile device, PC or Pycom Device with large resources and processing power\). Pycom devices can act as both a Client and a Server.
+GAP allows for devices to take various roles but generic flow works with devices that are either a Server \(low power, resource constrained, sending small payloads of data) or a Client device \(commonly a mobile device, PC or Pycom Device with large resources and processing power). Pycom devices can act as both a Client and a Server.
 
 ## Constructors
 
-### class network.Bluetooth\(id=0, ...\)
+### class network.Bluetooth\(id=0, ...)
 
 Create a Bluetooth object, and optionally configure it. See init for params of configuration.
 
@@ -56,13 +56,13 @@ bluetooth = Bluetooth()
 
 ## Methods
 
-### bluetooth.init\(id=0, mode=Bluetooth.BLE, antenna=None\)
+### bluetooth.init\(id=0, mode=Bluetooth.BLE, antenna=None)
 
 * `id` Only one Bluetooth peripheral available so must always be 0
 * `mode` currently the only supported mode is `Bluetooth.BLE`
 * `antenna` selects between the internal and the external antenna. Can be either`Bluetooth.INT_ANT`, `Bluetooth.EXT_ANT`.
 
-  With our development boards it defaults to using the internal antenna, but in the case of an OEM module, the antenna pin \(`P12`\) is not used, so it’s free to be used for other things.
+  With our development boards it defaults to using the internal antenna, but in the case of an OEM module, the antenna pin \(`P12`) is not used, so it’s free to be used for other things.
 
 Initialises and enables the Bluetooth radio in BLE mode.
 
@@ -74,17 +74,17 @@ Pin('P12', mode=Pin.OUT)(True)
 ```
 {% endhint %}
 
-### bluetooth.deinit\(\)
+### bluetooth.deinit\()
 
 Disables the Bluetooth radio.
 
-### bluetooth.start\_scan\(timeout\)
+### bluetooth.start\_scan\(timeout)
 
 Starts performing a scan listening for BLE devices sending advertisements. This function always returns immediately, the scanning will be performed on the background. The return value is `None`. After starting the scan the function `get_adv()` can be used to retrieve the advertisements messages from the FIFO. The internal FIFO has space to cache 16 advertisements.
 
 The arguments are:
 
-* `timeout` specifies the amount of time in seconds to scan for advertisements, cannot be zero. If timeout is &gt; 0, then the BLE radio will listen for advertisements until the specified value in seconds elapses. If timeout &lt; 0, then there’s no timeout at all, and stop\_scan\(\) needs to be called to cancel the scanning process.
+* `timeout` specifies the amount of time in seconds to scan for advertisements, cannot be zero. If timeout is &gt; 0, then the BLE radio will listen for advertisements until the specified value in seconds elapses. If timeout &lt; 0, then there’s no timeout at all, and stop\_scan\() needs to be called to cancel the scanning process.
 
 Examples:
 
@@ -93,15 +93,15 @@ bluetooth.start_scan(10)        # starts scanning and stop after 10 seconds
 bluetooth.start_scan(-1)        # starts scanning indefinitely until bluetooth.stop_scan() is called
 ```
 
-### bluetooth.stop\_scan\(\)
+### bluetooth.stop\_scan\()
 
 Stops an ongoing scanning process. Returns `None`.
 
-### bluetooth.isscanning\(\)
+### bluetooth.isscanning\()
 
 Returns `True` if a Bluetooth scan is in progress. `False` otherwise.
 
-### bluetooth.get\_adv\(\)
+### bluetooth.get\_adv\()
 
 Gets an named tuple with the advertisement data received during the scanning. The tuple has the following structure: `(mac, addr_type, adv_type, rssi, data)`
 
@@ -123,11 +123,11 @@ adv = bluetooth.get_adv() #
 ubinascii.hexlify(adv.mac) # convert hexadecimal to ascii
 ```
 
-### bluetooth.get\_advertisements\(\)
+### bluetooth.get\_advertisements\()
 
 Same as the `get_adv()` method, but this one returns a list with all the advertisements received.
 
-### bluetooth.resolve\_adv\_data\(data, data\_type\)
+### bluetooth.resolve\_adv\_data\(data, data\_type)
 
 Parses the advertisement data and returns the requested `data_type` if present. If the data type is not present, the function returns `None`.
 
@@ -157,7 +157,7 @@ while bluetooth.isscanning():
             print(ubinascii.hexlify(mfg_data))
 ```
 
-### bluetooth.connect\(mac\_addr\)
+### bluetooth.connect\(mac\_addr)
 
 Opens a BLE connection with the device specified by the `mac_addr` argument. This function blocks until the connection succeeds or fails. If the connections succeeds it returns a object of type `GATTCConnection`.
 
@@ -167,7 +167,7 @@ Connections are initiated by the central device. There is a maximum of 4 simulta
 bluetooth.connect('112233eeddff') # mac address is accepted as a string
 ```
 
-### bluetooth.callback\(trigger=None, handler=None, arg=None\)
+### bluetooth.callback\(trigger=None, handler=None, arg=None)
 
 Creates a callback that will be executed when any of the triggers occurs. The arguments are:
 
@@ -177,7 +177,7 @@ Creates a callback that will be executed when any of the triggers occurs. The ar
 
 An example of how this may be used can be seen in the [`bluetooth.events()`](./#bluetooth-events) method.
 
-### bluetooth.events\(\)
+### bluetooth.events\()
 
 Returns a value with bit flags identifying the events that have occurred since the last call. Calling this function clears the events.
 
@@ -201,14 +201,14 @@ bluetooth.callback(trigger=Bluetooth.CLIENT_CONNECTED | Bluetooth.CLIENT_DISCONN
 bluetooth.advertise(True)
 ```
 
-### bluetooth.set\_advertisement\(\* , name=None, manufacturer\_data=None, service\_data=None, service\_uuid=None\)
+### bluetooth.set\_advertisement\(\* , name=None, manufacturer\_data=None, service\_data=None, service\_uuid=None)
 
 Configure the data to be sent while advertising. If left with the default of `None` the data won’t be part of the advertisement message.
 
 The arguments are:
 
 * `name` is the string name to be shown on advertisements.
-* `manufacturer_data` manufacturer data to be advertised \(hint: use it for iBeacons\).
+* `manufacturer_data` manufacturer data to be advertised \(hint: use it for iBeacons).
 * `service_data` service data to be advertised.
 * `service_uuid` uuid of the service to be advertised.
 
@@ -218,11 +218,11 @@ Example:
 bluetooth.set_advertisement(name="advert", manufacturer_data="lopy_v1")
 ```
 
-### bluetooth.advertise\(\[Enable\]\)
+### bluetooth.advertise\(\[Enable\])
 
 Start or stop sending advertisements. The `set_advertisement()` method must have been called prior to this one.
 
-### bluetooth.service\(uuid, \* , isprimary=True, nbr\_chars=1, start=True\)
+### bluetooth.service\(uuid, \* , isprimary=True, nbr\_chars=1, start=True)
 
 Create a new service on the internal GATT server. Returns a object of type `BluetoothServerService`.
 
@@ -237,7 +237,7 @@ The arguments are:
 bluetooth.service('abc123')
 ```
 
-### bluetooth.disconnect\_client\(\)
+### bluetooth.disconnect\_client\()
 
 Closes the BLE connection with the client.
 
@@ -247,7 +247,7 @@ Closes the BLE connection with the client.
 * Advertisement type: `Bluetooth.CONN_ADV`, `Bluetooth.CONN_DIR_ADV`, `Bluetooth.DISC_ADV`, `Bluetooth.NON_CONN_ADV`, `Bluetooth.SCAN_RSP`
 * Address type: `Bluetooth.PUBLIC_ADDR`, `Bluetooth.RANDOM_ADDR`, `Bluetooth.PUBLIC_RPA_ADDR`, `Bluetooth.RANDOM_RPA_ADDR`
 * Advertisement data type: `Bluetooth.ADV_FLAG`, `Bluetooth.ADV_16SRV_PART`, `Bluetooth.ADV_T16SRV_CMPL`, `Bluetooth.ADV_32SRV_PART`, `Bluetooth.ADV_32SRV_CMPL`, `Bluetooth.ADV_128SRV_PART`, `Bluetooth.ADV_128SRV_CMPL`, `Bluetooth.ADV_NAME_SHORT`, `Bluetooth.ADV_NAME_CMPL`, `Bluetooth.ADV_TX_PWR`, `Bluetooth.ADV_DEV_CLASS`, `Bluetooth.ADV_SERVICE_DATA`, `Bluetooth.ADV_APPEARANCE`, `Bluetooth.ADV_ADV_INT`, `Bluetooth.ADV_32SERVICE_DATA`, `Bluetooth.ADV_128SERVICE_DATA`, `Bluetooth.ADV_MANUFACTURER_DATA`
-* Characteristic properties \(bit values that can be combined\): `Bluetooth.PROP_BROADCAST`, `Bluetooth.PROP_READ`, `Bluetooth.PROP_WRITE_NR`, `Bluetooth.PROP_WRITE`, `Bluetooth.PROP_NOTIFY`, `Bluetooth.PROP_INDICATE`, `Bluetooth.PROP_AUTH`, `Bluetooth.PROP_EXT_PROP`
+* Characteristic properties \(bit values that can be combined): `Bluetooth.PROP_BROADCAST`, `Bluetooth.PROP_READ`, `Bluetooth.PROP_WRITE_NR`, `Bluetooth.PROP_WRITE`, `Bluetooth.PROP_NOTIFY`, `Bluetooth.PROP_INDICATE`, `Bluetooth.PROP_AUTH`, `Bluetooth.PROP_EXT_PROP`
 * Characteristic callback events: `Bluetooth.CHAR_READ_EVENT`, `Bluetooth.CHAR_WRITE_EVENT`, `Bluetooth.NEW_ADV_EVENT`, `Bluetooth.CLIENT_CONNECTED`, `Bluetooth.CLIENT_DISCONNECTED`, `Bluetooth.CHAR_NOTIFY_EVENT`
 * Antenna type: `Bluetooth.INT_ANT`, `Bluetooth.EXT_ANT`
 

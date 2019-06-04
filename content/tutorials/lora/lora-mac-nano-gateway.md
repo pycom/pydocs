@@ -1,5 +1,9 @@
 ---
 title: "LoRa-MAC Nano-Gateway"
+aliases:
+    - tutorials/lora/lora-mac-nano-gateway.html
+    - tutorials/lora/lora-mac-nano-gateway.md
+    - chapter/tutorials/lora/lora-mac-nano-gateway
 ---
 
 This example allows a raw LoRa connection between two LoPys (nodes) to a single LoPy acting as a Nano-Gateway.
@@ -97,7 +101,7 @@ while(True):
 
 The node is always sending packages and waiting for the `ack` from the gateway.
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 To adapt this code to user specific needs:
 
 * Put a max waiting time for the `ack` to arrive and resend the package or mark it as invalid

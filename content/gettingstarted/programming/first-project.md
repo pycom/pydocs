@@ -1,5 +1,9 @@
 ---
 title: "Your first Pymakr project"
+aliases:
+    - gettingstarted/programming/first-project.html
+    - gettingstarted/programming/first-project.md
+    - chapter/gettingstarted/programming/first-project
 ---
 
 This guide will take you through how to setup your first project with Pymakr and make the on-board RGB LED flash various colours.
@@ -16,7 +20,7 @@ This guide will take you through how to setup your first project with Pymakr and
 
 3. Once the text editor has loaded you will need to click `File` &gt; `Open`, and open the directory you created in step 1
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 If you are using Atom, it is important to check at this point that Atom has successfully identified the project. The name of the directory you created in step 1 (`RGB-Blink` in this case) should be shown in the Pymakr pane like so:
 
 ![](/gitbook/assets/atom_project.png)
@@ -36,7 +40,7 @@ RGB-Blink
 
 * `boot.py` This is the first script that runs on your module when it
 
-  turns on. This is often used to connect a module a a WiFi network so that
+  turns on. This is often used to connect a module to a WiFi network so that
 
   Telnet and FTP can be used without connecting to the WiFi AP created by the
 

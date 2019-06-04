@@ -10,7 +10,7 @@ This article is only related to GPy, FiPy, and G01 boards
 
 Please read the following instructions carefully as there are some significant changes compared to the previous updater version.
 
-Most importantly, the updater is now integrated in the latest stable firmware release \(we will also publish a new development and pybytes firmware in the coming days\), so you no longer need to upload any scripts to your module. The built-in updater will take precedence over any scripts uploaded.
+Most importantly, the updater is now integrated in the latest stable firmware release \(we will also publish a new development and pybytes firmware in the coming days), so you no longer need to upload any scripts to your module. The built-in updater will take precedence over any scripts uploaded.
 
 Please start with the following steps:
 
@@ -21,7 +21,7 @@ You can find the different versions of firmwares available here: [https://softwa
 
 We are using `CATM1-38638.zip` and `NB1-37781.zip` as examples in this tutorial.
 
-After unpacking the zip archive, you will find each firmware packages contains two files, one being the firmware file \(e.g. `CATM1-38638.dup` or `NB1-37781.dup`\) and the `updater.elf` file, which is required when using the "recovery" firmware update method or if a previous upgrade failed and the modem is in recovery mode.
+After unpacking the zip archive, you will find each firmware packages contains two files, one being the firmware file \(e.g. `CATM1-38638.dup` or `NB1-37781.dup`) and the `updater.elf` file, which is required when using the "recovery" firmware update method or if a previous upgrade failed and the modem is in recovery mode.
 
 Please note that the `updater.elf` file is only around 300K so you can also store it inside the flash file system of the module. The firmware dup files will NOT fit into the available `/flash` file system on the module, so you either need to use an SD card or upload it directly from your computer.
 
@@ -196,7 +196,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> sqnsupgrade.run('Serial_Port', '/path/to/CATM1-38638.dup', '/path/to/updater.elf')
 ```
 
-When using the standard method \(or if the `updater.elf` was loaded on the module\):
+When using the standard method \(or if the `updater.elf` was loaded on the module):
 
 ```python
  $ python3
@@ -212,5 +212,5 @@ Please note that the firmware update may seem to "stall" around 7-10% and again 
 
 ## Retrying process
 
-In case of any failure or interruption to the process of LTE modem upgrade you can repeat the same steps **after doing a hard reset to the board \(i.e disconnecting and reconnecting power\), pressing the reset button is not enough.**
+In case of any failure or interruption to the process of LTE modem upgrade you can repeat the same steps **after doing a hard reset to the board \(i.e disconnecting and reconnecting power), pressing the reset button is not enough.**
 

@@ -39,7 +39,7 @@ You should see green microchip if you entered correct _Sigfox ID_ and _Sigfox PA
 Then provide the required information including email address and complete registration.
 
 {% hint style="info" %}
-When registering your other devices \(not your first device\), you already have created Sigfox Account before. Be sure you are login with your Sigfox account. In that way all of your devices will be added to same Sigfox Account.
+When registering your other devices \(not your first device), you already have created Sigfox Account before. Be sure you are login with your Sigfox account. In that way all of your devices will be added to same Sigfox Account.
 {% endhint %}
 
 ![](../../gitbook/assets/sigfoxregistrationform.png)
@@ -56,7 +56,7 @@ If you enter correct credentials then you should be able to login to Sigfox back
 
 You may want to transfer your devices to new Sigfox account.
 
-Once you register your device on Sigfox backend, then your Sigfox PAC was used, and is not valid anymore. You need to get new Sigfox PAC. We don't update Sigfox PAC assigned to your device \(which can be seen on last page of Firmware updater or read from device\).
+Once you register your device on Sigfox backend, then your Sigfox PAC was used, and is not valid anymore. You need to get new Sigfox PAC. We don't update Sigfox PAC assigned to your device \(which can be seen on last page of Firmware updater or read from device).
 
 To get new Sigfox PAC navigate to your device on Sigfox backend. On _device_ click on Sigfox Id of device you want to transfer.
 

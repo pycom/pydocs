@@ -1,5 +1,9 @@
 ---
 title: "Sleep"
+aliases:
+    - pytrackpysense/apireference/sleep.html
+    - pytrackpysense/apireference/sleep.md
+    - chapter/pytrackpysense/apireference/sleep
 ---
 
 This chapter describes the various methods for sleep and wakeup which are embedded in Pytrack and Pysense libraries. Both Pytrack and Pysense have the same methods, although the appropriate class, either `pytrack` or `pysense`, has to be instantiated.
@@ -99,7 +103,9 @@ Enables as wakeup source, the INT pic (PIC - RC1, pin\#6 on External IO Header).
 
 Sets the sleep interval, specified in seconds. The actual sleep will be started by calling `go_to_sleep()` method.
 
-{{< hint style="info" >}}
+Warning: When running via the repl calling `setup_sleep()` will hang/crash the repl. this is not the case for scripts uploaded to the board.
+
+{{% hint style="info" %}}
 Please note that more functionality is being added weekly to these libraries. If a required feature is not available, feel free to contribute with a pull request at the [Libraries GitHub repository](https://github.com/pycom/pycom-libraries)
 {{< /hint >}}
 

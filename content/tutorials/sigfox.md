@@ -1,5 +1,9 @@
 ---
 title: "Sigfox Examples"
+aliases:
+    - tutorials/sigfox.html
+    - tutorials/sigfox.md
+    - chapter/tutorials/sigfox
 ---
 
 Before you start, make sure that your device was registered with [Sigfox](../gettingstarted/registration/sigfox).
@@ -26,7 +30,7 @@ s.setsockopt(socket.SOL_SIGFOX, socket.SO_RX, False)
 s.send(bytes([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]))
 ```
 
-{{< hint style="danger" >}}
+{{% hint style="danger" %}}
 Please ensure that there is an antenna connected to your device before sending/receiving Sigfox messages as in proper use (e.g. without an antenna), may damage the device.
 {{< /hint >}}
 
@@ -49,3 +53,4 @@ You should now see the Information page with an entry `Device Type:` followed by
 Finally, on this page click on `Disengage sequence number` button in the upper right corner.
 
 ![screenshot of sigfox ID](/gitbook/assets/seq_dis_3.png)
+

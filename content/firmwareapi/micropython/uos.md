@@ -1,5 +1,9 @@
 ---
 title: "uos"
+aliases:
+    - firmwareapi/micropython/uos.html
+    - firmwareapi/micropython/uos.md
+    - chapter/firmwareapi/micropython/uos
 ---
 
 The `uos` module contains functions for filesystem access and `urandom` function.

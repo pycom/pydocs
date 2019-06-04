@@ -14,24 +14,24 @@ You can create as many of these objects as needed.
 
 ### Constructors
 
-#### class Timer.Chrono\(\)
+#### class Timer.Chrono\()
 
 Create a chronometer object.
 
-#### class Timer.Alarm\(handler=None, s, \* , ms, us, arg=None, periodic=False\)
+#### class Timer.Alarm\(handler=None, s, \* , ms, us, arg=None, periodic=False)
 
 Create an Alarm object.
 
 * `handler`: will be called after the interval has elapsed. If set to `None`, the alarm will be disabled after creation.
 * `arg`: an optional argument can be passed to the callback handler function. If `None` is specified, the function will receive the object that triggered the alarm.
-* `s, ms, us`: the interval can be specified in seconds \(float\), miliseconds \(integer\) or microseconds \(integer\). Only one at a time can be specified.
+* `s, ms, us`: the interval can be specified in seconds \(float), miliseconds \(integer) or microseconds \(integer). Only one at a time can be specified.
 * `periodic`: an alarm can be set to trigger repeatedly by setting this parameter to `True`.
 
 ### Methods
 
-#### Timer.sleep\_us\(\)
+#### Timer.sleep\_us\()
 
-Delay for a given number of microseconds, should be positive or 0 \(for speed, the condition is not enforced\). Internally it uses the same timer as the other elements of the `Timer` class. It compensates for the calling overhead, so for example, 100us should be really close to 100us. For times bigger than 10,000us it releases the GIL to let other threads run, so exactitude is not guaranteed for delays longer than that.
+Delay for a given number of microseconds, should be positive or 0 \(for speed, the condition is not enforced). Internally it uses the same timer as the other elements of the `Timer` class. It compensates for the calling overhead, so for example, 100us should be really close to 100us. For times bigger than 10,000us it releases the GIL to let other threads run, so exactitude is not guaranteed for delays longer than that.
 
 ## class Chrono
 
@@ -39,27 +39,27 @@ Can be used to measure time spans.
 
 ### Methods
 
-#### chrono.start\(\)
+#### chrono.start\()
 
 Start the chronometer.
 
-#### chrono.stop\(\)
+#### chrono.stop\()
 
 Stop the chronometer.
 
-#### chrono.reset\(\)
+#### chrono.reset\()
 
 Reset the time count to 0.
 
-#### chrono.read\(\)
+#### chrono.read\()
 
 Get the elapsed time in seconds.
 
-#### chrono.read\_ms\(\)
+#### chrono.read\_ms\()
 
 Get the elapsed time in milliseconds.
 
-#### chrono.read\_us\(\)
+#### chrono.read\_us\()
 
 Get the elapsed time in microseconds.
 
@@ -91,13 +91,13 @@ Used to get interrupted after a specific interval.
 
 ### Methods
 
-#### alarm.callback\(handler, \* , arg=None\)
+#### alarm.callback\(handler, \* , arg=None)
 
 Specify a callback handler for the alarm. If set to `None`, the alarm will be disabled.
 
 An optional argument `arg` can be passed to the callback handler function. If `None` is specified, the function will receive the object that triggered the alarm.
 
-#### alarm.cancel\(\)
+#### alarm.cancel\()
 
 Disables the alarm.
 

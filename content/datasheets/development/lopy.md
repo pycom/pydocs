@@ -1,8 +1,19 @@
 ---
 title: "LoPy"
+aliases:
+    - datasheets/development/lopy.html
+    - datasheets/development/lopy.md
+    - product-info/development/lopy
+    - chapter/datasheets/development/lopy
 ---
 
-\*\*\*\*![](/gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn80ythqnrgah01r2m-lopy-1.png) ****
+![](/gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn80ythqnrgah01r2m-lopy-1.png) 
+
+
+{{% hint style="info" %}}
+** Please Note: We have removed the labels from the pictures in the documentation due to inconsistencies with label orientation.  *The LED must be aligned above the USB socket* when inserting or removing a development board from an expansion board/Pytrack/Pysense/Pyscan. **
+{{< /hint >}}
+
 
 **Store**: [Buy Here](https://pycom.io/product/lopy)
 
@@ -12,16 +23,16 @@ title: "LoPy"
 
 The datasheet of the LoPy is available as a PDF File.
 
-[LoPy Datasheet](/gitbook/assets/lopy-specsheet.pdf)
+<a href="/gitbook/assets/specsheets/Pycom_002_Specsheets_LoPy_v2.pdf" target="_blank"> LoPy Datasheet </a>
 ## Pinout
 
 The pinout of the LoPy is available as a PDF File
 
-[LoPy Pinout](/gitbook/assets/lopy-pinout.pdf)
+<a href="/gitbook/assets/lopy-pinout.pdf" target="_blank"> LoPy Pinout </a>
 
 ![](/gitbook/assets/lopy-pinout.png)
 
-{{< hint style="info" >}}
+{{% hint style="info" %}}
 Please note that the PIN assignments for UART1 (TX1/RX1), SPI (CLK, MOSI, MISO) and I2C (SDA, SCL) are defaults and can be changed in Software.
 {{< /hint >}}
 
