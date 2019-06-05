@@ -86,7 +86,9 @@ Below you will find tables of all Pycom products. These tables illustrate the fu
       <td style="text-align:left">&#10004;</td>
     </tr>
   </tbody>
-</table>## OEM Modules
+</table>
+
+## OEM Modules
 
 | OEM Module | [L01/W01 Reference Board](datasheets/oem/l01_reference) | [Universal Reference Board](datasheets/oem/universal_reference) |
 | :--- | :--- | :--- |
@@ -94,4 +96,3 @@ Below you will find tables of all Pycom products. These tables illustrate the fu
 | [L01](datasheets/oem/l01) | &#10004; | &#10004; |
 | [L04](datasheets/oem/l04) |  | &#10004; |
 | [G01](datasheets/oem/g01) |  | &#10004; |
-
