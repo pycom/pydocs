@@ -23,3 +23,7 @@ cp tmp/pydocs/.gitbook/assets/* static/gitbook/assets/
 TODO:
 - prev. page,next page
 - google as ajax
+
+
+User name,Password,Access key ID,Secret access key,Console login link
+amplify-user,,AKIA33VTBXYKK6EXAZ6X,u7bKI47L1jCyAKyPn/4rps2Sj3vnKt/j/+BIajaM,https://pycom-prod.signin.aws.amazon.com/console

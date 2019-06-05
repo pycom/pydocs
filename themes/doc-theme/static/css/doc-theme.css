@@ -11,9 +11,7 @@ pre > code {
 
 }
 
-.v-content  {
-  padding-bottom: 120px!important;
-}
+
 
 .menu-contextual {
   width: 320px;
@@ -66,15 +64,6 @@ h1, h2, h3, h4 {
 }
 
 
-footer {
-  positison: fixed;
-  display: block;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  padding-left: 300px;
-
-}
 
 a, li > a {
 
@@ -118,13 +107,7 @@ ul.lefttree {
     padding:0!important;
 }
 
-.article {
-  margin-top: -32px;
-}
 
-.hot {
-
-}
 
 .danger-alert {
   background-color: #FFCDD2 !important;

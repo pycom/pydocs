@@ -1,0 +1,50 @@
+2019-06-05 11:46:41 URL:http://localhost:1313/ [17467/17467] -> "index.html.tmp.tmp" [1]
+http://localhost:1313/robots.txt:
+2019-06-05 11:46:43 ERROR 404: Not Found.
+2019-06-05 11:46:45 URL:https://fonts.googleapis.com/robots.txt [25] -> "robots.txt" [1]
+https://cdn.jsdelivr.net/robots.txt:
+2019-06-05 11:46:47 ERROR 400: Bad Request.
+2019-06-05 11:46:49 URL:https://forum.pycom.io/robots.txt [93/93] -> "robots.txt" [1]
+2019-06-05 11:46:55 URL:https://cdnjs.com/ [12311] -> "robots.txt" [1]
+https://certify.alexametrics.com/robots.txt:
+2019-06-05 11:46:58 ERROR 403: Forbidden.
+2019-06-05 11:47:04 URL:https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900%7CMaterial+Icons [1818] -> "css?family=Roboto:100,300,400,500,700,900|Material+Icons.tmp.tmp" [1]
+2019-06-05 11:47:08 URL:https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css [209966/209966] -> "vuetify.min.css.tmp.tmp" [1]
+2019-06-05 11:47:12 URL:http://localhost:1313/css/doc-theme.css? [2786/2786] -> "doc-theme.css?.tmp.tmp" [1]
+2019-06-05 11:47:14 URL: http://localhost:1313/favicon.ico 200 OK
+unlink: No such file or directory
+2019-06-05 11:47:18 URL:http://localhost:1313/products/ [22208/22208] -> "index.html.tmp.tmp" [1]
+2019-06-05 11:47:22 URL:http://localhost:1313/gettingstarted/ [19659/19659] -> "index.html.tmp.tmp" [1]
+2019-06-05 11:47:26 URL:http://localhost:1313/pymakr/installation/ [18039/18039] -> "index.html.tmp.tmp" [1]
+2019-06-05 11:47:30 URL:http://localhost:1313/pytrackpysense/ [21127/21127] -> "index.html.tmp.tmp" [1]
+2019-06-05 11:47:34 URL:http://localhost:1313/tutorials/ [18623/18623] -> "index.html.tmp.tmp" [1]
+2019-06-05 11:47:38 URL:http://localhost:1313/firmwareapi/ [19073/19073] -> "index.html.tmp.tmp" [1]
+2019-06-05 11:47:42 URL:http://localhost:1313/datasheets/ [18538/18538] -> "index.html.tmp.tmp" [1]
+2019-06-05 11:47:46 URL:http://localhost:1313/pybytes/ [19133/19133] -> "index.html.tmp.tmp" [1]
+2019-06-05 11:47:50 URL:http://localhost:1313/docnotes/ [17549/17549] -> "index.html.tmp.tmp" [1]
+2019-06-05 11:47:54 URL:http://localhost:1313/advance/downgrade/ [20011/20011] -> "index.html.tmp.tmp" [1]
+2019-06-05 11:47:58 URL:http://localhost:1313/documents/ [16830/16830] -> "index.html.tmp.tmp" [1]
+2019-06-05 11:48:02 URL:http://localhost:1313/getting-started/ [17540/17540] -> "index.html.tmp.tmp" [1]
+2019-06-05 11:48:07 URL:https://forum.pycom.io/ [141867/141867] -> "index.html.tmp.tmp" [1]
+2019-06-05 11:48:13 URL:http://localhost:1313/products/ [22208/22208] -> "products.tmp.tmp" [1]
+2019-06-05 11:48:19 URL:http://localhost:1313/gettingstarted/introduction/ [19668/19668] -> "introduction.tmp.tmp" [1]
+2019-06-05 11:48:25 URL:http://localhost:1313/pymakr/installation/ [18039/18039] -> "index.html.tmp.tmp" [1]
+2019-06-05 11:48:31 URL:http://localhost:1313/tutorials/introduction/ [18632/18632] -> "introduction.tmp.tmp" [1]
+2019-06-05 11:48:37 URL:http://localhost:1313/firmwareapi/introduction/ [19082/19082] -> "introduction.tmp.tmp" [1]
+2019-06-05 11:48:43 URL:http://localhost:1313/datasheets/introduction/ [18547/18547] -> "introduction.tmp.tmp" [1]
+2019-06-05 11:48:49 URL:http://localhost:1313/pybytes/introduction/ [19142/19142] -> "introduction.tmp.tmp" [1]
+2019-06-05 11:48:51 URL: https://cdn.jsdelivr.net/npm/vue/dist/vue.js 200 OK
+unlink: No such file or directory
+2019-06-05 11:48:53 URL: https://cdnjs.cloudflare.com/ajax/libs/vuetify/1.5.13/vuetify.min.js 200 OK
+unlink: No such file or directory
+2019-06-05 11:48:55 URL: https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js 200 OK
+unlink: No such file or directory
+2019-06-05 11:48:57 URL: https://certify.alexametrics.com/atrk.gif?account=WpWNq1SZw320l9 200 OK
+unlink: No such file or directory
+2019-06-05 11:48:59 URL: http://localhost:1313/livereload.js?port=1313&mindelay=10 200 OK
+unlink: No such file or directory
+Found no broken links.
+
+FINISHED --2019-06-05 11:48:59--
+Total wall clock time: 2m 22s
+Downloaded: 27 files, 732K in 0.1s (5.61 MB/s)

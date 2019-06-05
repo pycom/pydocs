@@ -14,18 +14,16 @@
 </head>
 <body>
 <v-app id="app" class="grey lighten-5"  v-cloak stylse="display: none;">
+    {{ partial "menu.html" . }}
+      {{- partial "toolbar.html" . -}}
 
-<v-container class="ma-0 pa-0">
-   <v-content  width="100%">
-          {{ partial "menu.html" . }}
+   <v-content >
+      <v-container class="fluid fill-height">
 
 
-          {{- partial "toolbar.html" . -}}
 
-          <v-container class="article" mt-3>
-            <div id="sr">
-              <gcse:searchresults></gcse:search>
-            </div>
+
+          <v-container class="article">
             <div id="article">
               {{- partial "menu-contextual.html" . -}}
               {{- block "main" . }}{{- end }}
@@ -36,8 +34,8 @@
 
 </v-container>
 
-  {{- partial "footer.html" . -}}
 
+  {{- partial "footer.html" . -}}
  </v-app>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

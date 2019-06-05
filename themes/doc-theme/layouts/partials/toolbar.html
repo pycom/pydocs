@@ -1,20 +1,23 @@
 <v-toolbar
   app
+  fixed
   scroll-off-screen
   height=68
   class="pr-3 pl-2"
 
 >
 <!-- style="background-color: #171730"  -->
-  <v-toolbar-title style="width: 260px" class="ml-4 pl-0  pt-2 text-xs-center">
-    <v-img height=48 width=190  src="/logo2.svg">
+  <v-toolbar-title style="width: 260px" class="ml-4 pl-0  pt-2 text-xs-center hidden-sm-and-down">
+    <v-img height=48 width=190  src="/logo2.svg" class="">
   </v-toolbar-title>
 
     <v-btn icon @click.stop="drawer = !drawer" style="z-index: 1200;">
       <v-icon>toc</v-icon>
     </v-btn>
-    <span class="hidden-sm-and-down "><b>
-        {{ .Page.Title }} {{ .Site.Title }}</b>
+    <span ><b>
+        {{ .Page.Title }}
+      </b>
+
     </span>
 
 
