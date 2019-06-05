@@ -29,6 +29,8 @@ rpl -R ".gitbook/assets/" "gitbook/assets/" *
 rpl -R "../gitbook/assets" "/gitbook/assets" content
 rpl -R "..//gitbook/assets" "/gitbook/assets" content
 rpl -R "’" "'" content
+rpl -R "✔" "&#10004;" content
+
 # get the images in static
 cp tmp/pydocs/.gitbook/assets/* static/gitbook/assets/
 ```
