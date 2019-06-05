@@ -389,7 +389,7 @@ The `Gateway` should now be configured. Next, one or more nodes can now be confi
 There are two methods of connecting LoPy devices to the nano-gateway, Over the Air Activation (OTAA) and Activation By Personalisation (ABP). The code and instructions for registering these methods are shown below, followed by instruction for how to connect them to an application on TTN.
 
 {{% hint style="info" %}}
-It’s important that the following code examples (also on GitHub) are used to connect to the nano-gateway as it only supports single channel connections.
+It's important that the following code examples (also on GitHub) are used to connect to the nano-gateway as it only supports single channel connections.
 {{< /hint >}}
 
 ### OTAA (Over The Air Activation)
@@ -535,7 +535,7 @@ Once the device has been added, change the `Activation Method` between `OTAA` an
 
 ### Adding Application Integrations
 
-Now that the data is arriving on the TTN Backend, TTN can be managed as to where data should be delivered to. To do this, use the `Integrations` tab within the new Application’s settings.
+Now that the data is arriving on the TTN Backend, TTN can be managed as to where data should be delivered to. To do this, use the `Integrations` tab within the new Application's settings.
 
 ![](/gitbook/assets/ttn-7%20%281%29.png)
 

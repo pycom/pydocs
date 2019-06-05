@@ -49,5 +49,5 @@ Return the square-root of `z`.
 ## Constants
 
 * `cmath.e`: Base of the natural logarithm
-* `cmath.pi`: The ratio of a circle’s circumference to its diameter
+* `cmath.pi`: The ratio of a circle's circumference to its diameter
 

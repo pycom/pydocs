@@ -165,5 +165,5 @@ Return an integer, being `x` rounded towards `0`.
 ## Constants
 
 * `math.e`: Base of the natural logarithm
-* `math.pi`: The ratio of a circle’s circumference to its diameter
+* `math.pi`: The ratio of a circle's circumference to its diameter
 

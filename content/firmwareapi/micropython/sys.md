@@ -38,9 +38,9 @@ This is simplified version of a function which appears in the traceback module i
 CPython mandates more attributes for this object, but the actual useful bare minimum is implemented in MicroPython.
 {{< /hint >}}
 
-* `sys.maxsize`: Maximum value which a native integer type can hold on the current platform, or maximum value representable by MicroPython integer type, if it’s smaller than platform max value (that is the case for MicroPython ports without long int support).
+* `sys.maxsize`: Maximum value which a native integer type can hold on the current platform, or maximum value representable by MicroPython integer type, if it's smaller than platform max value (that is the case for MicroPython ports without long int support).
 
-This attribute is useful for detecting "bitness" of a platform (32-bit vs 64-bit, etc.). It’s recommended to not compare this attribute to some value directly, but instead count number of bits in it:
+This attribute is useful for detecting "bitness" of a platform (32-bit vs 64-bit, etc.). It's recommended to not compare this attribute to some value directly, but instead count number of bits in it:
 
 ```python
 bits = 0

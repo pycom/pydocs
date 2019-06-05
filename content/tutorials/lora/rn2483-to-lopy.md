@@ -23,7 +23,7 @@ radio set sync 12
 radio set prlen 8
 
 # Transmit via radio tx:
-radio tx 48656c6C6F  #(should send ‘Hello’)
+radio tx 48656c6C6F  #(should send ‘Hello')
 ```
 
 ## LoPy

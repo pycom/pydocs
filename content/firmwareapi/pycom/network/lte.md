@@ -75,7 +75,7 @@ Enable radio functionality and attach to the LTE network authorised by the inser
 
 - `cid` : connection ID, see `LTE.connect()`. when the ID is set here it will be remembered when doint connect so no need to specify again
 
-- `type` : PDP context type either `LTE.IP` or `LTE.IPV4V6`. These are options to specify PDP type ‘Packet Data protocol’ either IP [Internet Protocol] or IPV4V6 ver4,6 , that depends actually on what does the Network support.
+- `type` : PDP context type either `LTE.IP` or `LTE.IPV4V6`. These are options to specify PDP type ‘Packet Data protocol' either IP [Internet Protocol] or IPV4V6 ver4,6 , that depends actually on what does the Network support.
 
 - `legacyattach` : When kept = True the API `LTE.isattached()` will return True when attached to the Network AND Network registration status is home or roaming, when flag is False, API `LTE.isattached()` will return True when attached to the Network only.
 

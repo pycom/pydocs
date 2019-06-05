@@ -61,7 +61,7 @@ Arguments are:
 * `auth` is a tuple with (sec, key). Security can be `None`, `WLAN.WEP`, `WLAN.WPA`, or `WLAN.WPA2`. The key is a string with the network password.
   * If `sec` is `WLAN.WEP` the key must be a string representing hexadecimal values (e.g. `ABC1DE45BF`). Only needed when mode is `WLAN.AP`.
 * `channel` a number in the range 1-11. Only needed when mode is `WLAN.AP`.
-* `antenna` selects between the internal and the external antenna. Can be either `WLAN.INT_ANT`, `WLAN.EXT_ANT`. With our development boards it defaults to using the internal antenna, but in the case of an OEM module, the antenna pin (`P12`) is not used, so it’s free to be
+* `antenna` selects between the internal and the external antenna. Can be either `WLAN.INT_ANT`, `WLAN.EXT_ANT`. With our development boards it defaults to using the internal antenna, but in the case of an OEM module, the antenna pin (`P12`) is not used, so it's free to be
 
   used for other things.
 

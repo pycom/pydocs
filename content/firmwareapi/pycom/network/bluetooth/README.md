@@ -70,7 +70,7 @@ bluetooth = Bluetooth()
 * `mode` currently the only supported mode is `Bluetooth.BLE`
 * `antenna` selects between the internal and the external antenna. Can be either`Bluetooth.INT_ANT`, `Bluetooth.EXT_ANT`.
 
-  With our development boards it defaults to using the internal antenna, but in the case of an OEM module, the antenna pin (`P12`) is not used, so it’s free to be used for other things.
+  With our development boards it defaults to using the internal antenna, but in the case of an OEM module, the antenna pin (`P12`) is not used, so it's free to be used for other things.
 
 Initialises and enables the Bluetooth radio in BLE mode.
 
@@ -92,7 +92,7 @@ Starts performing a scan listening for BLE devices sending advertisements. This 
 
 The arguments are:
 
-* `timeout` specifies the amount of time in seconds to scan for advertisements, cannot be zero. If timeout is &gt; 0, then the BLE radio will listen for advertisements until the specified value in seconds elapses. If timeout &lt; 0, then there’s no timeout at all, and stop\_scan() needs to be called to cancel the scanning process.
+* `timeout` specifies the amount of time in seconds to scan for advertisements, cannot be zero. If timeout is &gt; 0, then the BLE radio will listen for advertisements until the specified value in seconds elapses. If timeout &lt; 0, then there's no timeout at all, and stop\_scan() needs to be called to cancel the scanning process.
 
 Examples:
 
@@ -211,7 +211,7 @@ bluetooth.advertise(True)
 
 ### bluetooth.set\_advertisement(\* , name=None, manufacturer\_data=None, service\_data=None, service\_uuid=None)
 
-Configure the data to be sent while advertising. If left with the default of `None` the data won’t be part of the advertisement message.
+Configure the data to be sent while advertising. If left with the default of `None` the data won't be part of the advertisement message.
 
 The arguments are:
 

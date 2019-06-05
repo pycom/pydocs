@@ -60,7 +60,7 @@ print("Connected to device with addr = {}".format(ubinascii.hexlify(adv.mac)))
 
 ## Connect to a BLE Device and Retrieve Data
 
-Connecting to a device named 'Heart Rate' and receiving data from it’s services.
+Connecting to a device named 'Heart Rate' and receiving data from it's services.
 
 ```python
 from network import Bluetooth

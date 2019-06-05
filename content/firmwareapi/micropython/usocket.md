@@ -65,7 +65,7 @@ In the case of LoRa sockets, the address parameter is simply an integer with the
 
 #### socket.listen(\[backlog\])
 
-Enable a server to accept connections. If backlog is specified, it must be at least 0 (if it’s lower, it will be set to 0); and specifies the number of unaccepted connections that the system will allow before refusing new connections. If not specified, a default reasonable value is chosen.
+Enable a server to accept connections. If backlog is specified, it must be at least 0 (if it's lower, it will be set to 0); and specifies the number of unaccepted connections that the system will allow before refusing new connections. If not specified, a default reasonable value is chosen.
 
 #### socket.accept()
 
@@ -116,9 +116,9 @@ sock.setblocking(False) is equivalent to sock.settimeout(0.0)
 
 #### socket.makefile(mode='rb')
 
-Return a file object associated with the socket. The exact returned type depends on the arguments given to makefile(). The support is limited to binary modes only (`rb` and `wb`). CPython’s arguments: `encoding`, `errors`, and `newline` are not supported.
+Return a file object associated with the socket. The exact returned type depends on the arguments given to makefile(). The support is limited to binary modes only (`rb` and `wb`). CPython's arguments: `encoding`, `errors`, and `newline` are not supported.
 
-The socket must be in blocking mode; it can have a timeout, but the file object’s internal buffer may end up in a inconsistent state if a timeout occurs.
+The socket must be in blocking mode; it can have a timeout, but the file object's internal buffer may end up in a inconsistent state if a timeout occurs.
 
 {{% hint style="info" %}}
 **Difference to CPython**

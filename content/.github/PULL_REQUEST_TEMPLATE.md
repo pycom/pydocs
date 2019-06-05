@@ -12,7 +12,7 @@ aliases:
 
 
 ## Any relevant logs, error output, etc?
-*(If it’s long, please paste to https://gist.github.com and insert the link here)*
+*(If it's long, please paste to https://gist.github.com and insert the link here)*
 
 
 ## Any other comments?

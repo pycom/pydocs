@@ -6,7 +6,7 @@ aliases:
     - chapter/tutorials/all/repl
 ---
 
-Using the Pymakr Plugin, open and connect a device or use serial terminal (PuTTY, screen, picocom, etc). Upon connecting, there should be a blank screen with a flashing cursor. Press Enter and a MicroPython prompt should appear, i.e. `>>>`. Let’s make sure it is working with the obligatory test:
+Using the Pymakr Plugin, open and connect a device or use serial terminal (PuTTY, screen, picocom, etc). Upon connecting, there should be a blank screen with a flashing cursor. Press Enter and a MicroPython prompt should appear, i.e. `>>>`. Let's make sure it is working with the obligatory test:
 
 ```python
 >>> print("Hello LoPy!")
@@ -47,5 +47,5 @@ Type "help()" for more information.
 >>>
 ```
 
-If that still isn’t working a hard reset can be performed (power-off/on) by pressing the `RST` switch (the small black button next to the RGB LED). Using telnet, this will end the session, disconnecting the program that was used to connect to the Pycom Device.
+If that still isn't working a hard reset can be performed (power-off/on) by pressing the `RST` switch (the small black button next to the RGB LED). Using telnet, this will end the session, disconnecting the program that was used to connect to the Pycom Device.
 

@@ -38,7 +38,7 @@ Also be aware that code written into the REPL is not saved after the device is p
 To test code on a device, create a new `.py` file or open an existing one, type the desired code, save the file and then press the `Run` button. This will run the code directly onto the Pycom board and output the results of the script to the REPL.
 
 {{% hint style="info" %}}
-Changes made to files won’t be automatically uploaded to the board upon restarting or exiting the `Run` feature, as the Pycom board will not store this code. In order to push the code permanently to a device, use the `Upload` feature.
+Changes made to files won't be automatically uploaded to the board upon restarting or exiting the `Run` feature, as the Pycom board will not store this code. In order to push the code permanently to a device, use the `Upload` feature.
 {{< /hint >}}
 
 ## Projects

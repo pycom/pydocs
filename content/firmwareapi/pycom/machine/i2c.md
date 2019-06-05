@@ -34,7 +34,7 @@ i2c.deinit()                         # turn off the peripheral
 
 Printing the `i2c` object gives you information about its configuration.
 
-A master must specify the recipient’s address:
+A master must specify the recipient's address:
 
 ```python
 i2c.init(I2C.MASTER)
@@ -104,7 +104,7 @@ Return value is the number of bytes read.
 
 #### i2c.writeto(addr, buf, \* , stop=True)
 
-Write the bytes from `buf` to the slave specified by `addr`. The argument `buf` can also be an integer which will be treated as a single byte. If `stop` is set to `False` then the stop condition won’t be sent and the I2C operation may be continued (typically with a read transaction).
+Write the bytes from `buf` to the slave specified by `addr`. The argument `buf` can also be an integer which will be treated as a single byte. If `stop` is set to `False` then the stop condition won't be sent and the I2C operation may be continued (typically with a read transaction).
 
 Return value is the number of bytes written.
 

@@ -28,7 +28,7 @@ Please follow these steps to install the Pymakr VSCode Extension:
 
 ![](/gitbook/assets/vsc_setup_step_4.png)
 
-5. That’s it! You’ve installed the Pymakr Extension for VSCode
+5. That's it! You've installed the Pymakr Extension for VSCode
 
 ![](/gitbook/assets/vsc_setup_step_5%20%281%29.png)
 

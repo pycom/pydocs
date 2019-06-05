@@ -89,7 +89,7 @@ rtc.init((2014, 5, 1, 4, 13, 0, 0, 0)) # Correct
 
 ## Constants
 
-The `constants` section of a library within the docs refers to specific values from that library’s class. These might be used when constructing an object from that class or when utilising a method from within that class. These are generally listed by the library name followed by the specific value. See the example below:
+The `constants` section of a library within the docs refers to specific values from that library's class. These might be used when constructing an object from that class or when utilising a method from within that class. These are generally listed by the library name followed by the specific value. See the example below:
 
 ```python
 I2C.MASTER()

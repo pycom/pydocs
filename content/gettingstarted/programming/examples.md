@@ -79,7 +79,7 @@ welcome("Alex") # expect "Hello, Alex!"
 
 ## Data Structures
 
-Python has a number of different data structures for storing and manipulating variables. The main difference (regarding data structures) between C and Python is that Python manages memory for you. This means there’s no need to declare the sizes of lists, dictionaries, strings, etc.
+Python has a number of different data structures for storing and manipulating variables. The main difference (regarding data structures) between C and Python is that Python manages memory for you. This means there's no need to declare the sizes of lists, dictionaries, strings, etc.
 
 ### Lists
 

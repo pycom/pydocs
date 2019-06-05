@@ -23,7 +23,7 @@ about: Create a report to help us improve
 
 
 ## Any logs, error output, etc?
-*(If it’s long, please paste to https://gist.github.com and insert the link here)*
+*(If it's long, please paste to https://gist.github.com and insert the link here)*
 
 
 ## Any other comments?

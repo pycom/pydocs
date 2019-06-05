@@ -8,7 +8,7 @@ aliases:
 
 ## Interrupt Handling
 
-In Pycom’s ESP32 MicroPython port there are no restrictions on what can be done within an interrupt handler. For example, other ports do not allow allocating memory inside the handler or the use of sockets.
+In Pycom's ESP32 MicroPython port there are no restrictions on what can be done within an interrupt handler. For example, other ports do not allow allocating memory inside the handler or the use of sockets.
 
 These limitations were raised by handling the interrupt events differently. When an interrupt happens, a message is posted into a queue, notifying a separate thread that the appropriate callback handler should be called. Such handler would receive an argument. By default it is the object associated with the event.
 

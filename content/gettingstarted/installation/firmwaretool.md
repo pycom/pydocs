@@ -22,14 +22,14 @@ Previous versions of firmware are available for download [**here**](../../advanc
 
 The basic firmware upgrade procedure can be found below, please follow these steps carefully:
 
-After you’re done with upgrading, you can use the Pymakr Plugins to upload and run programs in your device.
+After you're done with upgrading, you can use the Pymakr Plugins to upload and run programs in your device.
 
 {% tabs first="Exp Board 2.0", second="Exp Board 3.0" %}
 {% content "first" %}
 1. Disconnect your device from your computer
 2. Insert module into the Expansion Board
 3. Connect a jumper cable or wire between `G23` and `GND`
-4. Reconnect the board via USB to your computer, this puts the device in ‘firmware update mode’.
+4. Reconnect the board via USB to your computer, this puts the device in ‘firmware update mode'.
 5. Run the Firmware Upgrade tool
 
 ![](/gitbook/assets/firmware-update.png)
@@ -56,5 +56,5 @@ When using a Pysense/Pytrack/Pyscan/Expansion Board 3.0 to update your module yo
 
 {% endtabs %}
 
-After you’re done with upgrading, you can use the Pymakr Plugins to upload and run programs in your device.
+After you're done with upgrading, you can use the Pymakr Plugins to upload and run programs in your device.
 

@@ -10,9 +10,9 @@ aliases:
 Always provide these details when asking for help. This helps us understand your setup and save time.
 
 * Run `os.uname()` on your module to get the version numbers
-* Your module’s type & version (e.g. FiPy 1.0)
+* Your module's type & version (e.g. FiPy 1.0)
 * Any shields, or devices connected (e.g. Pytrack, Extension Board 3.0 with “x" sensor)
-* Your Operating System’s version
+* Your Operating System's version
 * Pymakr version
 * Atom / VSCode version
 * Have you looked at our [documentation](https://docs.pycom.io) and similar issues on the [forum](https://forum.pycom.io)?
@@ -42,7 +42,7 @@ Normally, the firmware updater switches back to application mode at the end of a
 
 Make sure you have the latest version of Pymakr and [Atom](https://atom.io)/[VSCode](https://code.visualstudio.com) installed.
 
-**Synchronising a project results in ‘Failed to allocate memory’ error**
+**Synchronising a project results in ‘Failed to allocate memory' error**
 
 Synchronising takes a bit of memory, so this error can occur when code running on the board already is taking a substantial amount of memory.
 
@@ -50,7 +50,7 @@ Synchronising takes a bit of memory, so this error can occur when code running o
 
 ### Atom
 
-**Failed to load package: Cannot find module ‘serialport’**
+**Failed to load package: Cannot find module ‘serialport'**
 
 In some cases, this is caused by the Atom Package Manager (apm) using Python 3.x, while `node-gyp` (used for compiling the `serialport` lib) needs Python 2.x. To confirm this, `apm —version` can be run to check which Python version apm is using.
 
@@ -89,7 +89,7 @@ The REPL should then appear with the `>>>` prompt and you will be able to run/sy
 
 **Cannot connect to Pycom on Linux**
 
-If you’re a Linux user and can’t connect to your board, there might be a permission issue to access the serial port.
+If you're a Linux user and can't connect to your board, there might be a permission issue to access the serial port.
 
 **Solution:** Run the following command `sudo usermod -a -G dialout $USER`
 

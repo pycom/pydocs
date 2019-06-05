@@ -22,5 +22,5 @@ lte = LTE()
 lte.send_at_cmd('AT+CGSN=1')
 ```
 
-You’ll get a return string like this `\r\n+CGSN: "354347xxxxxxxxx"\r\n\r\nOK`. The value between the double quotes is your IMEI.
+You'll get a return string like this `\r\n+CGSN: "354347xxxxxxxxx"\r\n\r\nOK`. The value between the double quotes is your IMEI.
 

@@ -6,7 +6,7 @@ aliases:
     - chapter/pytrackpysense/apireference/pysense
 ---
 
-This chapter describes the various libraries which are designed for the Pysense board. This includes details about the various methods and classes available for each of the Pysense’s sensors.
+This chapter describes the various libraries which are designed for the Pysense board. This includes details about the various methods and classes available for each of the Pysense's sensors.
 
 ## 3-Axis Accelerometer (LIS2HH12)
 

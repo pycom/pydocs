@@ -85,7 +85,7 @@ The arguments are:
 * `sf` sets the desired spreading factor. Accepts values between 7 and 12.
 * `preamble` configures the number of pre-amble symbols. The default value is 8.
 * `coding_rate` can take the following values: `LoRa.CODING_4_5`, `LoRa.CODING_4_6`, `LoRa.CODING_4_7` or `LoRa.CODING_4_8`.
-* `power_mode` can be either `LoRa.ALWAYS_ON`, `LoRa.TX_ONLY` or `LoRa.SLEEP`. In `ALWAYS_ON` mode, the radio is always listening for incoming - packets whenever a transmission is not taking place. In `TX_ONLY` the radio goes to sleep as soon as the transmission completes. In `SLEEP` mode the radio is sent to sleep permanently and won’t accept any commands until the power mode is changed.
+* `power_mode` can be either `LoRa.ALWAYS_ON`, `LoRa.TX_ONLY` or `LoRa.SLEEP`. In `ALWAYS_ON` mode, the radio is always listening for incoming - packets whenever a transmission is not taking place. In `TX_ONLY` the radio goes to sleep as soon as the transmission completes. In `SLEEP` mode the radio is sent to sleep permanently and won't accept any commands until the power mode is changed.
 * `tx_iq` enables TX IQ inversion.
 * `rx_iq` enables RX IQ inversion.
 * `adr` enables Adaptive Data Rate.
@@ -283,7 +283,7 @@ Returns `True` if a LoRaWAN network has been joined. `False` otherwise.
 
 #### lora.add\_channel(index, \* , frequency, dr\_min, dr\_max)
 
-Add a LoRaWAN channel on the specified `index`. If there’s already a channel with that index it will be replaced with the new one.
+Add a LoRaWAN channel on the specified `index`. If there's already a channel with that index it will be replaced with the new one.
 
 The arguments are:
 

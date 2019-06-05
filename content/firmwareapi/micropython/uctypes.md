@@ -6,10 +6,10 @@ aliases:
     - chapter/firmwareapi/micropython/uctypes
 ---
 
-This module implements "foreign data interface" for MicroPython. The idea behind it is similar to CPython’s `ctypes` modules, but the actual API is different, streamlined and optimised for small size. The basic idea of the module is to define data structure layout with about the same power as the C language allows, and the access it using familiar dot-syntax to reference sub-fields.
+This module implements "foreign data interface" for MicroPython. The idea behind it is similar to CPython's `ctypes` modules, but the actual API is different, streamlined and optimised for small size. The basic idea of the module is to define data structure layout with about the same power as the C language allows, and the access it using familiar dot-syntax to reference sub-fields.
 
 {{% hint style="info" %}}
-Module ustruct Standard Python way to access binary data structures (doesn’t scale well to large and complex structures).
+Module ustruct Standard Python way to access binary data structures (doesn't scale well to large and complex structures).
 {{< /hint >}}
 
 ## Defining Structure Layout
@@ -75,7 +75,7 @@ I.e. value is a 2-tuple, first element of which is PTR flag OR-ed with offset, s
 "bitf0": uctypes.BFUINT16 | 0 | 0 << uctypes.BF_POS | 8 << uctypes.BF_LEN,
 ```
 
-I.e. value is type of scalar value containing given bitfield (typenames are similar to scalar types, but prefixes with "BF"), OR-ed with offset for scalar value containing the bitfield, and further OR-ed with values for bit offset and bit length of the bitfield within scalar value, shifted by BF\_POS and BF\_LEN positions, respectively. Bitfield position is counted from the least significant bit, and is the number of right-most bit of a field (in other words, it’s a number of bits a scalar needs to be shifted right to extra the bitfield).
+I.e. value is type of scalar value containing given bitfield (typenames are similar to scalar types, but prefixes with "BF"), OR-ed with offset for scalar value containing the bitfield, and further OR-ed with values for bit offset and bit length of the bitfield within scalar value, shifted by BF\_POS and BF\_LEN positions, respectively. Bitfield position is counted from the least significant bit, and is the number of right-most bit of a field (in other words, it's a number of bits a scalar needs to be shifted right to extra the bitfield).
 
 In the example above, first `UINT16` value will be extracted at offset 0 (this detail may be important when accessing hardware registers, where particular access size and alignment are required), and then bitfield whose rightmost bit is least-significant bit of this `UINT16`, and length is 8 bits, will be extracted - effectively, this will access least-significant byte of `UINT16`.
 
@@ -140,5 +140,5 @@ Accessing non-scalar fields leads to allocation of intermediate objects to repre
 * Avoid nested structures. For example, instead of `mcu_registers.peripheral_a.register1`, define separate layout descriptors for each peripheral, to be accessed as `peripheral_a.register1`.
 * Avoid other non-scalar data, like array. For example, instead of `peripheral_a.register[0]` use `peripheral_a.register0`.
 
-Note that these recommendations will lead to decreased readability and conciseness of layouts, so they should be used only if the need to access structure fields without allocation is anticipated (it’s even possible to define 2 parallel layouts - one for normal usage, and a restricted one to use when memory allocation is prohibited).
+Note that these recommendations will lead to decreased readability and conciseness of layouts, so they should be used only if the need to access structure fields without allocation is anticipated (it's even possible to define 2 parallel layouts - one for normal usage, and a restricted one to use when memory allocation is prohibited).
 

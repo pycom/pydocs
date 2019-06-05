@@ -25,7 +25,7 @@ For example, from a macOS/Linux terminal:
 $ ftp 192.168.4.1
 ```
 
-The FTP server doesn’t support active mode, only passive mode. Therefore, if using the native unix FTP client, immediately after logging in, run the following command:
+The FTP server doesn't support active mode, only passive mode. Therefore, if using the native unix FTP client, immediately after logging in, run the following command:
 
 ```bash
 ftp> passive

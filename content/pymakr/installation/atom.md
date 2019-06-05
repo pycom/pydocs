@@ -26,7 +26,7 @@ Please follow these steps to install the Pymakr Plugin:
 
 ![](/gitbook/assets/atom_setup_step_4-1.png)
 
-5. That’s it! You’ve installed the Pymakr Plugin for Atom.
+5. That's it! You've installed the Pymakr Plugin for Atom.
 
 ![](/gitbook/assets/atom_setup_step_5-1.png)
 

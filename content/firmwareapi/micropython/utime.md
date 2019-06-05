@@ -8,7 +8,7 @@ aliases:
 
 The `utime` module provides functions for getting the current time and date, measuring time intervals, and for delays.
 
-**Time Epoch**: Pycom’s ESP32 port uses standard for POSIX systems epoch of `1970-01-01 00:00:00 UTC`.
+**Time Epoch**: Pycom's ESP32 port uses standard for POSIX systems epoch of `1970-01-01 00:00:00 UTC`.
 
 ## Maintaining actual calendar date/time
 
@@ -41,7 +41,7 @@ Like `gmtime()` but converts to local time. If `secs` is not provided or `None`,
 
 #### utime.mktime()
 
-This is inverse function of `localtime`. It’s argument is a full 8-tuple which expresses a time as per `localtime`. It returns an integer which is the number of seconds since `Jan 1, 2000`.
+This is inverse function of `localtime`. It's argument is a full 8-tuple which expresses a time as per `localtime`. It returns an integer which is the number of seconds since `Jan 1, 2000`.
 
 #### utime.sleep(seconds)
 
