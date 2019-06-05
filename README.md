@@ -1,4 +1,16 @@
-#
+# local visualization
+
+.md files are in the content folder, the theme forlder contains the theme.
+
+install Hugo and run it on the current directory.
+```
+brew install hugo
+hugo serve
+```
+
+The file config.toml contains the global .toml
+
+# First generation of publish branch
 
 Some commands that have been used for building:
 
@@ -20,11 +32,3 @@ rpl -R "’" "'" content
 # get the images in static
 cp tmp/pydocs/.gitbook/assets/* static/gitbook/assets/
 ```
-
-TODO:
-- prev. page,next page
-- google as ajax
-
-
-User name,Password,Access key ID,Secret access key,Console login link
-amplify-user,,AKIA33VTBXYKK6EXAZ6X,u7bKI47L1jCyAKyPn/4rps2Sj3vnKt/j/+BIajaM,https://pycom-prod.signin.aws.amazon.com/console
