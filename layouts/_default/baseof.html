@@ -48,6 +48,8 @@
     var app = new Vue({
       el: '#app',
       data: {
+        page: 1,
+        pageCount: 0,
         q: null,
         error: null,
         results: null,
@@ -85,24 +87,26 @@
 
       },
       methods: {
-        fetchResults (kw) {
-          var key = "AIzaSyD4-MGytNzTCZpTH6UYk1mfOxZkt74T5MI";
-          var cx = "004592132197158309932:anluf60c9w8";
-          var url = "https://www.googleapis.com/customsearch/v1";
-          url = url + "?cx=" + cx + "&key=" + key + "&q=" + encodeURI(kw);
-          console.log(url)
+        navResult (url) {
+          window.location = url;
+        },
+        fetchResults (kw, start) {
+          if (!start) { start = 1 }
+          let key = "AIzaSyD4-MGytNzTCZpTH6UYk1mfOxZkt74T5MI";
+          let cx = "004592132197158309932:anluf60c9w8";
+          let url = "https://www.googleapis.com/customsearch/v1";
+          url = url + "?cx=" + cx + "&key=" + key + "&q=" + encodeURI(kw) + "&start=" + start
+
           this.$http.get(url).then((res) => {
-            console.log(res.data)
-            if (res.data &&  res.data.items) {
-              this.results = res.data.items
+
+            if (res.data) {
+              this.results = res.data
+              this.page = Math.trunc(res.data.queries.request[0].startIndex /10) + 1
+              // Mmm ... Google result number is varying accross page ....
+              this.pageCount = Math.trunc(res.data.searchInformation.totalResults/10) + 1
             } else {
-              console.log('no items?')
-
+              this.results = null;
             }
-            console.log(this.results)
-
-
-            // window.scrollTo(0, document.body.scrollHeight)
           }, response => {
             this.results = null;
             this.error = { status: response.error, message: response.text }
@@ -111,7 +115,15 @@
         },
         search(p) {
           window.location = '/search/?q=' + encodeURI(this.q)
-        }
+        },
+        pageClicked(p) {
+          event.stopPropagation()
+          event.preventDefault()
+          this.$nextTick(() => {
+            const start = ((this.page - 1) * 10) + 1
+            this.fetchResults(this.q, start)
+             })
+        },
       },
       watch: {
         // whenever question changes, this function will run
@@ -119,68 +131,14 @@
           if (newb.value != this.branches[0].value) {
             window.location = newb + window.location.pathname
           }
+        },
 
-          // window.location = newb.toString() + window.location.pathname;
-
-        }
       },
     });
 
     window.onload = function() {
       app.$mount('#app');
     }
-
-
-  var observeDOM = (function(){
-    var MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
-
-    return function( obj, callback ){
-      if( !obj || !obj.nodeType === 1 ) return; // validation
-
-      if( MutationObserver ){
-        // define a new observer
-        var obs = new MutationObserver(function(mutations, observer){
-            callback(mutations);
-        })
-        // have the observer observe foo for changes in children
-        obs.observe( obj, { childList:true, subtree:true });
-      }
-
-      else if( window.addEventListener ){
-        obj.addEventListener('DOMNodeInserted', callback, false);
-        obj.addEventListener('DOMNodeRemoved', callback, false);
-      }
-    }
-  })();
-
-var cb = function (e) {
-   var elem = document.getElementById('sr');
-   var s = elem.innerHTML.length;
-   if (s > 4000) {
-     window.searchResults = true;
-     document.getElementById('article').innerHTML= '';
-     window.scrollTo(0, 0);
-   } else {
-     window.searchResults = false;
-   }
-}
-
- var elem = document.getElementById('sr');
- observeDOM(elem, cb);
-app.searchResults = window.searchResults;
-
-
-    (function() {
-
-
-      var cx = '004592132197158309932:anluf60c9w8';
-      var gcse = document.createElement('script');
-      gcse.type = 'text/javascript';
-      gcse.async = true;
-      gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(gcse, s);
-    })();
   </script>
 
 {{- partial "alexia.html" . -}}

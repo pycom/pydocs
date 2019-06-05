@@ -1,8 +1,21 @@
+### Search results
 
-# Search results for <i>{{ q }}</i>
+{{ results.searchInformation.totalResults }} results in {{ results.searchInformation.formattedSearchTime }} ms.
 
-<template v-for="(item, index) in results">
-<v-card class="ma-3">
+
+
+
+
+
+
+<template v-if="results == null"  >
+  <v-alert color="blue lighten-3" value=true icon="rowing">
+    no results.
+  </v-alert>
+</template>
+
+<template v-for="(item, index) in results.items">
+<v-card class="ma-3" @click="navResult(item.formattedUrl)">
 <v-card-title class="blue--text text--darken-3 mb-0 pb-0">
 <v-icon left>search</v-icon>
     <span class="title"> {{ item.title }}</span>
@@ -27,5 +40,15 @@
   </v-card>
 
 
-
 </template>
+
+
+<div class="text-xs-center">
+  <v-pagination
+    v-model="page"
+    @input="pageClicked"
+    @previous="pageClicked($event)"
+    @next="pageClicked($event)"
+    :length="pageCount"
+  ></v-pagination>
+  </div>
