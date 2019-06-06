@@ -8,7 +8,7 @@ aliases:
 
 ## Overview
 
-Pycom modules come with the ability to update the devices firmware, while it is still running, we call this an "over the air" (OTA) update. The [`pycom`](../../firmwareapi/pycom/pycom) library provides several functions to achieve this. This example will demonstrate how you could potentially use this functionality to update deployed devices. The full source code of this example can be found [here](https://github.com/pycom/pycom-libraries/tree/master/examples/OTA).
+Pycom modules come with the ability to update the devices firmware, while it is still running, we call this an "over the air" (OTA) update. The [`pycom`](/firmwareapi/pycom/pycom) library provides several functions to achieve this. This example will demonstrate how you could potentially use this functionality to update deployed devices. The full source code of this example can be found [here](https://github.com/pycom/pycom-libraries/tree/master/examples/OTA).
 
 ## Method
 

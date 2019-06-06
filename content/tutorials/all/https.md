@@ -30,5 +30,5 @@ ss = ssl.wrap_socket(s, cert_reqs=ssl.CERT_REQUIRED, ca_certs='/flash/cert/ca.pe
 ss.connect(socket.getaddrinfo('cloud.blynk.cc', 8441)[0][-1])
 ```
 
-For more info, check the [`ssl`](../../firmwareapi/micropython/ussl) module in the API reference.
+For more info, check the [`ssl`](/firmwareapi/micropython/ussl) module in the API reference.
 

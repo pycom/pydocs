@@ -34,3 +34,10 @@ rpl -R "✔" "&#10004;" content
 # get the images in static
 cp tmp/pydocs/.gitbook/assets/* static/gitbook/assets/
 ```
+
+# detect broken links
+
+```
+wget -o ~/output.txt -r  --spider http://localhost:1313
+cat ~/output.txt | grep -B 7 404 | grep "\-\-20"
+```

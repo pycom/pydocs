@@ -1,5 +1,6 @@
 html {
     font-size: 105%;
+
 }
 pre {
     background-color: transparent!important;
@@ -8,7 +9,6 @@ pre > code {
   width: 100%;
   padding: 12px;
   margin: 18px;
-
 }
 
 
@@ -49,6 +49,10 @@ h1, h2, h3, h4 {
 
 .application {
     line-height: 1.7;
+}
+
+.application {
+  font-family:'Space Mono',monospace;
 }
 
 .theme--dark.v-navigation-drawer:not(.v-navigation-drawer--floating) .v-navigation-drawer__border {

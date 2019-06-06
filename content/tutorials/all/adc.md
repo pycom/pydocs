@@ -6,7 +6,7 @@ aliases:
     - chapter/tutorials/all/adc
 ---
 
-This example is a simple ADC sample. For more information please see [`ADC`](../../firmwareapi/pycom/machine/adc).
+This example is a simple ADC sample. For more information please see [`ADC`](/firmwareapi/pycom/machine/adc).
 
 ```python
 from machine import ADC

@@ -70,7 +70,7 @@ Now that the project structure is setup, you may wish to configure project speci
 
 ## Controlling the on-board LED
 
-Now that you have setup and configured your project, we can move on to programming your module. The first thing we will need to do is import some libraries in order to interact with the on-board LED. The Pycom firmware comes with a large amount of libraries for standard functionality built-in. You can find out more about these in the [API documentation](../../firmwareapi/introduction). For this example you will need to open the `main.py` file and add the following code:
+Now that you have setup and configured your project, we can move on to programming your module. The first thing we will need to do is import some libraries in order to interact with the on-board LED. The Pycom firmware comes with a large amount of libraries for standard functionality built-in. You can find out more about these in the [API documentation](/firmwareapi/introduction). For this example you will need to open the `main.py` file and add the following code:
 
 ```python
 import pycom

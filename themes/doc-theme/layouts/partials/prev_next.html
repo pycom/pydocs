@@ -1,0 +1,115 @@
+{{ $page := .page }}
+{{ $prev := false }}
+{{ $prevtmp := false }}
+{{ $got := false }}
+{{ $current := false }}
+
+{{ range .menu }}
+  {{- /** *************************************************************** */ -}}
+  {{ $iz := eq  $page.URL .URL}}
+  {{ if $got }}
+  <div class="full-width text-xs-center prev-next">
+    {{ if $prev }}
+    <v-btn href="{{ $prev.URL }}">Previous</v-btn>
+    {{ end }}
+    <v-btn href="{{ .URL }}">Next</v-btn>
+  </div>
+  {{ end }}
+  {{ if $iz }}
+    {{ $current = . }}
+    {{ $got = true }}
+    {{ $prev = $prevtmp }}
+    {{ else }}
+    {{ $got = false }}
+  {{ end }}
+  {{ $prevtmp = . }}
+  {{- /** *************************************************************** */ -}}
+
+  {{ if .HasChildren }}
+    {{ range .Children }}
+    {{- /** *************************************************************** */ -}}
+    {{ $iz := eq  $page.URL .URL}}
+    {{ if $got }}
+    <div class="full-width text-xs-center">
+      <v-btn href="{{ $prev.URL }}">Previous</v-btn>
+      <v-btn href="{{ .URL }}">Next</v-btn>
+    </div>
+    {{ end }}
+    {{ if $iz }}
+      {{ $current = . }}
+      {{ $got = true }}
+      {{ $prev = $prevtmp }}
+      {{ else }}
+      {{ $got = false }}
+    {{ end }}
+    {{ $prevtmp = . }}
+    {{- /** *************************************************************** */ -}}
+
+    {{ if .HasChildren }}
+      {{ range .Children }}
+      {{- /** *************************************************************** */ -}}
+      {{ $iz := eq  $page.URL .URL}}
+      {{ if $got }}
+      <div class="full-width text-xs-center">
+        <v-btn href="{{ $prev.URL }}">Previous</v-btn>
+        <v-btn href="{{ .URL }}">Next</v-btn>
+      </div>
+      {{ end }}
+      {{ if $iz }}
+        {{ $current = . }}
+        {{ $got = true }}
+        {{ $prev = $prevtmp }}
+        {{ else }}
+        {{ $got = false }}
+      {{ end }}
+      {{ $prevtmp = . }}
+
+      {{- /** *************************************************************** */ -}}
+
+      {{ if .HasChildren }}
+        {{ range .Children }}
+        {{- /** *************************************************************** */ -}}
+        {{ $iz := eq  $page.URL .URL}}
+        {{ if $got }}
+        <div class="full-width text-xs-center">
+          <v-btn href="{{ $prev.URL }}">Previous</v-btn>
+          <v-btn href="{{ .URL }}">Next</v-btn>
+        </div>
+        {{ end }}
+        {{ if $iz }}
+          {{ $current = . }}
+          {{ $got = true }}
+          {{ $prev = $prevtmp }}
+          {{ else }}
+          {{ $got = false }}
+        {{ end }}
+        {{ $prevtmp = . }}
+        {{ if .HasChildren }}
+          {{ range .Children }}
+          {{- /** *************************************************************** */ -}}
+          {{ $iz := eq  $page.URL .URL}}
+          {{ if $got }}
+          <div class="full-width text-xs-center">
+            <v-btn href="{{ $prev.URL }}">Previous</v-btn>
+            <v-btn href="{{ .URL }}">Next</v-btn>
+          </div>
+          {{ end }}
+          {{ if $iz }}
+            {{ $current = . }}
+            {{ $got = true }}
+            {{ $prev = $prevtmp }}
+            {{ else }}
+            {{ $got = false }}
+          {{ end }}
+          {{ $prevtmp = . }}
+          {{- /** *************************************************************** */ -}}
+          {{ end }}
+        {{ end }}
+        {{- /** *************************************************************** */ -}}
+        {{ end }}
+      {{ end }}
+      {{ end }}
+    {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}

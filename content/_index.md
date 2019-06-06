@@ -11,7 +11,7 @@ To get started, read through the Getting Started Guide then feel free to jump st
 * [Getting Started](gettingstarted/introduction)
 * [Pymakr](pymakr/installation/index.html)
 * [Tutorials](tutorials/introduction)
-* [API Documentation](firmwareapi/introduction)
-* [Product Info](datasheets/introduction)
+* [API Documentation](/firmwareapi/introduction)
+* [Product Info](/datasheets/introduction)
 * [Pybytes](pybytes/introduction)
 

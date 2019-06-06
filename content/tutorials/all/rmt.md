@@ -6,7 +6,7 @@ aliases:
     - chapter/tutorials/all/rmt
 ---
 
-Detailed information about this class can be found in [`RMT`](../../firmwareapi/pycom/machine/rmt).
+Detailed information about this class can be found in [`RMT`](/firmwareapi/pycom/machine/rmt).
 
 The RMT (Remote Control) peripheral of the ESP32 is primarily designed to send and receive infrared remote control signals that use on-off-keying of a carrier frequency, but due to its design it can be used to generate various types of signals, this class will allow you to do this.
 
