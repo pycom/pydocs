@@ -38,7 +38,7 @@ nav#TableOfContents {
 
 
 h1, h2, h3, h4 {
-  color: #0D47A1;
+  color: #1E1E3C;
 }
 
 h1, h2, h3, h4 {
@@ -75,13 +75,13 @@ a, li > a {
 }
 
 li > a {
-  color: #0D47A1;
+  color: #1E1E3C;
   font-weight: 500;
     line-height: 1.60;
 }
 
 li > a.hot {
-  color: #1976D2;
+  color: #1E1E3C;
   text-decoration: underline;
 }
 
@@ -198,4 +198,12 @@ table tr {
 table td, table th {
     padding: 6px 13px;
     border: 1px solid #ddd;
+}
+
+.ppurple {
+  color: #7800FF;
+}
+
+.navy {
+  color: #1E1E3C;
 }
