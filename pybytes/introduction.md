@@ -1,6 +1,6 @@
 # Introduction
 
-![](../.gitbook/assets/pybyteslogo%20%281%29.png)
+[![pybytes](../.gitbook/assets/pybytes/introduction/pybytes_logo.png)](https://pybytes.pycom.io/?utm_source=docs&utm_medium=web&utm_campaign=pybytes-introduction)
 
 ## What is Pybytes?
 
