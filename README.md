@@ -34,8 +34,7 @@ This usually requires some registration. This step will detail how to get regist
 
 # Quick navigation
 * [Products](products.md)
-* [Getting Started](gettingstarted/introduction.md)
-* [Pymakr](pymakr/installation/index.html)
+* [Pymakr](pymakr/installation/README.md)
 * [Tutorials](tutorials/introduction.md)
 * [API Documentation](firmwareapi/introduction.md)
 * [Product Info](datasheets/introduction.md)
