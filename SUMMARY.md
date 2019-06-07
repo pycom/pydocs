@@ -1,12 +1,11 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [Pycom Products](products.md)
 
 ## Getting Started
 
-* [Introduction](gettingstarted/introduction.md)
 * [Hardware Setup](gettingstarted/connection/README.md)
+  * [Pycom Products](products.md)
   * [LoPy](gettingstarted/connection/lopy.md)
   * [LoPy 4](gettingstarted/connection/lopy4.md)
   * [SiPy](gettingstarted/connection/sipy.md)
