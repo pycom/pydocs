@@ -1,26 +1,33 @@
-# Introduction
+# Welcome
+Pycom ecosystem makes IoT development easy.
 
-So, you've decided to order a Pycom development module. Firstly we would like to congratulate you in making an excellent decision. If you haven't yet placed your order we highly recommend you check out the [products](../products.md) page before you place your order to ensure you know which accessories you might require.
+* Choose [IoT hardware](../products.md) which fit your project requirements.
+ 
+* Install Pymakr plugin in [Atom](https://atom.io/packages/pymakr) or [VS Code](https://marketplace.visualstudio.com/items?itemName=pycom.Pymakr) and start with your IoT project in seconds.
 
-![](../.gitbook/assets/getting_started%20%281%29.png)
+* Write [MicroPython](https://micropython.org/) code and up to three times faster compared to C/C++.
 
-## [Step 1: Setting up the hardware](connection/)
+* Send data to [Pybytes IoT platform](https://pybytes.pycom.io) or use your device standalone with the range of supported networks. 
 
-In the first part of this getting started guide, we will take you through setting up your device. Firstly we will cover how to connect the module to your computer either via USB or WiFi. Secondly we will explain how to connect various accessories such as antennas or SIM cards to your module.
+![](../.gitbook/assets/getting_started.png)
 
-## [Step 2: Setting up your computer](installation/)
+## [Setting up the hardware](connection/README.md)
+Firstly we will cover how to connect the module to your computer either via USB or WiFi.
+Secondly, we will explain how to connect various accessories such as antennas or SIM cards to your module.
 
-Now that your module is successfully connected, you will need to install some software on your computer to interface with it. The second part of this guide will guide you through installing drivers; performing firmware updates for your module/accessories to ensure you have the most stable and feature packed version; and how to setup the software use to program the device.
+## [Setting up your computer and Pymakr plugin](installation/README.md)
+You will need to install some software on your computer to interface with it.
+The second part of this guide will guide you through installing drivers and performing firmware updates for your module/accessories.
+And how to set up the Pymakr plugins and other software use to program your device.
 
-## [Step 3: Using your module](programming/)
+## [MicroPython crash course](programming/README.md)
+Now that you have a connected module and all the required software installed it is time to begin programming your device.
+This part of the guide will get you started with a basic example and point you in the right direction for getting your device connected to your chosen network.
 
-Now that you have a connected module and all the required software installed it is time to begin programming your device. This part of the guide will get you started with a basic example and point you in the right direction for getting your device connected to your chosen network.
+## [Connecting to Pybytes IoT platform](../pybytes/introduction.md)
+Connect your device to [Pybytes](https://pybytes.pycom.io) with Wi-Fi, LoRa or Sigfox. Send data from your device just with one line command.
+Update your firmware over the air and integrate with third-party services like AWS.
 
-## [Step 4: Connecting to a network](registration/)
-
-Now that you familiar with programming your device you will no doubt be keen to get it connected to one of the advertised wireless networks. This usually requires some registration. This step will detail how to get registered and connected to various wireless networks.
-
-{% hint style="info" %}
-You can navigate through this guide using the arrow buttons at the bottom of the page.
-{% endhint %}
-
+## [Connecting to your custom IoT platform](registration/README.md)
+Connect your device to your own IoT platform with one of the advertised wireless networks.
+This usually requires some registration. This step will detail how to get registered and connected to various wireless networks.
