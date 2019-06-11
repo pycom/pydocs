@@ -39,7 +39,6 @@
 * [Getting Started with Pybytes](pybytes/getstarted.md)
 * [Add a device to Pybytes](pybytes/connect/README.md)
   * [Connect to Pybytes: Quick Add](pybytes/connect/quick.md)
-  * [Connect to Pybytes: Flash Pybytes library manually](pybytes/connect/flash.md)
   * [Add Sigfox device](pybytes/connect/sigfox/README.md)
     * [DevKit contract](pybytes/connect/sigfox/devkit.md)
     * [Custom contract](pybytes/connect/sigfox/custom.md)
@@ -48,6 +47,7 @@
   * [Amazon IoT](pybytes/integrations/amazon-iot.md)
   * [Webhooks](pybytes/integrations/webhooks.md)
   * [Azure](pybytes/integrations/azure.md)
+* [Flash Pybytes-library (advanced)](pybytes/connect/flash.md)  
 
 ## Pymakr Plugin
 

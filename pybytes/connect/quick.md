@@ -1,12 +1,6 @@
-# Connect to Pybytes: Quick Add
+# Connect device to Pybytes
 
-## Connecting a device to Pybytes quickly by using the Firmware Updater
-
-In this section, we explain to you how to connect your device to Pybytes quickly using the Firmware Updater.
-
-{% hint style="info" %}
-In case you want to extend Pybytes library you can flash Pybytes library manually. [Click here for more information.](flash.md)
-{% endhint %}
+In this section, we explain to you how to connect your device to Pybytes quickly using the Firmware Updater tool.
 
 ### Step 1: Download the firmware updater
 
