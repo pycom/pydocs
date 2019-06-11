@@ -254,3 +254,9 @@ table td, table th {
   margin: 0;
   left: 0;
 }
+
+
+.primary {
+    background-color: red !important;
+    border-color: red !important;
+}

@@ -16,12 +16,12 @@
 
 <template v-for="(item, index) in results.items">
 <v-card class="ma-3" @click="navResult(item.formattedUrl)">
-<v-card-title class="blue--text text--darken-3 mb-0 pb-0">
-<v-icon left>search</v-icon>
-    <span class="title"> {{ item.title }}</span>
-    </v-card-title>
-    <v-card-text class="blue--text text--darken-2 pt-0 mt-0">
-       <p class="red--text text--lighten-3 mt-0 pt-0">{{ item.formattedUrl }}</p>
+<v-card-title class="beba mb-0 pb-0">
+  <v-icon left>search</v-icon>
+  <span class="beba"> {{ item.title }}</span>
+</v-card-title>
+    <v-card-text class=" pt-0 mt-0">
+       <p class="ppurple text--lighten-3 mt-0 pt-0">{{ item.formattedUrl }}</p>
        <v-layout>
        <v-flex v-if="item.pagemap.cse_image">
          <v-img
@@ -46,6 +46,7 @@
 <div class="text-xs-center">
   <v-pagination
     v-model="page"
+    color="#1E1E3C"
     @input="pageClicked"
     @previous="pageClicked($event)"
     @next="pageClicked($event)"

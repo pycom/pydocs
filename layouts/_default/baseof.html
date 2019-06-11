@@ -18,8 +18,8 @@
       {{- partial "toolbar.html" . -}}
 
    <v-content >
-      <v-container class="fluid">
-
+      <v-container class="fluid pa-4">
+        <v-container class="ma-1 pa-1">
 
 
 
@@ -27,7 +27,7 @@
               {{- partial "menu-contextual.html" . -}}
               {{- block "main" . }}{{- end }}
 
-
+</v-container>
 </v-container>
           </v-content>
 
