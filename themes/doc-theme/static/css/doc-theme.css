@@ -3,14 +3,7 @@ html {
     font-size: 105%;
 
 }
-pre {
-    background-color: transparent!important;
-}
-pre > code {
-  width: 100%;
-  padding: 12px;
-  margin: 18px;
-}
+
 
 .menu-contextual {
   width: 320px;
@@ -38,7 +31,6 @@ h1, h2, h3, h4 {
   color: #1E1E3C;
   letter-spacing: 0.1em;
   opacity: 0.9;
-  font-weight: normal;
 }
 
 
@@ -80,7 +72,7 @@ url("/fonts/BebasNeue-Regular.otf") format("opentype");
 
 .application {
   /* font-family: 'Beba',Helvetica,Arial,Lucida,sans-serif; */
- font-family:'Space Mono',monospace;
+  font-family:'Space Mono',monospace; 
 }
 
 p {
@@ -265,6 +257,19 @@ table td, table th {
     border-color: red !important;
 }
 
+pre {
+    background-color: transparent!important;
+}
+pre > code {
+  width: 100%;
+  padding: 12px;
+  margin: 18px;
+}
+
 code {
+    margin-left: 4px;
+    margin-right: 4px;
+    padding: 1px;
+    background-color: #EEEEEE;
     color: #7800FF;
 }
