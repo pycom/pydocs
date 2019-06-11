@@ -265,3 +265,7 @@ table td, table th {
     background-color: red !important;
     border-color: red !important;
 }
+
+code {
+    color: #FC1247;
+}
