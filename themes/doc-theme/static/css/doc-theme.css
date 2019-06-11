@@ -47,6 +47,10 @@ h1, h2, h3, h4 {
 }
 
 
+h2 > a {
+  color: #1E1E3C;
+}
+
 @font-face {
 font-family: "Beba";
 src: url("/fonts/BebasNeue-Regular.eot");
@@ -101,6 +105,10 @@ p {
 a, li > a {
 
   text-decoration: none;
+}
+
+a {
+    color: #1E1E3C!important;
 }
 
 li > a {
@@ -238,7 +246,7 @@ table td, table th {
   color: #1E1E3C;
 }
 
-/*
+
 .prev-next {
   position: absolute;
   bottom: 0px;
@@ -246,4 +254,3 @@ table td, table th {
   margin: 0;
   left: 0;
 }
-*/
