@@ -36,10 +36,14 @@ nav#TableOfContents {
 
 h1, h2, h3, h4 {
   color: #1E1E3C;
-  font-family: 'Beba',Helvetica,Arial,Lucida,sans-serif;
   letter-spacing: 0.1em;
   opacity: 0.9;
   font-weight: normal;
+}
+
+
+h1 {
+  font-family: 'Beba',Helvetica,Arial,Lucida,sans-serif;
 }
 
 h1, h2, h3, h4 {
