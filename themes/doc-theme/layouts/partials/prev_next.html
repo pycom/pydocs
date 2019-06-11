@@ -8,12 +8,7 @@
   {{- /** *************************************************************** */ -}}
   {{ $iz := eq  $page.URL .URL}}
   {{ if $got }}
-  <div class="full-width text-xs-center prev-next">
-    {{ if $prev }}
-    <v-btn href="{{ $prev.URL }}">Previous</v-btn>
-    {{ end }}
-    <v-btn href="{{ .URL }}">Next</v-btn>
-  </div>
+      {{ partial "prev_next_btn.html" (dict "context" . "prev" $prev "next" .URL)  }}
   {{ end }}
   {{ if $iz }}
     {{ $current = . }}
@@ -30,10 +25,7 @@
     {{- /** *************************************************************** */ -}}
     {{ $iz := eq  $page.URL .URL}}
     {{ if $got }}
-    <div class="full-width text-xs-center">
-      <v-btn href="{{ $prev.URL }}">Previous</v-btn>
-      <v-btn href="{{ .URL }}">Next</v-btn>
-    </div>
+      {{ partial "prev_next_btn.html" (dict "context" . "prev" $prev "next" .URL)  }}
     {{ end }}
     {{ if $iz }}
       {{ $current = . }}
@@ -50,10 +42,7 @@
       {{- /** *************************************************************** */ -}}
       {{ $iz := eq  $page.URL .URL}}
       {{ if $got }}
-      <div class="full-width text-xs-center">
-        <v-btn href="{{ $prev.URL }}">Previous</v-btn>
-        <v-btn href="{{ .URL }}">Next</v-btn>
-      </div>
+      {{ partial "prev_next_btn.html" (dict "context" . "prev" $prev "next" .URL)  }}
       {{ end }}
       {{ if $iz }}
         {{ $current = . }}
@@ -71,10 +60,7 @@
         {{- /** *************************************************************** */ -}}
         {{ $iz := eq  $page.URL .URL}}
         {{ if $got }}
-        <div class="full-width text-xs-center">
-          <v-btn href="{{ $prev.URL }}">Previous</v-btn>
-          <v-btn href="{{ .URL }}">Next</v-btn>
-        </div>
+      {{ partial "prev_next_btn.html" (dict "context" . "prev" $prev "next" .URL)  }}
         {{ end }}
         {{ if $iz }}
           {{ $current = . }}
@@ -89,10 +75,7 @@
           {{- /** *************************************************************** */ -}}
           {{ $iz := eq  $page.URL .URL}}
           {{ if $got }}
-          <div class="full-width text-xs-center">
-            <v-btn href="{{ $prev.URL }}">Previous</v-btn>
-            <v-btn href="{{ .URL }}">Next</v-btn>
-          </div>
+      {{ partial "prev_next_btn.html" (dict "context" . "prev" $prev "next" .URL)  }}
           {{ end }}
           {{ if $iz }}
             {{ $current = . }}

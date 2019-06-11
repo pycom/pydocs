@@ -14,7 +14,7 @@
     <v-btn icon @click.stop="drawer = !drawer" style="z-index: 1200;">
       <v-icon>toc</v-icon>
     </v-btn>
-    <span class="mono" style="font-size: 1.8rem"><b>
+    <span class="beba" style="font-size: 1.8rem"><b>
         {{ .Page.Title }}
       </b>
 
@@ -23,7 +23,7 @@
 
   <v-spacer></v-spacer>
   <div style="width: 210px;">
-  <v-select :items="branches" v-model="branch" width=120 >
+  <v-select :items="branches" v-model="branch" width=120 class="mono">
     </div>
   </v-select>
   {{- if gt .WordCount 400 -}}

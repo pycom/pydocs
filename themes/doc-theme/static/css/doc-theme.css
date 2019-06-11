@@ -1,3 +1,4 @@
+
 html {
     font-size: 105%;
 
@@ -10,8 +11,6 @@ pre > code {
   padding: 12px;
   margin: 18px;
 }
-
-
 
 .menu-contextual {
   width: 320px;
@@ -35,10 +34,11 @@ nav#TableOfContents {
   margin-left: -48px;
 }
 
-
-
 h1, h2, h3, h4 {
   color: #1E1E3C;
+  font-family: 'Beba',Helvetica,Arial,Lucida,sans-serif;
+  letter-spacing: 0.1em;
+  opacity: 0.9;
 }
 
 h1, h2, h3, h4 {
@@ -47,12 +47,41 @@ h1, h2, h3, h4 {
 }
 
 
+@font-face {
+font-family: "Beba";
+src: url("/fonts/BebasNeue-Regular.eot");
+src: url("/fonts/BebasNeue-Regular.woff") format("woff"),
+url("/fonts/BebasNeue-Regular.otf") format("opentype");
+}
+/* 'Beba',Helvetica,Arial,Lucida,sans-serif; */
+
+.mono {
+  font-family: monospace;
+}
+
+.beba {
+  font-family: 'Beba',Helvetica,Arial,Lucida,sans-serif;
+    letter-spacing: 0.1em;
+}
+
+
 .application {
     line-height: 1.7;
 }
 
 .application {
-  font-family:'Space Mono',monospace;
+  /* font-family: 'Beba',Helvetica,Arial,Lucida,sans-serif; */
+ font-family:'Space Mono',monospace;
+}
+
+p {
+  text-align: justify;
+}
+
+.bread {
+  font-family: 'Beba',Helvetica,Arial,Lucida,sans-serif;
+  letter-spacing: 0.1em;
+  color: #7800FF;
 }
 
 .theme--dark.v-navigation-drawer:not(.v-navigation-drawer--floating) .v-navigation-drawer__border {
@@ -81,7 +110,7 @@ li > a {
 }
 
 li > a.hot {
-  color: #1E1E3C;
+  color: #7800FF;
   text-decoration: underline;
 }
 
@@ -90,6 +119,12 @@ li > a.hot {
 li.lefttree {
   margin-top: 6px;
   margin-bottom: 6px;
+
+}
+
+li.lefttree > a {
+      font-family: 'Beba',Helvetica,Arial,Lucida,sans-serif;
+        letter-spacing: 0.1em;
 }
 
 li.hot {
@@ -111,23 +146,21 @@ ul.lefttree {
     padding:0!important;
 }
 
-
-
 .danger-alert {
-  background-color: #FFCDD2 !important;
+  background-color: #FF450A !important;
   margin-top: 24px;
   margin-bottom: 24px;
 }
 
 .warning-alert {
-  background-color: #FFCDD2 !important;
+  background-color: #FF450A !important;
   margin-top: 24px;
   margin-bottom: 24px;
 }
 
 
 .info-alert {
-  background-color: #BBDEFB !important;
+  background-color: #00FFFF !important;
   margin-top: 24px;
   margin-bottom: 24px;
 }
@@ -146,14 +179,10 @@ img {
   padding: 18px;
 }
 
-.mono {
-  font-family: monospace;
-}
-
+/*
 nav#TableOfContents::-webkit-scrollbar, .fancyScroll::-webkit-scrollbar
 {
 	width: 10px!important;
-	background-color: #F5F5F5!important;
 }
 
 nav#TableOfContents::-webkit-scrollbar-thumb, .fancyScroll::-webkit-scrollbar-thumb
@@ -163,8 +192,9 @@ nav#TableOfContents::-webkit-scrollbar-thumb, .fancyScroll::-webkit-scrollbar-th
 									   left bottom,
 									   left top,
                      color-stop(0.86, rgb(255,255,255)),
-                     color-stop(0.72, rgb(179,212,252)));
+                     color-stop(0.72, rgb(120,0,255)));
 }
+*/
 
 
 
@@ -207,3 +237,13 @@ table td, table th {
 .navy {
   color: #1E1E3C;
 }
+
+/*
+.prev-next {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  margin: 0;
+  left: 0;
+}
+*/
