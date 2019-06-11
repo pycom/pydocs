@@ -11,7 +11,7 @@ Follow these steps to create a Pybytes account:
 
 ## Go Invent!
 
-Now it's time to explore Pybytes. You can start by connecting your Pycom board to Pybytes.
+Now it's time to explore Pybytes. You can start by [connecting your Pycom board to Pybytes](connect/README.md).
 
 {% page-ref page="connect/" %}
 
