@@ -57,7 +57,7 @@ url("/fonts/BebasNeue-Regular.otf") format("opentype");
 /* 'Beba',Helvetica,Arial,Lucida,sans-serif; */
 
 .mono {
-  font-family: monospace;
+  font-family: monospace!important;
 }
 
 .beba {
@@ -72,7 +72,7 @@ url("/fonts/BebasNeue-Regular.otf") format("opentype");
 
 .application {
   /* font-family: 'Beba',Helvetica,Arial,Lucida,sans-serif; */
-  font-family:'Space Mono',monospace; 
+  font-family:'Space Mono',monospace;
 }
 
 p {
