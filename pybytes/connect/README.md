@@ -32,4 +32,4 @@ Select how you would like to connect your device to Pybytes:
 
 1. **[Connect your device quickly](quick.md) \(Recommended\)**
 
-2. [Connect your device by flashing Pybytes Library](flash.md) \(Only if you want to customize Pybytes library code\).
+2. [Connect your device by flashing Pybytes Library](flash.md) \(only if you want to customize Pybytes library code\).

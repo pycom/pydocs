@@ -38,7 +38,7 @@
 * [Introduction](pybytes/introduction.md)
 * [Getting Started with Pybytes](pybytes/getstarted.md)
 * [Add a device to Pybytes](pybytes/connect/README.md)
-  * [Connect to Pybytes: Quick Add](pybytes/connect/quick.md)
+  * [Connect the device to Pybytes](pybytes/connect/quick.md)
   * [Add Sigfox device](pybytes/connect/sigfox/README.md)
     * [DevKit contract](pybytes/connect/sigfox/devkit.md)
     * [Custom contract](pybytes/connect/sigfox/custom.md)
