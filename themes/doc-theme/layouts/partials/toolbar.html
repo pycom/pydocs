@@ -16,19 +16,17 @@
     </v-btn>
     <span class="beba" style="font-size: 1.6rem; opacity: 0.85;">
         {{ .Page.Title }}
-
-
     </span>
 
 
   <v-spacer></v-spacer>
-  <div style="width: 210px;">
+  <div style="width: 210px; background-color: ">
   <v-select :items="branches" v-model="branch" width=120 class="mono">
     </div>
   </v-select>
   {{- if gt .WordCount 400 -}}
-  <v-btn icon  class="purple--text" ref="tocBtn" @click.stop="drawer2 = !drawer2">
-    <v-icon>more_vert</v-icon>
+  <v-btn icon  styleZZZ="background-color: #1E1E3C;" ref="tocBtn" @click.stop="drawer2 = !drawer2">
+    <v-icon style="color: #1E1E3C;">more_vert</v-icon>
   </v-btn>
   {{ end }}
 </v-toolbar>

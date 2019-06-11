@@ -14,8 +14,8 @@ pre > code {
 
 .menu-contextual {
   width: 320px;
-  right: 12px;
-  top: 12px;
+  right: 0px;
+  top: 0px;
   z-index: 3;
   position: fixed;
 }
@@ -251,7 +251,6 @@ table td, table th {
   color: #1E1E3C;
 }
 
-
 .prev-next {
   position: absolute;
   bottom: 0px;
@@ -267,5 +266,5 @@ table td, table th {
 }
 
 code {
-    color: #FC1247;
+    color: #7800FF;
 }
