@@ -6,7 +6,7 @@ In this section, we explain to you how to connect your device to Pybytes quickly
 
 ![](../../.gitbook/assets/pybytes/add-device/final-step.png)
 
-From the last step of the "Add Device" process. Download and install Pycom Firmware updater tool from the provided link. (Firmware updater is also available on [pycom.io]((https://pycom.io/downloads/)))
+From the last step of the "Add Device" process. Download and install Pycom Firmware updater tool from the provided link (Firmware updater is also available on [pycom.io](https://pycom.io/downloads/)).
 
 ![](../../.gitbook/assets/pybytes/add-device/connect-your-device-component.png)
 
@@ -18,18 +18,20 @@ Copy the activation token by pressing the copy button. The activation token is v
 * Connect your device to the computer
 * If your device is already connected, make sure it is not connected to Pymakr
 
-Open the Pycom Firmware updater tool on your computer.
+#### Firmware update process
+
+Open the Pycom Firmware updater tool on your computer and click on the Continue button.
 
 ![](../../.gitbook/assets/pybytes/add-device/fw-updater/intro-screen.png)
 
-Click on Continue button.
+Click again on the Continue button.
 
 ![](../../.gitbook/assets/pybytes/add-device/fw-updater/attention-screen.png)
 
-Click again on Continue button
-
+{% hint style="info" %}
 If your device is already connected to your computer, on MacOS serial port will be automatically filled for you.
 At this step, you can also click on Rescan ports button to update ports listed in the Firmware updater.
+{% endhint %}
 
 Check the options "Erase flash file system" and "Force update Pybytes registration";
 
