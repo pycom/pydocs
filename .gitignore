@@ -77,5 +77,4 @@ typings/
 
 #DynamoDB Local files
 .dynamodb/
-/_book/
-/.idea/
+
