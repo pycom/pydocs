@@ -76,22 +76,28 @@ Every line stands for one message sent every 5 seconds. Line `1 [-0.7]` means si
 
 ## Step 2: Add a signal from your device
 
-Go to Pybytes and on *Devices* page select your device;
+Go to Pybytes.
 
-![](../.gitbook/assets/pybytes/dashboard/device-table.png)
+1. On *Devices* page select a device;
 
-Then go to `Data` tab and click on the row in the *Undefined signals* table (recommended). Alternatively, you can click on *Define new signal* button.
+![](../.gitbook/assets/01%20%281%29.gif)
+
+2. On your device's page click on the *Data* tab.
+
+![](../.gitbook/assets/02-1.png)
+
+3. Click on the row in the *Undefined signals* table (recommended). Alternatively, you can click on *Define new signal* button.
 {% hint style="info" %}
 If you don't see your undefined signal in *Undefined signals* table, please reload your browser.
 {% endhint %}
 
 ![](../.gitbook/assets/pybytes/dashboard/undefined-signals-table.png)
 
-Define new signal by entering a signal name, and optionally a unit (If you clicked on "undefined signal row" your signal number `1` will be already pre-filled).
+4. Define new signal by entering a signal name, and optionally a unit (If you clicked on "undefined signal row" your signal number `1` will be already pre-filled).
 
 ![](../.gitbook/assets/pybytes/dashboard/define-new-signal.png)
 
-Your signal was defined!
+5. Your signal was added!
 
 ![](../.gitbook/assets/pybytes/dashboard/signal-was-added.png)
 
@@ -103,34 +109,49 @@ The signal number has to match the signal number that you defined on `pybytes.se
 
 ## Step 3: Add a widget for the signal
 
-Click on the *"signal card"*.
+1. Click on the *"signal card"*.
 
-![](../.gitbook/assets/pybytes/dashboard/signal-card.png)
+![](../.gitbook/assets/01.png)
 
-Click on the *Create a new display* button.
+2. Click on the *Create a new display* button.
 
-![](../.gitbook/assets/pybytes/dashboard/create-new-display.png)
+![](../.gitbook/assets/02-1%20%281%29.png)
 
-Select the type of visualisation \(e.g. *Bar chart* or *Line chart*\). Let's select the *Line chart*.   
+3. Select the type of visualisation \(e.g. *Bar chart* or *Line chart*\).
 
-![](../.gitbook/assets/pybytes/dashboard/line-chart.png)
+![](../.gitbook/assets/03.gif)
 
-You can adjust the parameters of your widget at `Settings`. After, click on the button `Create`.
+4. You can adjust the parameters of your widget at `Settings`. After, click on the button `Create`.
 
-![](../.gitbook/assets/pybytes/dashboard/confirm-graph-creation.png)
+![](../.gitbook/assets/04-1.png)
 
-Your widget was created. Now, add your widget to your device's dashboard. Click on the button `Edit` on your widget.
+5. Your widget was created. Now, add your widget to your device's dashboard. Click on the button `Edit` on your widget.
 
-![](../.gitbook/assets/pybytes/dashboard/graph-settings-button.png)
+![](../.gitbook/assets/05-1.png)
 
-Mark the checkbox `Display on Dashboard` at `Settings`. Finally, click on the button `Save`.
+6. Mark the checkbox `Display on Dashboard` at `Settings`. Finally, click on the button `Save`.
 
-![](../.gitbook/assets/pybytes/dashboard/display-on-dashboard-checkbox.png)
+![](../.gitbook/assets/06.gif)
 
-Click on the `Dashboard` tab. Your widget was successfully added there!
+7. Click on the tab `Dashboard`. Your widget was successfully added there!
 
-![](../.gitbook/assets/pybytes/dashboard/sinwave-dashboard-widget.png)
+![](../.gitbook/assets/07.png)
+
+## Step 4: Organise your dashboard
+
+1. Click on the button `Organise`. Now the dashboard's grid will enter the edit mode and allow you to resize and reposition its widgets.
+
+![](../.gitbook/assets/edit-mode%20%281%29.gif)
+
+2. Resize a widget by clicking on the triangle icon at the bottom right corner of the widget and drag the cursor over the grid. After, click on the button `Save` to save this action.
+
+![](../.gitbook/assets/02-1.gif)
+
+3. Change the widget's position by drag-and-dropping it over the grid. After, click on the button `Save` to save this action.
+
+![](../.gitbook/assets/03-1.gif)
 
 ## Done!
 
 Now you've learned how to set up your device's dashboard to display data. Also, you can add more widgets to other signals of your device.
+

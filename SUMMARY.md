@@ -1,11 +1,12 @@
 # Table of contents
 
 * [Introduction](README.md)
+* [Pycom Products](products.md)
 
 ## Getting Started
 
+* [Introduction](gettingstarted/introduction.md)
 * [Hardware Setup](gettingstarted/connection/README.md)
-  * [Pycom Products](products.md)
   * [LoPy](gettingstarted/connection/lopy.md)
   * [LoPy 4](gettingstarted/connection/lopy4.md)
   * [SiPy](gettingstarted/connection/sipy.md)
@@ -32,22 +33,6 @@
     * [The Things Network](gettingstarted/registration/lora/ttn.md)
     * [Senet](gettingstarted/registration/lora/senet.md)
 * [Troubleshooting Guide](gettingstarted/troubleshooting-guide.md)
-
-## Pybytes Iot platform
-
-* [Introduction](pybytes/introduction.md)
-* [Getting Started with Pybytes](pybytes/getstarted.md)
-* [Add a device to Pybytes](pybytes/connect/README.md)
-  * [Connect the device to Pybytes](pybytes/connect/quick.md)
-  * [Add Sigfox device](pybytes/connect/sigfox/README.md)
-    * [DevKit contract](pybytes/connect/sigfox/devkit.md)
-    * [Custom contract](pybytes/connect/sigfox/custom.md)
-* [Visualise data from your device](pybytes/dashboard.md)
-* [Integrations](pybytes/integrations/README.md)
-  * [Amazon IoT](pybytes/integrations/amazon-iot.md)
-  * [Webhooks](pybytes/integrations/webhooks.md)
-  * [Azure](pybytes/integrations/azure.md)
-* [Flash Pybytes-library (advanced)](pybytes/connect/flash.md)  
 
 ## Pymakr Plugin
 
@@ -196,6 +181,22 @@
   * [Deep Sleep Shield](datasheets/boards/deepsleep/README.md)
     * [Deep Sleep API](datasheets/boards/deepsleep/api.md)
 * [Notes](datasheets/notes.md)
+
+## Pybytes
+
+* [Introduction](pybytes/introduction.md)
+* [Getting Started with Pybytes](pybytes/getstarted.md)
+* [Add a device to Pybytes](pybytes/connect/README.md)
+  * [Connect to Pybytes: Quick Add](pybytes/connect/quick.md)
+  * [Connect to Pybytes: Flash Pybytes library manually](pybytes/connect/flash.md)
+  * [Add Sigfox device](pybytes/connect/sigfox/README.md)
+    * [DevKit contract](pybytes/connect/sigfox/devkit.md)
+    * [Custom contract](pybytes/connect/sigfox/custom.md)
+* [Visualise data from your device](pybytes/dashboard.md)
+* [Integrations](pybytes/integrations/README.md)
+  * [Amazon IoT](pybytes/integrations/amazon-iot.md)
+  * [Webhooks](pybytes/integrations/webhooks.md)
+  * [Azure](pybytes/integrations/azure.md)
 
 ## Documentation Notes
 

@@ -1,53 +1,54 @@
-# Connect the device to Pybytes
+# Connect to Pybytes: Quick Add
 
-In this section, we explain to you how to connect your device to Pybytes quickly using the Firmware Updater tool.
+## Connecting a device to Pybytes quickly by using the Firmware Updater
 
-### 1. Download Pycom Firmware updater tool
+In this section, we explain to you how to connect your device to Pybytes quickly using the Firmware Updater.
+
+{% hint style="info" %}
+In case you want to extend Pybytes library you can flash Pybytes library manually. [Click here for more information.](flash.md)
+{% endhint %}
+
+### Step 1: Download the firmware updater
+
+At the last step of the "Add Device" process:
 
 ![](../../.gitbook/assets/pybytes/add-device/final-step.png)
 
-From the last step of the "Add Device" process. Download and install Pycom Firmware updater tool from the provided link (Firmware updater is also available on [pycom.io](https://pycom.io/downloads/)).
+1. Select Firmware updater for your operating.
 
-![](../../.gitbook/assets/pybytes/add-device/connect-your-device-component.png)
+    (Firmware updater is also available in [Downloads](https://pycom.io/downloads/) section on pycom.io)
 
-Copy the activation token by pressing the copy button. The activation token is valid for one hour. If your activation token is expired, you can create a new one.
+![](../../.gitbook/assets/8-1.png)
 
-### 2. Flash Pybytes firmware with Pycom Firmware updater tool
+2. Copy the activation token.
 
-#### Before you start
-* Connect your device to the computer
-* If your device is already connected, make sure it is not connected to Pymakr
+    The activation token is valid for one hour. If your activation token is expired, you can create a new one.
 
-#### Firmware update process
+### Step 2: Firmware updater
 
-Open the Pycom Firmware updater tool on your computer and click on the Continue button.
+Install the Firmware updater on your computer.
 
-![](../../.gitbook/assets/pybytes/add-device/fw-updater/intro-screen.png)
+1. Start the *Firmware updater*;
 
-Click again on the Continue button.
+![](../../.gitbook/assets/1-1.png)
 
-![](../../.gitbook/assets/pybytes/add-device/fw-updater/attention-screen.png)
+![](../../.gitbook/assets/2%20%281%29.png)
 
-{% hint style="info" %}
-If your device is already connected to your computer, on MacOS serial port will be automatically filled for you.
-At this step, you can also click on Rescan ports button to update ports listed in the Firmware updater.
-{% endhint %}
+2. Select your device serial port \(Make sure your device is connected to your computer\);
 
-Check the options "Erase flash file system" and "Force update Pybytes registration";
+3. Mark the options "Erase flash file system" and "Force update Pybytes registration";
 
-![](../../.gitbook/assets/pybytes/add-device/fw-updater/settings-screen.png)
+![](../../.gitbook/assets/3.png)
 
-Paste your activation token from Pybytes. Firmware updater should display **Registration successful!**
+4. Paste your activation token from Pybytes;
 
-![](../../.gitbook/assets/pybytes/add-device/fw-updater/activation-token-screen.png)
+![](../../.gitbook/assets/5-1.gif)
 
-Then press the Continue button. Your device will be flashed with the Pybytes firmware. This should take about a minute.
+5. The firmware updater will update the device's firmware.
 
-![](../../.gitbook/assets/pybytes/add-device/fw-updater/update-in-progress-screen.png)
+![](../../.gitbook/assets/6%20%281%29.png)
 
-After the updating process is done. You will be welcomed with the final screen. Click on Done to close the Firmware updater.
-
-![](../../.gitbook/assets/pybytes/add-device/fw-updater/success-screen.png)
+![](../../.gitbook/assets/7%20%282%29.png)
 
 ## Next step: Set up your device's dashboard!
 
