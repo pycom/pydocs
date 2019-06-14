@@ -284,11 +284,16 @@ pre {
 pre > code {
   width: 100%;
   padding: 12px;
+  margin-top: 4px;
+  margin-bottom: 12px;
 }
 
 code {
-    margin-left: 4px;
-    margin-right: 4px;
+
     padding: 1px;
     background-color: #EEEEEE;
+}
+
+.primary--text {
+  color: #7800FF;
 }

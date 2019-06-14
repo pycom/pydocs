@@ -41,7 +41,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/1.5.13/vuetify.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js"></script>
   <script>
-  Vue.use(VueResource)
+  // Vue.use(VueResource)
+  // Vue.use(Vuetify, {
+  //   theme: {
+  //     primary: '#FF0000',
+  //     secondary: '#b0bec5',
+  //     accent: '#8c9eff',
+  //     error: '#b71c1c'
+  //   }
+  // })
+
     var app = new Vue({
       el: '#app',
       data: {
@@ -72,7 +81,8 @@
         if (this.$refs.tocBtn) {
           var elem = this.$refs.tocBtn.$el
           setTimeout(function () {
-              elem.click()
+              elem.click();
+
           }, 3500);
         }
         // we use a /search/ page essentially to generate/store a browser
@@ -81,6 +91,8 @@
           this.q = decodeURI(window.location.search.split("=")[1])
           this.fetchResults (this.q)
         }
+        var elem2 = document.getElementById("vuetify-theme-stylesheet");
+        elem2.parentNode.removeChild(elem2);
 
       },
       methods: {
