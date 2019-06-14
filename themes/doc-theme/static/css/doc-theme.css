@@ -114,7 +114,6 @@ a {
 
 a:hover {
   background-color: yellow;
-
 }
 
 a {
@@ -130,6 +129,8 @@ li > a {
 li > a.hot {
   color: #7800FF;
   text-decoration: underline;
+  background-color: yellow;
+  padding: 6px;
 }
 
 
