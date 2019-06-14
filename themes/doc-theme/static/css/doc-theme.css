@@ -99,9 +99,22 @@ p {
 
 
 
-a, li > a {
-
+a, li.lefttree > a {
   text-decoration: none;
+}
+
+a, li.righttree > a {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: underline;
+    padding: 5px;
+}
+
+a:hover {
+  background-color: yellow;
+
 }
 
 a {
@@ -180,7 +193,8 @@ nav#TableOfContents {
 }
 
 img {
-  max-width: 100%;
+  max-width: 90%;
+  margin-left: 5%;
   padding: 18px;
 }
 
@@ -239,6 +253,12 @@ table td, table th {
   color: #7800FF;
 }
 
+.pbgpurple {
+  background-color: #7800FF!important;
+  color: white;
+}
+
+
 .navy {
   color: #1E1E3C;
 }
@@ -263,7 +283,6 @@ pre {
 pre > code {
   width: 100%;
   padding: 12px;
-  margin: 18px;
 }
 
 code {
@@ -271,5 +290,4 @@ code {
     margin-right: 4px;
     padding: 1px;
     background-color: #EEEEEE;
-    color: #7800FF;
 }

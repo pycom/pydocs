@@ -5,7 +5,7 @@ uglyurls = false
 sectionPagesMenu = "main"
 PygmentsCodeFences = true
 # see https://help.farbox.com/pygments.html for available pygments
-PygmentsStyle = "emacs"
+PygmentsStyle = "friendly"
 theme = "doc-theme"
 
 [menu]

@@ -51,7 +51,7 @@
         error: null,
         results: null,
         drawer: true,
-        drawer2: false,
+        drawer2: true,
         toc: 0,
         branches: [
           { value: 'https://docs.pycom.io', text: 'version stable',  } ,
@@ -73,7 +73,7 @@
           var elem = this.$refs.tocBtn.$el
           setTimeout(function () {
               elem.click()
-          }, 1500);
+          }, 3500);
         }
         // we use a /search/ page essentially to generate/store a browser
         // history, if in search page, query results
@@ -100,7 +100,7 @@
               this.results = res.data
               this.page = Math.trunc(res.data.queries.request[0].startIndex /10) + 1
               // Mmm ... Google result number is varying accross page ....
-              this.pageCount = Math.trunc(res.data.searchInformation.totalResults/10) + 1
+              this.pageCount = Math.min(10, Math.trunc(res.data.searchInformation.totalResults/10) + 1)
             } else {
               this.results = null;
             }
@@ -133,9 +133,6 @@
       },
     });
 
-    window.onload = function() {
-      app.$mount('#app');
-    }
   </script>
 
 {{- partial "alexia.html" . -}}

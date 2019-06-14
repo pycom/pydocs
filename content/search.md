@@ -2,12 +2,6 @@
 
 {{ results.searchInformation.totalResults }} results in {{ results.searchInformation.formattedSearchTime }} ms.
 
-
-
-
-
-
-
 <template v-if="results == null"  >
   <v-alert color="blue lighten-3" value=true icon="rowing">
     no results.
@@ -21,7 +15,7 @@
   <span class="beba"> {{ item.title }}</span>
 </v-card-title>
     <v-card-text class=" pt-0 mt-0">
-       <p class="ppurple text--lighten-3 mt-0 pt-0">{{ item.formattedUrl }}</p>
+       <p class="ppurple text--lighten-3 mt-0 pt-0" style="text-decoration: underline;">{{ item.formattedUrl }}</p>
        <v-layout>
        <v-flex v-if="item.pagemap.cse_image">
          <v-img
