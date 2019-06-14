@@ -5,9 +5,11 @@
 This basic example shows how to read pitch and roll from the on-board accelerometer and output it in comma separated value \(CSV\) format over serial.
 
 ```python
+import time
 from LIS2HH12 import LIS2HH12
-from pytrack import Pytrack
-py = Pytrack()
+# Depends on pycocrop.py from:https://github.com/pycom/pycom-libraries
+from pysense import Pysense
+py = Pysense()
 acc = LIS2HH12()
 
 while True:
