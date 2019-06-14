@@ -32,6 +32,7 @@ When changing the WLAN mode, if following the instructions below, the WLAN conne
 The WLAN network class always boots in `WLAN.AP` mode; to connect it to an existing network, the WiFi class must be configured as a station:
 
 ```python
+import machine
 from network import WLAN
 wlan = WLAN(mode=WLAN.STA)
 ```
