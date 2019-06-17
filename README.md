@@ -1,20 +1,28 @@
-# local visualization
+# run locally
 
-.md files are in the content folder, the theme forlder contains the theme.
-
-install Hugo and run it on the current directory.
 ```
 brew install hugo
 hugo serve
 ```
 
-The file config.toml contains the global .toml
+# detect broken links
+
+```
+wget -o 404.txt -r  --spider http://localhost:1313
+```
+
+- .md files are in the content folder,
+-  the theme folder contains the theme.
+
+install Hugo and run it on the current directory.
+
+The file `config.toml` contains the global table of content
 
 # First generation of publish branch
 
 Some commands that have been used for building:
 
-- ```
+```bash
 # it clone gh-pages in ./tmp/ and appy all .md files
 ./reclone.sh
 # generate toc, title, redirects
@@ -33,11 +41,4 @@ rpl -R "✔" "&#10004;" content
 
 # get the images in static
 cp tmp/pydocs/.gitbook/assets/* static/gitbook/assets/
-```
-
-# detect broken links
-
-```
-wget -o ~/output.txt -r  --spider http://localhost:1313
-cat ~/output.txt | grep -B 7 404 | grep "\-\-20"
 ```
