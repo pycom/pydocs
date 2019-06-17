@@ -14,7 +14,7 @@ The file config.toml contains the global .toml
 
 Some commands that have been used for building:
 
-- ```
+```bash
 # it clone gh-pages in ./tmp/ and appy all .md files
 ./reclone.sh
 # generate toc, title, redirects
