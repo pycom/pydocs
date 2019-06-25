@@ -7,7 +7,8 @@ hugo serve
 
 # Workflow
 
-- make you clean commits on Master
+- Make PR using Master branch
+- PR get merged on master
 - Then merge publish with master
 
 
@@ -31,31 +32,3 @@ wget -o 404.txt -r  --spider http://localhost:1313
 
 A webhook has been installed on the publish branch to
 https://publish.d20i0wkqbblkur.amplifyapp.com/
-
-## First generation of publish branch (in memoriam)
-
-Some commands that have been used for building:
-
-```bash
-# it clone gh-pages in ./tmp/ and appy all .md files
-./reclone.sh
-# generate toc, title, redirects
-python3 migration.py
-# apply this changes to remove remaining not needed slashes protections
-rpl -R '\)' ')' content/*
-rpl -R '\(' '(' content/*
-#  use carrefully but there should be not .html in content
-# find "./content/" -name "*.html" -exec rm {} \;
-#  then finally fix link self to images
-rpl -R ".gitbook/assets/" "gitbook/assets/" *
-rpl -R "../gitbook/assets" "/gitbook/assets" content
-rpl -R "..//gitbook/assets" "/gitbook/assets" content
-rpl -R "’" "'" content
-rpl -R "✔" "&#10004;" content
-rpl -R "{{{%" "{{%" content
-rpl -R "%}}}" "%}}" content
-
-
-# get the images in static
-cp -R tmp/pydocs/.gitbook/assets/* static/gitbook/assets/
-```
