@@ -5,20 +5,13 @@ aliases:
     - firmwareapi/pycom/machine/adc.md
     - chapter/firmwareapi/pycom/machine/adc
 ---
-search:
-  keywords:
-    - ADC
-    - Analog
-    - ADCChannel
----
-
-# ADC
 
 ## class ADC – Analog to Digital Conversion
 
 ### Quick Usage Example
 
 ```python
+
 import machine
 
 adc = machine.ADC()             # create an ADC object
@@ -54,6 +47,7 @@ Create an analog pin.
 Returns an instance of `ADCChannel`. Example:
 
 ```python
+
 # enable an ADC channel on P16
 apin = adc.channel(pin='P16')
 ```
@@ -103,4 +97,3 @@ Converts the provided value into a voltage (in millivolts) in the same way volta
 {{% hint style="danger" %}}
 ADC pin input range is `0-1.1V`. This maximum value can be increased up to `3.3V` using the highest attenuation of `11dB`. **Do not exceed the maximum of 3.3V**, to avoid damaging the device.
 {{< /hint >}}
-

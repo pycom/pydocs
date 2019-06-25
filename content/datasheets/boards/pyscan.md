@@ -7,7 +7,7 @@ aliases:
     - chapter/datasheets/boards/pyscan
 ---
 
-![](/gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn83hfia61dsuyojco-pyscan-new.png) 
+![](/gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn83hfia61dsuyojco-pyscan-new.png)
 
 ## Datasheet
 
@@ -34,7 +34,7 @@ Libraries for the rest of the components will be added soon.
 
 ## Driver
 
-The Windows 7 driver for Pyscan is located [here](../../pytrackpysense/installation/firmware).
+The Windows 7 driver for Pyscan is located [here](/pytrackpysense/installation/firmware).
 
 For other Operating Systems there's no driver required.
 
@@ -59,4 +59,3 @@ The board features a single cell Li-Ion/Li-Po charger. When the board is being p
 ## 3D model for case design
 
 * Please see the <a href="/gitbook/assets/PyScan_v0.7.step" target="_blank"> 3D model </a> (step format)
-

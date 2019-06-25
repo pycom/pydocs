@@ -13,6 +13,7 @@ This chapter describes the various methods for sleep and wakeup which are embedd
 The following example is also available at [Sleep Wakeup Example Libraries GitHub repository](https://github.com/pycom/pycom-libraries/blob/master/examples/accelerometer_wake/main.py)
 
 ```python
+
 #from pytrack import Pytrack
 from pysense import Pysense
 from LIS2HH12 import LIS2HH12
@@ -82,6 +83,7 @@ Enables as wakeup source, the accelerometer INT pin (PIC - RA5). The boolean par
 **The accelerometer (class** `LIS2HH12`**)** has to be also configured for a certain acceleration threshold and duration. Code snippet:
 
 ```python
+
 from pytrack import Pytrack
 from LIS2HH12 import LIS2HH12
 

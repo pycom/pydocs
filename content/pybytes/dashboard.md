@@ -9,7 +9,7 @@ aliases:
 In this section, we will explain to you how to create widgets for data visualisation and set up your device's dashboard on Pybytes.
 
 {{% hint style="info" %}}
-We assume that you already have your device connected to Pybytes. In case you haven't, check how to [add your device here](connect/). After your done with that, you can proceed to the next example.
+We assume that you already have your device connected to Pybytes. In case you haven't, check how to [add your device here](../connect/). After your done with that, you can proceed to the next example.
 {{< /hint >}}
 
 ## Step 1: Set up your python application
@@ -18,7 +18,7 @@ The first step is to have your python application uploaded and running on your P
 
 1. Install the [Pymakr](https://atom.io/packages/pymakr) plugin.
 
-    (We highly recommend using Pymakr with Atom, but you can also use Pymakr with [VS Code](https://marketplace.visualstudio.com/items?itemName=pycom.Pymakr)). Learn more about Pymakr [here](pymakr/).
+    (We highly recommend using Pymakr with Atom, but you can also use Pymakr with [VS Code](https://marketplace.visualstudio.com/items?itemName=pycom.Pymakr)). Learn more about Pymakr [here](/pymakr).
 2. In Atom create a project folder `my-first-wipy` (any other name will work as well).
 4. In your project folder create the `main.py` file
 3. Copy and paste the following code into your `main.py`
@@ -30,6 +30,7 @@ Scroll a bit down to see the picture of the project structure in Atom.
 This python application will send data from the array every 5 seconds to Pybytes.
 
 ```python
+
 # Import what is necessary to create a thread
 import _thread
 from time import sleep
@@ -82,28 +83,22 @@ Every line stands for one message sent every 5 seconds. Line `1 [-0.7]` means si
 
 ## Step 2: Add a signal from your device
 
-Go to Pybytes.
+Go to Pybytes and on *Devices* page select your device;
 
-1. On *Devices* page select a device;
+![](/gitbook/assets/pybytes/dashboard/device-table.png)
 
-![](/gitbook/assets/01%20%281%29.gif)
-
-2. On your device's page click on the *Data* tab.
-
-![](/gitbook/assets/02-1.png)
-
-3. Click on the row in the *Undefined signals* table (recommended). Alternatively, you can click on *Define new signal* button.
+Then go to `Data` tab and click on the row in the *Undefined signals* table (recommended). Alternatively, you can click on *Define new signal* button.
 {{% hint style="info" %}}
 If you don't see your undefined signal in *Undefined signals* table, please reload your browser.
 {{< /hint >}}
 
 ![](/gitbook/assets/pybytes/dashboard/undefined-signals-table.png)
 
-4. Define new signal by entering a signal name, and optionally a unit (If you clicked on "undefined signal row" your signal number `1` will be already pre-filled).
+Define new signal by entering a signal name, and optionally a unit (If you clicked on "undefined signal row" your signal number `1` will be already pre-filled).
 
 ![](/gitbook/assets/pybytes/dashboard/define-new-signal.png)
 
-5. Your signal was added!
+Your signal was defined!
 
 ![](/gitbook/assets/pybytes/dashboard/signal-was-added.png)
 
@@ -115,49 +110,34 @@ The signal number has to match the signal number that you defined on `pybytes.se
 
 ## Step 3: Add a widget for the signal
 
-1. Click on the *"signal card"*.
+Click on the *"signal card"*.
 
-![](/gitbook/assets/01.png)
+![](/gitbook/assets/pybytes/dashboard/signal-card.png)
 
-2. Click on the *Create a new display* button.
+Click on the *Create a new display* button.
 
-![](/gitbook/assets/02-1%20%281%29.png)
+![](/gitbook/assets/pybytes/dashboard/create-new-display.png)
 
-3. Select the type of visualisation (e.g. *Bar chart* or *Line chart*).
+Select the type of visualisation (e.g. *Bar chart* or *Line chart*). Let's select the *Line chart*.   
 
-![](/gitbook/assets/03.gif)
+![](/gitbook/assets/pybytes/dashboard/line-chart.png)
 
-4. You can adjust the parameters of your widget at `Settings`. After, click on the button `Create`.
+You can adjust the parameters of your widget at `Settings`. After, click on the button `Create`.
 
-![](/gitbook/assets/04-1.png)
+![](/gitbook/assets/pybytes/dashboard/confirm-graph-creation.png)
 
-5. Your widget was created. Now, add your widget to your device's dashboard. Click on the button `Edit` on your widget.
+Your widget was created. Now, add your widget to your device's dashboard. Click on the button `Edit` on your widget.
 
-![](/gitbook/assets/05-1.png)
+![](/gitbook/assets/pybytes/dashboard/graph-settings-button.png)
 
-6. Mark the checkbox `Display on Dashboard` at `Settings`. Finally, click on the button `Save`.
+Mark the checkbox `Display on Dashboard` at `Settings`. Finally, click on the button `Save`.
 
-![](/gitbook/assets/06.gif)
+![](/gitbook/assets/pybytes/dashboard/display-on-dashboard-checkbox.png)
 
-7. Click on the tab `Dashboard`. Your widget was successfully added there!
+Click on the `Dashboard` tab. Your widget was successfully added there!
 
-![](/gitbook/assets/07.png)
-
-## Step 4: Organise your dashboard
-
-1. Click on the button `Organise`. Now the dashboard's grid will enter the edit mode and allow you to resize and reposition its widgets.
-
-![](/gitbook/assets/edit-mode%20%281%29.gif)
-
-2. Resize a widget by clicking on the triangle icon at the bottom right corner of the widget and drag the cursor over the grid. After, click on the button `Save` to save this action.
-
-![](/gitbook/assets/02-1.gif)
-
-3. Change the widget's position by drag-and-dropping it over the grid. After, click on the button `Save` to save this action.
-
-![](/gitbook/assets/03-1.gif)
+![](/gitbook/assets/pybytes/dashboard/sinwave-dashboard-widget.png)
 
 ## Done!
 
 Now you've learned how to set up your device's dashboard to display data. Also, you can add more widgets to other signals of your device.
-

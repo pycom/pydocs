@@ -5,20 +5,28 @@ brew install hugo
 hugo serve
 ```
 
+# some infos:
+
+- assets are in ./static directory, a directory aliased at /
+- css in /themes/doc-theme/static/doc-theme.css
+- SUMMARY.md is in config.toml
+
+
+# help
+
+- gohugo.io
+
+
 # detect broken links
 
 ```
 wget -o 404.txt -r  --spider http://localhost:1313
 ```
 
-- .md files are in the content folder,
--  the theme folder contains the theme.
+A webhook has been installed on the publish branch to
+https://publish.d20i0wkqbblkur.amplifyapp.com/
 
-install Hugo and run it on the current directory.
-
-The file `config.toml` contains the global table of content
-
-# First generation of publish branch
+## First generation of publish branch (in memoriam)
 
 Some commands that have been used for building:
 
@@ -28,8 +36,8 @@ Some commands that have been used for building:
 # generate toc, title, redirects
 python3 migration.py
 # apply this changes to remove remaining not needed slashes protections
-rpl -R '\)' ')' *
-rpl -R '\(' '(' *
+rpl -R '\)' ')' content/*
+rpl -R '\(' '(' content/*
 #  use carrefully but there should be not .html in content
 # find "./content/" -name "*.html" -exec rm {} \;
 #  then finally fix link self to images
@@ -38,7 +46,10 @@ rpl -R "../gitbook/assets" "/gitbook/assets" content
 rpl -R "..//gitbook/assets" "/gitbook/assets" content
 rpl -R "’" "'" content
 rpl -R "✔" "&#10004;" content
+rpl -R "{{{%" "{{%" content
+rpl -R "%}}}" "%}}" content
+
 
 # get the images in static
-cp tmp/pydocs/.gitbook/assets/* static/gitbook/assets/
+cp -R tmp/pydocs/.gitbook/assets/* static/gitbook/assets/
 ```

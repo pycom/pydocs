@@ -11,6 +11,7 @@ This code reads PIR sensor triggers from this simple [PIR sensor](https://www.ki
 ## Main (`main.py`)
 
 ```python
+
 import time
 from network import WLAN
 from machine import Pin
@@ -54,6 +55,7 @@ print("Exited main loop")
 For more WiFi scripts, see the wlan step by step tutorial.
 
 ```python
+
 import os
 import machine
 
@@ -100,6 +102,7 @@ if machine.reset_cause() != machine.SOFT_RESET:
 ## Domoticz Wrapper (`domoticz.py`)
 
 ```python
+
 import socket
 class Domoticz:
 

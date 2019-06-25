@@ -15,6 +15,7 @@ Visit [IO Adafruit](https://io.adafruit.com) and create an account. You'll need 
 This example will send a message to a topic on the Adafruit MQTT broker and then also subscribe to the same topic, in order to show how to use the subscribe functionality.
 
 ```python
+
 from mqtt import MQTTClient
 from network import WLAN
 import machine

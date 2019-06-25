@@ -142,6 +142,7 @@ The example below will only work on a Pycom device with LoRa capabilities. If wa
 {{< /hint >}}
 
 ```python
+
 from network import LoRa, WLAN
 import socket
 import time

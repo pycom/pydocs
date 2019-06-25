@@ -5,21 +5,13 @@ aliases:
     - firmwareapi/pycom/machine/rmt.md
     - chapter/firmwareapi/pycom/machine/rmt
 ---
-search:
-  keywords:
-    - RMT
-    - Remote
-    - Remote Controller
-    - Pulse
----
-
-# RMT
 
 The RMT (Remote Control) module is primarily designed to send and receive infrared remote control signals that use on-off-keying of a carrier frequency, but due to its design it can be used to generate various types of signals.
 
 ## Quick Usage Example: sending
 
 ```python
+
 import machine
 
 # create a RMT object for transmission
@@ -35,6 +27,7 @@ rmt.send_pulses(duration, data)
 ## Quick Usage Example: receiving
 
 ```python
+
 import machine
 # create a RMT object
 rmt = machine.RMT(channel=3)
@@ -137,4 +130,3 @@ Generates pulses as defined by the parameters below
 ## Constants
 
 * Define the level of the pulse: `RMT.LOW`, `RMT.HIGH`
-

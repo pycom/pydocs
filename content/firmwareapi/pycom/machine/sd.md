@@ -19,6 +19,7 @@ Make sure your SD card is formatted either as FAT16 or FAT32.
 ## Quick Example Usage:
 
 ```python
+
 from machine import SD
 import os
 
@@ -41,7 +42,7 @@ f.close()
 
 #### class machine.SD(id, ...)
 
-Create a SD card object. See [`sd.init()`](sd.md#sd-init-id-0) for parameters if initialisation.
+Create a SD card object. See [`sd.init()`](../sd#sd-init-id-0) for parameters if initialisation.
 
 ## Methods
 
@@ -56,4 +57,3 @@ Disable the SD card.
 {{% hint style="info" %}}
 Please note that the SD card library currently supports FAT16/32 formatted SD cards up to 32 GB. Future firmware updates will increase compatibility with additional formats and sizes.
 {{< /hint >}}
-

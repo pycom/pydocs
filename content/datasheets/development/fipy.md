@@ -17,7 +17,7 @@ aliases:
 
 **Store**: [Buy Here](https://pycom.io/product/fipy/)
 
-**Getting Started:** [Click Here](../../gettingstarted/connection/fipy)
+**Getting Started:** [Click Here](/gettingstarted/connection/fipy)
 
 
 ## Datasheet
@@ -61,13 +61,13 @@ The AT commands for the Sequans Monarch modem on the FiPy are available in a PDF
 
 ## Tutorials
 
-Tutorials on how to the FiPy module can be found in the [examples](../../tutorials/introduction) section of this documentation. The following tutorials might be of specific interest for the FiPy:
+Tutorials on how to the FiPy module can be found in the [examples](/tutorials/introduction) section of this documentation. The following tutorials might be of specific interest for the FiPy:
 
-* [WiFi connection](../../tutorials/all/wlan)
-* [LoRaWAN node](../../tutorials/lora/lorawan-abp)
-* [LoRaWAN nano gateway](../../tutorials/lora/lorawan-nano-gateway)
-* [Sigfox](../../tutorials/sigfox)
-* [LTE CAT-M1](../../tutorials/lte/cat-m1)
-* [NB-IoT](../../tutorials/lte/nb-iot)
-* [BLE](../../tutorials/all/ble)
+* [WiFi connection](/tutorials/all/wlan)
+* [LoRaWAN node](/tutorials/lora/lorawan-abp)
+* [LoRaWAN nano gateway](/tutorials/lora/lorawan-nano-gateway)
+* [Sigfox](/tutorials/sigfox)
+* [LTE CAT-M1](/tutorials/lte/cat-m1)
+* [NB-IoT](/tutorials/lte/nb-iot)
+* [BLE](/tutorials/all/ble)
 

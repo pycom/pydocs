@@ -1,9 +1,6 @@
-
 html {
     font-size: 105%;
-
 }
-
 
 .menu-contextual {
   width: 320px;
@@ -82,7 +79,7 @@ p {
 .bread {
   font-family: 'Beba',Helvetica,Arial,Lucida,sans-serif;
   letter-spacing: 0.1em;
-  color: #7800FF;
+  /* color: #7800FF; */
 }
 
 .theme--dark.v-navigation-drawer:not(.v-navigation-drawer--floating) .v-navigation-drawer__border {
@@ -106,8 +103,12 @@ a:hover {
   background-color: yellow;
 }
 
+a.v-tabs__item:hover {
+    background-color: red!important;
+}
+
 a {
-    color: #1E1E3C!important;
+    color: #1E1E3C;
 }
 
 li > a {
@@ -117,7 +118,6 @@ li > a {
 }
 
 li > a.hot {
-  color: #7800FF;
   text-decoration: underline;
   background-color: yellow;
   padding: 6px;
@@ -189,26 +189,6 @@ img {
   padding: 18px;
 }
 
-/*
-nav#TableOfContents::-webkit-scrollbar, .fancyScroll::-webkit-scrollbar
-{
-	width: 10px!important;
-}
-
-nav#TableOfContents::-webkit-scrollbar-thumb, .fancyScroll::-webkit-scrollbar-thumb
-{
-	border-radius: 10px!important;
-	background-image: -webkit-gradient(linear,
-									   left bottom,
-									   left top,
-                     color-stop(0.86, rgb(255,255,255)),
-                     color-stop(0.72, rgb(120,0,255)));
-}
-*/
-
-
-
-
 [v-cloak] > * { display:none }
 [v-cloak]::before {
   content: " ";
@@ -221,8 +201,6 @@ nav#TableOfContents::-webkit-scrollbar-thumb, .fancyScroll::-webkit-scrollbar-th
   background-attachment: fixed;
   background-position: center;
 }
-
-
 
 table {
     display: table;
@@ -281,7 +259,6 @@ pre > code {
 }
 
 code {
-
     padding: 1px;
     background-color: #EEEEEE;
 }

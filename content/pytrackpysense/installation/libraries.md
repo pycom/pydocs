@@ -35,6 +35,7 @@ The Pytrack and Pysense boards behave the same as the Expansion Board. `Upload`,
 Once the libraries are uploaded to the device, they can be used/imported as a typical MicroPython library would be. For example, importing and using the light sensor on the Pysense:
 
 ```python
+
 from pysense import Pysense
 from LTR329ALS01 import LTR329ALS01
 

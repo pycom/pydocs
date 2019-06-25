@@ -6,13 +6,14 @@ aliases:
     - chapter/tutorials/pytrack
 ---
 
-Both the Pysense and Pytrack use the same accelerometer. Please see the [Pysense Examples](pysense) to see how to use the accelerometer.
+Both the Pysense and Pytrack use the same accelerometer. Please see the [Pysense Examples](../pysense) to see how to use the accelerometer.
 
 ## Example
 
 You can find this example in the [pycom/pycom-libraries](https://github.com/pycom/pycom-libraries) GitHub repository.
 
 ```python
+
 import machine
 import math
 import network
@@ -53,4 +54,3 @@ while (True):
 
 * [micropyGPS](https://github.com/inmcm/micropyGPS)
 * [Alternative L76GNSS module](https://github.com/andrethemac/L76GLNSV4/blob/master/L76GNSV4.py)
-

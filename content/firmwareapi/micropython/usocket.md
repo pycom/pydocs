@@ -27,6 +27,7 @@ Translate the host/port argument into a sequence of 5-tuples that contain all th
 `(family, type, proto, canonname, sockaddr)` The following example shows how to connect to a given url:
 
 ```python
+
 s = socket.socket()
 s.connect(socket.getaddrinfo('www.micropython.org', 80)[0][-1])
 ```
@@ -110,6 +111,7 @@ Set blocking or non-blocking mode of the socket: if flag is false, the socket is
 This method is a shorthand for certain `settimeout()` calls:
 
 ```python
+
 sock.setblocking(True) is equivalent to sock.settimeout(None)
 sock.setblocking(False) is equivalent to sock.settimeout(0.0)
 ```
@@ -128,7 +130,7 @@ Closing the file object returned by `makefile()` **WILL** close the original soc
 
 #### socket.read(size)
 
-Read up to size bytes from the socket. Return a bytes object. If `size` is not given, it behaves just like [`socket.readall()`](usocket.md#socket-readall), see below.
+Read up to size bytes from the socket. Return a bytes object. If `size` is not given, it behaves just like [`socket.readall()`](../usocket.md#socket-readall), see below.
 
 #### socket.readall()
 
@@ -204,7 +206,7 @@ while True:
 ```
 
 #### socket.dnsserver(*, dnsIndex, ip_addr)
- 
+
 When no arguments are passed this function returns the configured DNS servers Primary (Index=0) and backup (Index = 1)
 to set primary and Backup DNS servers specify the Index and Ip Address.
 

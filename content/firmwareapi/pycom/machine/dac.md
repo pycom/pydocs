@@ -11,6 +11,7 @@ The DAC is used to output analog values (a specific voltage) on pin `P22` or pin
 ## Quick Usage Example
 
 ```python
+
 import machine
 
 dac = machine.DAC('P22')        # create a DAC object

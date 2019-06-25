@@ -17,7 +17,7 @@ aliases:
 
 **Store**: [Buy Here](https://pycom.io/product/lopy4/)
 
-**Getting Started:** [Click Here](../../gettingstarted/connection/lopy4)
+**Getting Started:** [Click Here](/gettingstarted/connection/lopy4)
 
 ## Datasheet
 
@@ -51,11 +51,11 @@ The `Vin` pin on the LoPy4 can be supplied with a voltage ranging from `3.5v` to
 
 ## Tutorials
 
-Tutorials on how to the LoPy4 module can be found in the [examples](../../tutorials/introduction) section of this documentation. The following tutorials might be of specific interest for the LoPy4:
+Tutorials on how to the LoPy4 module can be found in the [examples](/tutorials/introduction) section of this documentation. The following tutorials might be of specific interest for the LoPy4:
 
-* [WiFi connection](../../tutorials/all/wlan)
-* [LoRaWAN node](../../tutorials/lora/lorawan-abp)
-* [LoRaWAN nano gateway](../../tutorials/lora/lorawan-nano-gateway)
-* [Sigfox](../../tutorials/sigfox)
-* [BLE](../../tutorials/all/ble)
+* [WiFi connection](/tutorials/all/wlan)
+* [LoRaWAN node](/tutorials/lora/lorawan-abp)
+* [LoRaWAN nano gateway](/tutorials/lora/lorawan-nano-gateway)
+* [Sigfox](/tutorials/sigfox)
+* [BLE](/tutorials/all/ble)
 

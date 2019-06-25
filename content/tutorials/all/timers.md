@@ -13,6 +13,7 @@ Detailed information about this class can be found in [`Timer`](/firmwareapi/pyc
 The Chronometer can be used to measure how much time has elapsed in a block of code. The following example uses a simple stopwatch.
 
 ```python
+
 from machine import Timer
 import time
 
@@ -36,6 +37,7 @@ print("  %f seconds in the last lap" % (total - lap))
 The Alarm can be used to get interrupts at a specific interval. The following code executes a callback every second for 10 seconds.
 
 ```python
+
 from machine import Timer
 
 class Clock:
@@ -54,6 +56,5 @@ clock = Clock()
 ```
 
 {{% hint style="info" %}}
-There are no restrictions to what can be done in an interrupt. For example, it is possible to even do network requests with an interrupt. However, it is important to keep in mind that interrupts are handled sequentially, so it's good practice to keep them short. More information can be found in [`Interrupt Handling`](/firmwareapi/notes.md#interrupt-handling).
+There are no restrictions to what can be done in an interrupt. For example, it is possible to even do network requests with an interrupt. However, it is important to keep in mind that interrupts are handled sequentially, so it's good practice to keep them short. More information can be found in [`Interrupt Handling`](/firmwareapi/notes#interrupt-handling).
 {{< /hint >}}
-

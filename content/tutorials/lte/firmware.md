@@ -20,6 +20,7 @@ This article is only related to GPy, FiPy, and G01 boards
 Please also use the file upgdiff_33080-to-39529.dup (1.2M) from the archive.
 
 ```python
+
 import sqnsupgrade
 sqnsupgrade.run('upgdiff_33080-to-39529.dup', 'updater.elf')
 ```
@@ -51,6 +52,7 @@ Please note that the `updater.elf` file is only around 300K so you can also stor
  To upgrade from the previous CAT-M1 firmware 38638 you can simply upload the upgdiff_38638-to-39529.dup file (452K) from the CATM1-39529.zip archive into the /flash directory on your module and run:
 
 ```python
+
 import sqnsupgrade
 sqnsupgrade.run('upgdiff_38638-to-39529.dup')
 ```
@@ -66,6 +68,7 @@ To transfer the firmware files onto the SD card you have two options:
 2. Make sure your SD card has an MBR and a single primary partition, the format it directly on the module, mount it and transfer the firmware files onto the SD card using FTP. Please ensure the transfer is successful and that each file on the module has the same size as the original file on your PC.
 
 ```python
+
 from machine import SD
 
 sd = SD()
@@ -79,6 +82,7 @@ Once you copied/uploaded the firmware files on to the SD card you can flash the 
 To flash the CAT-M1 firmware onto your device using the recovery method:
 
 ```python
+
 import sqnsupgrade
 sqnsupgrade.run('/sd/CATM1-39529.dup', '/sd/updater.elf')
 ```
@@ -86,6 +90,7 @@ sqnsupgrade.run('/sd/CATM1-39529.dup', '/sd/updater.elf')
 To flash the NB-IoT firmware onto your device using the recovery method:
 
 ```python
+
 import sqnsupgrade
 sqnsupgrade.run('/sd/NB1-37781.dup', '/sd/updater.elf')
 ```
@@ -187,6 +192,7 @@ First, you need to prepare your modem for upgrade mode by using the following co
 To use the recovery method:
 
 ```python
+
 import sqnsupgrade
 sqnsupgrade.uart(True)
 ```
@@ -194,6 +200,7 @@ sqnsupgrade.uart(True)
 To use the recovery method using the `updater.elf` file on the module**:**
 
 ```python
+
  import sqnsupgrade
  sqnsupgrade.uart(True,'/flash/updater.elf')
 ```
@@ -201,6 +208,7 @@ To use the recovery method using the `updater.elf` file on the module**:**
 To use the normal method:
 
 ```python
+
  import sqnsupgrade
  sqnsupgrade.uart()
 ```
@@ -220,6 +228,7 @@ Go to the directory where you saved the `sqnsupgrade` scripts and run the follow
 When using the recovery method:
 
 ```python
+
 $ python3
 Python 3.6.5 (default, Apr 25 2018, 14:23:58)
 [GCC 4.2.1 Compatible Apple LLVM 9.1.0 (clang-902.0.39.1)] on darwin
@@ -232,6 +241,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 When using the standard method (or if the `updater.elf` was loaded on the module):
 
 ```python
+
  $ python3
  Python 3.6.5 (default, Apr 25 2018, 14:23:58)
  [GCC 4.2.1 Compatible Apple LLVM 9.1.0 (clang-902.0.39.1)] on darwin

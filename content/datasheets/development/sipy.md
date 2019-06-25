@@ -17,7 +17,7 @@ aliases:
 
 **Store**: [Buy Here](https://pycom.io/product/sipy)
 
-**Getting Started:** [Click Here](../../gettingstarted/connection/sipy)
+**Getting Started:** [Click Here](/gettingstarted/connection/sipy)
 
 ## Datasheet
 
@@ -51,13 +51,12 @@ The `Vin` pin on the SiPy can be supplied with a voltage ranging from `3.5v` to 
 
 ### Deep Sleep
 
-Due to a couple issues with the SiPy design the module draws more current than it should while in deep sleep. The DC-DC switching regulator always stays in high performance mode which is used to provide the lowest possible output ripple when the modules is in use. In this mode, it draws a quiescent current of 10mA. When the regulator is put into ECO mode, the quiescent current goes down to 10uA. Unfortunately, the pin used to control this mode is out of the RTC domain, and therefore not usable during deep sleep. This causes the regulator to always stay in PWM mode, keeping its quiescent current at 10mA. Alongside this the flash chip doesn't enter power down mode because the CS pin is floating during deep sleep. This causes the flash chip to consume around 2mA of current. To work around this issue a ["deep sleep shield"](../boards/deepsleep/) is available that attaches to the module and allows power to be cut off from the device. The device can then be re-enabled either on a timer or via pin interrupt. With the deep sleep shield the current consumption during deep sleep is between 7uA and 10uA depending on the wake sources configured.
+Due to a couple issues with the SiPy design the module draws more current than it should while in deep sleep. The DC-DC switching regulator always stays in high performance mode which is used to provide the lowest possible output ripple when the modules is in use. In this mode, it draws a quiescent current of 10mA. When the regulator is put into ECO mode, the quiescent current goes down to 10uA. Unfortunately, the pin used to control this mode is out of the RTC domain, and therefore not usable during deep sleep. This causes the regulator to always stay in PWM mode, keeping its quiescent current at 10mA. Alongside this the flash chip doesn't enter power down mode because the CS pin is floating during deep sleep. This causes the flash chip to consume around 2mA of current. To work around this issue a ["deep sleep shield"](../../boards/deepsleep/) is available that attaches to the module and allows power to be cut off from the device. The device can then be re-enabled either on a timer or via pin interrupt. With the deep sleep shield the current consumption during deep sleep is between 7uA and 10uA depending on the wake sources configured.
 
 ## Tutorials
 
-Tutorials on how to the SiPy module can be found in the [examples](../../tutorials/introduction) section of this documentation. The following tutorials might be of specific interest for the SiPy:
+Tutorials on how to the SiPy module can be found in the [examples](/tutorials/introduction) section of this documentation. The following tutorials might be of specific interest for the SiPy:
 
-* [WiFi connection](../../tutorials/all/wlan)
-* [Sigfox](../../tutorials/sigfox)
-* [BLE](../../tutorials/all/ble)
-
+* [WiFi connection](/tutorials/all/wlan)
+* [Sigfox](/tutorials/sigfox)
+* [BLE](/tutorials/all/ble)

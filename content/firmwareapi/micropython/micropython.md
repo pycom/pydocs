@@ -19,6 +19,7 @@ A good way to use this function is to place it at the start of a main script (e.
 Used to declare that the expression is a constant so that the compile can optimise it. The use of this function should be as follows:
 
 ```python
+
 from micropython import const  
 
 CONST_X = const(123)

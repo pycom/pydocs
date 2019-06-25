@@ -21,6 +21,7 @@ Following are encoding examples for various field types:
 * Scalar types:
 
 ```python
+
 "field_name": uctypes.UINT32 | 0
 ```
 
@@ -29,6 +30,7 @@ In other words, value is scalar type identifier OR-ed with field offset (in byte
 * Recursive structures:
 
 ```python
+
 "sub": (2, {
     "b0": uctypes.UINT8 | 0,
     "b1": uctypes.UINT8 | 1,
@@ -40,6 +42,7 @@ I.e. value is a 2-tuple, first element of which is offset, and second is a struc
 * Arrays of Primitive Types:
 
 ```python
+
 "arr": (uctypes.ARRAY | 0, uctypes.UINT8 | 2),
 ```
 
@@ -48,6 +51,7 @@ I.e. value is a 2-tuple, first element of which is ARRAY flag OR-ed with offset,
 * Arrays of Aggregate Types:
 
 ```python
+
 "arr2": (uctypes.ARRAY | 0, 2, {"b": uctypes.UINT8 | 0}),
 ```
 
@@ -56,6 +60,7 @@ I.e. value is a 3-tuple, first element of which is ARRAY flag OR-ed with offset,
 * Pointer to a primitive type:
 
 ```python
+
 "ptr": (uctypes.PTR | 0, uctypes.UINT8),
 ```
 
@@ -64,6 +69,7 @@ I.e. value is a 2-tuple, first element of which is PTR flag OR-ed with offset, a
 * Pointer to an aggregate type:
 
 ```python
+
 "ptr2": (uctypes.PTR | 0, {"b": uctypes.UINT8 | 0}),
 ```
 
@@ -72,6 +78,7 @@ I.e. value is a 2-tuple, first element of which is PTR flag OR-ed with offset, s
 * Bitfields:
 
 ```python
+
 "bitf0": uctypes.BFUINT16 | 0 | 0 << uctypes.BF_POS | 8 << uctypes.BF_LEN,
 ```
 

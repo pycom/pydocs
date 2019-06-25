@@ -15,6 +15,7 @@ This module provides access to Transport Layer Security (often known as "Secure 
 Takes an instance `sock` of `socket.socket`, and returns an instance of ssl.SSLSocket, a subtype of `socket.socket`, which wraps the underlying socket in an SSL context. Example:
 
 ```python
+
 import socket
 import ssl
 s = socket.socket()
@@ -27,6 +28,7 @@ Certificates must be used in order to validate the other side of the connection,
 For instance, to connect to the Blynk servers using certificates, take the file `ca.pem` located in the `blynk` examples folder and put it in `/flash/cert/`. Then do:
 
 ```python
+
 import socket
 import ssl
 s = socket.socket()

@@ -25,6 +25,7 @@ The Nano-Gateway code is split into 3 files, `main.py`, `config.py` and `nanogat
 Most LoRaWAN network servers expect a Gateway ID in the form of a unique 64-bit hexadecimal number (called a EUI-64). The recommended practice is to produce this ID from your board by expanding the WiFi MAC address (a 48-bit number, called MAC-48). You can obtain that by running this code prior to configuration:
 
 ```python
+
 from network import WLAN
 import ubinascii
 wl = WLAN()
@@ -38,6 +39,7 @@ The result will by something like `b'240ac4FFFE008d88'` where `240ac4FFFE008d88`
 This file runs at boot and calls the library and `config.py` files to initialise the nano-gateway. Once configuration is set, the nano-gateway is then started.
 
 ```python
+
 """ LoPy LoRaWAN Nano Gateway example usage """
 
 import config
@@ -70,6 +72,7 @@ The Gateway ID is generated in the script using the process described above.
 **Please change the WIFI\_SSID and WIFI\_PASS variables to match your desired WiFi network**
 
 ```python
+
 """ LoPy LoRaWAN Nano Gateway configuration options """
 
 import machine
@@ -104,6 +107,7 @@ LORA_NODE_DR = 5
 The nano-gateway library controls all of the packet generation and forwarding for the LoRa data. This does not require any user configuration and the latest version of this code should be downloaded from the Pycom [GitHub Repository](https://github.com/pycom/pycom-libraries/tree/master/examples/lorawan-nano-gateway).
 
 ```python
+
 """ LoPy Nano Gateway class """
 
 from network import WLAN
@@ -397,6 +401,7 @@ It's important that the following code examples (also on GitHub) are used to con
 When the LoPy connects an application (via TTN) using OTAA, the network configuration is derived automatically during a handshake between the LoPy and network server. Note that the network keys derived using the OTAA methodology are specific to the device and are used to encrypt and verify transmissions at the network level.
 
 ```python
+
 """ OTAA Node example compatible with the LoPy Nano Gateway """
 
 from network import LoRa
@@ -461,6 +466,7 @@ Using ABP join mode requires the user to define the following values and input t
 * Network Session Key
 
 ```python
+
 """ ABP Node example compatible with the LoPy Nano Gateway """
 
 from network import LoRa

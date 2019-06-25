@@ -10,7 +10,7 @@ This module provides native support for cryptographic algorithms. It's loosely b
 
 ## Classes
 
-* [class AES](../pycom/aes) - Advanced Encryption Standard
+* [class AES](/firmwareapi/pycom/aes) - Advanced Encryption Standard
 
 ## **Methods**
 
@@ -35,6 +35,7 @@ The `pers` is the personalization string used for random number generation.
 Returns with a Bytes object containing the generated signature.
 
 ```python
+
 import crypto
 
 # Example of a JWT header + payload
@@ -45,4 +46,3 @@ pk = f.read()
 # Generate the signature
 signature = crypto.generate_rsa_signature(header_payload, pk, pers="my_pers_string")
 ```
-

@@ -28,6 +28,7 @@ If you're trying to update to the latest `development` firmware, make sure you u
 Open a support ticket with the details and send us the result of this code:
 
 ```python
+
 import machine, binascii                                                     
 binascii.hexlify(machine.unique_id())
 ```

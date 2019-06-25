@@ -16,6 +16,7 @@ The following class allows you to manage Server characteristics.
 Gets or sets the value of the characteristic. Can take an integer, a string or a bytes object.
 
 ```python
+
 characteristic.value(123) # set characteristic value to an integer with the value 123
 characteristic.value() # get characteristic value
 ```
@@ -37,6 +38,7 @@ Returns a value with bit flags identifying the events that have occurred since t
 An example of advertising and creating services on the device:
 
 ```python
+
 from network import Bluetooth
 
 bluetooth = Bluetooth()

@@ -8,11 +8,11 @@ aliases:
 
 Every Sigfox Pycom device comes with free Sigfox connectivity - Sigfox DevKit contract. It provides one year of Sigfox connectivity. This is great for prototyping.
 
-But every device you want to add to Pybytes you need register on Sigfox backend. You need to repeat [Sigfox activation procedure](../../../gettingstarted/registration/sigfox).
+But every device you want to add to Pybytes you need register on Sigfox backend. You need to repeat [Sigfox activation procedure](/gettingstarted/registration/sigfox).
 
 After you add your Sigfox credentials to Pybytes you can see DevKit contract type is selected as default (on page Settings → Sigfox API).
 
-![](..//gitbook/assets/pybytesdevkit%20%281%29.png)
+![](/gitbook/assets/pybytesdevkit%20%281%29.png)
 
 ## Add your device to Pybytes
 
@@ -22,7 +22,7 @@ After you add your Sigfox credentials to Pybytes you can see DevKit contract typ
    2. Paste your device token to firmware updater
 
 {{% hint style="info" %}}
-Detailed steps which are same for all devices are [**described here**](../quick).
+Detailed steps which are same for all devices are [**described here**](../../quick).
 {{< /hint >}}
 
 ## Check sigfox status
@@ -33,7 +33,7 @@ Now you should see sigfox status component.
 
 Click on _Check Sigfox status_ button
 
-![](..//gitbook/assets/devkitcheck.png)
+![](/gitbook/assets/devkitcheck.png)
 
 You should see two green lights.
 
@@ -47,5 +47,4 @@ This is not an issue with Custom contract, where _device type_ on Sigfox backend
 
 ## Troubleshooting
 
-[Disengage Sigfox sequence number](../../../tutorials/sigfox.md#disengage-sequence-number)
-
+[Disengage Sigfox sequence number](/tutorials/sigfox#disengage-sequence-number)

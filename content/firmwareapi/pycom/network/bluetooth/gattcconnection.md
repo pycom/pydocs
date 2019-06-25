@@ -20,6 +20,7 @@ Returns `True` if the connection is still open. `False` otherwise.
 Example:
 
 ```python
+
 from network import Bluetooth
 import ubinascii
 bluetooth = Bluetooth()
@@ -47,6 +48,7 @@ Performs a service search on the connected BLE peripheral (server) a returns a l
 Example:
 
 ```python
+
 # assuming that a BLE connection is already open
 services = connection.services()
 print(services)

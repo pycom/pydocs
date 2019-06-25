@@ -11,6 +11,7 @@ This example shows how to connect two Pycode LoRa capable modules (nodes) via ra
 ## Node A
 
 ```python
+
 from network import LoRa
 import socket
 import time
@@ -33,6 +34,7 @@ while True:
 ## Node B
 
 ```python
+
 from network import LoRa
 import socket
 import time

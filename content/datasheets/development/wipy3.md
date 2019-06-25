@@ -7,7 +7,7 @@ aliases:
     - chapter/datasheets/development/wipy3
 ---
 
-![](/gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn86pdzbdvrponxeg6-wipy3.png) 
+![](/gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn86pdzbdvrponxeg6-wipy3.png)
 
 {{% hint style="info" %}}
  ** Please Note: We have removed the labels from the pictures in the documentation due to inconsistencies with label orientation.  *The LED must be aligned above the USB socket* when inserting or removing a development board from an expansion board/Pytrack/Pysense/Pyscan. **
@@ -16,7 +16,7 @@ aliases:
 
 **Store**: [Buy Here](https://pycom.io/product/wipy-3-0/)
 
-**Getting Started:** [Click Here](../../gettingstarted/connection/wipy)
+**Getting Started:** [Click Here](/gettingstarted/connection/wipy)
 
 ## Datasheet
 
@@ -57,8 +57,7 @@ The `Vin` pin on the WiPy3 can be supplied with a voltage ranging from `3.5v` to
 
 ## Tutorials
 
-Tutorials on how to the WiPy3 module can be found in the [examples](../../tutorials/introduction) section of this documentation. The following tutorials might be of specific interest for the WiPy3:
+Tutorials on how to the WiPy3 module can be found in the [examples](/tutorials/introduction) section of this documentation. The following tutorials might be of specific interest for the WiPy3:
 
-* [WiFi connection](../../tutorials/all/wlan)
-* [BLE](../../tutorials/all/ble)
-
+* [WiFi connection](/tutorials/all/wlan)
+* [BLE](/tutorials/all/ble)

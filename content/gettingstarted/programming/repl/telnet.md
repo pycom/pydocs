@@ -21,7 +21,7 @@ See [network.server](/firmwareapi/pycom/network/server) for info on how to chang
 
 ## All platforms
 
-By far the easiest way to access the Telnet REPL is via the our [Pymakr plug-in](../../../pymakr/installation/) for Atom and Visual Studio Code. This adds a pane to the bottom of the editors that allows you to directly access the REPL and any output from the device. Detailed instructions on how to setup Pymakr can be found [here](../../../pymakr/installation/).
+By far the easiest way to access the Telnet REPL is via the our [Pymakr plug-in](/pymakr/installation/) for Atom and Visual Studio Code. This adds a pane to the bottom of the editors that allows you to directly access the REPL and any output from the device. Detailed instructions on how to setup Pymakr can be found [here](/pymakr/installation/).
 
 ## macOS and Linux
 
@@ -44,4 +44,3 @@ A terminal emulator is needed to open a telnet connection from Windows; the easi
 {{% hint style="info" %}}
 When using a Pycom device with a personal, home or office WiFi access point, the telnet connection may still be used. In this instance, the user will need to determine the Pycom device's local IP address and substitute this for `192.168.4.1`, referred to in the earlier sections.
 {{< /hint >}}
-

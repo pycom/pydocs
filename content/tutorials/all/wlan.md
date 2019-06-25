@@ -11,6 +11,7 @@ The WLAN is a system feature of all Pycom devices, therefore it is enabled by de
 In order to retrieve the current WLAN instance, run:
 
 ```python
+
 >>> from network import WLAN
 >>> wlan = WLAN() # we call the constructor without params
 ```
@@ -18,6 +19,7 @@ In order to retrieve the current WLAN instance, run:
 The current mode (`WLAN.AP` after power up) may be checked by running:
 
 ```python
+
 >>> wlan.mode()
 ```
 
@@ -38,6 +40,7 @@ When changing the WLAN mode, if following the instructions below, the WLAN conne
 The WLAN network class always boots in `WLAN.AP` mode; to connect it to an existing network, the WiFi class must be configured as a station:
 
 ```python
+
 from network import WLAN
 wlan = WLAN(mode=WLAN.STA)
 ```
@@ -45,6 +48,7 @@ wlan = WLAN(mode=WLAN.STA)
 Now the device may proceed to scan for networks:
 
 ```python
+
 nets = wlan.scan()
 for net in nets:
     if net.ssid == 'mywifi':
@@ -61,6 +65,7 @@ for net in nets:
 If the users wants their device to connect to a home router upon boot up, using with a fixed IP address, use the following script as `/flash/boot.py`:
 
 ```python
+
 import machine
 from network import WLAN
 wlan = WLAN() # get current object, without changing the mode
@@ -86,6 +91,7 @@ Notice how we check for the reset cause and the connection status, this is cruci
 The following script holds a list with nets and an optional list of `wlan_config` to set a fixed IP
 
 ```python
+
 import os
 import machine
 
@@ -134,6 +140,7 @@ if machine.reset_cause() != machine.SOFT_RESET:
 Before connecting, obtain and copy the public and private keys to the device, e.g. under location `/flash/cert`. If it is required to validate the server's public key, an appropriate CA certificate (chain) must also be provided.
 
 ```python
+
 from network import WLAN
 
 wlan = WLAN(mode=WLAN.STA)
@@ -145,6 +152,7 @@ wlan.connect(ssid='mywifi', auth=(WLAN.WPA2_ENT,), identity='myidentity', ca_cer
 In case of EAP-PEAP (or EAP-TTLS), the client key and certificate are not necessary, only a username and password pair. If it is required to validate the server's public key, an appropriate CA certificate (chain) must also be provided.
 
 ```python
+
 from network import WLAN
 
 wlan = WLAN(mode=WLAN.STA)

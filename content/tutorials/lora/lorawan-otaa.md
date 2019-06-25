@@ -11,6 +11,7 @@ OTAA stands for Over The Air Authentication. With this method the LoPy sends a J
 The example below attempts to get any data received after sending the frame. Keep in mind that the Gateway might not be sending any data back, therefore we make the socket non-blocking before attempting to receive, in order to prevent getting stuck waiting for a packet that will never arrive.
 
 ```python
+
 from network import LoRa
 import socket
 import time

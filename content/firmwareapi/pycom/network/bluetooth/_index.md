@@ -2,10 +2,6 @@
 title: "Bluetooth"
 aliases:
 ---
-search: false
----
-
-# Bluetooth
 
 This class provides a driver for the Bluetooth radio in the module. Currently, only basic BLE functionality is available.
 
@@ -57,6 +53,7 @@ Create a Bluetooth object, and optionally configure it. See init for params of c
 Example:
 
 ```python
+
 from network import Bluetooth
 bluetooth = Bluetooth()
 ```
@@ -77,6 +74,7 @@ Initialises and enables the Bluetooth radio in BLE mode.
 To use an external antenna, set `P12 as output pin.`
 
 ```python
+
 Pin('P12', mode=Pin.OUT)(True)
 ```
 {{< /hint >}}
@@ -96,6 +94,7 @@ The arguments are:
 Examples:
 
 ```python
+
 bluetooth.start_scan(10)        # starts scanning and stop after 10 seconds
 bluetooth.start_scan(-1)        # starts scanning indefinitely until bluetooth.stop_scan() is called
 ```
@@ -121,6 +120,7 @@ Gets an named tuple with the advertisement data received during the scanning. Th
 Example for getting `mac` address of an advertiser:
 
 ```python
+
 import ubinascii
 
 bluetooth = Bluetooth()
@@ -146,6 +146,7 @@ Arguments:
 Example:
 
 ```python
+
 import ubinascii
 from network import Bluetooth
 bluetooth = Bluetooth()
@@ -171,6 +172,7 @@ Opens a BLE connection with the device specified by the `mac_addr` argument. Thi
 Connections are initiated by the central device. There is a maximum of 4 simultaneous connections.
 
 ```python
+
 bluetooth.connect('112233eeddff') # mac address is accepted as a string
 ```
 
@@ -191,6 +193,7 @@ Returns a value with bit flags identifying the events that have occurred since t
 Example of usage:
 
 ```python
+
 from network import Bluetooth
 
 bluetooth = Bluetooth()
@@ -222,6 +225,7 @@ The arguments are:
 Example:
 
 ```python
+
 bluetooth.set_advertisement(name="advert", manufacturer_data="lopy_v1")
 ```
 
@@ -241,6 +245,7 @@ The arguments are:
 * `start` if `True` the service is started immediately.
 
 ```python
+
 bluetooth.service('abc123')
 ```
 
@@ -257,4 +262,3 @@ Closes the BLE connection with the client.
 * Characteristic properties (bit values that can be combined): `Bluetooth.PROP_BROADCAST`, `Bluetooth.PROP_READ`, `Bluetooth.PROP_WRITE_NR`, `Bluetooth.PROP_WRITE`, `Bluetooth.PROP_NOTIFY`, `Bluetooth.PROP_INDICATE`, `Bluetooth.PROP_AUTH`, `Bluetooth.PROP_EXT_PROP`
 * Characteristic callback events: `Bluetooth.CHAR_READ_EVENT`, `Bluetooth.CHAR_WRITE_EVENT`, `Bluetooth.NEW_ADV_EVENT`, `Bluetooth.CLIENT_CONNECTED`, `Bluetooth.CLIENT_DISCONNECTED`, `Bluetooth.CHAR_NOTIFY_EVENT`
 * Antenna type: `Bluetooth.INT_ANT`, `Bluetooth.EXT_ANT`
-

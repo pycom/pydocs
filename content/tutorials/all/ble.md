@@ -15,6 +15,7 @@ Full info on `bluetooth` can be found within [Bluetooth page]() of the Firmware 
 Scan for all of the advertising devices within range of the scanning device.
 
 ```python
+
 bluetooth.start_scan(10)  # starts scanning and stop after 10 seconds
 bluetooth.start_scan(-1)  # starts scanning indefinitely until bluetooth.stop_scan() is called
 ```
@@ -24,6 +25,7 @@ bluetooth.start_scan(-1)  # starts scanning indefinitely until bluetooth.stop_sc
 A quick usage example that scans and prints the raw data from advertisements.
 
 ```python
+
 from network import Bluetooth
 
 bluetooth = Bluetooth()
@@ -38,6 +40,7 @@ while True:
 Connecting to a device that is sending advertisements.
 
 ```python
+
 from network import Bluetooth
 import ubinascii
 bluetooth = Bluetooth()
@@ -63,6 +66,7 @@ print("Connected to device with addr = {}".format(ubinascii.hexlify(adv.mac)))
 Connecting to a device named 'Heart Rate' and receiving data from it's services.
 
 ```python
+
 from network import Bluetooth
 import time
 bt = Bluetooth()
@@ -97,6 +101,7 @@ while True:
 Using `resolve_adv_data()` to attempt to retrieve the name and manufacturer data from the advertiser.
 
 ```python
+
 import ubinascii
 from network import Bluetooth
 bluetooth = Bluetooth()

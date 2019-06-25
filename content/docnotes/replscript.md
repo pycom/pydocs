@@ -11,6 +11,8 @@ Users of this documentation should be aware that examples given in the docs are 
 ## Basic Arithmetic
 
 ```python
+
+
 1 + 1 # REPL will print out '2' to console
 1 + 1 # Script will not return anything the console
 print(1 + 1) # Both the REPL and a script will return '2' to the console
@@ -37,4 +39,3 @@ value = 1 + 1
 # do something here...
 print(value)
 ```
-

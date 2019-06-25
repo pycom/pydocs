@@ -30,6 +30,7 @@ The following examples create an RMT object on channel 4, configure it for trans
 In this first example, we define the signal as a tuple of binary values that define the shape of the desired signal along with the duration of a bit.
 
 ```python
+
 from machine import RMT
 # Map RMT channel 4 to P21, when the RMT is idle, it will output LOW
 rmt = RMT(channel=4, gpio="P21", tx_idle_level=RMT.LOW)
@@ -46,6 +47,7 @@ rmt.pulses_send(duration, data)
 In this example we define the signal by a tuple of durations and what state the signal starts in.
 
 ```python
+
 from machine import RMT
 # Map RMT channel 4 to P21, when the RMT is idle, it will output LOW
 rmt = RMT(channel=4, gpio="P21", tx_idle_level=RMT.LOW)
@@ -65,6 +67,7 @@ rmt.pulses_send(duration, start_level=RMT.HIGH)
 This third example, is a combination of the above two styles of defining a signal. Each pulse has a defined duration as well as a state. This is useful if you don't always want the signal to toggle state.
 
 ```python
+
 from machine import RMT
 # Map RMT channel 4 to P21, when the RMT is idle, it will output LOW
 rmt = RMT(channel=4, gpio="P21", tx_idle_level=RMT.LOW)
@@ -81,6 +84,7 @@ rmt.pulses_send(duration, data)
 The following example creates an RMT object on channel 4 and configures it for transmission with carrier modulation.
 
 ```python
+
 from machine import RMT
 rmt = RMT(channel=4,
           gpio="P21",
@@ -97,6 +101,7 @@ rmt.pulses_send(duration, data)
 The following example creates an RMT object on channel 2, configures it for receiving, then waits for the first, undefined number of pulses without timeout
 
 ```python
+
 from machine import RMT
 rmt = machine.RMT(channel=2)
 rmt.init(gpio="P21", rx_idle_threshold=1000)
@@ -115,6 +120,7 @@ data = rmt.pulses_get()
 The following example creates an RMT object on channel 2, configures it for receiving a undefined number of pulses, then waits maximum of 1000us for the first pulse.
 
 ```python
+
 from machine import RMT
 # Sets RMT channel 2 to P21 and sets the maximum length of a valid pulse to
 # 1000*channel resolution = 1000 * 100ns = 100us
@@ -131,6 +137,7 @@ data = rmt.pulses_get(timeout=500)
 The following example creates an RMT object on channel 2, configures it for receiving, filters out pulses with width &lt; 20\*100 nano seconds, then waits for 100 pulses
 
 ```python
+
 from machine import RMT
 
 rmt = machine.RMT(channel=2,  # Resolution = 100ns

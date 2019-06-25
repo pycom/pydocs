@@ -72,6 +72,7 @@ Get the elapsed time in microseconds.
 Example:
 
 ```python
+
 from machine import Timer
 import time
 
@@ -110,6 +111,7 @@ Disables the alarm.
 Example:
 
 ```python
+
 from machine import Timer
 
 class Clock:
@@ -128,6 +130,5 @@ clock = Clock()
 ```
 
 {{% hint style="info" %}}
-For more information on how Pycom's products handle interrupts, see [notes](../../notes.md#interrupt-handling).
+For more information on how Pycom's products handle interrupts, see [notes](/firmwareapi/notes#interrupt-handling).
 {{< /hint >}}
-

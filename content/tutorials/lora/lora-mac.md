@@ -11,6 +11,7 @@ Basic LoRa connection example, sending and receiving data. In LoRa-MAC mode the 
 For the example below, you will need two LoPys. A `while` loop with a random delay time is used to minimise the chances of the 2 LoPy's transmitting at the same time. Run the code below on the 2 LoPy modules and you will see the word 'Hello' being received on both sides.
 
 ```python
+
 from network import LoRa
 import socket
 import machine

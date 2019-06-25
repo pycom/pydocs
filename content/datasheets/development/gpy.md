@@ -15,7 +15,7 @@ aliases:
 
 **Store**: [Buy Here](https://pycom.io/product/gpy)
 
-**Getting Started:** [Click Here](../../gettingstarted/connection/gpy)
+**Getting Started:** [Click Here](/gettingstarted/connection/gpy)
 
 ## Datasheet
 
@@ -64,10 +64,10 @@ The AT commands for the Sequans Monarch modem on the GPy are available in a PDF 
 
 ## Tutorials
 
-Tutorials on how to the GPy module can be found in the [examples](../../tutorials/introduction) section of this documentation. The following tutorials might be of specific interest for the GPy:
+Tutorials on how to the GPy module can be found in the [examples](/tutorials/introduction) section of this documentation. The following tutorials might be of specific interest for the GPy:
 
-* [WiFi connection](../../tutorials/all/wlan)
-* [LTE CAT-M1](../../tutorials/lte/cat-m1)
-* [NB-IoT](../../tutorials/lte/nb-iot)
-* [BLE](../../tutorials/all/ble)
+* [WiFi connection](/tutorials/all/wlan)
+* [LTE CAT-M1](/tutorials/lte/cat-m1)
+* [NB-IoT](/tutorials/lte/nb-iot)
+* [BLE](/tutorials/all/ble)
 

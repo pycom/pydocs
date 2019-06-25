@@ -9,6 +9,7 @@ aliases:
 This class provides a driver for the WiFi network processor in the module. Example usage:
 
 ```python
+
 import network
 import time
 # setup as a station
@@ -24,6 +25,7 @@ print(wlan.ifconfig())
 ## Quick Usage Example
 
 ```python
+
 import machine
 from network import WLAN
 
@@ -42,7 +44,7 @@ print(wlan.ifconfig())
 
 #### class network.WLAN(id=0, ...)
 
-Create a WLAN object, and optionally configure it. See [`init`](wlan.md#wlan-init-mode-ssid-none-auth-none-channel-1-antenna-none-power_save-false-hidden-false) for params of configuration.
+Create a WLAN object, and optionally configure it. See [`init`](../wlan.md#wlan-init-mode-ssid-none-auth-none-channel-1-antenna-none-power_save-false-hidden-false) for params of configuration.
 
 {{% hint style="info" %}}
 The WLAN constructor is special in the sense that if no arguments besides the `id` are given, it will return the already existing WLAN instance without re-configuring it. This is because WLAN is a system feature of the WiPy. If the already existing instance is not initialised it will do the same as the other constructors an will initialise it with default values.
@@ -71,6 +73,7 @@ Arguments are:
 For example, you can do:
 
 ```python
+
 # create and configure as an access point
 wlan.init(mode=WLAN.AP, ssid='wipy-wlan', auth=(WLAN.WPA2,'www.wipy.io'), channel=7, antenna=WLAN.INT_ANT)
 ```
@@ -78,6 +81,7 @@ wlan.init(mode=WLAN.AP, ssid='wipy-wlan', auth=(WLAN.WPA2,'www.wipy.io'), channe
 or
 
 ```python
+
 # configure as an station
 wlan.init(mode=WLAN.STA)
 ```
@@ -86,6 +90,7 @@ wlan.init(mode=WLAN.STA)
 To use an external antenna, set `P12 as output pin.`
 
 ```python
+
 Pin('P12', mode=Pin.OUT)(True)
 ```
 {{< /hint >}}
@@ -135,6 +140,7 @@ If `dhcp` is passed as a parameter then the DHCP client is enabled and the IP pa
 If the 4-tuple config is given then a static IP is configured. For instance:
 
 ```python
+
 wlan.ifconfig(config=('192.168.0.4', '255.255.255.0', '192.168.0.1', '8.8.8.8'))
 ```
 
@@ -162,6 +168,7 @@ Get or set the antenna type (external or internal).
 To use an external antenna, set `P12 as output pin.`
 
 ```python
+
 Pin('P12', mode=Pin.OUT)(True)
 ```
 {{< /hint >}}
@@ -175,4 +182,3 @@ Get a 6-byte long `bytes` object with the WiFI MAC address.
 * WLAN mode: `WLAN.STA`, `WLAN.AP`, `WLAN.STA_AP`
 * WLAN network security: `WLAN.WEP`, `WLAN.WPA`, `WLAN.WPA2`, `WLAN.WPA2_ENT`
 * Antenna type: `WLAN.INT_ANT`, `WLAN.EXT_ANT`
-

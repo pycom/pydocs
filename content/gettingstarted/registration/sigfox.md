@@ -23,6 +23,7 @@ See [Sigfox documentation](https://support.sigfox.com/docs/device-idpac-couple) 
 After first firmware update you can also get your _Sigfox ID_ and _Sigfox PAC_ through a couple of commands via the REPL.
 
 ```python
+
 from network import Sigfox
 import binascii
 

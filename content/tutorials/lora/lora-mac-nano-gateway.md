@@ -13,6 +13,7 @@ For more information and discussions about this code, see this forum [post](http
 ## Gateway Code
 
 ```python
+
 import socket
 import struct
 from network import LoRa
@@ -51,6 +52,7 @@ The `_LORA_PKG_FORMAT` is used as a method of identifying the different devices 
 ## Node
 
 ```python
+
 import os
 import socket
 import time

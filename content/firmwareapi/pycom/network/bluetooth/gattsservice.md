@@ -32,6 +32,7 @@ Creates a new characteristic on the service. Returns an object of the class `GAT
 * `value` sets the initial value. Can take an integer, a string or a bytes object.
 
 ```python
+
 service.characteristic('temp', value=25)
 ```
 

@@ -8,6 +8,7 @@ The `machine` module contains specific functions related to the board.
 ### Quick Usage Example
 
 ```python
+
 import machine
 
 help(machine) # display all members from the machine module

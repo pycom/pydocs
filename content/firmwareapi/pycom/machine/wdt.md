@@ -11,6 +11,7 @@ The WDT is used to restart the system when the application crashes and ends up i
 ## Quick Usage Example
 
 ```python
+
 from machine import WDT
 wdt = WDT(timeout=2000)  # enable it with a timeout of 2 seconds
 wdt.feed()

@@ -38,6 +38,7 @@ For more information see this <a href="http://docs.aws.amazon.com/iot/latest/dev
 This file contains the WiFi, certificate paths and application specific settings that need to be updated by the user.
 
 ```python
+
 # WiFi configuration
 WIFI_SSID = 'my_wifi_ssid'
 WIFI_PASS = 'my_wifi_password'
@@ -88,6 +89,7 @@ To subscribe to a topic:
 * Messages should be published as shown in the [diagram](https://github.com/pycom/pycom-docs/tree/37661883902849b1a931ee273a23ae8e0f3d773e/img/aws-10.png)
 
 ```python
+
 # user specified callback function
 def customCallback(client, userdata, message):
     print("Received a new message: ")
@@ -126,6 +128,7 @@ while loopCount < 8:
 ### Shadow updater (`main.py`)
 
 ```python
+
 # user specified callback functions
 def customShadowCallback_Update(payload, responseStatus, token):
     if responseStatus == "timeout":
@@ -174,6 +177,7 @@ while True:
 ### Delta Listener (`main.py`)
 
 ```python
+
 # Custom Shadow callback
 def customShadowCallback_Delta(payload, responseStatus, token):
     payloadDict = json.loads(payload)

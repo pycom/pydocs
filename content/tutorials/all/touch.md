@@ -8,6 +8,7 @@ aliases:
 Example of how to use the Touch class of the Machine module:
 
 ```python
+
 from machine import Touch
 from machine import Timer
 import time

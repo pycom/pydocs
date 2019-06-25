@@ -7,7 +7,7 @@ aliases:
     - chapter/datasheets/boards/expansion3
 ---
 
-## ![](/gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn82uldmpus0lnq1kx-expansion3.png) 
+## ![](/gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn82uldmpus0lnq1kx-expansion3.png)
 
 ## Datasheet
 
@@ -51,9 +51,8 @@ To use the battery, pull `P8/G15` high (connect to `3v3`). If you want to use th
 
 ## Troubleshooting
 
-* If PIC stays in bootloader mode, the [`dfu-util` update](../../pytrackpysense/installation/firmware) should be performed
+* If PIC stays in bootloader mode, the [`dfu-util` update](/pytrackpysense/installation/firmware) should be performed
 
 ## 3D model for case design
 
 * Please see the <a href="/gitbook/assets/Expansion_Board_3D.step" target="_blank"> 3D model </a> (step format)
-

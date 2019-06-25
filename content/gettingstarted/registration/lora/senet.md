@@ -5,7 +5,7 @@ aliases:
     - gettingstarted/registration/lora/senet.md
 ---
 
-![](..//gitbook/assets/senet-logo.png)
+![](/gitbook/assets/senet-logo.png)
 
 ## The Senet Developer Portal
 
@@ -29,6 +29,7 @@ This comes from the device itself and can be obtained from `lora.mac()`.
 To obtain the required hexadecimal representation you can run the following code on your LoPy:
 
 ```python
+
 from network import LoRa
 import ubinascii
 
@@ -38,7 +39,7 @@ print("DevEUI: %s" % (ubinascii.hexlify(lora.mac()).decode('ascii')))
 
 Use this value during the first step of device registration.
 
-![](..//gitbook/assets/senet-register.png)
+![](/gitbook/assets/senet-register.png)
 
 ### Application EUI and Application Key
 
@@ -46,13 +47,14 @@ The Application EUI uniquely identifies the security broker (called a Join Serve
 
 At the completion of your device registration process on the Senet Developer Portal, you will be presented with the Application EUI and the Application Key which you will need to provision in your device. This information is always available after the fact in the device details screen.
 
-![](..//gitbook/assets/senet-register-complete.png)
+![](/gitbook/assets/senet-register-complete.png)
 
 ## Provisioning the LoPy or FiPy
 
 After device registration is complete, configure the device for optimal operation and provision the AppEUI and AppKey.
 
 ```python
+
 from network import LoRa
 import socket
 import time

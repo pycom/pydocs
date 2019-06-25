@@ -8,7 +8,21 @@ aliases:
 ---
 
 ## Basic connection
-
+<div>
+<v-tabs
+    dark
+    color="#1E1E3C"
+    slider-color="red">
+    <v-tab ripple key="1">Exp Board 3.0</v-tab>      
+    <v-tab ripple key="2">Exp Board 2.0</v-tab>
+    <v-tab ripple key="3"> Pytrack/Pysense/Pyscan</v-tab>
+    <v-tab ripple key="4">USB UART Adapter</v-tab>
+    <v-tab ripple key="5">WiFi</v-tab>
+      <v-tabs-items>
+      <v-tab-item key="1">
+      </v-tab-item>
+      </v-tabs-item>
+    </v-tab>
 {% tabs first="Exp Board 2.0", second="Exp Board 3.0", third="Pytrack/Pysense/Pyscan", forth="USB UART Adapter", fifth="WiFi" %}
 {% content "first" %}
 * When using the expansion board with a FiPy, you will need to remove the CTS and RTS jumpers as these interfere with communication with the cellular modem.
@@ -19,7 +33,7 @@ aliases:
 ![](/gitbook/assets/expansion_board_2_fipy.png)
 
 {% content "second" %}
-* Before connecting your module to an Expansion Board 3.0, you should update the firmware on the Expansion Board 3.0. Instructions on how to do this can be found [here](../../pytrackpysense/installation/firmware).
+* Before connecting your module to an Expansion Board 3.0, you should update the firmware on the Expansion Board 3.0. Instructions on how to do this can be found [here](/pytrackpysense/installation/firmware).
 * When using the expansion board with a FiPy, you will need to remove the CTS and RTS jumpers as these interfere with communication with the cellular modem.
 * Look for the reset button on the module (located at a corner of the board, next to the LED).
 * Locate the USB connector on the expansion board.
@@ -28,7 +42,7 @@ aliases:
 ![](/gitbook/assets/expansion_board_3_fipy.png)
 
 {% content "third" %}
-* Before connecting your module to a Pysense/Pytrack/Pyscan board, you should update the firmware on the Pysense/Pytrack/Pyscan. Instructions on how to do this can be found [here](../../pytrackpysense/installation/firmware).
+* Before connecting your module to a Pysense/Pytrack/Pyscan board, you should update the firmware on the Pysense/Pytrack/Pyscan. Instructions on how to do this can be found [here](/pytrackpysense/installation/firmware).
 * Look for the reset button on the FiPy module (located at a corner of the board, next to the LED).
 * Locate the USB connector on the Pysense/Pytrack/Pyscan.
 * Insert the module on the Pysense/Pytrack/Pyscan with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible. ![](/gitbook/assets/pysense_fipy.png)![](/gitbook/assets/pytrack_fipy.png)
@@ -103,4 +117,3 @@ All Pycom modules, including the FiPy, come with a on-board WiFi antenna as well
 If you intend on using the LTE CAT-M1 or NB-IoT connectivity of the FiPy you will need to insert a SIM card into your FiPy. It should be noted that the FiPy does not support regular LTE connectivity and you may require a special SIM. It is best to contact your local cellular providers for more information on acquiring a LTE CAT-M1/NB-IoT enabled nano SIM.
 
 ![](/gitbook/assets/sim_fipy.png)
-

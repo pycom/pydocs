@@ -36,6 +36,7 @@ Returns the locally stored value of the characteristic without sending a read re
 Writes the given value on the characteristic. For now it only accepts bytes object representing the value to be written.
 
 ```python
+
 characteristic.write(b'x0f')
 ```
 
