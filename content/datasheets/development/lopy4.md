@@ -7,11 +7,11 @@ aliases:
     - chapter/datasheets/development/lopy4
 ---
 
-![](/gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn85npgnazxzxyv-nu-lopy4-1.png) 
+![](/gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn85npgnazxzxyv-nu-lopy4-1.png)
 
 
 {{% hint style="info" %}}
- ** Please Note: We have removed the labels from the pictures in the documentation due to inconsistencies with label orientation.  *The LED must be aligned above the USB socket* when inserting or removing a development board from an expansion board/Pytrack/Pysense/Pyscan. **
+ Please Note: We have removed the labels from the pictures in the documentation due to inconsistencies with label orientation.  *The LED must be aligned above the USB socket* when inserting or removing a development board from an expansion board/Pytrack/Pysense/Pyscan.
 {{< /hint >}}
 
 
@@ -58,4 +58,3 @@ Tutorials on how to the LoPy4 module can be found in the [examples](/tutorials/i
 * [LoRaWAN nano gateway](/tutorials/lora/lorawan-nano-gateway)
 * [Sigfox](/tutorials/sigfox)
 * [BLE](/tutorials/all/ble)
-
