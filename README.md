@@ -5,6 +5,12 @@ brew install hugo
 hugo serve
 ```
 
+# Workflow
+
+- make you clean commits on Master
+- Then merge publish with master
+
+
 # some infos:
 
 - assets are in ./static directory, a directory aliased at /
