@@ -8,7 +8,9 @@ aliases:
 ---
 
 ## Basic connection
+
 <div>
+
 <v-tabs
     dark
     color="#1E1E3C"
@@ -19,61 +21,93 @@ aliases:
     <v-tab ripple key="4">USB UART Adapter</v-tab>
     <v-tab ripple key="5">WiFi</v-tab>
       <v-tabs-items>
+      <!-- Tab 1 -->
       <v-tab-item key="1">
+      <ul>
+      <li>Before connecting your module to an Expansion Board 3.0, you should <a href="/pytrackpysense/installation/firmware">update the firmware on the Expansion Board 3.0. Instructions on how to do this can be found here. </a></li>
+      <li>When using the expansion board with a FiPy, you will need to remove the CTS and RTS jumpers as these interfere with communication with the cellular modem.</li>
+      <li>Look for the reset button on the module (located at a corner of the board, next to the LED).</li>
+      <li>Locate the USB connector on the expansion board.</li>
+      <li>Insert the FiPy module on the Expansion Board with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.</li>
+      </ul>
+      <img src="/gitbook/assets/expansion_board_3_fipy.png">
+      </v-tab-item>
+      <!-- Tab 2 -->
+      <v-tab-item key="2">
+      <ul>
+      <li> When using the expansion board with a FiPy, you will need to remove the CTS and RTS jumpers as these interfere with communication with the cellular modem.</li>
+      <li> Look for the reset button on the module (located at a corner of the board, next to the LED).</li>
+      <li> Locate the USB connector on the expansion board.</li>
+      <li> Insert the FiPy module on the the expansion board with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.</li>
+      </ul>
+      <img src="/gitbook/assets/expansion_board_2_fipy.png">
+
+      </v-tab-item>
+
+      <v-tab-item key="3">
+      <div>
+      <ul>
+      <li> Before connecting your module to a Pysense/Pytrack/Pyscan board, you should <a href="/pytrackpysense/installation/firmware">update the firmware on the Pysense/Pytrack/Pyscan. Instructions on how to do this can be found here</a>.</li>
+      <li> Look for the reset button on the FiPy module (located at a corner of the board, next to the LED).</li>
+      <li> Locate the USB connector on the Pysense/Pytrack/Pyscan.</li>
+      <li> Insert the module on the Pysense/Pytrack/Pyscan with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.</li>
+      </ul>
+      <img src="/gitbook/assets/pysense_fipy.png">
+      <img src="/gitbook/assets/pytrack_fipy.png">
+      </div>
+      </v-tab-item>     
+      <v-tab-item key="4">
+      <div>
+      <ul>
+      <li>Firstly you will need to connect power to your FiPy. You will need to supply <code>3.5v</code>-<code>5.5v</code> to the <code>Vin</code> pin.
+
+      Do **not** feed <code>3.3v</code> directly to the <code>3.3v</code> supply pin, this will damage the regulator.</li>
+
+      <li>The connect the <code>RX</code> and <code>TX</code> of your USB UART to the <code>TX</code> and <code>RX</code> of the FiPy respectively.
+
+      Please ensure you have the signal level of the UART adapter set to <code>3.3v</code> before connecting it.</li>
+
+      <li>In order to put the FiPy into bootloader mode to update the device firmware you will need to connect <code>P2</code> to <code>GND</code>. We recommend you connect a button between the two to make this simpler.</li>
+
+      </ul>
+
+      <img src="/gitbook/assets/uart_fipy.png">
+      </div>
+      </v-tab-item>
+
+      <v-tab-item key="5">
+      <div>
+      <p>
+      <b>Note:</b> This method of connection is not recommended for first time users. It is possible to lock yourself out of the device, requiring a USB connection.
+      </p>
+      <ul>
+      <li>In order to access the FiPy via WiFi you only need to provide <code>3.5v</code> - <code>5.5v</code> on the <code>Vin</code> pin of the FiPy:
+
+      <img src="/gitbook/assets/bare_fipy.png">
+
+      </li>
+
+      <li>By default, when the FiPy boots, it will create a WiFi access point with the following credentials:
+        <ul>
+        <li> SSID: <code>fipy-wlan</code></li>
+        <li> password: <code>www.pycom.io</code></li>
+        </ul>
+      </li>
+      <li>Once connected to this network you will be able to access the telnet and FTP servers running on the FiPy. For both of these the login details are:
+    
+        <ul>
+        <li>username: <code>micro</code></li>
+        <li>password: <code>python</code></li>
+        </ul>
+
+      </li>
+      </ul>
+      </div>
       </v-tab-item>
       </v-tabs-item>
     </v-tab>
-{% tabs first="Exp Board 2.0", second="Exp Board 3.0", third="Pytrack/Pysense/Pyscan", forth="USB UART Adapter", fifth="WiFi" %}
-{% content "first" %}
-* When using the expansion board with a FiPy, you will need to remove the CTS and RTS jumpers as these interfere with communication with the cellular modem.
-* Look for the reset button on the module (located at a corner of the board, next to the LED).
-* Locate the USB connector on the expansion board.
-* Insert the FiPy module on the the expansion board with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.
+</div>
 
-![](/gitbook/assets/expansion_board_2_fipy.png)
-
-{% content "second" %}
-* Before connecting your module to an Expansion Board 3.0, you should update the firmware on the Expansion Board 3.0. Instructions on how to do this can be found [here](/pytrackpysense/installation/firmware).
-* When using the expansion board with a FiPy, you will need to remove the CTS and RTS jumpers as these interfere with communication with the cellular modem.
-* Look for the reset button on the module (located at a corner of the board, next to the LED).
-* Locate the USB connector on the expansion board.
-* Insert the FiPy module on the Expansion Board with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.
-
-![](/gitbook/assets/expansion_board_3_fipy.png)
-
-{% content "third" %}
-* Before connecting your module to a Pysense/Pytrack/Pyscan board, you should update the firmware on the Pysense/Pytrack/Pyscan. Instructions on how to do this can be found [here](/pytrackpysense/installation/firmware).
-* Look for the reset button on the FiPy module (located at a corner of the board, next to the LED).
-* Locate the USB connector on the Pysense/Pytrack/Pyscan.
-* Insert the module on the Pysense/Pytrack/Pyscan with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible. ![](/gitbook/assets/pysense_fipy.png)![](/gitbook/assets/pytrack_fipy.png)
-
-{% content "forth" %}
-* Firstly you will need to connect power to your FiPy. You will need to supply `3.5v`-`5.5v` to the `Vin` pin.
-
-Do **not** feed `3.3v` directly to the `3.3v` supply pin, this will damage the regulator.
-
-* The connect the `RX` and `TX` of your USB UART to the `TX` and `RX` of the FiPy respectively.
-
-Please ensure you have the signal level of the UART adapter set to `3.3v` before connecting it.
-
-* In order to put the FiPy into bootloader mode to update the device firmware you will need to connect `P2` to `GND`. We recommend you connect a button between the two to make this simpler.
-
-![](/gitbook/assets/uart_fipy.png)
-
-{% content "fifth" %}
-**Note:** This method of connection is not recommended for first time users. It is possible to lock yourself out of the device, requiring a USB connection.
-
-* In order to access the FiPy via WiFi you only need to provide `3.5v` - `5.5v` on the `Vin` pin of the FiPy:
-
-![](/gitbook/assets/bare_fipy.png)
-
-* By default, when the FiPy boots, it will create a WiFi access point with the following credentials:
-  * SSID: `fipy-wlan`
-  * password: `www.pycom.io`
-* Once connected to this network you will be able to access the telnet and FTP servers running on the FiPy. For both of these the login details are:
-  * username: `micro`
-  * password: `python`
-{% endtabs %}
 
 ## Antennas
 
