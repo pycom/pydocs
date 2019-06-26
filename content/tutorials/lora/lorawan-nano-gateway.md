@@ -5,8 +5,6 @@ aliases:
     - tutorials/lora/lorawan-nano-gateway.md
     - chapter/tutorials/lora/lorawan-nano-gateway
 ---
-search: false
----
 
 # LoRaWAN Nano-Gateway
 
@@ -562,4 +560,3 @@ Copy the URL that is generated and past this into the `URL` form under the `Appl
 ![](/gitbook/assets/ttn-10%20%281%29.png)
 
 This is the address that TTN will forward data onto. As soon as a LoPy starts sending messages, TTN will forward these onto `RequestBin` and they will appear at the unique `RequestBin URL`.
-

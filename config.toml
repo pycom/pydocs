@@ -986,7 +986,7 @@ theme = "doc-theme"
 
 [[menu.main]]
     name = "WiPy 2.0"
-    url = "/datasheets/development/wipy2"
+    url = "/datasheets/development/wipy2/"
     identifier = "datasheets@development@wipy2"
     parent = "datasheets@development"
     weight = 10
