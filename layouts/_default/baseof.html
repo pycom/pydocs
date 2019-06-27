@@ -15,7 +15,11 @@
 <body>
 <v-app id="app" class="grey lighten-5"  v-cloak stylse="display: none;">
     {{ partial "menu.html" . }}
-      {{- partial "toolbar.html" . -}}
+
+    <!-- 
+     {{- partial "toolbar.html" . -}}
+    -->
+ 
 
    <v-content >
       <v-container class="fluid pa-4">
@@ -33,8 +37,9 @@
 
 
 
-
-  {{- partial "footer.html" . -}}
+<!--
+    {{- partial "footer.html" . -}}
+-->
  </v-app>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

@@ -86,6 +86,10 @@ p {
     background-color: transparent;
 }
 
+ul.lefttree {
+  margin-left: -8px;
+}
+
 a, li.lefttree > a {
   text-decoration: none;
 }
@@ -127,11 +131,6 @@ li.lefttree > i {
   display: hidden;
 }
 
-ul.lefttree {
-  padding-left: 0px;
-}
-
-
 li.lefttree > a {
       font-family: 'Beba',Helvetica,Arial,Lucida,sans-serif;
         letter-spacing: 0.1em;
@@ -145,13 +144,6 @@ li.hot {
   padding-left: 22px;
 }
 
-
-/*
-ul.lefttree {
-  padding-right: 0px;
-  margin-right: 0px;
-}
-*/
 
 .v-toolbar__content, .v-toolbar__extension {
     padding:0!important;
