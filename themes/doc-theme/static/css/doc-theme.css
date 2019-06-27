@@ -69,7 +69,7 @@ url("/fonts/BebasNeue-Regular.otf") format("opentype");
 
 .application {
   /* font-family: 'Beba',Helvetica,Arial,Lucida,sans-serif; */
-  font-family:'Space Mono',monospace;
+  font-family: Helvetica;
 }
 /*
 p {
@@ -151,20 +151,20 @@ li.hot {
 }
 
 .danger-alert {
-  background-color: #FF8A80 !important;
+  background-color: #EF9A9A !important;
   margin-top: 24px;
   margin-bottom: 24px;
 }
 
 .warning-alert {
-  background-color: #FF8A80 !important;
+  background-color: #EF9A9A !important;
   margin-top: 24px;
   margin-bottom: 24px;
 }
 
 
 .info-alert {
-  background-color: #00FFFF !important;
+  background-color: #90CAF9 !important;
   margin-top: 24px;
   margin-bottom: 24px;
 }
@@ -260,4 +260,13 @@ code {
 
 .primary--text {
   color: #7800FF;
+}
+
+
+.v-window {
+  padding-top: 24px;
+}
+
+p {
+  text-align: justify;
 }
