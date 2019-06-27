@@ -119,17 +119,18 @@ li > a {
 
 li > a.hot {
   text-decoration: underline;
-  /* background-color: yellow; */
   padding: 6px;
 }
 
 
-
-li.lefttree {
-  margin-top: 6px;
-  margin-bottom: 6px;
-
+li.lefttree > i {
+  display: hidden;
 }
+
+ul.lefttree {
+  padding-left: 0px;
+}
+
 
 li.lefttree > a {
       font-family: 'Beba',Helvetica,Arial,Lucida,sans-serif;
@@ -145,11 +146,12 @@ li.hot {
 }
 
 
-
+/*
 ul.lefttree {
   padding-right: 0px;
   margin-right: 0px;
 }
+*/
 
 .v-toolbar__content, .v-toolbar__extension {
     padding:0!important;
