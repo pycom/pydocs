@@ -6,7 +6,7 @@ html {
   width: 320px;
   right: 0px;
   top: 0px;
-  z-index: 3;
+  z-index: 4;
   position: fixed;
 }
 
@@ -71,10 +71,11 @@ url("/fonts/BebasNeue-Regular.otf") format("opentype");
   /* font-family: 'Beba',Helvetica,Arial,Lucida,sans-serif; */
   font-family:'Space Mono',monospace;
 }
-
+/*
 p {
   text-align: justify;
 }
+*/
 
 .bread {
   font-family: 'Beba',Helvetica,Arial,Lucida,sans-serif;
