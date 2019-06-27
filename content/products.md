@@ -1,12 +1,10 @@
 ---
-title: "Pycom Products"
+title: ""
 aliases:
     - products.html
     - products.md
     - chapter/products
 ---
-
-## Pycom Products
 
 Below you will find tables of all Pycom products. These tables illustrate the functionality of our various products, their compatibility with each other, as well as what accessories are required to utilise certain functionality.
 
@@ -86,7 +84,9 @@ Below you will find tables of all Pycom products. These tables illustrate the fu
       <td style="text-align:center">&#10004;</td>
     </tr>
   </tbody>
-</table>## OEM Modules
+</table>
+
+## OEM Modules
 
 | OEM Module | [L01/W01 Reference Board](/datasheets/oem/l01_reference) | [Universal Reference Board](/datasheets/oem/universal_reference) |
 | :--- | :---: | :---: |

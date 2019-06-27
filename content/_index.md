@@ -43,3 +43,12 @@ This usually requires some registration. This step will detail how to get regist
 * [API Documentation](firmwareapi/introduction)
 * [Product Info](datasheets/introduction)
 * [Pybytes](pybytes/introduction)
+
+
+<v-layout class="full-width  prev-next pa-2 mt-4 mb-0" styleZZ="background-color: #7800FF;">
+  <v-flex xs6 class="ppurple">
+  </v-flex>
+  <v-flex xs6 class="text-xs-right">
+  <v-btn class="mr-4 pbgpurple white--text"  href="/products/">Next</v-btn>
+    </v-flex>
+</v-layout>
