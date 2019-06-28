@@ -105,4 +105,3 @@ Duplicate the terminal (the REPL) on the passed stream-like object. The given ob
 ## Constants
 
 * `uos.sep`: Separation character used in paths
-
