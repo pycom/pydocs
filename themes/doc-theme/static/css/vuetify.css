@@ -2905,9 +2905,7 @@ p {
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
-.mt-0 {
-  margin-top: 0 !important;
-}
+
 .mr-0 {
   margin-right: 0 !important;
 }
@@ -3096,10 +3094,10 @@ p {
   margin-right: 24px !important;
 }
 .mb-4 {
-  margin-bottom: 24px !important;
+  margin-bottom: 30px !important;
 }
 .ml-4 {
-  margin-left: 24px !important;
+  margin-left: 30px !important;
 }
 .pa-4 {
   padding: 24px 24px !important;

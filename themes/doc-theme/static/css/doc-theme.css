@@ -32,7 +32,7 @@ h1, h2, h3, h4 {
 
 
 h1 {
-  font-family: 'Beba',Helvetica,Arial,Lucida,sans-serif;
+  font-family: 'BebasNeueBold', sans-serif;
 }
 
 h1, h2, h3, h4 {
@@ -89,7 +89,7 @@ url("/fonts/space-mono/SpaceMono-Regular.eot") format("opentype");
 
 
 .bread {
-  font-family: 'Beba',Helvetica,Arial,Lucida,sans-serif;
+  font-family: 'BebasNeueBold',sans-serif;
   letter-spacing: 0.1em;
   /* color: #7800FF; */
 }
@@ -105,6 +105,17 @@ ul.lefttree {
 a, li.lefttree > a {
   text-decoration: none;
 }
+li.lefttree > a {
+  padding:6px;
+
+}
+
+li.hot > a.hot {
+  text-decoration: none;
+  background: #ffff00;
+  padding: 6px;
+
+}
 
 a, li.righttree > a {
   text-decoration: none;
@@ -113,7 +124,7 @@ a, li.righttree > a {
 
 a {
   text-decoration: underline;
-    padding: 5px;
+  padding: 0px;
 }
 
 a:hover {
@@ -134,8 +145,11 @@ li > a {
     line-height: 1.60;
 }
 
-li > a.hot {
-  text-decoration: underline;
+li.hot li.hot > a.hot {
+  text-decoration: none;
+  background: #ffff00;
+  font-family: 'BebasNeueBold';
+  color:#1E1E3C;
   padding: 6px;
 }
 
