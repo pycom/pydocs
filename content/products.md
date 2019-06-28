@@ -4,6 +4,7 @@ aliases:
     - products.html
     - products.md
     - chapter/products
+disable_breadcrumbs: true
 ---
 
 Below you will find tables of all Pycom products. These tables illustrate the functionality of our various products, their compatibility with each other, as well as what accessories are required to utilise certain functionality.

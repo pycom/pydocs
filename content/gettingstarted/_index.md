@@ -7,6 +7,7 @@ aliases:
     - getting-started
     - gettingstarted/introduction
     - chapter/gettingstarted/introduction
+disable_breadcrumbs: true
 ---
 
 So, you've decided to order a Pycom development module. Firstly we would like to congratulate you in making an excellent decision. If you haven't yet placed your order we highly recommend you check out the [products](../products) page before you place your order to ensure you know which accessories you might require.
@@ -32,4 +33,3 @@ Now that you familiar with programming your device you will no doubt be keen to 
 {{% hint style="info" %}}
 You can navigate through this guide using the arrow buttons at the bottom of the page.
 {{< /hint >}}
-
