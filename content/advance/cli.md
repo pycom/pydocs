@@ -5,8 +5,6 @@ aliases:
     - advance/cli.md
     - chapter/advance/cli
 ---
-search: false
----
 
 # CLI Updater
 
