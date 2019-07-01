@@ -6,8 +6,6 @@ aliases:
     - chapter/advance/cli
 ---
 
-# CLI Updater
-
 ## Command Line Update Utility
 
 #### Windows
