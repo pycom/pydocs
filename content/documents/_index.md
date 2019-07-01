@@ -1,4 +1,4 @@
 ---
-title: Documents
+title: documents
 disable_breadcrumbs: true
 ---
