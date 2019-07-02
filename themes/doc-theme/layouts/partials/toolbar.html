@@ -20,10 +20,25 @@
 
 
   <v-spacer></v-spacer>
+  <div style="width: 320px">
+  <v-text-field
+    v-model="q"
+    @change="search"
+    @click:append="search"
+    class="mono"
+    dark
+    hide-details
+     single-line
+    append-icon="search"
+    label="Search"
+  ></v-text-field>
+</div>
+  <!--
   <div style="width: 240px; ">
   <v-select :items="branches" v-model="branch" width=120 class="mono">
     </div>
   </v-select>
+  -->
   {{- if gt .WordCount 400 -}}
   <v-btn icon   ref="tocBtn" @click.stop="drawer2 = !drawer2" >
     <v-icon style="color: rgb(23, 255, 189);">more_vert</v-icon>
