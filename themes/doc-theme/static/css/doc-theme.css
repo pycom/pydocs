@@ -116,11 +116,13 @@ url("/fonts/space-mono/SpaceMono-Regular.eot") format("opentype");
   font-family: 'Space Mono';
 }
 
-
+a.bread:hover {
+  background-color: transparent;
+}
 .bread {
   font-family: 'BebasNeueBold',sans-serif;
   letter-spacing: 0.1em;
-  color: rgb(120, 0, 255);
+  color: rgb(120, 0, 255)!important;
 }
 
 .theme--dark.v-navigation-drawer:not(.v-navigation-drawer--floating) .v-navigation-drawer__border {
