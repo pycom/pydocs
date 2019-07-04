@@ -136,13 +136,12 @@ a, li.lefttree > a {
 }
 
 li.lefttree > a:hover {
-  background-color: transparent;
+  background-color: transparent!important;
 }
 
 
 li.lefttree > a {
   padding:6px;
-
 }
 
 li.hot > a.hot {
