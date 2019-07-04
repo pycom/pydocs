@@ -120,7 +120,7 @@ url("/fonts/space-mono/SpaceMono-Regular.eot") format("opentype");
 .bread {
   font-family: 'BebasNeueBold',sans-serif;
   letter-spacing: 0.1em;
-  /* color: #7800FF; */
+  color: rgb(120, 0, 255);
 }
 
 .theme--dark.v-navigation-drawer:not(.v-navigation-drawer--floating) .v-navigation-drawer__border {
@@ -134,6 +134,12 @@ ul.lefttree {
 a, li.lefttree > a {
   text-decoration: none;
 }
+
+li.lefttree > a:hover {
+  background-color: transparent;
+}
+
+
 li.lefttree > a {
   padding:6px;
 
@@ -141,7 +147,7 @@ li.lefttree > a {
 
 li.hot > a.hot {
   text-decoration: none;
-  background: #17ffBD;
+  color: #7800FF!important;
   padding: 6px;
 
 }
@@ -176,7 +182,6 @@ li > a {
 
 li.hot li.hot > a.hot {
   text-decoration: none;
-  background: #17ffBD;
   font-family: 'BebasNeueBold';
   color:#1E1E3C;
   padding: 6px;

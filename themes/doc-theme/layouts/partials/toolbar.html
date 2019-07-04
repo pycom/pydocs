@@ -19,12 +19,14 @@
 
 
   <v-spacer></v-spacer>
-  <div style="width: 240px; ">
+  {{ if eq .Section "firmwareapi"}}
+  <div style="width: 240px;">
   <v-select :items="branches" v-model="branch" width=120 class="mono">
-    </div>
   </v-select>
+  </div>
+  {{ end }}
   {{- if gt .WordCount 400 -}}
-  <v-btn icon   ref="tocBtn" @click.stop="drawer2 = !drawer2" >
+  <v-btn icon ref="tocBtn" @click.stop="drawer2 = !drawer2" >
     <v-icon style="color: rgb(23, 255, 189);">more_vert</v-icon>
   </v-btn>
   {{ end }}
