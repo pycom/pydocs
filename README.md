@@ -1,3 +1,8 @@
+# Warning! This project is deprectated. 
+
+## Current Pycom documentation repository is: https://github.com/pycom/pycom-documentation/
+
+
 # run locally
 
 ```
